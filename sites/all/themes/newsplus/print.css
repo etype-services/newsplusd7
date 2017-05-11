@@ -1,0 +1,79 @@
+.node-type-mt-post #pre-header,
+.node-type-mt-post #header-top,
+.node-type-mt-post #header,
+.node-type-mt-post #page-intro,
+.node-type-mt-post #messages-console,
+.node-type-mt-post #top-content,
+.node-type-mt-post .sidebar,
+.node-type-mt-post #content-bottom,
+.node-type-mt-post #banner,
+.node-type-mt-post #highlighted,
+.node-type-mt-post #promoted,
+.node-type-mt-post #footer,
+.node-type-mt-post #subfooter,
+.node-type-mt-post #toolbar,
+.node-type-mt-post #toTop,
+.node-type-mt-post #main>.tabs,
+.node-type-blog #pre-header,
+.node-type-blog #header-top,
+.node-type-blog #header,
+.node-type-blog #page-intro,
+.node-type-blog #messages-console,
+.node-type-blog #top-content,
+.node-type-blog .sidebar,
+.node-type-blog #content-bottom,
+.node-type-blog #banner,
+.node-type-blog #highlighted,
+.node-type-blog #promoted,
+.node-type-blog #footer,
+.node-type-blog #subfooter,
+.node-type-blog #toolbar,
+.node-type-blog #toTop,
+.node-type-blog #main>.tabs,
+.node-type-article #pre-header,
+.node-type-article #header-top,
+.node-type-article #header,
+.node-type-article #page-intro,
+.node-type-article #messages-console,
+.node-type-article #top-content,
+.node-type-article .sidebar,
+.node-type-article #content-bottom,
+.node-type-article #banner,
+.node-type-article #highlighted,
+.node-type-article #promoted,
+.node-type-article #footer,
+.node-type-article #subfooter,
+.node-type-article #toolbar,
+.node-type-article #toTop,
+.node-type-article #main>.tabs { display: none!important; }
+
+#printArea .node-footer,
+#printArea #comments,
+#printArea .node-side .reading-time,
+#printArea .node-side #affix { display: none!important; }
+
+.node-type-article #main-content,
+.node-type-blog #main-content,
+.node-type-mt-post #main-content { padding-top: 0; }
+
+#printArea a:after,
+.node-type-mt-post #breadcrumb a:after,
+.node-type-blog #breadcrumb a:after,
+.node-type-article #breadcrumb a:after { content:" (" attr(href) ") ";font-size:0em;font-weight:normal; }
+
+#printArea blockquote,
+#printArea .views-field-field-image, 
+#printArea .field-type-image, 
+#printArea .image-listing-item, 
+#printArea .image-wrapper>a,
+.node-type-article #page>.container,
+.node-type-blog #page>.container,
+.node-type-mt-post #page>.container { border: none; }
+
+#printArea .node-content { margin-left: 0; }
+
+#printArea .node-side { float: none; padding-left: 0px; text-align: left; }
+
+#printArea .node-side .user-info { margin-bottom: 10px; }
+
+#printArea .user-info .user-picture { margin: 0; }

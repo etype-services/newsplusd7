@@ -1,0 +1,9 @@
+/* Custom CSS overrides */
+
+/* Uncomment this line to hide site name into fixed navigation header*/
+/* #navigation-site-name { display: none!important; } */
+
+/* Uncomment this line to adjust the font-size & paddings of site name into fixed navigation header*/
+/*.fixed-header-enabled #navigation-site-name { font-size: 18px; padding: 13px 0px 8px; }*/
+
+.profile dd, .profile dt { display: none; }

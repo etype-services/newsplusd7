@@ -1,0 +1,13 @@
+# Rename this file to php.ini or add the 
+# following entries to your php.ini file in 
+# the root folder of your Drupal installation. 
+# 
+# Do this if you are facing problems with the 
+# available PHP memory in your box or hosting 
+# environment.
+
+memory_limit = 64M
+extension=pdo.so
+extension=pdo_sqlite.so
+extension=sqlite.so
+extension=pdo_mysql.so

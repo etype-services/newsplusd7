@@ -1,0 +1,66 @@
+name = News+
+description = A Bootstrap-based, responsive Drupal theme by <a href="http://www.morethanthemes.com/" target="_blank">More than (just) Themes</a>.
+version = 7.x-5.1.1
+core = 7.x
+
+stylesheets[all][] = bootstrap/css/bootstrap.css
+stylesheets[all][] = js/flexslider/flexslider.css
+stylesheets[all][] = style.css
+
+scripts[] = js/flexslider/jquery.flexslider.js
+scripts[] = js/jquery.browser.min.js
+
+regions[pre_header_left] = Pre Header Left
+regions[pre_header_right] = Pre header Right
+regions[header_top_left] = Header Top Left
+regions[header_top_right] = Header Top Right
+regions[navigation] = Navigation
+regions[header] = Header
+regions[page_intro] = Page Intro
+regions[top_content] = Top Content
+regions[banner] = Banner
+regions[highlighted] = Highlighted
+regions[promoted] = Promoted Area
+regions[content] = Content
+regions[sidebar_first] = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[footer_first] = Footer First
+regions[footer_second] = Footer Second
+regions[footer_third] = Footer Third
+regions[footer_fourth] = Footer Fourth
+regions[sub_footer_left] = Subfooter Left
+regions[footer] = Subfooter Right
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+
+settings[breadcrumb_display]= 1
+settings[breadcrumb_separator]= '/'
+settings[fixed_header]= 1
+settings[scrolltop_display]= 1
+settings[frontpage_content_print]= 1
+settings[bootstrap_js_include]= 1
+settings[three_columns_grid_layout]= 'grid_3_6_3'
+settings[color_scheme]= 'default'
+settings[reading_time]= '1'
+settings[share_links]= '1'
+settings[print_button]= '1'
+settings[font_resize]= '1'
+settings[post_progress]= '1'
+settings[affix_admin_height] = '64'
+settings[affix_fixedHeader_height] = '54'
+settings[headings_font_family]= 'hff-5'
+settings[paragraph_font_family]= 'pff-5'
+settings[sitename_font_family]= 'sff-32'
+settings[slogan_font_family]= 'slff-32'
+settings[slideshow_effect]='fade'
+settings[slideshow_effect_time]='10'
+settings[internal_banner_effect]='slide'
+settings[breaking_effect]='fade'
+settings[breaking_effect_time]='5'
+settings[responsive_multilevelmenu_state]= 1
+settings[google_map_latitude]='40.726576'
+settings[google_map_longitude]='-74.046822'
+settings[google_map_zoom]= 13
+settings[google_map_canvas]= 'map-canvas'
+settings[google_map_js]= 0

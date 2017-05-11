@@ -1,0 +1,61 @@
+a, .field-name-field-mt-post-categories.field-type-taxonomy-term-reference a, ul.links li.statistics_counter span { color: #357cce; }
+
+#header, #header-inside, #main-navigation .sf-menu ul li.sfHover>a, #main-navigation .sf-menu ul li a:hover, .mean-container .mean-nav ul li a:hover,
+.mean-container .mean-nav ul li a.mean-expand:hover, a.button, input[type="submit"], input[type="reset"], input[type="button"], table th,
+#pre-header .sf-menu>li.sfHover>a, #pre-header ul.menu li a:hover, #header-top .sf-menu>li.sfHover>a, #header-top ul.menu li a:hover, 
+.view-commerce-cart-block ul.links li a, .checkout-buttons .checkout-cancel, .checkout-buttons .checkout-back, .checkout-buttons .checkout-cancel:focus, 
+.checkout-buttons .checkout-back:focus { background-color: #357cce; }
+
+.pre-header-area a.button, .pre-header-area input[type="submit"], .header-top-area a.button, .header-top-area input[type="submit"] { background-color: #357cce!important; }
+
+#pre-header .sf-menu ul, #pre-header-inside.mean-container .mean-nav,
+#pre-header-inside.mean-container .mean-nav ul li a.mean-expand,
+#header-top .sf-menu ul, #header-top-inside.mean-container .mean-nav,
+#header-top-inside.mean-container .mean-nav ul li a.mean-expand { background-color: #357cce; background-color: rgba(53,124,206,0.9); }
+
+.sidebar h2.title, #page .block-views h2.title { border-bottom: 1px solid #357cce; }
+
+.mean-container .mean-nav ul li li a:hover, #pre-header-inside.mean-container .mean-nav ul li li a,
+#header-top-inside.mean-container .mean-nav ul li li a { border-top: 1px solid #357cce; }
+
+a:hover, a:focus, ul.menu li.collapsed > a:before, ul.menu li.expanded > a:before, .subfooter-area ul.menu li a:hover, 
+.field-name-field-mt-post-categories.field-type-taxonomy-term-reference a:hover, .views-field-title a:hover, .view-titles:after,
+ul.user-social-bookmarks li a:hover, .flex-direction-nav a, #internal-slider-carousel .flex-direction-nav a, #toTop,
+.item-list ul.quicktabs-tabs > li.active > a:after, .nav-tabs > li.active > a:after, .prev-node a:hover, .next-node a:hover, 
+.node-navigation div:hover > .fa-angle-left, .node-navigation div:hover > .fa-angle-right { color: #4f91dd; }
+
+#pre-header,  #header-top, #main-navigation .sf-menu>li.sfHover>a, ul.menu li a:hover, ul.pager li > a:hover, ul.pager li.pager-current, 
+.item-list ul li.pager-current.last, .field-type-taxonomy-term-reference a:hover, .view-taxonomy .views-row a:hover, 
+.views-field-field-mt-post-categories a:hover, .view-titles .more-link a, .view-popular-objects .views-row:hover .views-field-field-mt-post-categories a, 
+.view-feed .view-header p, .header-area ul.social-bookmarks li a:hover, .header-area ul.brands li a:hover, .overlay i, 
+a.button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, ul.links li a:hover, .more a:hover, 
+.item-list ul.quicktabs-tabs > li > a:hover, .nav-tabs > li > a:hover, .item-list ul.quicktabs-tabs > li.active > a, .nav-tabs > li.active > a, 
+.item-list ul.quicktabs-tabs > li.active > a:hover, .nav-tabs > li.active > a:hover, .panel-title a, .panel-heading a:hover, 
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active, 
+.overlayed-teaser a:after, .checkout-buttons .checkout-cancel:hover, .checkout-buttons .checkout-back:hover, .post-progressbar,
+.nav-tabs > li.active > a:focus, .nav-tabs > li > a:hover:focus { background-color: #4f91dd; }
+
+#main-navigation .sf-menu ul, .mean-container .mean-nav, .mean-container .mean-nav ul li a.mean-expand 
+{ background-color: #4f91dd;  background-color: rgba(79,145,221,0.9); }
+
+.overlay, .overlayed-teaser a:before { background-color: #4f91dd; background-color: rgba(79,145,221,0.3); }
+
+.item-list ul.quicktabs-tabs > li > a:hover, .nav-tabs > li > a:hover, input.form-text:focus, textarea:focus, .node-type-webform #main .form-text:focus, 
+.node-type-webform #main textarea:focus, ul.user-social-bookmarks li a:hover, .view-popular-objects .views-row:hover, 
+.item-list ul.quicktabs-tabs > li.active > a, .nav-tabs > li.active > a, .item-list ul.quicktabs-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:hover, #internal-slider-carousel ul.slides>li.flex-active-slide, #internal-slider-carousel ul.slides>li:hover, 
+#internal-slider-carousel .flex-direction-nav a, .nav-tabs > li.active > a:focus, .nav-tabs > li > a:hover:focus { border-color: #4f91dd; }
+
+.item-list ul.quicktabs-tabs, .nav-tabs { border-bottom: 3px solid #4f91dd; }
+.mean-container .mean-nav ul li li a { border-top: 1px solid #4f91dd; } 
+pre {  border-left: 10px solid #4f91dd; }
+
+.view-titles .more-link a { border-bottom: 6px solid rgba(53,124,206,0.65); }
+
+#pre-header .sf-menu ul li.sfHover>a, #pre-header .sf-menu ul li a:hover, #pre-header-inside.mean-container .mean-nav ul li a:hover, 
+#pre-header-inside.mean-container .mean-nav ul li a.mean-expand:hover, #header-top .sf-menu ul li.sfHover>a, #header-top .sf-menu ul li a:hover, 
+#header-top-inside.mean-container .mean-nav ul li a:hover, #header-top-inside.mean-container .mean-nav ul li a.mean-expand:hover { background-color: #2c68ad; }
+
+#pre-header-inside.mean-container .mean-nav ul li li a:hover, #header-top-inside.mean-container .mean-nav ul li li a:hover { border-top: 1px solid #2c68ad; }
+
+#header { border-bottom: 6px solid #2c68ad; }
