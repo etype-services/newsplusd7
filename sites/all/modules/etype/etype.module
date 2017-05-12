@@ -530,20 +530,20 @@ function etype_admin() {
 
   $form = array();
 
-  $form['pub'] = array(
+  $form['etype_pub'] = array(
     '#type' => 'textfield',
     '#title' => t('Pub'),
     '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
     '#size' => 10,
-    '#default_value' => theme_get_setting('pub'),
+    '#default_value' => variable_get('etype_pub'),
   );
 
-  $form['ptype'] = array(
+  $form['etype_ptype'] = array(
     '#type' => 'textfield',
     '#title' => t('PType'),
     '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
     '#size' => 10,
-    '#default_value' => theme_get_setting('ptype'),
+    '#default_value' => variable_get('etype_ptype'),
   );
 
   return system_settings_form($form);
