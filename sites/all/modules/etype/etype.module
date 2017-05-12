@@ -30,11 +30,25 @@ function etype_menu() {
     'access arguments' => array('access administration pages')
   );
 
-  $items['etype-node-cleanup'] = array(
-    'title' => t('Clean up nodes'),
-    'page callback' => 'etype_node_cleanup',
-    'type' => MENU_CALLBACK,
-    'access arguments' => array('access administration pages')
+  /* admin settings page */
+  $items['admin/config/etype'] = array(
+    'title' => 'eType',
+    'description' => 'eType Settings', // Like any other menu item
+    'position' => 'right',
+    'weight' => -15,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('administer site configuration'), // Permission needed to view this area
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  $items['admin/config/etype/settings'] = array(
+    'title' => 'eType Settings',
+    'description' => 'eType integration options',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('etype_admin'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
   );
 
   return $items;
@@ -510,7 +524,7 @@ function etype_e_editions() {
 }
 
 /* admin settings form */
-function etype_wire_admin() {
+function etype_admin() {
 
   /* get current setting */
 
