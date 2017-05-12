@@ -534,7 +534,7 @@ function etype_admin() {
     '#type' => 'textfield',
     '#title' => t('eType Pub'),
     '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
-    '#size' => 10,
+    '#size' => 55,
     '#default_value' => variable_get('etype_pub'),
   );
 
@@ -542,7 +542,7 @@ function etype_admin() {
     '#type' => 'textfield',
     '#title' => t('eType PType'),
     '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
-    '#size' => 10,
+    '#size' => 55,
     '#default_value' => variable_get('etype_ptype'),
   );
 
