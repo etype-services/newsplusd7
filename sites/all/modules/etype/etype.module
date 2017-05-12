@@ -532,7 +532,7 @@ function etype_admin() {
 
   $form['etype_pub'] = array(
     '#type' => 'textfield',
-    '#title' => t('Pub'),
+    '#title' => t('eType Pub'),
     '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
     '#size' => 10,
     '#default_value' => variable_get('etype_pub'),
@@ -540,7 +540,7 @@ function etype_admin() {
 
   $form['etype_ptype'] = array(
     '#type' => 'textfield',
-    '#title' => t('PType'),
+    '#title' => t('eType PType'),
     '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
     '#size' => 10,
     '#default_value' => variable_get('etype_ptype'),
