@@ -44,7 +44,7 @@ function etype_menu() {
 
   $items['admin/config/etype/settings'] = array(
     'title' => 'eType Settings',
-    'description' => 'eType integration options',
+    'description' => 'Set eType integration options here.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('etype_admin'),
     'access arguments' => array('administer site configuration'),
