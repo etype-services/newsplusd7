@@ -508,3 +508,29 @@ function etype_e_editions() {
   }
   return $e_editions;
 }
+
+/* admin settings form */
+function etype_wire_admin() {
+
+  /* get current setting */
+
+  $form = array();
+
+  $form['pub'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Pub'),
+    '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('pub'),
+  );
+
+  $form['ptype'] = array(
+    '#type' => 'textfield',
+    '#title' => t('PType'),
+    '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
+    '#size' => 10,
+    '#default_value' => theme_get_setting('ptype'),
+  );
+
+  return system_settings_form($form);
+}
