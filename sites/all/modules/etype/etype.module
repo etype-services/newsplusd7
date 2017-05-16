@@ -504,14 +504,14 @@ function _etype_follow_content() {
   $output = '
 <ul class="social-bookmarks">';
 
-  $facebook = variable_get('etype_facebook_bottom');
-  $twitter = variable_get('etype_twitter_bottom');
-  $googleplus = variable_get('etype_googleplus_bottom');
-  $instagram = variable_get('etype_instagram_bottom');
-  $youtube = variable_get('etype_youtube_bottom');
-  $pinterest = variable_get('etype_pinterest_bottom');
-  $vimeo = variable_get('etype_vimeo_bottom');
-  $rss = variable_get('etype_rss_bottom');
+  $facebook = variable_get('etype_facebook_footer');
+  $twitter = variable_get('etype_twitter_footer');
+  $googleplus = variable_get('etype_googleplus_footer');
+  $instagram = variable_get('etype_instagram_footer');
+  $youtube = variable_get('etype_youtube_footer');
+  $pinterest = variable_get('etype_pinterest_footer');
+  $vimeo = variable_get('etype_vimeo_footer');
+  $rss = variable_get('etype_rss_footer');
 
   if ($facebook > 0) {
     $url = variable_get('etype_facebook_url');
