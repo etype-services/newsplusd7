@@ -47,6 +47,7 @@ function etype_menu() {
     'description' => 'Set eType integration options here.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('etype_admin'),
+    'file' => 'etype.admin.inc',
     'access arguments' => array('administer site configuration'),
     'type' => MENU_NORMAL_ITEM,
   );
