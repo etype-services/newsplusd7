@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * redirect to e-Edition (defaults to first of possible multiple)
+ */
+function _etype_e_edition() {
+  $e_editions = etype_e_editions();
+  drupal_goto($e_editions[0]['path']);
+}
+
 /* BLOCKS */
 
 /**
