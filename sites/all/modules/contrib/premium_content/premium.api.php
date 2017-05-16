@@ -75,7 +75,7 @@ function hook_default_premium_levels() {
  *   to explicitly grant access, so Premium's standard role-based
  *   permissions will take effect.
  */
-function hook_premium_access(&$node, $teaser) {
+function hook_premium_access(&$node, $teaser= FALSE) {
   global $user;
   // We don't alter the access teasers - default is always allow, which
   // is fine with us.
