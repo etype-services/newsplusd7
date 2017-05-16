@@ -1,0 +1,15 @@
+name = eType Premium content
+description = Restrict access to premium content.
+package = eType Services Custom Modules
+core = 7.x
+dependencies[] = ctools
+configure = admin/structure/premium_levels
+files[] = premium.test
+; Updated for eType Services
+
+; Information added by drupal.org packaging script on 2012-03-10
+version = "7.x-1.0-beta3"
+core = "7.x"
+project = "etype_premium_content"
+datestamp = "1331338857"
+
