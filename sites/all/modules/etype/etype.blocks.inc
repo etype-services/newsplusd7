@@ -26,6 +26,11 @@ function etype_block_view($delta = '') {
       $block['content'] = _etype_follow_content();
       break;
 
+    case 'Contact-Page-Follow':
+      $block['subject'] = 'Stay tuned with us';
+      $block['content'] = _etype_contact_follow_content();
+      break;
+
   }
 
   return $block;
@@ -199,6 +204,70 @@ function _etype_follow_content() {
      </form>
 </div>
 ';
+
+  return $output;
+
+}
+
+/**
+ * Follow block for Contact page
+ */
+function _etype_contact_follow_content() {
+
+  $output = '
+<p>You can connect with us through all major social media. Just clicking on the corresponding logo below.</p>
+<ul class="social-bookmarks large">';
+
+  $facebook = variable_get('etype_facebook_footer');
+  $twitter = variable_get('etype_twitter_footer');
+  $googleplus = variable_get('etype_googleplus_footer');
+  $instagram = variable_get('etype_instagram_footer');
+  $youtube = variable_get('etype_youtube_footer');
+  $pinterest = variable_get('etype_pinterest_footer');
+  $vimeo = variable_get('etype_vimeo_footer');
+  $rss = variable_get('etype_rss_footer');
+
+  if ($facebook > 0) {
+    $url = variable_get('etype_facebook_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-facebook"></i></a></li>';
+  }
+
+  if ($twitter > 0) {
+    $url = variable_get('etype_twitter_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-twitter"></i></a></li>';
+  }
+
+  if ($googleplus > 0) {
+    $url = variable_get('etype_googleplus_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-google-plus"></i></a></li>';
+  }
+
+  if ($instagram > 0) {
+    $url = variable_get('etype_instagram_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-instagram"></i></a></li>';
+  }
+
+  if ($youtube > 0) {
+    $url = variable_get('etype_youtube_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-youtube"></i></a></li>';
+  }
+
+  if ($pinterest > 0) {
+    $url = variable_get('etype_pinterest_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-pinterest"></i></a></li>';
+  }
+
+  if ($vimeo > 0) {
+    $url = variable_get('etype_vimeo_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-vimeo-square"></i></a></li>';
+  }
+
+  if ($rss > 0) {
+    $output .= '<li><a href="/rss.xml"><i class="fa fa-rss-square"></i></a></li>';
+  }
+
+  $output .= '
+</ul>';
 
   return $output;
 

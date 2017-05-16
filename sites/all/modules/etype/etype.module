@@ -74,6 +74,11 @@ function etype_block_info() {
   $blocks['Follow'] = [
     'info' => t('eType Follow'),
   ];
+
+  $blocks['Contact-Page-Follow'] = [
+    'info' => t('eType Contact Page Follow'),
+  ];
+
   return $blocks;
 }
 
