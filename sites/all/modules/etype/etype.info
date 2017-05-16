@@ -6,3 +6,4 @@ files[] = etype.admin.inc
 files[] = etype.blocks.inc
 project = "etype"
 dependencies[] = entity
+stylesheets['all'][] = etype.css
