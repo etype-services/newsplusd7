@@ -222,14 +222,6 @@ function etype_admin() {
     '#title' => t('RSS'),
   );
 
-  $form['rss']['etype_rss_feed'] = array(
-    '#type' => 'textfield',
-    '#title' => t('RSS Feed'),
-    '#description' => t('Enter "Yes" to turn this on'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_rss_feed', ''),
-  );
-
   $form['rss']['etype_rss_top'] = array(
     '#type' => 'checkbox',
     '#title' => t('Add link to main navigation bar'),

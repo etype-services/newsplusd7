@@ -450,10 +450,7 @@ function _etype_social_search_content() {
   }
 
   if ($rss > 0) {
-    $url = variable_get('etype_rss_feed');
-    if (! empty($url)) {
-      $output .= '<li><a href="/rss.xml"><i class="fa fa-rss-square"></i></a></li>';
-    }
+    $output .= '<li><a href="/rss.xml"><i class="fa fa-rss-square"></i></a></li>';
   }
 
   $output .= '
