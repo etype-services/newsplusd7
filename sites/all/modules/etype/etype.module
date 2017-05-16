@@ -504,14 +504,14 @@ function _etype_follow_content() {
   $output = '
 <ul class="social-bookmarks">';
 
-  $facebook = variable_get('etype_facebook_top');
-  $twitter = variable_get('etype_twitter_top');
-  $googleplus = variable_get('etype_googleplus_top');
-  $instagram = variable_get('etype_instagram_top');
-  $youtube = variable_get('etype_youtube_top');
-  $pinterest = variable_get('etype_pinterest_top');
-  $vimeo = variable_get('etype_vimeo_top');
-  $rss = variable_get('etype_rss_top');
+  $facebook = variable_get('etype_facebook_bottom');
+  $twitter = variable_get('etype_twitter_bottom');
+  $googleplus = variable_get('etype_googleplus_bottom');
+  $instagram = variable_get('etype_instagram_bottom');
+  $youtube = variable_get('etype_youtube_bottom');
+  $pinterest = variable_get('etype_pinterest_bottom');
+  $vimeo = variable_get('etype_vimeo_bottom');
+  $rss = variable_get('etype_rss_bottom');
 
   if ($facebook > 0) {
     $url = variable_get('etype_facebook_url');
@@ -564,7 +564,7 @@ function _etype_follow_content() {
 <input type="text" class="form-text" name="subscribe" value="Your email address" onfocus="if (this.value == \'Your email address\') {this.value = \'\';}" onblur="if (this.value == \'\') {this.value = \'Your email address\';}" />
             </div>
             <div class="form-actions">
-<input value="" type="submit" id="edit-submit" name="subscribe" class="form-submit">
+<input value="" type="submit" id="edit-submit" name="subscribe" class="form-submit">
             </div>
         </div>
      </form>
