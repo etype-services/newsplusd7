@@ -322,9 +322,12 @@ function newsplus_preprocess_html(&$variables) {
     array('type' => 'inline', 'scope' => 'header')
     );
       
+    /*drupal_add_js('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false',array('type' => 'external', 'scope' => 'header', 'group' => 'JS_THEME')); AIzaSyDHYWYdyYlbOVXbvzv1BGom_4v5HlOxvN0 */
+
+    $google_map_apikey = theme_get_setting('google_map_apikey','newsplus');
     /*drupal_add_js('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false',array('type' => 'external', 'scope' => 'header', 'group' => 'JS_THEME'));*/
 
-    drupal_add_js('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false',array('type' => 'external', 'scope' => 'header', 'group' => 'JS_THEME'));
+    drupal_add_js('ttps://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDHYWYdyYlbOVXbvzv1BGom_4v5HlOxvN0',array('type' => 'external', 'scope' => 'header', 'group' => 'JS_THEME'));
 
     $google_map_latitude = theme_get_setting('google_map_latitude','newsplus');
         drupal_add_js(array('newsplus' => array('google_map_latitude' => $google_map_latitude)), 'setting');
