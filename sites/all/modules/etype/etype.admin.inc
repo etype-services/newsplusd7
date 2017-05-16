@@ -60,6 +60,13 @@ function etype_admin() {
     '#default_value' => variable_get('etype_facebook_footer', 0),
   );
 
+  $form['facebook']['etype_facebook_contact'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add link to Contact page'),
+    '#default_value' => variable_get('etype_facebook_contact', 0),
+  );
+
+
   /* twitter */
   $form['twitter'] = array(
     '#type' => 'fieldset',
@@ -84,6 +91,12 @@ function etype_admin() {
     '#type' => 'checkbox',
     '#title' => t('Add link to footer area'),
     '#default_value' => variable_get('etype_twitter_footer', 0),
+  );
+
+  $form['twitter']['etype_twitter_contact'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add link to Contact page'),
+    '#default_value' => variable_get('etype_twitter_contact', 0),
   );
 
   /* googleplus */
@@ -112,6 +125,12 @@ function etype_admin() {
     '#default_value' => variable_get('etype_googleplus_footer', 0),
   );
 
+  $form['googleplus']['etype_googleplus_contact'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add link to Contact page'),
+    '#default_value' => variable_get('etype_googleplus_contact', 0),
+  );
+
   /* youtube */
   $form['youtube'] = array(
     '#type' => 'fieldset',
@@ -136,6 +155,12 @@ function etype_admin() {
     '#type' => 'checkbox',
     '#title' => t('Add link to footer area'),
     '#default_value' => variable_get('etype_youtube_footer', 0),
+  );
+
+  $form['youtube']['etype_youtube_contact'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add link to Contact page'),
+    '#default_value' => variable_get('etype_youtube_contact', 0),
   );
 
   /* instagram */
@@ -164,6 +189,12 @@ function etype_admin() {
     '#default_value' => variable_get('etype_instagram_footer', 0),
   );
 
+  $form['instagram']['etype_instagram_contact'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add link to Contact page'),
+    '#default_value' => variable_get('etype_instagram_contact', 0),
+  );
+
   /* pinterest */
   $form['pinterest'] = array(
     '#type' => 'fieldset',
@@ -188,6 +219,12 @@ function etype_admin() {
     '#type' => 'checkbox',
     '#title' => t('Add link to footer area'),
     '#default_value' => variable_get('etype_pinterest_footer', 0),
+  );
+
+  $form['pinterest']['etype_pinterest_contact'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add link to Contact page'),
+    '#default_value' => variable_get('etype_pinterest_contact', 0),
   );
 
   /* vimeo */
@@ -216,6 +253,12 @@ function etype_admin() {
     '#default_value' => variable_get('etype_vimeo_footer', 0),
   );
 
+  $form['vimeo']['etype_vimeo_contact'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add link to Contact page'),
+    '#default_value' => variable_get('etype_vimeo_contact', 0),
+  );
+
   /* rss */
   $form['rss'] = array(
     '#type' => 'fieldset',
@@ -232,6 +275,12 @@ function etype_admin() {
     '#type' => 'checkbox',
     '#title' => t('Add link to footer area'),
     '#default_value' => variable_get('etype_rss_footer', 0),
+  );
+
+  $form['rss']['etype_rss_contact'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add link to Contact page'),
+    '#default_value' => variable_get('etype_rss_contact', 0),
   );
 
   return system_settings_form($form);

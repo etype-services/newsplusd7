@@ -218,14 +218,14 @@ function _etype_contact_follow_content() {
 <p>You can connect with us through all major social media. Just clicking on the corresponding logo below.</p>
 <ul class="social-bookmarks large">';
 
-  $facebook = variable_get('etype_facebook_footer');
-  $twitter = variable_get('etype_twitter_footer');
-  $googleplus = variable_get('etype_googleplus_footer');
-  $instagram = variable_get('etype_instagram_footer');
-  $youtube = variable_get('etype_youtube_footer');
-  $pinterest = variable_get('etype_pinterest_footer');
-  $vimeo = variable_get('etype_vimeo_footer');
-  $rss = variable_get('etype_rss_footer');
+  $facebook = variable_get('etype_facebook_contact');
+  $twitter = variable_get('etype_twitter_contact');
+  $googleplus = variable_get('etype_googleplus_contact');
+  $instagram = variable_get('etype_instagram_contact');
+  $youtube = variable_get('etype_youtube_contact');
+  $pinterest = variable_get('etype_pinterest_contact');
+  $vimeo = variable_get('etype_vimeo_contact');
+  $rss = variable_get('etype_rss_contact');
 
   if ($facebook > 0) {
     $url = variable_get('etype_facebook_url');
