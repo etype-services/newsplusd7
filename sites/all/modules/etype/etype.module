@@ -412,5 +412,46 @@ function etype_admin() {
     '#default_value' => variable_get('etype_ptype'),
   );
 
+  $form['etype_facebook_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook'),
+    '#description' => t('Facebook URL'),
+    '#size' => 55,
+    '#default_value' => variable_get('etype_facebook_url'),
+  );
+
+  $form['etype_twitter_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Twitter'),
+    '#description' => t('Twitter URL'),
+    '#size' => 55,
+    '#default_value' => variable_get('etype_twitter_url'),
+  );
+
+  $form['etype_googleplus_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Google Plus'),
+    '#description' => t('Google Plus URL'),
+    '#size' => 55,
+    '#default_value' => variable_get('etype_googleplus_url'),
+  );
+
+  $form['etype_youtube_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('YouTube'),
+    '#description' => t('YouTube URL'),
+    '#size' => 55,
+    '#default_value' => variable_get('etype_youtube_url'),
+  );
+
+  $form['etype_instagram_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Instagram'),
+    '#description' => t('Instagram URL'),
+    '#size' => 55,
+    '#default_value' => variable_get('etype_instagram_url'),
+  );
+
+
   return system_settings_form($form);
 }
