@@ -452,6 +452,21 @@ function etype_admin() {
     '#default_value' => variable_get('etype_instagram_url'),
   );
 
+  $form['etype_pinterest_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Pinterest'),
+    '#description' => t('Pinterest URL'),
+    '#size' => 55,
+    '#default_value' => variable_get('etype_pinterest_url'),
+  );
+
+  $form['etype_vimeo_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Vimeo'),
+    '#description' => t('Vimeo URL'),
+    '#size' => 55,
+    '#default_value' => variable_get('etype_vimeo_url'),
+  );
 
   return system_settings_form($form);
 }
