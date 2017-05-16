@@ -322,6 +322,8 @@ function newsplus_preprocess_html(&$variables) {
     array('type' => 'inline', 'scope' => 'header')
     );
       
+    /*drupal_add_js('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false',array('type' => 'external', 'scope' => 'header', 'group' => 'JS_THEME'));*/
+
     drupal_add_js('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false',array('type' => 'external', 'scope' => 'header', 'group' => 'JS_THEME'));
 
     $google_map_latitude = theme_get_setting('google_map_latitude','newsplus');

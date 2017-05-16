@@ -550,6 +550,13 @@ function newsplus_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Google Maps Canvas Id'),
     '#description'   => t('Set the Google Map Canvas Id. For example: map-canvas'),
     '#default_value' => theme_get_setting('google_map_canvas','newsplus'),
-  ); 
+  );
+
+  $form['mtt_settings']['tabs']['google_map']['google_map_contact']['google_map_apikey'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Google Maps API Key'),
+    '#description'   => t('Set the Google Map API Key. See https://developers.google.com/maps/documentation/javascript/get-api-key to get a key.'),
+    '#default_value' => theme_get_setting('google_map_apikey','newsplus'),
+  );
 
 }
