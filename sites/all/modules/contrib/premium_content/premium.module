@@ -306,6 +306,12 @@ function premium_level_delete($machine_name) {
 
 /**
  * Calculate time offset for auto-aging / auto-archiving
+ * @param $timestamp
+ * @param $start_ts
+ * @param $end_ts
+ * @param $mode
+ * @param $count
+ * @param $unit
  */
 function _premium_offset($timestamp, &$start_ts, &$end_ts, $mode, $count, $unit) {
 

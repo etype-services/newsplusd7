@@ -322,7 +322,7 @@ function etype_form_contact_site_form_alter(&$form, &$form_state, $form_id) {
  * @return bool
  * override premium level for Shoutem feeds
  */
-function etype_premium_access(&$node, $teaser) {
+function etype_premium_access(&$node, &$teaser) {
   $permitido = array(
     '/news-mobile.xml',
     '/sports-mobile.xml',

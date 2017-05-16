@@ -77,7 +77,6 @@ function hook_default_premium_levels() {
  */
 function hook_premium_access(&$node, $teaser) {
   global $user;
-
   // We don't alter the access teasers - default is always allow, which
   // is fine with us.
   if ($teaser) {
