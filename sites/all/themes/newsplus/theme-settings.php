@@ -552,6 +552,7 @@ function newsplus_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => theme_get_setting('google_map_canvas','newsplus'),
   );
 
+  /* custom field -- google maps requires api key */
   $form['mtt_settings']['tabs']['google_map']['google_map_contact']['google_map_apikey'] = array(
     '#type' => 'textfield',
     '#title' => t('Google Maps API Key'),
