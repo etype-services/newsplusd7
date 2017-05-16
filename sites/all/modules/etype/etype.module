@@ -54,31 +54,6 @@ function etype_menu() {
   return $items;
 }
 
-/**
- * Implements hook_block_info().
- */
-function etype_block_info() {
-  $blocks = array();
-
-  $blocks['e-Edition'] = array(
-    'info' => t('e-Edition'),
-  );
-  return $blocks;
-}
-
-/**
- * Implements hook_block_view().
- */
-function etype_block_view($delta = '') {
-  $block = array();
-  switch ($delta) {
-    case 'e-Edition':
-      $block['subject'] = '';
-      $block['content'] = _etype_e_edition_content();
-      break;
-  }
-  return $block;
-}
 
 /**
  * Function to get path to site folder
@@ -86,21 +61,6 @@ function etype_block_view($delta = '') {
  */
 function etype_site_path() {
   return $_SERVER['DOCUMENT_ROOT'] . base_path() . conf_path();
-}
-
-/**
- * e-Edition block
- */
-function _etype_e_edition_content() {
-  $e_editions = etype_e_editions();
-  $output = '';
-  foreach($e_editions as $e_edition) {
-    $output .= '
-<p><a href="' . $e_edition['path'] . '"><img src="' . $e_edition['image'] . '"></a></p>
-<p><a href="' . $e_edition['path'] . '">Click here to read ' . $e_edition['site_name'] . '</a></p>
-';
-  }
-  return $output;
 }
 
 /**
@@ -381,92 +341,4 @@ function etype_e_editions() {
     $ptr++;
   }
   return $e_editions;
-}
-
-/* admin settings form */
-function etype_admin() {
-
-  $form = array();
-
-  $form['etype_e_edition'] = array(
-    '#type' => 'textfield',
-    '#title' => t('e-Edition'),
-    '#description' => t('For one paper enter the e-Edition like <code>Mitchell%20News-JournalID617</code>, for more than one format like this: <code>Mitchell%20News-JournalID617|Mitchell News Journal,The%20Yorktown%20News-ViewID84|The Yorktown News View</code>'),
-    '#size' => 101,
-    '#default_value' => variable_get('etype_e_edition'),
-  );
-
-  $form['etype_pub'] = array(
-    '#type' => 'textfield',
-    '#title' => t('eType Pub'),
-    '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_pub'),
-  );
-
-  $form['etype_ptype'] = array(
-    '#type' => 'textfield',
-    '#title' => t('eType PType'),
-    '#description' => t('Separate multiple entries with a comma, in the same order as the e-Editions'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_ptype'),
-  );
-
-  $form['etype_facebook_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Facebook'),
-    '#description' => t('Facebook URL'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_facebook_url'),
-  );
-
-  $form['etype_twitter_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Twitter'),
-    '#description' => t('Twitter URL'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_twitter_url'),
-  );
-
-  $form['etype_googleplus_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Google Plus'),
-    '#description' => t('Google Plus URL'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_googleplus_url'),
-  );
-
-  $form['etype_youtube_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('YouTube'),
-    '#description' => t('YouTube URL'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_youtube_url'),
-  );
-
-  $form['etype_instagram_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Instagram'),
-    '#description' => t('Instagram URL'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_instagram_url'),
-  );
-
-  $form['etype_pinterest_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Pinterest'),
-    '#description' => t('Pinterest URL'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_pinterest_url'),
-  );
-
-  $form['etype_vimeo_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Vimeo'),
-    '#description' => t('Vimeo URL'),
-    '#size' => 55,
-    '#default_value' => variable_get('etype_vimeo_url'),
-  );
-
-  return system_settings_form($form);
 }
