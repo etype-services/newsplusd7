@@ -407,8 +407,12 @@ function _etype_social_search_content() {
 
   $facebook = variable_get('etype_facebook_top');
   $twitter = variable_get('etype_twitter_top');
-  $googleplus = variable_get('etype_pinterest_top');
-  $instagram = variable_get('etype_pinterest_top');
+  $googleplus = variable_get('etype_googleplus_top');
+  $instagram = variable_get('etype_instagram_top');
+  $youtube = variable_get('etype_youtube_top');
+  $pinterest = variable_get('etype_pinterest_top');
+  $vimeo = variable_get('etype_vimeo_top');
+  $rss = variable_get('etype_rss_top');
 
   if ($facebook > 0) {
     $url = variable_get('etype_facebook_url');
@@ -430,9 +434,32 @@ function _etype_social_search_content() {
     $output .= '<li><a href="' . $url . '"><i class="fa fa-instagram"></i></a></li>';
   }
 
+  if ($youtube > 0) {
+    $url = variable_get('etype_youtube_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-youtube"></i></a></li>';
+  }
+
+  if ($pinterest > 0) {
+    $url = variable_get('etype_pinterest_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-pinterest"></i></a></li>';
+  }
+
+  if ($vimeo > 0) {
+    $url = variable_get('etype_vimeo_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-vimeo-square"></i></a></li>';
+  }
+
+  if ($rss > 0) {
+    $url = variable_get('etype_rss_feed');
+    if (! empty($url)) {
+      $output .= '<li><a href="/rss.xml"><i class="fa fa-rss-square"></i></a></li>';
+    }
+  }
+
   $output .= '
 </ul>';
 
+  /* search box is poart of this block */
   if (module_exists('search')) {
     $output .= '
     <div class="dropdown search-bar block-search">
@@ -443,6 +470,7 @@ function _etype_social_search_content() {
     $output .= render($block);
     $output .= '</li></ul></div>';
   }
+
   $output .= '</div>';
 
   return $output;
