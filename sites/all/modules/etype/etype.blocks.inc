@@ -11,29 +11,12 @@ function _etype_e_edition() {
 /* BLOCKS */
 
 /**
- * Implements hook_block_info().
- */
-function etype_block_info() {
-  $blocks = [];
-
-  $blocks['e-Edition'] = [
-    'info' => t('e-Edition'),
-  ];
-
-  $blocks['Social-Search'] = [
-    'info' => t('eType Social & Search'),
-  ];
-
-  $blocks['Follow'] = [
-    'info' => t('eType Follow'),
-  ];
-  return $blocks;
-}
-
-/**
- * Implements hook_block_view().
+ * Implements hook_block_view()
+ * @param string $delta
+ * @return array
  */
 function etype_block_view($delta = '') {
+
   $block = [];
   switch ($delta) {
     case 'e-Edition':

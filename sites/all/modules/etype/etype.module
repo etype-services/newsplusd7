@@ -58,6 +58,26 @@ function etype_menu() {
   return $items;
 }
 
+/**
+ * Implements hook_block_info().
+ */
+function etype_block_info() {
+  $blocks = [];
+
+  $blocks['e-Edition'] = [
+    'info' => t('e-Edition'),
+  ];
+
+  $blocks['Social-Search'] = [
+    'info' => t('eType Social & Search'),
+  ];
+
+  $blocks['Follow'] = [
+    'info' => t('eType Follow'),
+  ];
+  return $blocks;
+}
+
 
 /**
  * Function to get path to site folder
