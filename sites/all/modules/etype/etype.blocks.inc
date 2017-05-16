@@ -56,30 +56,49 @@ function _etype_e_edition_content() {
 function _etype_social_search_content() {
 
   $output = '
-  <ul class="social-links">';
-  $facebook = variable_get('etype_facebook_url');
-  $twitter = variable_get('etype_twitter_url');
-  $googleplus = variable_get('etype_pinterest_url');
-  $instagram = variable_get('etype_pinterest_url');
-  if (!empty($facebook)) {
-    $output .= '<li><a class="facebook" href="' . $facebook . '"></a></li>';
+<div class="navigation-social-bookmarks">
+    <ul class="social-bookmarks">';
+
+  $facebook = variable_get('etype_facebook_top');
+  $twitter = variable_get('etype_twitter_top');
+  $googleplus = variable_get('etype_pinterest_top');
+  $instagram = variable_get('etype_pinterest_top');
+
+  if ($facebook > 0) {
+    $url = variable_get('etype_facebook_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-facebook"></i></a></li>';
   }
-  if (!empty($twitter)) {
-    $output .= '<li><a class="twitter" href="https://twitter.com/' . $twitter . '"></a></li>';
+
+  if ($twitter > 0) {
+    $url = variable_get('etype_twitter_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-twitter"></i></a></li>';
   }
-  if (!empty($pinterest)) {
-    $output .= '<li><a class="pinterest" href="https://www.pinterest.com/' . $pinterest . '"></a></li>';
+
+  if ($googleplus > 0) {
+    $url = variable_get('etype_googleplus_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-google-plus"></i></a></li>';
   }
-  if (!empty($instagram)) {
-    $output .= '<li><a class="instagram" href="https://instagram.com/' . $instagram . '"></a></li>';
+
+  if ($instagram > 0) {
+    $url = variable_get('etype_instagram_url');
+    $output .= '<li><a href="' . $url . '"><i class="fa fa-instagram"></i></a></li>';
   }
-  if (!empty($googleplus)) {
-    $output .= '<li><a class="googleplus" href="https://plus.google.com/' . $googleplus . '"></a></li>';
+
+  $output .= '
+</ul>';
+
+  if (module_exists('search')) {
+    $output .= '
+    <div class="dropdown search-bar block-search">
+    <a data-toggle="dropdown" href="#" class="trigger"></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <li>';
+    $block = module_invoke('search', 'block_view', 'search');
+    $output .= render($block);
+    $output .= '</li></ul></div>';
   }
-  if (!empty($rssfeed)) {
-    $output .= '<li><a class="rss" href="/rss.xml"></a></li>';
-  }
-  $output .= '</ul>';
+  $output .= '</div>';
+
   return $output;
-  return $output;
+
 }
