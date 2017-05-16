@@ -7,7 +7,7 @@ function etype_admin() {
 
   $form['e_edition'] = array(
     '#type' => 'fieldset',
-    '#title' => t('e-Edition Settings'),
+    '#title' => t('e-Edition'),
   );
 
   $form['e_edition']['etype_e_edition'] = array(
@@ -36,29 +36,26 @@ function etype_admin() {
 
   $form['facebook'] = array(
     '#type' => 'fieldset',
-    '#title' => t('e-Edition Settings'),
+    '#title' => t('Facebook'),
   );
 
   $form['facebook']['etype_facebook_url'] = array(
     '#type' => 'textfield',
-    '#title' => t('Facebook'),
-    '#description' => t('Facebook URL'),
+    '#title' => t('Facebook URL'),
     '#size' => 55,
     '#default_value' => variable_get('etype_facebook_url'),
   );
 
   $form['facebook']['etype_facebook_top'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Main Navigation'),
+    '#title' => t('Add Facebook page link to main navigation bar'),
     '#default_value' => variable_get('etype_facebook_top', 0),
-    '#description' => t('Add Facebook page link to main navigation bar.'),
   );
 
   $form['facebook']['etype_facebook_footer'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Footer'),
+    '#title' => t('Add Facebook page link to footer area'),
     '#default_value' => variable_get('etype_facebook_footer', 0),
-    '#description' => t('Add Facebook page link to footer area.'),
   );
 
   $form['etype_twitter_url'] = array(
