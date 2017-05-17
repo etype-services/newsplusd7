@@ -1,3 +1,9 @@
+/* search in nav bar */
 #block-etype-social-search {
+    padding: 0;
+}
+
+/* Contact us "Stay tuned" copy, in its own block to allow customization */
+#block-block-12 {
     padding: 0;
 }
