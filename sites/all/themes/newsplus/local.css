@@ -7,3 +7,7 @@
 /*.fixed-header-enabled #navigation-site-name { font-size: 18px; padding: 13px 0px 8px; }*/
 
 .profile dd, .profile dt { display: none; }
+
+#header-top {
+    padding-top: 32px;
+}
