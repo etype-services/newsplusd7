@@ -52,7 +52,7 @@ function etype_block_view($delta = '') {
       break;
 
     case 'Contact-Page-Follow':
-      $block['subject'] = 'Stay tuned with us';
+      $block['subject'] = '';
       $block['content'] = _etype_contact_follow_content();
       break;
 
