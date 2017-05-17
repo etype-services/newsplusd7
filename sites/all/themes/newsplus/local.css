@@ -12,3 +12,8 @@
 #header-top {
     padding-top: 32px;
 }
+
+/* reduce size of name in footer */
+#footer-site-name {
+    font-size: 2em;
+}
