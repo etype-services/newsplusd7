@@ -8,6 +8,7 @@
 
 .profile dd, .profile dt { display: none; }
 
+/* change space above logo */
 #header-top {
     padding-top: 32px;
 }
