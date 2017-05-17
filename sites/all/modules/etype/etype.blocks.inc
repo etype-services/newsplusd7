@@ -240,8 +240,6 @@ function _etype_follow_content() {
 function _etype_contact_follow_content() {
 
   $output = '
-<h3 class="title">Stay tuned with us</h3>
-<p>You can connect with us through all major social media. Just click on the corresponding logo below.</p>
 <ul class="social-bookmarks large">';
 
   $facebook = variable_get('etype_facebook_contact');

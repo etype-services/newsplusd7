@@ -1,5 +1,6 @@
 <?php
 
+/* por qué, Drupal? */
 include_once 'etype.blocks.inc';
 
 /**
