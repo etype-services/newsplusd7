@@ -32,3 +32,9 @@
 .node-info .byline a {
     color: #363636;
 }
+
+/* blockquote */
+blockquote {
+    margin: 40px 0 40px;
+    overflow: visible;
+}
