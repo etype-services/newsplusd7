@@ -19,23 +19,11 @@
 }
 
 /* byline and email */
-.node-info {
-    margin-bottom: 0;
+.node-info .byline {
+    font-size: 13px;
 }
 
-.node-content .field-name-field-byline {
-    display: inline-block;
-    font-size: 11px;
-    color: #7d7d7d;
-    margin-right: 0.3em;
-}
-
-.node-content .field-name-field-email {
-    display: inline-block;
-    margin-bottom: 35px;
-    font-size: 11px;
-}
-
+/* match tags link color */
 .node-content .field-name-field-email a {
-    color: #7d7d7d;
+    color: #363636;
 }
