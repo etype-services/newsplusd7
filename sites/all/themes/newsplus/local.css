@@ -17,3 +17,22 @@
 #footer-site-name {
     font-size: 2em;
 }
+
+/* byline and email */
+.node-info {
+    margin-bottom: 0.5em;
+}
+
+.node-content .field-name-field-byline {
+    display: inline-block;
+    font-size: 11px;
+    color: #7d7d7d;
+    margin-right: 0.3em;
+}
+
+.node-content .field-name-field-email {
+    display: inline-block;
+    margin-bottom: 35px;
+    font-size: 11px;
+    color: #7d7d7d;
+}
