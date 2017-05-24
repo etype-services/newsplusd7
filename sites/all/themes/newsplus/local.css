@@ -24,7 +24,11 @@
     display: block;
 }
 
+.node-info .byline div {
+    display: inline-block;
+}
+
 /* match tags link color */
-.node-content .field-name-field-email a {
+.node-info .byline a {
     color: #363636;
 }
