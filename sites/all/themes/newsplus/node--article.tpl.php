@@ -130,6 +130,7 @@ $post_progress = theme_get_setting('post_progress');
                   <i class="fa fa-user"></i> <?php print render($content['field_byline']);  ?>
                   <?php print render($content['field_email']);  ?>
               </div>
+            <?php } ?>
 
             <?php if ($display_submitted) { ?>
             <div class="node-info-item"><i class="fa fa-clock-o"></i> <?php print format_date($created, 'custom', 'F d, Y - H:i'); ?></div>
