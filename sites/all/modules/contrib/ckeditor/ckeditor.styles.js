@@ -25,10 +25,11 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Heading 6'		, element : 'h6' },
             { name : 'Preformatted Text', element : 'pre' },
             { name : 'Address'			, element : 'address' },
-            */
+
 
             { name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
             { name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
+            */
 
             /* Inline Styles */
 
@@ -41,7 +42,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Strikethrough'	, element : 'strike' },
             { name : 'Subscript'		, element : 'sub' },
             { name : 'Superscript'		, element : 'sup' },
-            */
 
             { name : 'Marker: Yellow'	, element : 'span', styles : { 'background-color' : 'Yellow' } },
             { name : 'Marker: Green'	, element : 'span', styles : { 'background-color' : 'Lime' } },
@@ -63,8 +63,9 @@ if(typeof(CKEDITOR) !== 'undefined') {
 
             { name : 'Language: RTL'	, element : 'span', attributes : { 'dir' : 'rtl' } },
             { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
+             */
 
-            /* Object Styles */
+            /* Object Styles
 
             {
                     name : 'Image on Left',
@@ -87,5 +88,8 @@ if(typeof(CKEDITOR) !== 'undefined') {
                             'align' : 'right'
                     }
             }
+             */
+        { name : 'Blockquote'		, element : 'blockquote' },
+
     ]);
 }
