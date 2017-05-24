@@ -126,7 +126,7 @@ $post_progress = theme_get_setting('post_progress');
               <!-- custom section for byline & email -->
             <?php if (isset($content['field_email']) && !empty($content['field_email'])) { ?>
                 <div class="node-info-item byline">
-                    <i class="fa fa-user"></i> <?php print render($content['field_byline']);  ?>
+                    <i class="fa fa-pencil"></i> <?php print render($content['field_byline']);  ?>
                   <?php print render($content['field_email']);  ?>
                 </div>
             <?php } ?>
