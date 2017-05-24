@@ -21,6 +21,7 @@
 /* byline and email */
 .node-info .byline {
     font-size: 13px;
+    display: block;
 }
 
 /* match tags link color */
