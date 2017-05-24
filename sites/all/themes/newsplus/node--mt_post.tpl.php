@@ -123,6 +123,13 @@ $post_progress = theme_get_setting('post_progress');
 
         <?php if (isset($content['field_mt_post_categories']) || $display_submitted || (module_exists('comment') && ($node->comment == COMMENT_NODE_OPEN || ($node->comment == COMMENT_NODE_CLOSED && $node->comment_count > 0)))) { ?>
           <div class="node-info">
+              <!-- custom section for byline & email -->
+            <?php if (isset($content['field_email']) && !empty($content['field_email'])) { ?>
+                <div class="node-info-item byline">
+                    <i class="fa fa-user"></i> <?php print render($content['field_byline']);  ?>
+                  <?php print render($content['field_email']);  ?>
+                </div>
+            <?php } ?>
             <?php if ($display_submitted) { ?>
             <div class="node-info-item"><i class="fa fa-clock-o"></i> <?php print format_date($created, 'custom', 'F d, Y - H:i'); ?></div>
             <?php } ?>
