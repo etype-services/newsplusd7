@@ -20,7 +20,7 @@
 
 /* byline and email */
 .node-info {
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
 }
 
 .node-content .field-name-field-byline {
@@ -34,5 +34,8 @@
     display: inline-block;
     margin-bottom: 35px;
     font-size: 11px;
+}
+
+.node-content .field-name-field-email a {
     color: #7d7d7d;
 }
