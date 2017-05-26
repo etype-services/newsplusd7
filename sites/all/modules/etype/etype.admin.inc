@@ -43,7 +43,8 @@ function etype_admin() {
 
   $form['facebook']['etype_facebook_url'] = array(
     '#type' => 'textfield',
-    '#title' => t('Facebook URL'),
+    '#title' => t('Facebook '),
+    '#description' => t('Full Facebook URL'),
     '#size' => 55,
     '#default_value' => variable_get('etype_facebook_url', 'https://www.facebook.com/'),
   );
@@ -76,7 +77,7 @@ function etype_admin() {
   $form['twitter']['etype_twitter_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Twitter'),
-    '#description' => t('Twitter URL'),
+    '#description' => t('Full Twitter URL'),
     '#size' => 55,
     '#default_value' => variable_get('etype_twitter_url', 'https://twitter.com/'),
   );
@@ -108,7 +109,7 @@ function etype_admin() {
   $form['googleplus']['etype_googleplus_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Google Plus'),
-    '#description' => t('Google Plus URL'),
+    '#description' => t('Full Google Plus URL'),
     '#size' => 55,
     '#default_value' => variable_get('etype_googleplus_url', 'https://plus.google.com/'),
   );
@@ -140,7 +141,7 @@ function etype_admin() {
   $form['youtube']['etype_youtube_url'] = array(
     '#type' => 'textfield',
     '#title' => t('YouTube'),
-    '#description' => t('YouTube URL'),
+    '#description' => t('Full YouTube URL'),
     '#size' => 55,
     '#default_value' => variable_get('etype_youtube_url', 'https://youtube.com/'),
   );
@@ -172,7 +173,7 @@ function etype_admin() {
   $form['instagram']['etype_instagram_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Instagram'),
-    '#description' => t('Instagram URL'),
+    '#description' => t('Full Instagram URL'),
     '#size' => 55,
     '#default_value' => variable_get('etype_instagram_url', 'https://instagram.com/'),
   );
@@ -204,7 +205,7 @@ function etype_admin() {
   $form['pinterest']['etype_pinterest_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Pinterest'),
-    '#description' => t('Pinterest URL'),
+    '#description' => t('Full Pinterest URL'),
     '#size' => 55,
     '#default_value' => variable_get('etype_pinterest_url', 'https://pinterest.com/'),
   );
@@ -236,7 +237,7 @@ function etype_admin() {
   $form['vimeo']['etype_vimeo_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Vimeo'),
-    '#description' => t('Vimeo URL'),
+    '#description' => t('Full Vimeo URL'),
     '#size' => 55,
     '#default_value' => variable_get('etype_vimeo_url', 'https://vimeo.com/'),
   );
