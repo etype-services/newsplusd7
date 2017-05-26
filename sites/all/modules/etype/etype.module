@@ -13,32 +13,28 @@ include_once 'etype.blocks.inc';
  *
  */
 function etype_init() {
+  // add facebook connect script to etype module admin pages
   if ((arg(0) == 'admin') && (arg(2) == 'etype')) {
     $fb_js = <<<END
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : 'your-app-id',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.9'
+(function ($) {
+  $(document).ready(function() {
+    $.ajaxSetup({ cache: true });
+    $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+      FB.init({
+        appId: '1213308308778005',
+        version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+      });     
+      $('#fb_loginbutton').removeAttr('disabled');
+      //FB.getLoginStatus(updateStatusCallback);
     });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+  });
+})(jQuery);
 END;
-    drupal_add_js($fb_js, array(
+    drupal_add_js($fb_js, [
       'type' => 'inline',
+      'scope' => 'footer',
       'weight' => 1,
-    ));
+    ]);
   }
 }
 

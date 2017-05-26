@@ -67,6 +67,13 @@ function etype_admin() {
     '#default_value' => variable_get('etype_facebook_contact', 0),
   );
 
+  $form['facebook']['etype_facebook_app'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook App Id'),
+    '#size' => 55,
+    '#default_value' => variable_get('etype_facebook_app', ''),
+  );
+
 
   /* twitter */
   $form['twitter'] = array(
