@@ -67,11 +67,16 @@ function etype_admin() {
     '#default_value' => variable_get('etype_facebook_contact', 0),
   );
 
-  $form['facebook']['etype_facebook_app'] = array(
+  $form['facebook']['etype_facebook_app_id'] = array(
     '#type' => 'textfield',
     '#title' => t('Facebook App Id'),
+    '#description' => t('The App Id allows for Facebook functionality including autoposting. Set up an App <a href="https://developers.facebook.com/apps">here</a>. You will need to log in to Facebook with an account that can administer the Page you want to autopost to.'),
     '#size' => 55,
-    '#default_value' => variable_get('etype_facebook_app', ''),
+    '#default_value' => variable_get('etype_facebook_app_id', ''),
+  );
+
+  $form['facebook']['etype_facebook_login'] = array(
+    '#markup' => '<div id="etype_fb_login" class="link"></div>'
   );
 
 

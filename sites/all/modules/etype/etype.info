@@ -9,4 +9,4 @@ dependencies[] = entity
 files[] = etype.admin.inc
 files[] = etype.blocks.inc
 
-stylesheets[all][] = etype.css
+stylesheets[all][] = css/etype.css

@@ -1,0 +1,10 @@
+/* facebook login */
+#etype_fb_login {
+    display: none;
+    font-style: oblique;
+}
+
+.link {
+    color: #0074BD;
+    cursor: pointer;
+}

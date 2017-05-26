@@ -13,28 +13,23 @@ include_once 'etype.blocks.inc';
  *
  */
 function etype_init() {
-  // add facebook connect script to etype module admin pages
-  if ((arg(0) == 'admin') && (arg(2) == 'etype')) {
-    $fb_js = <<<END
-(function ($) {
-  $(document).ready(function() {
-    $.ajaxSetup({ cache: true });
-    $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
-      FB.init({
-        appId: '1213308308778005',
-        version: 'v2.7' // or v2.1, v2.2, v2.3, ...
-      });     
-      $('#fb_loginbutton').removeAttr('disabled');
-      //FB.getLoginStatus(updateStatusCallback);
-    });
-  });
-})(jQuery);
+  // add facebook connect script to etype module admin settings page
+  if ((arg(0) == 'admin') && (arg(2) == 'etype') && (arg(3) == 'settings')) {
+    drupal_add_css(drupal_get_path('module', 'etype') . '/css/etype.admin.css');
+    $fb_app_id = variable_get('etype_facebook_app_id');
+    if (! empty($fb_app_id)) {
+      $fb_js = <<<END
+(function ($) { $(document).ready(function() {etype_app_id = '$fb_app_id';}) })(jQuery);
 END;
-    drupal_add_js($fb_js, [
-      'type' => 'inline',
-      'scope' => 'footer',
-      'weight' => 1,
-    ]);
+      drupal_add_js($fb_js, [
+        'type' => 'inline',
+        'scope' => 'footer',
+        'weight' => 1,
+      ]);
+      drupal_add_js(drupal_get_path('module', 'etype') . '/js/etype.fb.js', [
+        'scope' => 'footer',
+      ]);
+    }
   }
 }
 
@@ -314,27 +309,6 @@ function etype_form_contact_site_form_alter(&$form, &$form_state, $form_id) {
     '#type' => 'textfield',
     '#required' => TRUE,
   ];
-}
-
-/**
- * @param $node
- * @param $teaser
- *
- * @return bool
- * override premium level for Shoutem feeds
- */
-function etype_premium_access(&$node) {
-  $permitido = [
-    '/news-mobile.xml',
-    '/sports-mobile.xml',
-    '/lifestyle-mobile.xml',
-    '/obits-mobile.xml',
-    '/commentary-mobile.xml',
-  ];
-  $solicitud = request_uri();
-  if (in_array($solicitud, $permitido)) {
-    return TRUE;
-  }
 }
 
 /**
