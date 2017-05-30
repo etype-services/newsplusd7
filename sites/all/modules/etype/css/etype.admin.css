@@ -1,7 +1,10 @@
 /* facebook login */
 #etype_fb_login {
     display: none;
-    font-style: oblique;
+}
+
+#etype-admin .form-item-etype-facebook-page-id {
+    display: none;
 }
 
 .link {
