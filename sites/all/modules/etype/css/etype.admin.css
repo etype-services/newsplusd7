@@ -8,6 +8,6 @@
 }
 
 .link {
-    color: #0074BD;
+    color: #0074BD !important;
     cursor: pointer;
 }

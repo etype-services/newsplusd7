@@ -8,7 +8,7 @@
             if (response.status === 'connected') {
                 logged_in(response.authResponse.userID);
             } else {
-                obj.show().text('Log in to Facebook').click(function() {
+                obj.show().text('Log in to Facebook to set Facebook Page Id').click(function() {
                     login();
                 });
             }

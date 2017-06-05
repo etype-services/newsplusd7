@@ -76,13 +76,19 @@ function etype_admin() {
   );
 
   $form['facebook']['etype_facebook_login'] = array(
-    '#markup' => '<div id="etype_fb_login" class="link"></div>'
+    '#markup' => '<div id="etype_fb_login" class="link description"></div>'
   );
 
   $options = [
     0 => t('Select'),
   ];
   $etype_facebook_page_id = variable_get('etype_facebook_page_id', 0);
+  if ($etype_facebook_page_id > 0) {
+    $form['facebook']['etype_facebook_page_markup'] = array(
+      '#markup' => '<div class="description">Saved Facebook Page Id is ' . $etype_facebook_page_id . '.</div>',
+    );
+  }
+
   $form['facebook']['etype_facebook_page_id'] = array(
     '#type' => 'select',
     '#title' => t('Facebook Page Id '),
