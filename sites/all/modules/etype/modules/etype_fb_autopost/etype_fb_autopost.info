@@ -1,0 +1,7 @@
+name = eType Facebook Autopost
+description = Facbook Autopost module for eType Services.
+
+package = eType Services Custom Modules
+core = 7.x
+project = "etype_fb_autopost"
+dependencies[] = etype

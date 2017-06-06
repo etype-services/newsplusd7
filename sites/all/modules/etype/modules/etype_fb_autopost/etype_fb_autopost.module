@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function etype_fb_autopost_menu() {
+
+  $items = [];
+
+  $items['admin/config/etype/etype_fb_autopost/settings'] = [
+    'title' => 'eType Facebook autopost',
+    'description' => 'Set up Facebook Autopost.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['etype_fb_autopost_admin'],
+    'file' => 'etype_fb_autopost.admin.inc',
+    'access arguments' => ['administer site configuration'],
+    'type' => MENU_NORMAL_ITEM,
+  ];
+
+  return $items;
+}
+
+/**
+ * Load js and css files for facebook login
+ */
+function etype_fb_autopost_init() {
+  // add facebook connect script to etype module admin settings page
+  if ((arg(0) == 'admin') && (arg(3) == 'etype_fb_autopost') && (arg(4) == 'settings')) {
+    drupal_add_css(drupal_get_path('module', 'etype_fb_autopost') . '/css/etype_fb_autopost.css');
+    $fb_app_id = variable_get('etype_facebook_app_id');
+    $fb_page_id = variable_get('etype_facebook_page_id');
+    if (! empty($fb_app_id)) {
+      $fb_js = <<<END
+(function ($) { 
+  $(document).ready(function() {
+    etype_app_id = '$fb_app_id';
+    etype_page_id = '$fb_page_id';
+  }) 
+})(jQuery);
+END;
+      drupal_add_js($fb_js, [
+        'type' => 'inline',
+        'scope' => 'footer',
+        'weight' => 1,
+      ]);
+      drupal_add_js(drupal_get_path('module', 'etype_fb_autopost') . '/js/etype_fb_autopost.js', [
+        'scope' => 'footer',
+      ]);
+    }
+  }
+}
+
+function etype_fb_autopost_form_mt_post_node_form_alter(&$form, $form_state, $form_id) {
+  $fb_app_id = variable_get('etype_facebook_app_id');
+  $fb_page_id = variable_get('etype_facebook_page_id');
+
+  if ((!empty($fb_app_id)) && (!empty($fb_page_id))) {
+    $form['options']['fb_autopost'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Autopost to Facebook'),
+    );
+
+    drupal_add_js(drupal_get_path('module', 'etype_fb_autopost') . '/js/etype_fb_autopost.node.js', [
+      'scope' => 'footer',
+    ]);
+  }
+
+  return $form;
+
+}

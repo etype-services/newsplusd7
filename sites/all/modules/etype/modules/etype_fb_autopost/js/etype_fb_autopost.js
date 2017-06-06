@@ -1,7 +1,7 @@
 (function ($) {
     $(document).ready(function() {
 
-        obj = $('#etype_fb_login');
+        var obj = $('#etype_fb_login');
 
         function updateStatusCallback(response) {
             //console.log(response);

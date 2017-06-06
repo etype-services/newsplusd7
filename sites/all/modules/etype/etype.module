@@ -10,36 +10,6 @@ include_once 'etype.blocks.inc';
  */
 
 /**
- *
- */
-function etype_init() {
-  // add facebook connect script to etype module admin settings page
-  if ((arg(0) == 'admin') && (arg(2) == 'etype') && (arg(3) == 'settings')) {
-    drupal_add_css(drupal_get_path('module', 'etype') . '/css/etype.admin.css');
-    $fb_app_id = variable_get('etype_facebook_app_id');
-    $fb_page_id = variable_get('etype_facebook_page_id');
-    if (! empty($fb_app_id)) {
-      $fb_js = <<<END
-(function ($) { 
-  $(document).ready(function() {
-    etype_app_id = '$fb_app_id';
-    etype_page_id = '$fb_page_id';
-  }) 
-})(jQuery);
-END;
-      drupal_add_js($fb_js, [
-        'type' => 'inline',
-        'scope' => 'footer',
-        'weight' => 1,
-      ]);
-      drupal_add_js(drupal_get_path('module', 'etype') . '/js/etype.fb.js', [
-        'scope' => 'footer',
-      ]);
-    }
-  }
-}
-
-/**
  * Implements hook_menu().
  */
 function etype_menu() {
@@ -78,8 +48,8 @@ function etype_menu() {
   ];
 
   $items['admin/config/etype/settings'] = [
-    'title' => 'eType Settings',
-    'description' => 'Set eType integration options here.',
+    'title' => 'eType settings',
+    'description' => 'Set eType custom options.',
     'page callback' => 'drupal_get_form',
     'page arguments' => ['etype_admin'],
     'file' => 'etype.admin.inc',
