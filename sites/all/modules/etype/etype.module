@@ -49,7 +49,7 @@ function etype_menu() {
 
   $items['admin/config/etype/settings'] = [
     'title' => 'eType settings',
-    'description' => 'Set eType custom options.',
+    'description' => 'Set eType custom options, including social media links.',
     'page callback' => 'drupal_get_form',
     'page arguments' => ['etype_admin'],
     'file' => 'etype.admin.inc',
