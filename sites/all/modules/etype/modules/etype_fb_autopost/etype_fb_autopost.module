@@ -50,21 +50,50 @@ END;
   }
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ *
+ * @return mixed
+ *
+ * Add Facebook checkbox and functionality to add post form
+ */
 function etype_fb_autopost_form_mt_post_node_form_alter(&$form, $form_state, $form_id) {
   $fb_app_id = variable_get('etype_facebook_app_id');
   $fb_page_id = variable_get('etype_facebook_page_id');
 
   if ((!empty($fb_app_id)) && (!empty($fb_page_id))) {
+
     $form['options']['fb_autopost'] = array(
       '#type' => 'checkbox',
       '#title' => t('Autopost to Facebook'),
     );
 
+    $fb_js = <<<END
+(function ($) { 
+  $(document).ready(function() {
+    etype_app_id = '$fb_app_id';
+    etype_page_id = '$fb_page_id';
+  }) 
+})(jQuery);
+END;
+    drupal_add_js($fb_js, [
+      'type' => 'inline',
+      'scope' => 'footer',
+      'weight' => 1,
+    ]);
     drupal_add_js(drupal_get_path('module', 'etype_fb_autopost') . '/js/etype_fb_autopost.node.js', [
       'scope' => 'footer',
     ]);
+
+    $form['actions']['submit']['#submit'][] = '_etype_fb_autopost_callback';
   }
 
   return $form;
 
+}
+
+function _etype_fb_autopost_callback() {
+  // record fb autopost
 }
