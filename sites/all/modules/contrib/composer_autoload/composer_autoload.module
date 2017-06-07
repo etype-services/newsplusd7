@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * @file
+ * Provides primary Drupal hook implementations.
+ *
+ * @author Jimmy Berry ("boombatower", http://drupal.org/user/214218)
+ */
+
+/**
+ * Implements hook_init().
+ */
+function composer_autoload_init() {
+  // Retrieve all the autoload.php paths.
+  $loaders = composer_autoload_get_autoload_paths();
+
+  // Include each autoload.php file.
+  foreach ($loaders as $loader) {
+    include_once $loader;
+  }
+}
+
+/**
+ * Returns the cached list of autoload.php files.
+ *
+ * @return array An array of strings pointing to found autoload.php files.
+ */
+function composer_autoload_get_autoload_paths() {
+  // Statically cache the loaders list.
+  $loaders = &drupal_static('composer_autoload');
+  if (!isset($loaders)) {
+    // Retrieve the loaders list from the cache.
+    if ($cache = cache_get('composer_autoload')) {
+      $loaders = $cache->data;
+    }
+    else {
+      // The cache is not available, so rebuild it.
+      $loaders = composer_autoload_cache_rebuild();
+      cache_set('composer_autoload', $loaders);
+    }
+  }
+
+  return $loaders;
+}
+
+/**
+ * Rebuild composer autoload.php file list cache.
+ *
+ * @return
+ *   An array of autoload.php file paths relative to DRUPAL_ROOT.
+ */
+function composer_autoload_cache_rebuild() {
+  $loaders = array();
+
+  // Cycle through each of the enabled modules and check for autoload.php.
+  $modules = module_list();
+  foreach ($modules as $module) {
+    $path = drupal_get_path('module', $module);
+    if ($files = file_scan_directory($path, '/^autoload\.php$/')) {
+      $loaders = array_merge($loaders, array_keys($files));
+    }
+  }
+
+  // Add the custom Composer autoload.php path.
+  $custom = variable_get('composer_autoload_path', 'sites/all/vendor/autoload.php');
+  if (!empty($custom) && is_file($custom)) {
+    $loaders[] = $custom;
+  }
+
+  // Allow other modules to modify the autoload.php array.
+  drupal_alter('composer_autoload_loaders', $loaders);
+
+  return $loaders;
+}
+
+/**
+ * Implements hook_composer_autoload_menu().
+ */
+function composer_autoload_menu() {
+  $items['admin/config/development/composer_autoload'] = array(
+    'title' => 'Composer Autoload',
+    'description' => 'Configuration settings for Composer Autoload',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('composer_autoload_admin'),
+    'access arguments' => array('administer composer_autoload settings'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'composer_autoload.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_help().
+ */
+function composer_autoload_help($path) {
+  switch ($path) {
+    case 'admin/help#composer_autoload':
+      return '<p>' . t('The Composer Autoload module will automatically load any found autoload.php files in your module directories. In the <a href="@composer_autoload">Composer Autoload administration page</a>, you can also specify your own customized autoload.php path.', array(
+          '@composer_autoload' => url('admin/config/development/composer_autoload'),
+        )) . '</p>';
+
+    case 'admin/config/development/composer_autoload':
+      $output = '<p>' . t('The Composer Autoload module will load any found autoload.php files in your module directories.') . '</p>';
+      $output .= theme('item_list', array(
+        'title' => t('Found Composer Autoload Files'),
+        'items' => composer_autoload_get_autoload_paths(),
+      ));
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function composer_autoload_permission() {
+  return array(
+    'administer composer_autoload settings' => array(
+      'title' => t('Administer Composer Autoload'),
+      'description' => t('Configure a custom location to a Composer-built autoload.php file.'),
+      'restrict access' => TRUE,
+    ),
+  );
+}
