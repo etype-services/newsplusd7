@@ -100,7 +100,7 @@ function _etype_fb_autopost_callback() {
   $fb = new Facebook\Facebook([
     'app_id' => $fb_app_id,
     'app_secret' => 'd923410afb7a8dc10832f166811309b7',
-    'default_graph_version' => 'v2.2',
+    'default_graph_version' => 'v2.9',
   ]);
 
   $helper = $fb->getCanvasHelper();
