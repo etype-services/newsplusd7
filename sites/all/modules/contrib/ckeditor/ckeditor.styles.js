@@ -60,7 +60,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
 
             { name : 'Cited Work'		, element : 'cite' },
             { name : 'Inline Quotation'	, element : 'q' },
-            { name : 'Pulled Quote'	    , element : 'blockquote' },
 
             { name : 'Language: RTL'	, element : 'span', attributes : { 'dir' : 'rtl' } },
             { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },

@@ -55,3 +55,4 @@
  */
 
 $sites['infinitieplus.etypegoogle10.com'] = 'infinitieplus.etypegoogle10.com';
+$sites['demo.etypegoogle10.com'] = 'demo.etypegoogle10.com';
