@@ -4,7 +4,10 @@
   justify-content: center;
 }
 
-.region-top-content .block-simpleads,
-.region-sidebar-second .block-simpleads {
+.region-top-content .block-simpleads {
+  padding: 0;
+}
+
+.sidebar .block.block-simpleads {
   padding: 0;
 }
