@@ -108,13 +108,3 @@ function etype_e_editions() {
   }
   return $e_editions;
 }
-
-/**
- * Override or insert variables into the html template.
- */
-function etype_preprocess_html(&$variables) {
-  /**
-   * Add local.css file for CSS overrides.
-   */
-  drupal_add_css(drupal_get_path('module', 'etype') . 'css/ads.css', array('group' => CSS_THEME, 'type' => 'file'));
-}
