@@ -26,13 +26,6 @@ function etype_menu() {
     'type' => MENU_NORMAL_ITEM,
   ];
 
-  $items['etype-classified-import'] = [
-    'title' => t('Import Classified Ads'),
-    'page callback' => 'etype_classified_ad_importer',
-    'type' => MENU_CALLBACK,
-    'access arguments' => ['access administration pages'],
-  ];
-
   /* admin settings page */
   $items['admin/config/etype'] = [
     'title' => 'eType',
@@ -66,246 +59,6 @@ function etype_menu() {
 function _etype_e_edition() {
   $e_editions = etype_e_editions();
   drupal_goto($e_editions[0]['path']);
-}
-
-/**
- * Function to get path to site folder
- *
- * @return string
- */
-function etype_site_path() {
-  return $_SERVER['DOCUMENT_ROOT'] . base_path() . conf_path();
-}
-
-/**
- * Cron Jobs
- *
- * @param $op
- * @param null $job
- *
- * @return mixed
- */
-function etype_cronapi($op, $job = NULL) {
-  $cron_schedule = ''; // set in include file, just to avoid IDE errors
-  $etype_site_path = etype_site_path();
-  $settings_file = $etype_site_path . '/etype_settings.php';
-  if (file_exists($settings_file)) {
-    include($etype_site_path . '/etype_settings.php');
-    if (!empty($cron_schedule)) {
-      /* Classified importer */
-      $items['etype_classified_cron'] = [
-        'description' => 'Import Classified Ads',
-        'rule' => $cron_schedule,
-        'callback' => 'etype_classified_ad_importer',
-      ];
-      return $items;
-    }
-  }
-}
-
-
-/**
- * Clean up node table
- */
-function etype_node_cleanup() {
-  $res = db_query('SELECT n.nid FROM node n LEFT JOIN node_revision nr ON nr.nid = n.nid WHERE nr.vid IS NULL');
-  if (count($res) > 0) {
-    $nids = [];
-    foreach ($res as $record) {
-      // Do something with each $record
-      $nids[] = $record->nid;
-    }
-    node_delete_multiple($nids);
-  }
-}
-
-/**
- * @param $vid
- *
- * @return int
- * Map xml classified categories to Drupal taxonomy items
- */
-function etype_classfied_mapping($vid) {
-
-  $categories = []; // set in include file, just to avoid IDE errors
-  $etype_site_path = etype_site_path();
-  include($etype_site_path . '/etype_settings.php');
-  $ad_cat = 0;
-  if (!isset($vid)) {
-    drupal_set_message(t("No category id for item"), 'error');
-  }
-  else {
-    foreach ($categories as $k => $v) {
-      if ($vid == $k) {
-        $ad_cat = $v;
-        continue;
-      }
-    }
-    if ($ad_cat == 0) {
-      drupal_set_message(t("$vid not matched"), 'error');
-    }
-  }
-  return $ad_cat;
-}
-
-/**
- * Create Entity
- *
- * @param array $item
- * @param array $values
- * @param string $entity_type
- */
-function etype_entity_create($item = [], $values = [], $entity_type = 'node') {
-
-  $entity = entity_create($entity_type, $values);
-  $ewrapper = entity_metadata_wrapper($entity_type, $entity);
-  if (count($item) > 0) {
-    foreach ($item as $k => $v) {
-      switch ($k) {
-
-        case 'body':
-          $ewrapper->body->set(['value' => $v]);
-          break;
-
-        case 'category':
-          $v = intval($v);
-          $ewrapper->classified_category->set($v);
-          break;
-
-        default:
-          $ewrapper->$k->set($v);
-      }
-    }
-    $ewrapper->save(TRUE);
-  }
-}
-
-/**
- * feeds cron job
- */
-function etype_classified_ad_importer() {
-
-  global $user;
-  $url = ''; // set in include file, just to avoid IDE errors
-  $etype_site_path = etype_site_path();
-  $settings_file = $etype_site_path . '/etype_settings.php';
-
-  if (file_exists($settings_file)) {
-
-    include($etype_site_path . '/etype_settings.php');
-
-    if (!empty($url)) {
-
-      $values = [
-        'type' => 'classified',
-        'uid' => $user->uid,
-        'status' => 1,
-        'comment' => 0,
-        'promote' => 0,
-        'language' => LANGUAGE_NONE,
-      ];
-
-      $xml = file_get_contents($url);
-      if ($xml !== FALSE) {
-
-        $ad_obj = simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA);
-        $i = 0;
-        if (count($ad_obj) > 0) {
-
-          /* delete all current ads */
-          $query = new EntityFieldQuery();
-          $query->entityCondition('entity_type', 'node')
-            ->entityCondition('bundle', 'classified');
-          $result = $query->execute();
-          // dpq($query);
-          if (count($result) > 0) {
-            $nids = array_keys($result['node']);
-            $i = count($nids);
-            node_delete_multiple($nids);
-            watchdog('etype', "EType Classified Importer deleted %num Classified Ads", $variables = ['%num' => $i], $severity = WATCHDOG_NOTICE);
-            // drupal_set_message(t("EType Classified Importer deleted $i expired nodes"), 'status');
-          }
-          else {
-            watchdog('etype', "EType Classified Importer found no Classified Ads to delete", $variables = [], $severity = WATCHDOG_NOTICE);
-          }
-
-          $i = 0;
-          /* loop over xml and add new Classified Ads */
-          foreach ($ad_obj as $ad) {
-
-            // xml object processing to make array
-            $array = [];
-            foreach ($ad as $k => $v) {
-              $v = (array) $v;
-              isset($v[0]) ? $array[$k] = $v[0] : $array[$k] = '';
-            }
-
-            /* check for valid matched category, otherwise there will be an error in node creation */
-            $category = etype_classfied_mapping($array['categoryId']);
-            if ($category > 0) {
-              $node = [
-                'title' => $array['ItemTitle'],
-                'body' => $array['ItemDesc'],
-                'category' => etype_classfied_mapping($array['categoryId']),
-              ];
-              // print_r($node);
-              $values['created'] = strtotime($array['startDate']);
-              etype_entity_create($node, $values);
-              $i++;
-            }
-          }
-        }
-        watchdog('etype', "EType Classified Importer added %num Classified Ads", $variables = ['%num' => $i], $severity = WATCHDOG_NOTICE);
-        // drupal_set_message(t("EType Classified Importer added $i nodes"), 'status');
-      }
-      else {
-        watchdog('etype', "EType Classified Importer found no xml at %url", $variables = ['%url' => $url], $severity = WATCHDOG_NOTICE);
-      }
-
-    }
-
-  }
-}
-
-function etype_clear_cache() {
-  drupal_flush_all_caches();
-  watchdog('etype', "Cache cleared", $variables = [], $severity = WATCHDOG_NOTICE);
-}
-
-/**
- * @param $form
- * @param $form_state
- * @param $form_id
- * For Nassau
- * TODO; show only on Nassau
- */
-function etype_form_contact_site_form_alter(&$form, &$form_state, $form_id) {
-  $form['phone'] = [
-    '#title' => t('Phone number'),
-    '#type' => 'textfield',
-    '#required' => TRUE,
-  ];
-}
-
-/**
- * @param $node
- * @param $teaser
- *
- * @return bool
- * override premium level for Shoutem feeds
- */
-function etype_premium_access(&$node) {
-  $permitido = [
-    '/news-mobile.xml',
-    '/sports-mobile.xml',
-    '/lifestyle-mobile.xml',
-    '/obits-mobile.xml',
-    '/commentary-mobile.xml',
-  ];
-  $solicitud = request_uri();
-  if (in_array($solicitud, $permitido)) {
-    return TRUE;
-  }
 }
 
 /**
@@ -354,4 +107,14 @@ function etype_e_editions() {
     $ptr++;
   }
   return $e_editions;
+}
+
+/**
+ * Override or insert variables into the html template.
+ */
+function etype_preprocess_html(&$variables) {
+  /**
+   * Add local.css file for CSS overrides.
+   */
+  drupal_add_css(drupal_get_path('module', 'etype') . 'css/ads.css', array('group' => CSS_THEME, 'type' => 'file'));
 }
