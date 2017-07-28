@@ -4,6 +4,7 @@
   justify-content: center;
 }
 
-.region-top-content .block-simpleads {
+.region-top-content .block-simpleads,
+.region-sidebar-second .block-simpleads {
   padding: 0;
 }
