@@ -40,13 +40,14 @@ blockquote {
   margin: 40px 0 40px;
   overflow: visible;
 }
+
+/*
+Adjustments for ads
+ */
 /* slideshow */
 .front #banner #slideshow {
   margin-top: 0;
 }
-/*
-Next two to make room for ads
- */
 /* weather widget */
 #block-block-13 {
   padding: 0;
