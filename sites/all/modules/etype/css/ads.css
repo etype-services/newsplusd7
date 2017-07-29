@@ -8,10 +8,12 @@
   padding: 0;
 }
 
+/* ad divs have padding between them */
 .sidebar .block.block-simpleads .simplead-container {
-  padding-bottom: 0;
+  padding-bottom: 40px;
 }
 
+/* last one with no padding */
 .sidebar .block.block-simpleads .adslist > div > div:last-child {
-  padding-bottom: 40px;
+  padding-bottom: 0;
 }
