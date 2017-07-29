@@ -48,11 +48,3 @@ Adjustments for ads
 .front #banner #slideshow {
   margin-top: 0;
 }
-/* weather widget */
-#block-block-13 {
-  padding: 0;
-}
-/* sidebar tabs */
-#block-quicktabs-sidebar-tabs {
-  padding: 40px 0;
-}
