@@ -14,6 +14,6 @@
 }
 
 /* last one with no padding */
-.sidebar .block.block-simpleads .adslist > div > div:last-child {
+.sidebar .block.block-simpleads .adslist > div > div > div:last-child {
   padding-bottom: 0;
 }
