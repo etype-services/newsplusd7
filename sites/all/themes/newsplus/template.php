@@ -772,6 +772,7 @@ function newsplus_preprocess_page(&$variables) {
   $three_columns_grid_layout = theme_get_setting('three_columns_grid_layout', 'newsplus');
   $sidebar_first = $variables['page']['sidebar_first'];
   $sidebar_second = $variables['page']['sidebar_second'];
+  $footer_ad = $variables['page']['footer_ad'];
   $footer_first = $variables['page']['footer_first'];
   $footer_second = $variables['page']['footer_second'];
   $footer_third = $variables['page']['footer_third'];
@@ -926,6 +927,8 @@ function newsplus_preprocess_page(&$variables) {
   } else { 
     $variables['footer_grid_class'] = 'col-sm-12';
   }
+
+  $variables['footer_ad_class'] = 'col-md-12';
 
 }
 

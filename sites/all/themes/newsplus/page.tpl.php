@@ -351,6 +351,12 @@
 <footer id="footer" class="clearfix">
     <div class="container">
 
+      <?php if ($page['footer_ad']):?>
+          <div class="<?php print $footer_ad_class; ?>">
+                <?php print render($page['footer_ad']); ?>
+          </div>
+      <?php endif; ?>
+
         <div class="row">
             <?php if ($page['footer_first']):?>
             <div class="<?php print $footer_grid_class; ?>">

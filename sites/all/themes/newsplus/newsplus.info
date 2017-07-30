@@ -24,6 +24,7 @@ regions[promoted] = Promoted Area
 regions[content] = Content
 regions[sidebar_first] = First Sidebar
 regions[sidebar_second] = Second Sidebar
+regions[footer_ad] = Footer Ad
 regions[footer_first] = Footer First
 regions[footer_second] = Footer Second
 regions[footer_third] = Footer Third
