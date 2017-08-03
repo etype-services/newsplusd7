@@ -11,9 +11,16 @@ function newsplus_breadcrumb($variables) {
   $breadcrumb_separator = theme_get_setting('breadcrumb_separator','newsplus'); 
   
   if (!empty($breadcrumb)) {
-  $breadcrumb[] = drupal_get_title();
-  $breadcrumb = array_unique($breadcrumb);
-  return '<div>' . implode(' <span class="breadcrumb-separator">' . $breadcrumb_separator . '</span>', $breadcrumb) . '</div>';
+    $title = drupal_get_title();
+    foreach ($breadcrumb as $item) {
+      if (strip_tags($item) == $title) {
+        unset ($title();
+      }
+    }
+    if (isset($title)) {
+      $breadcrumb[] = $title;
+    }
+    return '<div>' . implode(' <span class="breadcrumb-separator">' . $breadcrumb_separator . '</span>', $breadcrumb) . '</div>';
   }
   
 }
