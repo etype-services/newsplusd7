@@ -12,8 +12,20 @@ function newsplus_breadcrumb($variables) {
 
   if (!empty($breadcrumb)) {
     $path = drupal_get_path_alias();
-    echo $path;
-    $breadcrumb[] = drupal_get_title();
+    switch ($path) {
+      case 'calendar':
+      case 'calendar/month':
+        $breadcrumb[] = '<a href="/calendar/month">Month</a>';
+        break;
+      case 'calendar/day';
+      case 'calendar/week';
+      case 'calendar/year';
+        // nada
+        break;
+      default:
+      $breadcrumb[] = drupal_get_title();
+
+    }
     return '<div>' . implode(' <span class="breadcrumb-separator">' . $breadcrumb_separator . '</span>', $breadcrumb) . '</div>';
   }
   
