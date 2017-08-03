@@ -10,10 +10,9 @@ function newsplus_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   $breadcrumb_separator = theme_get_setting('breadcrumb_separator','newsplus');
 
-  $path = drupal_get_path_alias();
-  echo $path;
-
   if (!empty($breadcrumb)) {
+    $path = drupal_get_path_alias();
+    echo $path;
     $breadcrumb[] = drupal_get_title();
     return '<div>' . implode(' <span class="breadcrumb-separator">' . $breadcrumb_separator . '</span>', $breadcrumb) . '</div>';
   }
