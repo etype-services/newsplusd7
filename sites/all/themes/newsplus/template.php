@@ -2,11 +2,8 @@
 
 /**
  * Return a themed breadcrumb trail.
- *
- * @param $breadcrumb
- *   An array containing the breadcrumb links.
- * @return
- *   A string containing the breadcrumb output.
+ * @param $variables
+ * @return string
  */
 function newsplus_breadcrumb($variables) {
 
@@ -15,6 +12,7 @@ function newsplus_breadcrumb($variables) {
   
   if (!empty($breadcrumb)) {
   $breadcrumb[] = drupal_get_title();
+  $breadcrumb = array_unique($breadcrumb);
   return '<div>' . implode(' <span class="breadcrumb-separator">' . $breadcrumb_separator . '</span>', $breadcrumb) . '</div>';
   }
   
