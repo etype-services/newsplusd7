@@ -60,6 +60,9 @@ Adjustments for ads
   }
 }
 /* fix calendar */
+.page-calendar-created h1.title {
+  display: none;
+}
 .view .date-nav-wrapper .date-prev {
   right: 76px;
 }
