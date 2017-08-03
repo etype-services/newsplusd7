@@ -6,7 +6,9 @@
 /* Uncomment this line to adjust the font-size & paddings of site name into fixed navigation header*/
 /*.fixed-header-enabled #navigation-site-name { font-size: 18px; padding: 13px 0px 8px; }*/
 
-.profile dd, .profile dt { display: none; }
+.profile dd, .profile dt {
+  display: none;
+}
 /* change space above logo */
 #header-top {
   padding-top: 32px;
@@ -50,4 +52,10 @@ Adjustments for ads
 }
 #footer {
   padding-top: 40px;
+}
+
+@media (max-width: 767px) {
+  #block-views-videos-block .views-field-field-image {
+    border: none;
+  }
 }
