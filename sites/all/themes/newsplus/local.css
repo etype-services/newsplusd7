@@ -53,7 +53,7 @@ Adjustments for ads
 #footer {
   padding-top: 40px;
 }
-
+/* video thumbe do not expland on smaller screens */
 @media (max-width: 767px) {
   #block-views-videos-block .views-field-field-image {
     border: none;
