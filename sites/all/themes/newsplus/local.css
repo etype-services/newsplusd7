@@ -59,3 +59,7 @@ Adjustments for ads
     border: none;
   }
 }
+/* fix calendar */
+.view .date-nav-wrapper .date-prev {
+  right: 76px;
+}
