@@ -14,7 +14,7 @@ function newsplus_breadcrumb($variables) {
     $title = drupal_get_title();
     foreach ($breadcrumb as $item) {
       if (strip_tags($item) == $title) {
-        unset ($title();
+        unset ($title);
       }
     }
     if (isset($title)) {
