@@ -69,3 +69,7 @@ Adjustments for ads
 .view .date-nav-wrapper .date-heading {
   text-align: left;
 }
+/* upcoming events */
+#block-views-calendar-block-2 .views-row div {
+  display: inline-block;
+}
