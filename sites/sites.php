@@ -54,6 +54,7 @@
  * @see http://drupal.org/documentation/install/multi-site
  */
 
+$sites['etypegoogle10.com'] = 'demo.etypegoogle10.com';
 $sites['demo.etypegoogle10.com'] = 'demo.etypegoogle10.com';
 
 $sites['infinitieplus.etypegoogle10.com'] = 'infinitieplus.etypegoogle10.com';
