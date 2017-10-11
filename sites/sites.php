@@ -54,15 +54,13 @@
  * @see http://drupal.org/documentation/install/multi-site
  */
 
-$sites['etypegoogle10.com'] = 'demo.etypegoogle10.com';
+$sites['www.etypegoogle10.com'] = 'demo.etypegoogle10.com';
 $sites['demo.etypegoogle10.com'] = 'demo.etypegoogle10.com';
 
 /* freemansd.etypegoogle10.com */
 $sites['freemansd.etypegoogle10.com'] = 'freemansd.etypegoogle10.com';
-$sites['freemansd.com'] = 'freemansd.etypegoogle10.com';
 $sites['www.freemansd.com'] = 'freemansd.etypegoogle10.com';
 
 /* gunnisontimes.etypegoogle10.com */
 $sites['gunnisontimes.etypegoogle10.com'] = 'gunnisontimes.etypegoogle10.com';
-$sites['gunnisontimes.com'] = 'gunnisontimes.etypegoogle10.com';
 $sites['www.gunnisontimes.com'] = 'gunnisontimes.etypegoogle10.com';
