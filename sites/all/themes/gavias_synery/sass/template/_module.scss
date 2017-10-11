@@ -1,0 +1,45 @@
+.poll{
+	.title{
+		margin-bottom: 15px;
+		font-weight: 400!important;
+		font-size: 15px;
+		color: $black;
+	}
+	.text{
+		font-weight: 400;
+		color: #333333;
+	}
+	.bar .foreground{
+		background: $theme-color;
+	}
+}
+
+.block-poll{
+	ul.links{
+		text-align: center;
+		overflow: hidden;
+		padding: 15px 0 0;
+		li{
+			display: inline-block;
+			margin-right: 20px;
+			a{
+				padding-right: 10px;
+				position: relative;
+				@include transition(all 0.35s);
+				&:after{
+					content: "\f105";
+					position: absolute;
+					top: -1px;
+					right: 0;
+					font-family: "FontAwesome";
+				}
+				&:hover{
+					padding-right: 15px;
+				}
+			}
+			&:last-child{
+				margin: 0;
+			}
+		}
+	}
+}

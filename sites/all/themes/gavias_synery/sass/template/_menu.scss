@@ -1,0 +1,127 @@
+.tb-megamenu {
+	background: none;  
+	.dropdown-menu {
+		@include rtl-text-align-left();
+		a{
+			padding: 0;
+			font-weight: 300!important;
+			&:hover{
+				color: $theme-color!important;
+			}
+		}
+	}
+	.block{
+		
+	}   
+   .nav-collapse ul.nav{
+   	> li {
+   		border-left: 1px solid $border-color;
+   		&:last-child{
+   			border-right: 1px solid $border-color;
+   		}
+   		> a{
+   			color: $black!important;
+   		}
+   		&.open{
+   			> a{
+   				color: $theme-color!important;
+   			}
+   		}
+			> a {
+				text-transform: uppercase;
+				border-right: none;
+				color: $white;
+				font-weight: 700;
+				font-size: 14px;
+				padding: 15px 20px;
+				border: none;
+				background: none!important;
+				border-left: 1px solid rgba(255, 255, 255, 0.1);
+				&:focus, &:hover {
+					color: $theme-color;
+				}
+			}
+			&.active > a{
+				color: $theme-color!important;
+				border-left: 1px solid rgba(255, 255, 255, 0.1)!important;
+			}
+			&.dropdown.open {
+				.active  {
+					> a {
+						color: $theme-color!important;
+						&:focus, &:hover {
+							
+						}
+					}
+				}
+			}
+			&.dropdown {
+				.caret {
+					margin-top: 10px!important;
+				}
+			}
+			.dropdown-menu{
+				padding: 10px;
+				background: $white;
+				border: none;
+				border-bottom: 2px solid $theme-color;
+				.tb-megamenu-subnav{
+					> li > a{
+						border:none;
+						padding: 5px 0;
+						&:hover, &:focus, &:active{
+							background: none;
+							color: $theme-color;
+						}
+					}
+				}
+				
+				ul.menu > li {
+					padding: 5px 0;
+					> a{
+						padding: 5px 5px 5px 15px;
+					}
+				}
+			}	
+		}
+	}
+	.tb-megamenu-subnav{
+		a{
+			background: none!important;
+		}
+	}
+}		
+
+@media(max-width: $screen-sm-max){
+	.tb-megamenu {
+		> .nav-collapse{
+			margin-top: 20px;
+			@include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+			> ul.nav > li {
+				border: none!important;
+				> a{
+					color: $white!important;
+					&:hover{
+						color: $theme-color!important;
+					}
+				}	
+			}
+		}
+		.tb-megamenu-button{
+			margin: 5px 0 5px 5px;
+		}
+		.nav-collapse .dropdown-menu a{
+			border: none;
+			padding: 0;
+		}
+		.dropdown-menu{
+			color: #333!important;
+			a{
+				color: #333!important;;
+			}
+		}
+		.tb-megamenu-nav{
+			background: $theme-color-second!important;
+		}
+	}
+}

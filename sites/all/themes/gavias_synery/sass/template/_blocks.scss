@@ -1,0 +1,292 @@
+// Block Layout styles
+//----------------------------
+.block {
+  background: $nocolor;
+  margin-bottom: 30px;
+  .block-title {
+    background: none;
+    h1, h2, h3, h4{
+      margin: 0;
+    }
+    h2{
+      border-bottom: 1px solid $border-color;
+      padding: 0 0 8px;
+      margin-bottom: 20px;
+    }
+    span{
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color : $black;
+    }
+  }
+  .block-content{
+    //padding: 10px;
+  }
+  &.block-none, &.no-padding{
+    background: none!important;
+    padding: 0!important;
+    .block-content{
+      padding: 0!important;
+    }
+  }
+  &.no-title{
+    margin-top: 0;
+  }
+  &.style-higlight{
+    background: #34495E;
+    .block-title {
+      h2{
+        margin: 0;
+        padding: 0;
+        border: none;
+        span{
+          padding: 10px;
+          background: #4E6984;
+          color: $white;
+        }
+      }
+    }
+    .post-title a{
+      color: $white; 
+    }
+    .more-link a{
+      color: $white;
+      padding: 0 15px 15px;
+      display: block;
+      &:hover{
+        color: $theme-color;
+      }
+    }
+  }
+  &#block-system-main{
+    padding-top: 20px;
+  }
+  &.no-title{
+    border: none;
+    .block-title {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &.black-color{
+    .block-title h2{
+      border-color: #444444;
+      span{
+        color: #444444;
+      }
+    }
+  } 
+  &.blue-color{
+    .block-title h2{
+      border-color: #4089ea;
+      span{
+        color: #4089ea;
+      }
+    }
+  } 
+  &.red-color{
+    .block-title h2{
+      border-color: #e84c3d;
+      span{
+        color: #e84c3d;
+      }  
+    }
+  }
+  &.green-color{
+    .block-title h2{
+      border-color: #2fcc71;
+      span{
+        color: #2fcc71;
+      }
+    }  
+  }
+  &.navi-color{
+    .block-title h2{
+      border-color: #2a80b9;
+      span{
+        color: #2a80b9;
+      }
+    }
+  }
+  &.yellow-color{
+    .block-title h2{
+      border-color: #f1c40f;
+      span{
+        color: #f1c40f;
+      }
+    }
+  }
+    &.brown-color{
+    .block-title h2{
+      border-color: #4e6984;
+      span{
+        color: #4e6984;
+      }
+    }
+  }
+  &.oranger-color{
+    .block-title h2{
+      border-color: #EB866A;
+      span{
+        color: #EB866A;
+      }
+    }
+  }
+}
+
+.sidebar{
+  .block{
+    background: $white;
+    margin-bottom: 30px;
+    .block-title{
+      padding: 0 20px;
+      margin: 0;
+      border: none;
+      h2{
+        border-bottom: 1px solid $border-color;
+      }
+      span{
+        padding: 0;
+      }
+    }
+    .block-content{
+      padding: 0 20px;
+    }
+    .post-block{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.region-main-menu{
+  .block{
+    background: $nocolor;
+    .block-content{
+      padding: 0;
+    }
+  }
+}
+
+.footer{
+  .block{
+    
+  }
+}
+
+//--------- Block recent comment ---------------------
+.recent-comment-block{
+  .views-field-picture{
+    @include rtl-margin-right(10px);
+  }
+  .views-field-title{
+    margin-top: -4px;
+    a{
+      font-weight: 700;
+    }
+  }
+  .views-field-name{
+    color: #a4a4a4;
+    a{
+      color: #a4a4a4;
+    }
+  }
+}
+
+//------------ Block newsletter --------------------------
+.newsletter-default{
+  padding: 20px;
+  margin: 0;
+  .block-content{
+    padding: 0 15%;
+    @media(max-width: $screen-sm-max){
+      padding: 0;
+    }
+    > div{
+      > p{
+        width: 35%;
+        float: left;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 36px;
+        color: $black;
+
+        @media(max-width: $screen-xs-max){
+          width: 100%;
+          float: none;
+        }
+      }
+      > form{
+        width: 65%;
+        float: left;
+        @media(max-width: $screen-xs-max){
+          width: 100%;
+          float: none;
+        }
+      }
+    }
+    form{
+      padding-right: 30px;
+      label[for*="edit-mail"]{
+        display: none;
+      }
+      .form-item {
+        padding: 0;
+        margin: 0;
+        width: 70%;
+        float: left;
+        input[type*="text"]{
+          background: $white;
+          border: 1px solid $border-color;
+          width: 100%;
+        }
+      }
+    }
+    #edit-submit{
+      width: 30%;
+      float: left;
+    }
+  }  
+}
+
+ul.widget-twitter{
+  > li{
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $border-color;
+    .avata{
+      margin-right: 10px;
+     text-align: center;
+    }
+  }
+}
+
+.list-tags{
+  .view-list{
+    ul > li{
+      float: left;
+      border: 1px solid $border-color;
+      display: inline-block;
+      width: auto!important;
+      padding: 0!important;
+      margin: 0 10px 10px 0!important;
+      a{
+        padding: 6px 10px;
+        display: block;
+        @include transition(all 0.35s);
+      }
+      &:hover{
+        background: $theme-color;
+        a{
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.contact-info{
+  line-height: 28px;
+}

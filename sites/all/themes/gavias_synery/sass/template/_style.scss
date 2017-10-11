@@ -1,0 +1,238 @@
+.margin-top-10{
+  margin-top: 10px;
+}
+.float-left{
+  float: left;
+}
+.no-margin{
+  margin: 0!important;
+}
+.no-bg{
+  background-color: $nocolor!important;
+}
+.col-no-padding{
+  div[class*="col-"]{
+    padding: 0!important;
+  }
+}
+//Social
+.connect {
+  ul {
+    margin-bottom: 0;
+      li {
+        text-align: center;
+        padding-right: 0;
+        width: 16.5%;
+        height: 52px;
+        padding-top: 12px;
+        margin-right: -4px;
+        &:hover{
+         
+        }
+        &.social-facebook{
+            &:hover {
+              background-color: #3a5898;
+            }
+        }
+        &.social-twitter{
+            &:hover {
+              background-color: #00acee;
+            }
+        }
+        &.social-google{
+            &:hover {
+              background-color: #dd6363;
+            }
+        }
+        &.social-youtube{
+            &:hover {
+              background-color: #ce3527;
+            }
+        }
+        &.social-letter{
+            &:hover {
+              background-color: #ccc33b;
+            }
+        }
+        &.social-rss  {
+            width: 51px;
+            &:hover {
+              background-color: #e78e2f;
+            }
+        } 
+          &:first-child{
+            border-left: none;
+          }
+          a {
+            font-size: 20px;
+            color: #686868;
+            padding-left: 6px;
+          }
+      }
+  }
+}
+
+.nav-tabs {
+  border-color: #eee;
+  > li {
+    > a {
+      font-weight: 700;
+      color: #444;
+      padding: 8px 14px;
+      @include border-radius(3px 3px 0 0);
+      border: 1px solid #eee;
+      border-bottom: none;
+      @include box-shadow(0 0 15px rgba(0, 0, 0, 0.04) inset);
+      @include transition(all 0.2s ease-in-out);
+      i {
+        margin-right: 5px;
+      }
+      &:hover, &:focus {
+        color: $theme-color;
+        border-color: #fff;
+        @include box-shadow(0 0 15px rgba(0, 0, 0, 0.1) inset);
+      }
+    }
+    &.active > a {
+      border-color: #eee;
+      border-bottom-color: $theme-color;
+      &:hover, &:focus {
+        border-color: #eee;
+        border-bottom-color: $theme-color;
+      }
+      @include box-shadow(0 0 0px rgba(0, 0, 0, 0.1) inset);
+      &:hover {
+       @include box-shadow(0 0 0px rgba(0, 0, 0, 0.1) inset);
+      }
+    }
+  }
+}
+
+.box-quick-link{
+  ul {
+    padding: 0;
+    margin: 0;
+      > li{
+        @include size(46%, 70px);
+        border: 1px solid $border-color;
+        float: left;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 8%;
+        &:nth-child(2n){
+          margin-left: 4%;
+        }
+        &:nth-child(2n+1){
+          margin-right: 4%;
+        }
+        a{
+          font-weight: 600;
+          font-size: 13px;
+          display: block;
+          line-height: 1.8;
+          padding-top: 12px;
+          i{
+            display: block;
+            font-size: 23px;
+            color: #777777;
+          }
+          &:hover{
+            color: $white;
+            i{
+              color: $white;
+            }
+          }
+        }
+      &:hover{
+        background-color: #555555;
+        *{
+          color: $white;
+        }
+      }  
+    }
+  }
+}
+
+// OWL carousel-------------------------
+.owl-carousel{
+  background: none!important;
+  .owl-controls{
+    margin: 0;
+    .owl-pagination{
+      position: relative;
+      bottom: 10px;
+      z-index: 9;
+      display: inline-block;
+      width: 100%;
+      left: 0;
+      .owl-page {
+        span{
+          background: #d6d6d6;
+          @include size(10px, 10px);
+        }
+        &.active span{
+          background: #869791;
+        }
+      }
+    }
+  }  
+ 
+  .owl-buttons{
+    @include opacity(0);
+    @include transition(opacity 0.35s);
+    > div{
+      @include transition(all 0.35s);
+      position: absolute;
+      top: 50%;
+      margin-top: -22.5px;
+      text-indent: -999999px;
+      @include size(40px, 40px);
+      color: $white;
+      border: 2px solid rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.3);
+      &:hover{
+        background: rgba(0, 0, 0, 0.8);
+        color: $white;
+      }
+      &:before{
+        position: absolute;
+        font-family: 'FontAwesome';
+        text-indent: 1px;
+        top: 0;
+        right: 0;
+        font-size: 25px;
+        @include size(100%, 100%);
+        line-height: 35px;
+        text-align: center;
+      }
+      &.owl-prev{
+        right: 0;
+        margin-right: 0;
+        &:before{
+          content: "\f105";
+        }
+      }
+      &.owl-next{
+        left: 0;
+        margin-left: 0;
+        &:before{
+          content: "\f104";
+        }
+      }
+    }
+  }
+  &:hover .owl-buttons{
+    @include opacity(1);
+    .owl-next{
+      margin-left: 30px;
+    }
+    .owl-prev{
+      margin-right: 30px;
+    }  
+  }
+}
+
+div.error{
+  background-repeat: no-repeat!important;
+  background-image: none!important;
+}

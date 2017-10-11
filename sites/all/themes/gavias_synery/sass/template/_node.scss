@@ -1,0 +1,344 @@
+.node-teaser-display{
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  .post-title{
+    a{
+      font-size: 16px;
+    }
+  }
+  .field-type-taxonomy-term-reference{
+    margin-top: 15px;
+    .field-items > .field-item{
+      border: 1px solid $theme-color;
+      padding: 4px 8px;
+      float: left;
+      margin-right: 10px;
+      &:hover, &:focus, &:active{
+        background: $theme-color;
+        a{
+          color: $white;
+        }  
+      }
+    }
+  }
+}
+
+.post-block{
+   background: $white;
+   .post-image {
+     overflow: hidden;
+      img{
+        width: 100%;
+        @include transition(all 0.4s);
+     }
+     &:hover img{
+     -ms-transform: scale(1.2) rotate(6deg); 
+      -webkit-transform:scale(1.2) rotate(6deg); 
+      transform:scale(1.2) rotate(6deg);
+     }
+    } 
+   .post-title{
+       padding: 10px 0 5px;
+      h2, h3, h4{
+         margin: 0;
+      }
+      a{
+         font-size: 16px;
+         line-height: 20px;
+         font-weight: 500;
+         font-family: $font-second;
+      }
+   }
+   .post-meta{
+    padding: 5px 0;
+      font-size: 12px;
+      color: #A4A4A4!important;
+      a{
+         color: #A4A4A4!important;
+         &:hover{
+            color: $theme-color;
+         }
+      }
+      > span{
+         margin-right: 5px;
+      }
+   }
+
+   .content-after{
+      padding: 10px 0 0;
+   }
+   &.post-style-list{
+      .post-image{
+         @include size(70px, auto);
+         float: left;
+      }
+      .post-meta-wrap{
+         float: left;
+         width: calc(100% - 75px);
+         padding-left: 15px;
+         .post-title a{
+            font-weight: 400;
+            font-size: 14px;
+            padding: 5px 0;
+         }
+      }
+      .content-after{
+         
+      }
+   }
+}
+
+.gallery-teaser-display{
+  .post-block{
+    position: relative;
+    .post-content{
+      @include transition(all 0.35s);
+      @include opacity(0);
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 30px;
+      @include size(100%, 100%);
+      z-index: 9;
+      background: rgba(0, 0, 0, 0.5);
+      a, *{
+        color: $white!important;
+      }
+      a:hover{
+        color: $theme-color!important;
+      }
+    }
+    &:hover{
+      .post-content{
+        @include opacity(1);
+      }
+    }
+  }
+}
+
+//Post skin dark
+.style-dark{
+  .post-block{
+    background: $nocolor;
+    .post-title{
+      background: $nocolor;
+      a{
+        color: $white;
+        &:hover{
+          color: $theme-color;
+        }
+      }
+    }
+  } 
+}
+
+.post-slideshow{
+   div[class*="col-"]{
+      padding: 0;
+   }
+}
+
+//----------------- Display post slider ------------------------
+.post-slide{
+   &.post-block{
+      position: relative;
+      .post-meta-wrap{
+        background : linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background : -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background : -o-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background : -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        width: 100%;
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+         z-index: 9;
+         @include transition(all 0.35s);
+         .post-title a{
+            padding: 5px 0;
+            font-size: 26px;
+            color: $white;
+            font-weight: 400;
+            &:hover{
+              color: $theme-color;
+            }
+         }
+      }
+      .post-meta{
+         color: $white;
+         padding: 5px 0;
+      }
+      .post-body{
+         color: $white;
+         font-size: 16px;
+         height: 0;
+         @include opacity(0);
+         @include transition(all 0.35s);
+         @media(max-width: $screen-sm-max){
+            display: none;
+         }
+      }
+      &:hover{
+         .post-body{
+            @include opacity(1);
+            height: 60px;
+         }
+      }
+   }
+}
+
+//--------------------- Display post stick --------------------------
+.post-style-stick{
+   .view-content{
+      .view-list > ul{
+         > li{
+            border-bottom: 1px solid #eaeaea;
+            display: block;
+            float: right;
+            overflow: hidden;
+            padding: 7px 0 !important;
+            width: 47%;
+            clear: right;
+            @media(max-width: $screen-sm-max){
+              width: 100%;
+              clear: both;
+            }
+            .post-title, .post-meta, .post-meta-wrap{
+              clear: both;
+            }
+            &:after {
+               visibility: hidden;
+               display: block;
+               content: ".";
+               clear: right;
+               height: 0;
+            }
+            &:not(:first-child){
+               .post-image{
+                  display: none;
+                  float: left;
+               }
+               .post-content-inner, .content-body, .post-body{
+                  display: none;
+               }
+               .post-title{
+                  padding-top: 0;
+                  margin-top: -3px;
+               }
+
+              
+            }
+            &:first-child{
+               border-bottom: 0 none;
+               display: block;
+               float: left;
+               margin: 0 10px 0 0 !important;
+               width: 50%;
+               clear: none;
+                @media(max-width: $screen-sm-max){
+                  width: 100%;
+                  clear: both;
+                }
+                &:after {
+                  content: none;
+                }
+            }
+         }
+      }
+   }
+}
+
+//------------------------- Display post Highlight ------------------
+.list-highlight-post{
+  .view-list ul li{
+    padding: 0!important;
+    margin: 0;
+    .post-block{
+      background: $theme-color-second; 
+      .post-image{
+         padding: 0;
+      }  
+      .post-meta-wrap {
+        padding: 20px;
+        overflow: hidden;
+        *{
+          color: $white;
+          a:hover{
+            color: $theme-color;
+          }
+        }
+      }
+      .post-body{
+         padding-top: 10px;
+      }
+    }
+    &:nth-child(2n){
+      .post-image{
+        float: right!important;
+      }
+    }
+  }
+}
+
+//------------------ Display post list ---------------------
+.post-style-list{
+  .post-block{
+    clear: both;
+    .post-image{
+      width: 35%;
+      float: left;
+      img{
+        height: auto;
+        width: 100%;
+      }
+    }
+    .post-content{
+      width: 65%;
+      padding-left: 15px;
+      float: left;
+    }
+    .post-title{
+      padding-top: 0;
+    }
+  }
+  &.small{
+    .post-image{
+      width: 30%;
+    }
+    .post-content{
+      width: 70%;
+      padding-left: 10px;
+    }
+    .post-title{
+      padding-top: 3px;
+      a{
+        font-weight: 400;
+        font-size: 14px!important;
+      }
+    }
+    .post-meta{
+      padding: 0;
+    }
+  }
+}
+
+//---------------- Display post video ----------------------------
+.view-videos-block{
+  padding: 20px;
+  .post-block{
+    background: $nocolor;
+    margin-bottom: 15px; 
+    padding: 0 15px;
+    .post-title{
+      padding: 5px 0;
+      a{
+        font-size: 16px;
+        &:hover{
+          color: $theme-color;
+        }
+      }
+    }  
+  }
+}

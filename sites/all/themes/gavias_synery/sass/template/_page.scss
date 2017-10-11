@@ -1,0 +1,118 @@
+.blog-single-post{
+   .post-meta-tag{
+     > *{
+       @include rtl-float-left(); 
+     }
+   }
+   .post-title h1{
+      font-size: 24px;
+   }
+   .post-meta {
+      clear: both;
+      color: #A4A4A4;
+      > span{
+        @include rtl-float-left(); 
+         margin-right: 10px;
+         i{
+            margin-right: 5px; 
+         }
+         a{
+            color: #A4A4A4;
+            &:hover{
+               color: $theme-color;
+            }
+         }
+         &.post-meta-tag{
+            i{
+               margin-top: 4px;
+            }
+         }
+      }
+   }   
+   .content-first{
+      position: relative;
+      margin-bottom: 20px;
+      .post-date {
+         position: absolute;
+         width: 45px;
+         top: 0;
+         @include rtl-left(0);
+         > span{
+            display: block;
+            width: 100%;
+            text-align: center;
+         }
+         .day {
+            background: none repeat scroll 0 0 #f4f4f4;
+            @include border-radius(2px 2px 0 0);
+            color: #ccc;
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+         }
+         .month{
+            background: none repeat scroll 0 0 #ccc;
+            @include border-radius( 0 0 2px 2px);
+            @include box-shadow(0 -1px 0 0 rgba(0, 0, 0, 0.07) inset);
+            color: #ffffff;
+            font-size: 0.9em;
+            padding: 0 10px 2px;
+         }
+      }  
+      .post-title, .post-meta{
+         @include rtl-padding-left(60px);
+      } 
+   } 
+   .post-content{
+      line-height: 1.7;
+   }  
+   .field-type-taxonomy-term-reference{
+      margin-top: 20px;
+      .field-items{
+         > .field-item{
+            float: left;
+            margin-right: 15px;
+            border: 1px solid $border-color;
+            padding: 5px 8px;
+         }
+      }
+   }
+   .link-wrapper{
+      padding-top: 15px;
+   }
+}   
+
+.link-wrapper{
+   margin-top: 15px;
+   clear: both;
+}
+
+.post-author{
+   border-top: 1px solid $border-color;
+   padding: 10px 0;
+   h3{
+      font-size: 20px;
+      color: #A4A4A4;
+      position: relative;
+      padding-bottom: 10px;
+      &:after{
+         content: "";
+         position: absolute;
+         border: none;
+         @include rtl-left(0);
+         @include size(40px, 2px);
+         background: $theme-color;
+         bottom: 0;
+         z-index: 999;
+         margin: 0;
+      }
+      i{
+         margin-right: 5px;
+      }
+   }
+   .img-thumbnail{
+      float: left;
+      margin-right: 20px;
+   }
+}

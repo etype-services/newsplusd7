@@ -1,0 +1,88 @@
+;Theme info
+name = 'Gavias Synery'
+description = 'Theme for Drupal'
+core = '7.x'
+engine = 'phptemplate'
+screenshot = 'screenshot.png'
+;hidden = 'TRUE'
+
+;Stylesheets
+stylesheets[all][] = vendor/owl-carousel/owl.carousel.css
+stylesheets[all][] = vendor/owl-carousel/owl.theme.default.css
+stylesheets[all][] = 'css/font-awesome.css'
+
+;Scripts
+scripts[] = js/imagesloader.min.js
+scripts[] = vendor/modernizr.js
+scripts[] = vendor/jquery.easing.js
+scripts[] = vendor/owl-carousel/owl.carousel.js
+scripts[] = 'js/jquery.cookie.js'
+scripts[] = 'js/theme.plugins.js'
+scripts[] = 'js/gavias-custom.js'
+
+scripts[] = 'js/modernizr.custom.26633.js'
+scripts[] = 'js/jquery.gridrotator.js'
+
+; Features (core settings)
+features[] = 'logo'
+;features[] = 'name'
+;features[] = 'slogan'
+features[] = 'node_user_picture'
+features[] = 'comment_user_picture'
+features[] = 'comment_user_verification'
+features[] = 'favicon'
+features[] = 'go_to_top_button'
+;features[] = 'secondary_menu'
+
+
+;Core regions
+regions[topbar] = topbar
+regions[search] = Search
+regions[header_right] = 'Header Right'
+regions[main_menu] = 'Main menu'
+
+;Region Promotion
+regions[promotion] = 'Promotion'
+regions[promotion_second] = 'Promotion Second'
+
+;Regions content
+regions[before_content] = Before Content
+regions[content_top] = 'Content Top'
+regions[content] = 'Main content'
+regions[content_bottom] = 'Content Bottom'
+regions[sidebar_left] = Left Sidebar
+regions[sidebar_right] = Right Sidebar
+regions[after_content] = After Content
+
+;Regions highlighted
+regions[highlighted] = 'Highlighted'
+regions[help] = 'Help'
+
+;Regions footer & copyright
+regions[before_footer] = Before Footer
+regions[footer_first] = Footer First
+regions[footer_second] = Footer Second
+regions[footer_third] = Footer Third
+regions[footer_four] = Footer Four
+regions[after_footer] = Ater Footer
+regions[copyright] = 'Copyright'
+
+;Breadcrumb
+settings[skin_color] = 0099CC
+settings[site_layout] = wide
+settings[background_select] = az_subtle
+settings[background_select] = az_subtle
+settings[body_background_color] = CCCCCC
+settings[enable_skin_color] = 0
+settings[theme_skin] = ""
+settings[layout_sidebar] = "layout_sidebar_default"
+
+; Information added by drupal.org packaging script on 2015-04-20
+version = "7.x-1.0"
+core = "7.x"
+project = "gavias_synery"
+datestamp = "1353011329"
+
+
+
+

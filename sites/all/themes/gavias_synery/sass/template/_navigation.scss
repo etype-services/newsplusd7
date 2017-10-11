@@ -1,0 +1,31 @@
+ul {
+  &.pagination {
+    margin: 0;
+    text-align: center;
+    padding: 30px 0;
+  }
+}
+
+
+
+#breadcrumb-wrapper {
+  padding: 20px 0;
+
+    h2 {
+    }
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: block;
+        float: left;
+        list-style: none;
+        a {
+          font-style: italic;
+          font-size: 12px;
+          margin-right: 5px;
+        }
+      }
+  }
+}
