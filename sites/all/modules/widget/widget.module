@@ -1,0 +1,244 @@
+<?php
+/**
+ * Implementation of hook_block_info()
+ */
+function widget_block_info() {
+    // This example comes from node.module.
+
+    $blocks['widget_twitter'] = array(
+        'info' => t('Juno Latest Tweets'),
+    );
+	$blocks['widget_flickr'] = array(
+        'info' => t('Juno Flickr Widget'),
+    );
+	$blocks['widget_social_network'] = array(
+      'info' => t('Juno Social network'),
+  	);
+
+    return $blocks;
+}
+
+/**
+ * Implementation of hook_block_configure()
+ */
+function widget_block_configure($delta = '') {
+    $form = array();
+    switch ($delta) {
+        case 'widget_twitter':
+            $form['widget_twitter_username'] = array(
+                '#type' => 'textfield',
+                '#title' => t('Your twitter username'),
+                '#default_value' => variable_get('widget_twitter_username', 'Junothemes'),
+                '#description' => t('Eg: Junothemes')
+            );
+
+            $form['widget_twitter_tweets_count'] = array(
+                '#type' => 'select',
+                '#title' => t('Number of recent tweets items to display'),
+                '#default_value' => variable_get('widget_twitter_tweets_count', 2),
+                '#options' => drupal_map_assoc(array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 30)),
+            );
+
+             $form['widget_twitter_consumerkey'] = array(
+                '#type' => 'textfield',
+                '#title' => t('Consumer key'),
+                '#default_value' => variable_get('widget_twitter_consumerkey', 'tX4whV4R54o6hQxN9IB6w'),
+                '#description' => t('Eg: tX4whV4R54o6hQxN9IB6w')
+            );
+              $form['widget_twitter_consumersecret'] = array(
+                '#type' => 'textfield',
+                '#title' => t('Consumer secret'),
+                '#default_value' => variable_get('widget_twitter_consumersecret', 'IioHcE47vKpIFmwPFxY9BW6L6NP0IhMPxF15HiBblI'),
+                '#description' => t('Eg: IioHcE47vKpIFmwPFxY9BW6L6NP0IhMPxF15HiBblI'),
+            );
+               $form['widget_twitter_accesstoken'] = array(
+                '#type' => 'textfield',
+                '#title' => t('Access token'),
+                '#default_value' => variable_get('widget_twitter_accesstoken', '256872626-1ZSZZXDGdlLXALzaot3a7RiJdsqRwtaHtlBEnx8o'),
+                '#description' => t('Eg: 256872626-1ZSZZXDGdlLXALzaot3a7RiJdsqRwtaHtlBEnx8o')
+            );
+                $form['widget_twitter_accesstokensecret'] = array(
+                '#type' => 'textfield',
+                '#title' => t('Access token secret'),
+                '#default_value' => variable_get('widget_twitter_accesstokensecret', 'eJF9BWQOPJB2SgTSvI3OqQq6OIFz51HNegxoHmw5TY'),
+                '#description' => t('Eg: eJF9BWQOPJB2SgTSvI3OqQq6OIFz51HNegxoHmw5TY'),
+            );
+
+			
+            break;
+			
+		case 'widget_flickr':
+            $form['widget_flickr_id'] = array(
+                '#type' => 'textfield',
+                '#title' => t('Your flickr ID'),
+                '#default_value' => variable_get('widget_flickr_id', '52617155@N08'),
+                '#description' => t('Eg: 52617155@N08')
+            );
+            $form['widget_flickr_photo_count'] = array(
+                '#type' => 'select',
+                '#title' => t('Number of recent photos items to display'),
+                '#default_value' => variable_get('widget_flickr_photo_count', 6),
+                '#options' => drupal_map_assoc(array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 30)),
+            );
+            break;
+		case 'widget_social_network':
+			$form['facebook'] = array(
+			  '#type' => 'textfield',
+			  '#title' => t('Add your Facebook url.'),
+			  '#default_value' => variable_get('facebook', ''),
+			);
+			$form['twitter'] = array(
+			  '#type' => 'textfield',
+			  '#title' => t('Add your Twitter url.'),
+			  '#default_value' => variable_get('twitter', ''),
+			);
+			$form['delicious'] = array(
+			  '#type' => 'textfield',
+			  '#title' => t('Add your Delicious url.'),
+			  '#default_value' => variable_get('delicious', ''),
+			);
+			$form['google_plus'] = array(
+			  '#type' => 'textfield',
+			  '#title' => t('Add your Google Plus url.'),
+			  '#default_value' => variable_get('google_plus', ''),
+			);
+			break;
+    }
+    return $form;
+}
+
+/**
+ * Implementation of hook_block_save()
+ */
+function widget_block_save($delta = '', $edit = array()) {
+    switch ($delta) {
+        case 'widget_twitter':
+            variable_set('widget_twitter_username', $edit['widget_twitter_username']);
+            variable_set('widget_twitter_tweets_count', $edit['widget_twitter_tweets_count']);
+            break;
+		case 'widget_flickr':
+            variable_set('widget_flickr_id', $edit['widget_flickr_id']);
+            variable_set('widget_flickr_photo_count', $edit['widget_flickr_photo_count']);
+            break;
+		case 'widget_social_network':
+			variable_set('facebook', $edit['facebook']);
+			variable_set('twitter', $edit['twitter']);
+			variable_set('delicious', $edit['delicious']);
+			variable_set('google_plus', $edit['google_plus']);
+			break;
+		case 'widget_slideshow':
+			break;		
+    }
+}
+
+  function getAgo($timestamp) {
+        $difference = time() - $timestamp;
+
+        if ($difference < 60) {
+            return $difference." seconds ago";
+        } else {
+            $difference = round($difference / 60);
+        }
+
+        if ($difference < 60) {
+            return $difference." minutes ago";
+        } else {
+            $difference = round($difference / 60);
+        }
+
+        if ($difference < 24) {
+            return $difference." hours ago";
+        }
+        else {
+            $difference = round($difference / 24);
+        }
+
+        if ($difference < 7) {
+            return $difference." days ago";
+        } else {
+            $difference = round($difference / 7);
+            return $difference." weeks ago";
+        }
+    }
+
+/**
+ * Implementation of hook_block_view()
+ */
+function widget_block_view($delta = '') {
+    // This example is adapted from node.module.
+    $block = array();
+
+    switch ($delta) {
+        case 'widget_twitter':
+       		 	$user_name = variable_get('widget_twitter_username','envato');
+       		 	$count = variable_get('widget_twitter_tweets_count',2);
+            	$block['title'] = widget_block_get_title($delta);
+           		drupal_add_js(drupal_get_path('module','widget').'/js/twitter/twitter.js');
+
+                $url = 'statuses/user_timeline.json?screen_name='.$user_name.'&count='.$count ;
+				require_once("js/twitter/twitteroauth/twitteroauth/twitteroauth.php");
+				$consumerkey = "tX4whV4R54o6hQxN9IB6w";
+				$consumersecret = variable_get('consumersecret','IioHcE47vKpIFmwPFxY9BW6L6NP0IhMPxF15HiBblI');
+				$accesstoken = variable_get('accesstoken','256872626-1ZSZZXDGdlLXALzaot3a7RiJdsqRwtaHtlBEnx8o');
+				$accesstokensecret = variable_get('accesstokensecret','eJF9BWQOPJB2SgTSvI3OqQq6OIFz51HNegxoHmw5TY');
+				$connection = new TwitterOAuth($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
+				$tweets = $connection->get("https://api.twitter.com/1.1/".$url);
+				$block['content'] = array(
+                '#theme' => 'widget_twitter',
+                '#settings' => array(
+                    'widget_twitter_username' => variable_get('widget_twitter_username', 'envato'),
+                    'widget_twitter_tweets_count' => variable_get('widget_twitter_tweets_count', 2),
+                ),
+                '#list' =>  $tweets 
+                 );
+
+            break;
+		case 'widget_flickr':
+            $block['title'] = widget_block_get_title($delta);
+			$block['content'] = array(
+                '#theme' => 'widget_flickr',
+                '#settings' => array(
+                    'widget_flickr_id' => variable_get('widget_flickr_id', '52617155@N08'),
+                    'widget_flickr_photo_count' => variable_get('widget_flickr_photo_count', 6),
+                ),
+            );
+
+            break;
+		case 'widget_social_network':
+			$block['title'] = widget_block_get_title($delta);
+			$block['content'] = array(
+				'#theme' => 'widget_social_network',
+				'#social' => array('facebook'=>variable_get('facebook'), 'twitter'=>variable_get('twitter'), 'delicious'=>variable_get('delicious'), 'google_plus'=>variable_get('google_plus')),
+				'#title' => $block['title']
+			);
+			break;
+    }
+    return $block;
+}
+
+/**
+ * Implementation of hook_theme()
+ * 
+ */
+function widget_theme($existing, $type, $theme, $path) {
+    return array(
+        'widget_twitter' => array(
+            'variables' => array('list' => NULL,'settings' => array('widget_twitter_username' => NULL, 'widget_twitter_tweets_count' => NULL)),
+            'template' => 'widget_twitter'
+        ),
+		'widget_flickr' => array(
+            'variables' => array('settings' => array('widget_flickr_id' => NULL, 'widget_flickr_photo_count' => NULL)),
+            'template' => 'widget_flickr'
+        ),
+		'widget_social_network' => array(
+          'variables' => array('social' => NULL, 'title' => NULL),
+          'template' => 'widget_social_network',
+      	),
+    );
+}
+
+function widget_block_get_title($delta) {
+  $block = db_query('SELECT title FROM {block} WHERE delta = :delta', array(':delta' => $delta))->fetchObject();
+
+  return $block->title ? $block->title : '';
+}

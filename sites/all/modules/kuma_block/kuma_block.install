@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the kuma_block module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function kuma_block_install() {
+  $schema['block'] = array();
+  kuma_block_schema_alter($schema);
+  foreach ($schema['block']['fields'] as $field => $spec) {
+    if (db_field_exists('block', $field)) {
+      watchdog('system', 'Module install: Attempt to recreate field: "%field", when it already exists.', array('%field' => $field), WATCHDOG_WARNING);
+    }
+    else {
+      db_add_field('block', $field, $spec);
+    }
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function kuma_block_uninstall() {
+  $schema['block'] = array();
+  kuma_block_schema_alter($schema);
+  foreach ($schema['block']['fields'] as $field => $specs) {
+    db_drop_field('block', $field);
+  }
+}
+
+/**
+ * Implements hook_schema_alter().
+ *
+ * Other modules, such as i18n_block also modify the block database table.
+ */
+function kuma_block_schema_alter(&$schema) {
+  if (isset($schema['block'])) {
+    $schema['block']['fields']['css_kuma_animation'] = array(
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => TRUE,
+      'default' => '',
+      'description' => 'String containing the classes for the block.',
+    );
+    $schema['block']['fields']['css_kuma_width'] = array(
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => TRUE,
+      'default' => '',
+      'description' => 'String containing the classes for the block.',
+    );
+  }
+}

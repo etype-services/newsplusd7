@@ -14,9 +14,9 @@ files[] = tests/AdvPollSingleChoice.test
 core = 7.x
 package = "Voting"
 
-; Information added by Drupal.org packaging script on 2015-10-06
-version = "7.x-3.0-alpha1"
+; Information added by Drupal.org packaging script on 2017-09-22
+version = "7.x-3.0"
 core = "7.x"
 project = "advpoll"
-datestamp = "1444168741"
+datestamp = "1506054850"
 

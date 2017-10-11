@@ -37,7 +37,7 @@ function advpoll_settings_form($form, &$form_state) {
  */
 function advpoll_settings_form_validate($form, &$form_state) {
   // Ensure precision is an integer.
-  if(!empty($form_state['values']['advpoll_percentage_precision']) && !is_numeric($form_state['values']['advpoll_percentage_precision'])) {
+  if (!empty($form_state['values']['advpoll_percentage_precision']) && !is_numeric($form_state['values']['advpoll_percentage_precision'])) {
     form_set_error('advpoll_percentage_precision', t('Percentage precision must be an integer.'));
   }
 }

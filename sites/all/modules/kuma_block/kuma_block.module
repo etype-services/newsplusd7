@@ -1,0 +1,173 @@
+<?php
+
+/**
+ * @file
+ * Enhanced control over the Animation of any Block.
+ *
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function kuma_block_permission() {
+  return array(
+    'administer block animation' => array(
+      'title' => t('Administer block animation'),
+      'description' => t('Set Animation for blocks.'),
+    ),
+  );
+}
+
+/**
+ * Implements theme_preprocess_block().
+ *
+ * Extend block's classes with any user defined classes.
+ */
+function kuma_block_preprocess_block(&$vars) {
+  $block = $vars['block'];
+  if (isset($block->css_kuma_animation) && $block->css_kuma_animation != '' && $block->css_kuma_animation != 'none') {
+    $vars['attributes_array'] = array_merge($vars['attributes_array'],array('data_animation' => $block->css_kuma_animation));
+     $vars['classes_array'] = array_merge($vars['classes_array'], explode(' ', 'animate-area animated'));
+  }
+  if (isset($block->css_kuma_width) && $block->css_kuma_width != '' && $block->css_kuma_width != 'none') {
+
+    $vars['classes_array'] = array_merge($vars['classes_array'], explode(' ', 'col-lg-' . $block->css_kuma_width . ' col-xs-12'));
+  }
+}
+/**
+ * Implements hook_form_alter().
+ *
+ * Alter block edit form to add configuration field.
+ */
+function kuma_block_form_alter(&$form, &$form_state, $form_id) {
+  if (user_access('administer block animation') && ($form_id == 'block_admin_configure' || $form_id == 'block_add_block_form')) {
+    // Load statically cached block object used to display the form.
+    $block = block_load($form['module']['#value'], $form['delta']['#value']);
+
+    $form['settings']['css_kuma_width'] = array(
+       '#type' => 'select',
+        '#title' => t('Width block'),
+        '#default_value' => isset($block->css_kuma_width) ? $block->css_kuma_width : '',
+        '#description' => t('Customize Width of block. (Grid bootstrap)'),
+        '#options' => array(
+          'none' =>'- Default -',
+          '1' => '1/12',
+          '2' => '2/12',
+          '3' => '3/12',
+          '4' => '4/12',
+          '5' => '5/12',
+          '6' => '6/12',
+          '7' => '7/12',
+          '8' => '8/12',
+          '9' => '9/12',
+          '10' => '10/12',
+          '11' => '11/12',
+          '12' => '12/12',
+        )
+    );
+
+    $form['settings']['css_kuma_animation'] = array(
+      '#type' => 'select',
+      '#title' => t('Animation for block'),
+      '#default_value' => isset($block->css_kuma_animation) ? $block->css_kuma_animation : '',
+      '#description' => t('Customize animation of block.'),
+      '#options' => array(
+        'none' =>'- None -',
+        'bounce' => 'bounce',
+        'flash' => 'flash',
+        'pulse' => 'pulse',
+        'rubberBand' => 'rubberBand',
+        'shake' => 'shake',
+        'swing' => 'swing',
+        'tada' => 'tada',
+        'wobble' => 'wobble',
+        'bounceIn' => 'bounceIn',
+        'bounceInDown' => 'bounceInDown',
+        'bounceInLeft' => 'bounceInLeft',
+        'bounceInRight' => 'bounceInRight',
+        'bounceInRight' => 'bounceInRight',
+        'bounceOut' => 'bounceOut',
+        'bounceOutDown' => 'bounceOutDown',
+        'bounceOutLeft' => 'bounceOutLeft',
+        'bounceOutRight' => 'bounceOutRight',
+        'bounceOutUp' => 'bounceOutUp',
+        'fadeIn' => 'fadeIn',
+        'fadeInDown' => 'fadeInDown',
+        'fadeInDownBig' => 'fadeInDownBig',
+        'fadeInLeft' => 'fadeInLeft',
+        'fadeInLeftBig' => 'fadeInLeftBig',
+        'fadeInRight' => 'fadeInRight',
+        'fadeInRightBig' => 'fadeInRightBig',
+        'fadeInUp' => 'fadeInUp',
+        'fadeInUpBig' => 'fadeInUpBig',
+        'fadeOut' => 'fadeOut',
+        'fadeOutDown' => 'fadeOutDown',
+        'fadeOutDownBig' => 'fadeOutDownBig',
+        'fadeOutLeft' => 'fadeOutLeft',
+        'fadeOutLeftBig' => 'fadeOutLeftBig',
+        'fadeOutRight' => 'fadeOutRight',
+        'fadeOutRightBig' => 'fadeOutRightBig',
+        'fadeOutUp' => 'fadeOutUp',
+        'fadeOutUpBig' => 'fadeOutUpBig',
+        'flip' => 'flip',
+        'flipInX' => 'flipInX',
+        'flipInY' => 'flipInY',
+        'flipOutX' => 'flipOutX',
+        'flipOutY' => 'flipOutY',
+        'lightSpeedIn' => 'lightSpeedIn',
+        'lightSpeedOut' => 'lightSpeedOut',
+        'rotateIn' => 'rotateIn',
+        'rotateInDownLeft' => 'rotateInDownLeft',
+        'rotateInDownRight' => 'rotateInDownRight',
+        'rotateInUpLeft' => 'rotateInUpLeft',
+        'rotateInUpRight' => 'rotateInUpRight',
+        'rotateOut' => 'rotateOut',
+        'rotateOutDownLeft' => 'rotateOutDownLeft',
+        'rotateOutDownRight' => 'rotateOutDownRight',
+        'rotateOutUpLeft' => 'rotateOutUpLeft',
+        'rotateOutUpRight' => 'rotateOutUpRight',
+        'slideInDown' => 'slideInDown',
+        'slideInLeft' => 'slideInLeft',
+        'slideInRight' => 'slideInRight',
+        'slideOutLeft' => 'slideOutLeft',
+        'slideOutRight' => 'slideOutRight',
+        'slideOutUp' => 'slideOutUp',
+        'hinge' => 'hinge',
+        'rollIn' => 'rollIn',
+        'rollOut' => 'rollOut',
+        )
+    );
+    $form['#submit'][] = 'kuma_block_form_submit';
+  }
+}
+
+/**
+ * Helper function: additional submit callback for block configuration pages.
+ *
+ * Save supplied CSS classes.
+ */
+function kuma_block_form_submit($form, &$form_state) {
+  if ($form_state['values']['form_id'] == 'block_admin_configure' || $form_state['values']['form_id'] == 'block_add_block_form') {
+    // Only save if value has changed.
+    if (user_access('administer blocks')) {
+     $tmp = array();
+      if(isset($form_state['values']['css_kuma_animation']) && $form['settings']['css_kuma_animation']['#default_value'] != $form_state['values']['css_kuma_animation']){
+          $tmp['css_kuma_animation'] = $form_state['values']['css_kuma_animation'];
+      }
+      if(isset($form_state['values']['css_kuma_width']) && $form['settings']['css_kuma_width']['#default_value'] != $form_state['values']['css_kuma_width']){
+          $tmp['css_kuma_width'] = $form_state['values']['css_kuma_width'];
+      }
+      if($tmp){
+        db_update('block')
+          ->fields($tmp)
+          ->condition('module', $form_state['values']['module'])
+          ->condition('delta', $form_state['values']['delta'])
+          ->execute();
+        // Flush all context module cache to use the updated css_class.
+        if (module_exists('context')) {
+          cache_clear_all('context', 'cache', TRUE);
+        }
+      }  
+    }
+  }
+}

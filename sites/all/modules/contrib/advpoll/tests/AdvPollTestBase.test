@@ -98,7 +98,7 @@ var $poll_admin;
       $options[] = $this->randomName();
     }
 
-    $poll_node = new StdClass();
+    $poll_node = new stdClass();
 
     // Information for base node
     $poll_node->type = 'advpoll';
@@ -140,7 +140,7 @@ var $poll_admin;
    * @param int $poll_id
    *  The node ID of the poll to close.
    */
-  protected function closePoll($poll_id){
+  protected function closePoll($poll_id) {
     // Load the poll node.
     $node = node_load($poll_id);
 
