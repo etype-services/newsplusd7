@@ -7,9 +7,9 @@ features[fe_block_settings][] = user-online
 features[features_api][] = api:2
 hidden = TRUE
 
-; Information added by drupal.org packaging script on 2013-10-16
-version = "7.x-2.1+1-dev"
+; Information added by Drupal.org packaging script on 2015-12-18
+version = "7.x-2.3"
 core = "7.x"
 project = "block_class"
-datestamp = "1381947783"
+datestamp = "1450415951"
 
