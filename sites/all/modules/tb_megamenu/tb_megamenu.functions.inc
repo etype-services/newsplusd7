@@ -214,13 +214,14 @@ function tb_megamenu_sync_config($items, &$item_config, $_mlid, $section) {
   if(empty($item_config['rows_content'])) {
     $item_config['rows_content'] = array(0 => array(0 => array('col_content' => array(), 'col_config' => array()))); 
     foreach($items as $item) {
+      $weight = isset($item['link']['weight'])? $item['link']['weight']: 0
       $mlid = $item['link']['mlid'];
       if(!$item['link']['hidden']) {
         $item_config['rows_content'][0][0]['col_content'][] = array(
           'type' => 'menu_item',
           'mlid' => $mlid,
           'tb_item_config' => array(),
-          'weight' => $item['link']['weight'],
+          'weight' => $weight,
         );
       }
     }
