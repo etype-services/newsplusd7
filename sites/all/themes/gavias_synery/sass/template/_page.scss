@@ -96,17 +96,6 @@
     color: #a4a4a4;
     position: relative;
     padding-bottom: 10px;
-    &:after {
-      content: "";
-      position: absolute;
-      border: none;
-      @include rtl-left(0);
-      @include size(40px, 2px);
-      background: $theme-color;
-      bottom: 0;
-      z-index: 999;
-      margin: 0;
-    }
     i {
       margin-right: 5px;
     }
