@@ -27,7 +27,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                               </div>
                           </div>
                     <?php } else {
-                      print render($content['field_post_image']);
+                      print render($content['field_image']);
                     } ?>
                   <?php } elseif ($post_format == 'video' || $post_format == 'audio') { ?>
                     <?php if (render($content['field_post_embed'])) { ?>
@@ -41,10 +41,10 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                             ?>
                           </div>
                     <?php } else {
-                      print render($content['field_post_image']);
+                      print render($content['field_image']);
                     } ?>
                   <?php } else {
-                    print render($content['field_post_image']);
+                    print render($content['field_image']);
                   }
                   ?>
                 </div>
@@ -77,7 +77,6 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                           hide($content['taxonomy_forums']);
                           hide($content['comments']);
                           hide($content['links']);
-                          hide($content['field_tags']);
                           hide($content['field_post_image']);
                           hide($content['field_post_gallery']);
                           hide($content['field_post_embed']);
@@ -149,14 +148,6 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
               <div class="post-meta">
                   <span class="post-meta-user"><i
                               class="icon icon-user"></i> <?php print t('By'); ?> <?php print $name; ?> </span>
-                <?php if (render($content['field_tags'])): ?>
-                    <span class="post-meta-tag"><i
-                                class="icon icon-tag"></i> <?php print render($content['field_tags']); ?> </span>
-                <?php endif; ?>
-                <?php if (render($content['field_term'])): ?>
-                    <span class="post-meta-tag"><i
-                                class="icon icon-tag"></i> <?php print render($content['field_term']); ?> </span>
-                <?php endif; ?>
 
                 <?php if (module_exists('comment')): ?>
                     <span class="post-meta-comments"><i
