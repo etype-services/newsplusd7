@@ -309,20 +309,6 @@ header .header-main {
     color: #a4a4a4;
     position: relative;
     padding-bottom: 10px; }
-    .post-author h3:after {
-      content: "";
-      position: absolute;
-      border: none;
-      left: 0;
-      width: 40px;
-      height: 2px;
-      background: #0099CC;
-      bottom: 0;
-      z-index: 999;
-      margin: 0; }
-      .rtl .post-author h3:after {
-        right: 0;
-        left: auto; }
     .post-author h3 i {
       margin-right: 5px; }
   .post-author .img-thumbnail {
