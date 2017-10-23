@@ -14,6 +14,6 @@ configure = admin/structure/tb-megamenu
 ; Information added by drupal.org packaging script on 2013-10-19
 version = "7.x-1.0-beta5+0-dev"
 core = "7.x"
-project = "tb_sirate_starter"
+project = "tb_megamenu"
 datestamp = "1382146470"
 
