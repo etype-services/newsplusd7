@@ -224,7 +224,8 @@ function tb_megamenu_sync_order_menus(&$menu_config) {
       foreach ($row as $col) {
         foreach ($col['col_content'] as $menu_item) {
           if ($menu_item['type'] == 'menu_item') {
-            $item_sorted[$menu_item['weight']] = $menu_item;
+            $weight = isset($menu_item['weight'])? $menu_item['weight']: 0;
+            $item_sorted[$weight] = $menu_item;
           }
         }
       }
