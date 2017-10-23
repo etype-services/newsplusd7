@@ -1,4 +1,3 @@
-@import "../fonts/font-awesome/css/font-awesome.css";
 .tb-megamenu .clearfix {
   *zoom: 1;
 }
@@ -131,10 +130,6 @@
 }
 .tb-megamenu .nav > .dropdown > .dropdown-toggle .caret {
   display: inline-block;
-}
-.tb-megamenu .nav [class^="icon-"],
-.tb-megamenu .nav [class*=" icon-"] {
-  margin-right: 5px;
 }
 
 .tb-megamenu .nav {
@@ -376,7 +371,6 @@
 	-moz-transition: height .35s ease;
 	-o-transition: height .35s ease;
 	transition: height .35s ease;
-	display: block;
 }
 .tb-megamenu .collapse.in {
 	height: auto;
@@ -615,7 +609,7 @@
 }
 .tb-megamenu .btn-group > .btn,
 .tb-megamenu .btn-group > .dropdown-menu {
-	font-size: 13px;
+	/*font-size: 13px;*/
 }
 .tb-megamenu .btn-group > .btn.first,
 .tb-megamenu .btn-group > .btn:first-child {
@@ -854,7 +848,7 @@
 	outline-offset: -2px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 979px) {
 .tb-megamenu .navbar .brand {
 		font-size: 13px;
 	}
@@ -972,7 +966,7 @@
 	}
 .tb-megamenu .nav-collapse .nav li a {
 		margin-bottom: 0;
-		border-top: 1px solid #d9d9d9;		
+		border-top: 1px solid #d9d9d9;
 	}
 .tb-megamenu .nav-collapse .nav li ul li ul.dropdown-menu,
 .tb-megamenu .nav-collapse .nav li ul li:hover ul.dropdown-menu,
@@ -980,7 +974,7 @@
 		display: none !important;
 	}
 .tb-megamenu .nav-collapse .nav > li > a,
-.tb-megamenu .nav-collapse .dropdown-menu a {			
+.tb-megamenu .nav-collapse .dropdown-menu a {
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
 		border-radius: 0;

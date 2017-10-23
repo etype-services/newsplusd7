@@ -3,7 +3,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
 (function ($) {
   Drupal.TBMegaMenu.createTouchMenu = function(items) {
       items.children('a').each( function() {
-  var $item = $(this);
+	var $item = $(this);
         var tbitem = $(this).parent();
         $item.click( function(event){
           if ($item.hasClass('tb-megamenu-clicked')) {
@@ -13,7 +13,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
           else {
             event.preventDefault();
             $item.addClass('tb-megamenu-clicked');
-            if(!tbitem.hasClass('open')){ 
+            if(!tbitem.hasClass('open')){	
               tbitem.addClass('open');
             }
           }
@@ -24,12 +24,12 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
      });
      /*
      items.children('a').children('span.caret').each( function() {
-  var $item = $(this).parent();
+	var $item = $(this).parent();
         $item.click(function(event){
           tbitem = $item.parent();
           if ($item.hasClass('tb-megamenu-clicked')) {
             Drupal.TBMegaMenu.eventStopPropagation(event);
-            if(tbitem.hasClass('open')){  
+            if(tbitem.hasClass('open')){	
               tbitem.removeClass('open');
               $item.removeClass('tb-megamenu-clicked');
             }
@@ -37,7 +37,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
           else {
             Drupal.TBMegaMenu.eventStopPropagation(event);
             $item.addClass('tb-megamenu-clicked');
-            if(!tbitem.hasClass('open')){ 
+            if(!tbitem.hasClass('open')){	
               tbitem.addClass('open');
               $item.removeClass('tb-megamenu-clicked');
             }
