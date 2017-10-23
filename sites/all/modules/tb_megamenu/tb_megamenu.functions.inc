@@ -216,12 +216,11 @@ function tb_megamenu_sync_config($items, &$item_config, $_mlid, $section) {
     foreach($items as $item) {
       $mlid = $item['link']['mlid'];
       if(!$item['link']['hidden']) {
-        $weight = isset($item['link']['weight'])? $item['link']['weight']: 0;
         $item_config['rows_content'][0][0]['col_content'][] = array(
           'type' => 'menu_item',
           'mlid' => $mlid,
           'tb_item_config' => array(),
-          'weight' => $weight,
+          'weight' => $item['link']['weight'],
         );
       }
     }
