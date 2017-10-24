@@ -766,7 +766,7 @@ function newsplus_preprocess_html(&$variables) {
         'media' => 'all',
         'preprocess' => FALSE,
         'every_page' => TRUE,
-        'weight' => 999,
+        'weight' => 9999,
         'group' => CSS_THEME
       )
     );
