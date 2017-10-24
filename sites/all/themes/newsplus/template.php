@@ -46,10 +46,29 @@ function newsplus_preprocess_block(&$variables) {
  */
 function newsplus_preprocess_html(&$variables) {
 
+
+  /* add site-specific css */
+  $base_path = base_path();
+  $conf_path = conf_path();
+  $site_css = $base_path . $conf_path . '/site.css';
+
+  if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
+    drupal_add_css(
+      $site_css,
+      array(
+        'media' => 'all',
+        'preprocess' => FALSE,
+        'every_page' => TRUE,
+        'weight' => 9999,
+        'group' => CSS_THEME
+      )
+    );
+  }
+
   $color_scheme = theme_get_setting('color_scheme');
   
   if ($color_scheme != 'default') {
-    drupal_add_css(drupal_get_path('theme', 'newsplus') . '/style-' .$color_scheme. '.css', array('group' => CSS_THEME, 'type' => 'file'));
+    drupal_add_css(drupal_get_path('theme', 'newsplus') . '/style-' .$color_scheme. '.css', array('group' => CSS_THEME, 'every_page' => TRUE,));
   }
 
   if (isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on') {
@@ -751,26 +770,6 @@ function newsplus_preprocess_html(&$variables) {
       }
   });',
   array('type' => 'inline', 'scope' => 'header'));
-
-
-  /* add site-specific css */
-  $base_path = base_path();
-  $conf_path = conf_path();
-  $site_css = $base_path . $conf_path . '/site.css';
-
-  if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
-    drupal_add_css(
-      $site_css,
-      array(
-        'type' => 'file',
-        'media' => 'all',
-        'preprocess' => FALSE,
-        'every_page' => TRUE,
-        'weight' => 9999,
-        'group' => CSS_THEME
-      )
-    );
-  }
 
 }
 
