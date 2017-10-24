@@ -804,7 +804,7 @@ function newsplus_process_html(&$vars) {
 function newsplus_preprocess_page(&$variables) {
   
   $three_columns_grid_layout = theme_get_setting('three_columns_grid_layout', 'newsplus');
-  if (isset ($variables['page'])) {
+  if (isset ($variables['page']['sidebar_first'])) {
     $sidebar_first = $variables['page']['sidebar_first'];
     $sidebar_second = $variables['page']['sidebar_second'];
     $footer_first = $variables['page']['footer_first'];
