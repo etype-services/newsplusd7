@@ -32,6 +32,7 @@ function newsplus_breadcrumb($variables) {
 }
 
 /**
+ * @param $variables
  * Add classes to block.
  */
 function newsplus_preprocess_block(&$variables) {
@@ -42,6 +43,7 @@ function newsplus_preprocess_block(&$variables) {
 }
 
 /**
+ * @param $variables
  * Override or insert variables into the html template.
  */
 function newsplus_preprocess_html(&$variables) {
@@ -774,6 +776,7 @@ function newsplus_preprocess_html(&$variables) {
 }
 
 /**
+ * @param $vars
  * Override or insert variables into the html template.
  */
 function newsplus_process_html(&$vars) {
@@ -798,6 +801,7 @@ function newsplus_process_html(&$vars) {
 }
 
 /**
+ * @param $variables
  * Preprocess variables for page template.
  */
 function newsplus_preprocess_page(&$variables) {
@@ -821,7 +825,7 @@ function newsplus_preprocess_page(&$variables) {
    */
   if (drupal_is_front_page() || isset($variables['node']) && ($variables['node']->type == 'blog' || $variables['node']->type == 'article' || $variables['node']->type == 'mt_post')) {
     if (isset($variables['node']) && $variables['node']->type != 'page' ) { 
-      if($sidebar_first && $sidebar_second) { 
+      if(isset($sidebar_first) && isset($sidebar_second)) {
         if ($three_columns_grid_layout == 'grid_3_6_3') {
           $variables['main_grid_class'] = 'col-md-6';
           $variables['sidebar_first_grid_class'] = 'col-md-3';
@@ -835,10 +839,10 @@ function newsplus_preprocess_page(&$variables) {
           $variables['sidebar_first_grid_class'] = 'col-md-4';
           $variables['sidebar_second_grid_class'] = 'col-md-2';
         }
-      } elseif ($sidebar_first && !$sidebar_second) {
+      } elseif (isset($sidebar_first) && !isset($sidebar_second)) {
         $variables['main_grid_class'] = 'col-md-8';
         $variables['sidebar_first_grid_class'] = 'col-md-4';
-      } elseif (!$sidebar_first && $sidebar_second) {
+      } elseif (!isset($sidebar_first) && isset($sidebar_second)) {
         $variables['main_grid_class'] = 'col-md-8';
         $variables['sidebar_second_grid_class'] = 'col-md-4';
       } else {
@@ -847,7 +851,7 @@ function newsplus_preprocess_page(&$variables) {
         $variables['sidebar_second_grid_class'] = '';
       }
     } else {
-      if($sidebar_first && $sidebar_second) { 
+      if(isset($sidebar_first) && isset($sidebar_second)) {
         if ($three_columns_grid_layout == 'grid_3_6_3') {
           $variables['main_grid_class'] = 'col-md-6';
           $variables['sidebar_first_grid_class'] = 'col-md-3';
@@ -861,10 +865,10 @@ function newsplus_preprocess_page(&$variables) {
           $variables['sidebar_first_grid_class'] = 'col-md-4';
           $variables['sidebar_second_grid_class'] = 'col-md-2';
         }
-      } elseif ($sidebar_first && !$sidebar_second) {
+      } elseif (isset($sidebar_first) && !isset($sidebar_second)) {
         $variables['main_grid_class'] = 'col-md-8';
         $variables['sidebar_first_grid_class'] = 'col-md-4';
-      } elseif (!$sidebar_first && $sidebar_second) {
+      } elseif (!isset($sidebar_first) && isset($sidebar_second)) {
         $variables['main_grid_class'] = 'col-md-8';
         $variables['sidebar_second_grid_class'] = 'col-md-4';   
       } else {
@@ -875,7 +879,7 @@ function newsplus_preprocess_page(&$variables) {
     }
   } else {
     if (isset($variables['node']) && $variables['node']->type != 'page' ) { 
-      if($sidebar_first && $sidebar_second) { 
+      if(isset($sidebar_first) && isset($sidebar_second)) {
         if ($three_columns_grid_layout == 'grid_3_6_3') {
           $variables['main_grid_class'] = 'col-md-6';
           $variables['sidebar_first_grid_class'] = 'col-md-3';
@@ -889,10 +893,10 @@ function newsplus_preprocess_page(&$variables) {
           $variables['sidebar_first_grid_class'] = 'col-md-4';
           $variables['sidebar_second_grid_class'] = 'col-md-2';
         }
-      } elseif ($sidebar_first && !$sidebar_second) {
+      } elseif (isset($sidebar_first) && !isset($sidebar_second)) {
         $variables['main_grid_class'] = 'col-md-7';
         $variables['sidebar_first_grid_class'] = 'col-md-4';
-      } elseif (!$sidebar_first && $sidebar_second) {
+      } elseif (!isset($sidebar_first) && isset($sidebar_second)) {
         $variables['main_grid_class'] = 'col-md-7 col-md-offset-1';
         $variables['sidebar_second_grid_class'] = 'col-md-4';   
       } else {
@@ -901,7 +905,7 @@ function newsplus_preprocess_page(&$variables) {
         $variables['sidebar_second_grid_class'] = '';     
       }
     } else {
-      if($sidebar_first && $sidebar_second) { 
+      if (isset($sidebar_first) && isset($sidebar_second)) {
         if ($three_columns_grid_layout == 'grid_3_6_3') {
           $variables['main_grid_class'] = 'col-md-6';
           $variables['sidebar_first_grid_class'] = 'col-md-3';
@@ -915,10 +919,10 @@ function newsplus_preprocess_page(&$variables) {
           $variables['sidebar_first_grid_class'] = 'col-md-4';
           $variables['sidebar_second_grid_class'] = 'col-md-2';
         }
-      } elseif ($sidebar_first && !$sidebar_second) {
+      } elseif (isset($sidebar_first) && !isset($sidebar_second)) {
         $variables['main_grid_class'] = 'col-md-7';
         $variables['sidebar_first_grid_class'] = 'col-md-4';
-      } elseif (!$sidebar_first && $sidebar_second) {
+      } elseif (!isset($sidebar_first) && isset($sidebar_second)) {
         $variables['main_grid_class'] = 'col-md-7 col-md-offset-1';
         $variables['sidebar_second_grid_class'] = 'col-md-4';   
       } else {
@@ -929,7 +933,7 @@ function newsplus_preprocess_page(&$variables) {
     } 
   }
 
-  if ($pre_header_left && $pre_header_right) { 
+  if (isset($pre_header_left) && isset($pre_header_right)) {
     $variables['pre_header_left_grid_class'] = 'col-md-8';
     $variables['pre_header_right_grid_class'] = 'col-md-4';
   } else { 
@@ -937,26 +941,29 @@ function newsplus_preprocess_page(&$variables) {
     $variables['pre_header_right_grid_class'] = 'col-md-12';
   }
 
-  if ($header) { 
+  if (isset($header)) {
     $variables['header_inside_left_grid_class'] = 'col-md-8';
   } else { 
     $variables['header_inside_left_grid_class'] = 'col-md-12';
   }
 
-  if ($header_top_right) { 
+  if (isset($header_top_right)) {
     $variables['header_top_inside_left_grid_class'] = 'col-md-6';
   } else { 
     $variables['header_top_inside_left_grid_class'] = 'col-md-12';
   } 
 
-  if ($footer_first && $footer_second && $footer_third && $footer_fourth) { 
+  if (isset($footer_first) && isset($footer_second) && isset($footer_third) &&
+    isset($footer_fourth)) {
     $variables['footer_grid_class'] = 'col-sm-3';
-  } elseif ((!$footer_first && $footer_second && $footer_third && $footer_fourth) || ($footer_first && !$footer_second && $footer_third && $footer_fourth) 
-  || ($footer_first && $footer_second && !$footer_third && $footer_fourth) || ($footer_first && $footer_second && $footer_third && !$footer_fourth)) { 
+  } elseif ((!isset($footer_first) && isset($footer_second) && isset($footer_third) && isset($footer_fourth)) || (isset($footer_first) && !isset($footer_second) && isset($footer_third) &&
+      isset($footer_fourth))
+  || (isset($footer_first) && isset($footer_second) && !isset($footer_third) && isset($footer_fourth)) || (isset($footer_first) && isset($footer_second) && isset($footer_third) && !isset($footer_fourth))) {
     $variables['footer_grid_class'] = 'col-sm-4';
-  } elseif ((!$footer_first && !$footer_second && $footer_third && $footer_fourth) || (!$footer_first && $footer_second && !$footer_third && $footer_fourth) 
-  || (!$footer_first && $footer_second && $footer_third && !$footer_fourth) || ($footer_first && !$footer_second && !$footer_third && $footer_fourth)
-  || ($footer_first && !$footer_second && $footer_third && !$footer_fourth) || ($footer_first && $footer_second && !$footer_third && !$footer_fourth)) {
+  } elseif ((!isset($footer_first) && !isset($footer_second) && isset($footer_third) && isset($footer_fourth)) || (!isset($footer_first) && isset($footer_second) && !isset($footer_third) &&
+      isset($footer_fourth))
+  || (!isset($footer_first) && isset($footer_second) && isset($footer_third) && !isset($footer_fourth)) || (isset($footer_first) && !isset($footer_second) && !isset($footer_third) && isset($footer_fourth))
+  || (isset($footer_first) && !isset($footer_second) && isset($footer_third) && !isset($footer_fourth)) || (isset($footer_first) && isset($footer_second) && !isset($footer_third) && !isset($footer_fourth))) {
     $variables['footer_grid_class'] = 'col-sm-6';   
   } else { 
     $variables['footer_grid_class'] = 'col-sm-12';
@@ -967,6 +974,7 @@ function newsplus_preprocess_page(&$variables) {
 }
 
 /**
+ * @param $variables
  * Preprocess variables for node template.
  */
 function newsplus_preprocess_node(&$variables) {
@@ -975,8 +983,9 @@ function newsplus_preprocess_node(&$variables) {
 }
 
 /**
-* Implements hook_preprocess_maintenance_page().
-*/
+ * @param $variables
+ * Implements hook_preprocess_maintenance_page().
+ */
 function newsplus_preprocess_maintenance_page(&$variables) {
 
   $color_scheme = theme_get_setting('color_scheme');
@@ -996,6 +1005,9 @@ function newsplus_preprocess_maintenance_page(&$variables) {
 
 }
 
+/**
+ * @param $page
+ */
 function newsplus_page_alter($page) {
 
   $mobileoptimized = array(
@@ -1028,6 +1040,11 @@ function newsplus_page_alter($page) {
   
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ */
 function newsplus_form_alter(&$form, &$form_state, $form_id) {
   
   if ($form_id == 'search_block_form') {
