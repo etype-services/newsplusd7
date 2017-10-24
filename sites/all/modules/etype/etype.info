@@ -1,3 +1,4 @@
+; Specific to Newsplus Server - not for use with CNI template
 name = eType Services
 description = Custom module for eType Services.
 
