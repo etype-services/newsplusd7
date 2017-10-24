@@ -751,6 +751,27 @@ function newsplus_preprocess_html(&$variables) {
       }
   });',
   array('type' => 'inline', 'scope' => 'header'));
+
+
+  /* add site-specific css */
+  $base_path = base_path();
+  $conf_path = conf_path();
+  $site_css = $base_path . $conf_path . '/local.css';
+
+  if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
+    drupal_add_css(
+      $site_css,
+      array(
+        'type' => 'file',
+        'media' => 'all',
+        'preprocess' => FALSE,
+        'every_page' => TRUE,
+        'weight' => 999,
+        'group' => CSS_THEME
+      )
+    );
+  }
+
 }
 
 /**
@@ -772,6 +793,8 @@ function newsplus_process_html(&$vars) {
   $classes[] = theme_get_setting('paragraph_font_family');
   $classes[] = $layout_body_class;
   $vars['classes'] = trim(implode(' ', $classes));
+  /* add theme class for use in modules */
+  $vars['classes'] .= ' newsplus';
 
 }
 
@@ -1020,5 +1043,3 @@ function newsplus_form_alter(&$form, &$form_state, $form_id) {
   }
 
 }
-
-?>
