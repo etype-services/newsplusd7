@@ -1431,7 +1431,7 @@ ul.pagination {
     margin-bottom: 0; }
 
 /* fix calendar */
-.page-calendar .content-full .content-main-inner {
+.page-calendar-node-field-date .content-full .content-main-inner {
   border-top: none; }
 
 .view .date-nav-wrapper .date-prev {
