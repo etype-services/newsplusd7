@@ -1431,21 +1431,15 @@ ul.pagination {
     margin-bottom: 0; }
 
 /* fix calendar */
-.page-calendar #page-title {
-  display: none; }
+.page-calendar .content-full .content-main-inner {
+  border-top: none; }
 
 .view .date-nav-wrapper .date-prev {
-  right: 75px; }
-
+  right: 74px; }
 .view .date-nav-wrapper .date-heading {
   text-align: left; }
-
 .view .date-nav-wrapper .date-nav {
   height: 50px; }
-
-/* upcoming events */
-#block-views-calendar-block-2 .views-row div {
-  display: inline-block; }
 
 div.messages {
   margin: 10px 0; }
