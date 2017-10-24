@@ -281,7 +281,7 @@ function newsplus_preprocess_html(&$variables) {
   drupal_add_css(path_to_theme() . '/ie9.css', array('group' => CSS_THEME, 'browsers' => array('IE' => '(IE 9)&(!IEMobile)', '!IE' => FALSE), 'preprocess' => FALSE));
     
   /**
-   * Add local.css file for CSS overrides.
+   * Add site.css file for CSS overrides.
    */
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/local.css', array('group' => CSS_THEME, 'type' => 'file'));
 
@@ -756,7 +756,7 @@ function newsplus_preprocess_html(&$variables) {
   /* add site-specific css */
   $base_path = base_path();
   $conf_path = conf_path();
-  $site_css = $base_path . $conf_path . '/local.css';
+  $site_css = $base_path . $conf_path . '/site.css';
 
   if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
     drupal_add_css(
