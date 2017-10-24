@@ -808,6 +808,9 @@ function newsplus_preprocess_page(&$variables) {
   
   $three_columns_grid_layout = theme_get_setting('three_columns_grid_layout', 'newsplus');
   if (isset ($variables['page'])) {
+
+    var_dump($variables['page']);
+    exit;
     if (isset ($variables['page']['sidebar_first'])) $sidebar_first = $variables['page']['sidebar_first'];
     if (isset ($variables['page']['sidebar_second'])) $sidebar_second = $variables['page']['sidebar_second'];
     if (isset ($variables['page']['footer_first'])) $footer_first = $variables['page']['footer_first'];
