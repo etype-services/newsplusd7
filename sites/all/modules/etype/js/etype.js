@@ -7,7 +7,7 @@
       var pathname = window.location.pathname; // Returns path only
       // only on Home Page
       if (pathname === "/") {
-        obj = $(".tb-megamenu-nav > li");
+        obj = $(".tb-megamenu-nav > li").hasClass("dropdown");
         console.log(obj);
       }
     }
