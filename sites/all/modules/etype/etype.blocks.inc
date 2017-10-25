@@ -211,10 +211,10 @@ function _etype_follow_content() {
     $output .= '<li><a href="/rss.xml"><i class="fa fa-rss-square"></i></a></li>';
   }
 
+  /* email form
   $output .= '
 </ul>';
 
-  /* email form */
   $output .= '
 <div class="subscribe-form">
     <form action="">
@@ -229,6 +229,7 @@ function _etype_follow_content() {
      </form>
 </div>
 ';
+  */
 
   return $output;
 
