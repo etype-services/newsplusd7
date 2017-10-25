@@ -8,7 +8,7 @@
       console.log(pathname);
       // only on Home Page
       if (pathname === "/") {
-        $(".tb-megamenu-nav > li").hasClass("dropdown").removeClass("active");
+        //$(".tb-megamenu-nav > li").hasClass("dropdown").removeClass("active");
       }
     }
   };
