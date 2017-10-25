@@ -13,4 +13,4 @@ files[] = etype.blocks.inc
 stylesheets[all][] = css/etype.css
 stylesheets[all][] = css/ads.css
 
-scripts[] = 'js/etype.js'
+scripts[] = js/etype.js
