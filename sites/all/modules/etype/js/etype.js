@@ -7,8 +7,11 @@
       var pathname = window.location.pathname; // Returns path only
       // only on Home Page
       if (pathname === "/") {
-        obj = $(".tb-megamenu-nav > li").hasClass("dropdown");
-        console.log(obj);
+        $(".tb-megamenu-nav > li").each(function(i) {
+          if ($(this).hasClass("dropdown")) {
+            $(this).removeClass("active");
+          }
+        });
       }
     }
   };
