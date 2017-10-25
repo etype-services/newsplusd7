@@ -1590,3 +1590,17 @@ div#acquia-agent-no-search {
 #views-live-preview {
   max-width: 1100px;
   overflow-x: auto; }
+
+/* Simple Ads */
+.adslist {
+  display: flex;
+  justify-content: center; }
+
+/* assumes header-right is just for ads */
+#header #header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 92px; }
+#header .block-simpleads {
+  margin-bottom: 0; }
