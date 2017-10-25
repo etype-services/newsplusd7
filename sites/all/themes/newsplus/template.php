@@ -795,8 +795,6 @@ function newsplus_process_html(&$vars) {
   $classes[] = theme_get_setting('paragraph_font_family');
   $classes[] = $layout_body_class;
   $vars['classes'] = trim(implode(' ', $classes));
-  /* add theme class for use in modules */
-  $vars['classes'] .= ' newsplus';
 
 }
 
@@ -1003,6 +1001,8 @@ function newsplus_preprocess_maintenance_page(&$variables) {
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/fonts' .$protocol. '/montserrat-font.css', array('group' => CSS_THEME, 'type' => 'file'));
 
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/local.css', array('group' => CSS_THEME, 'type' => 'file'));
+
+  drupal_add_css(drupal_get_path('theme', 'newsplus') . '/ads.css', array('group' => CSS_THEME, 'type' => 'file'));
 
 }
 
