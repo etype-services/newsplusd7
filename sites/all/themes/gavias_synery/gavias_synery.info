@@ -36,7 +36,7 @@ features[] = 'go_to_top_button'
 
 
 ;Core regions
-regions[topbar] = topbar
+regions[topbar] = Topbar
 regions[search] = Search
 regions[header_right] = 'Header Right'
 regions[main_menu] = 'Main menu'
