@@ -302,9 +302,10 @@ function newsplus_preprocess_html(&$variables) {
   drupal_add_css(path_to_theme() . '/ie9.css', array('group' => CSS_THEME, 'browsers' => array('IE' => '(IE 9)&(!IEMobile)', '!IE' => FALSE), 'preprocess' => FALSE));
     
   /**
-   * Add site.css file for CSS overrides.
+   * Add site.css and ads.css file for CSS overrides.
    */
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/local.css', array('group' => CSS_THEME, 'type' => 'file'));
+  drupal_add_css(drupal_get_path('theme', 'newsplus') . '/ads.css', array('group' => CSS_THEME, 'type' => 'file'));
 
   /**
   * Add Javascript - Enable/disable Bootstrap 3 Javascript.
@@ -1000,7 +1001,6 @@ function newsplus_preprocess_maintenance_page(&$variables) {
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/fonts' .$protocol. '/roboto-font.css', array('group' => CSS_THEME, 'type' => 'file'));
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/fonts' .$protocol. '/montserrat-font.css', array('group' => CSS_THEME, 'type' => 'file'));
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/local.css', array('group' => CSS_THEME, 'type' => 'file'));
-  drupal_add_css(drupal_get_path('theme', 'newsplus') . '/ads.css', array('group' => CSS_THEME, 'type' => 'file'));
 
 }
 
