@@ -999,9 +999,7 @@ function newsplus_preprocess_maintenance_page(&$variables) {
   }
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/fonts' .$protocol. '/roboto-font.css', array('group' => CSS_THEME, 'type' => 'file'));
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/fonts' .$protocol. '/montserrat-font.css', array('group' => CSS_THEME, 'type' => 'file'));
-
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/local.css', array('group' => CSS_THEME, 'type' => 'file'));
-
   drupal_add_css(drupal_get_path('theme', 'newsplus') . '/ads.css', array('group' => CSS_THEME, 'type' => 'file'));
 
 }
