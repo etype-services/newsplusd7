@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.region-header-top-right .adslist {
+  justify-content: flex-end;
+}
+
 .region-top-content .block-simpleads {
   padding: 0;
 }
