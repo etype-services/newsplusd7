@@ -1596,11 +1596,11 @@ div#acquia-agent-no-search {
   display: flex;
   justify-content: center; }
 
-/* assumes header-right is just for ads */
-#header #header-right {
+/* assumes region-header-right is just for ads */
+.region-header-right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   min-height: 92px; }
-#header .block-simpleads {
-  margin-bottom: 0; }
+  .region-header-right .block-simpleads {
+    margin-bottom: 0; }

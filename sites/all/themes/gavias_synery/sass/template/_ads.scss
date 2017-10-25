@@ -3,14 +3,13 @@
   display: flex;
   justify-content: center;
 }
-/* assumes header-right is just for ads */
-#header {
-  #header-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    min-height: 92px;
-  }
+/* assumes region-header-right is just for ads */
+.region-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 92px;
+
   .block-simpleads {
     margin-bottom: 0;
   }
