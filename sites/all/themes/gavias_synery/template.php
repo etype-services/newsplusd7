@@ -13,26 +13,28 @@ include_once $theme_path . '/includes/functions.php';
 include_once $theme_path . '/includes/dynamic_style.php';
 
 /**
- * Assign theme hook suggestions for custom templates and pass color theme setting
- */  
+ * Assign theme hook suggestions for custom templates and pass color theme
+ * setting
+ */
 function gavias_synery_preprocess_page(&$vars, $hook) {
   if (isset($vars['node'])) {
     $suggest = "page__node__{$vars['node']->type}";
     $vars['theme_hook_suggestions'][] = $suggest;
   }
-  
-  if (arg(0) == 'taxonomy' && arg(1) == 'term' ){
+
+  if (arg(0) == 'taxonomy' && arg(1) == 'term') {
     $term = taxonomy_term_load(arg(2));
     $vars['theme_hook_suggestions'][] = 'page--taxonomy--vocabulary--' . $term->vid;
   }
   $alias = drupal_get_path_alias($_GET['q']);
   if ($alias != $_GET['q']) {
-    $vars['theme_hook_suggestions'][] = 'page__'. str_replace('-', '_', $alias);     
+    $vars['theme_hook_suggestions'][] = 'page__' . str_replace('-', '_', $alias);
   }
 }
 
 /**
  * Override or insert variables into the html template.
+ *
  * @param $vars
  *   An array of variables to pass to the theme template.
  */
@@ -42,50 +44,64 @@ function gavias_synery_preprocess_html(&$vars) {
   global $parent_root;
   $skin = theme_get_setting('theme_skin');
   if (theme_get_setting('rtl') == 1) {
-    drupal_add_css(drupal_get_path('theme', 'gavias_synery') . '/css/' . ($skin ? ('skins/' . $skin . '/') : '' ) . 'template.css', array('group' => CSS_DEFAULT, 'type' => 'file'));
-    drupal_add_css(drupal_get_path('theme', 'gavias_synery') . '/css/' . ($skin ? ('skins/' . $skin . '/') : '' ) . 'bootstrap-rtl.css', array('group' => CSS_DEFAULT, 'type' => 'file'));
+    drupal_add_css(drupal_get_path('theme', 'gavias_synery') . '/css/' . ($skin ? ('skins/' . $skin . '/') : '') . 'template.css', [
+      'group' => CSS_DEFAULT,
+      'type' => 'file',
+    ]);
+    drupal_add_css(drupal_get_path('theme', 'gavias_synery') . '/css/' . ($skin ? ('skins/' . $skin . '/') : '') . 'bootstrap-rtl.css', [
+      'group' => CSS_DEFAULT,
+      'type' => 'file',
+    ]);
     $vars['language']->dir = 'rtl';
     $vars['classes_array'][] = 'rtl';
-  }else{
-    drupal_add_css(drupal_get_path('theme', 'gavias_synery') . '/css/' . ($skin ? ('skins/' . $skin . '/') : '' ) . 'template.css', array('group' => CSS_DEFAULT, 'type' => 'file'));
-    drupal_add_css(drupal_get_path('theme', 'gavias_synery') . '/css/' . ($skin ? ('skins/' . $skin . '/') : '' ) . 'bootstrap.css', array('group' => CSS_DEFAULT, 'type' => 'file'));
-  } 
+  } else {
+    drupal_add_css(drupal_get_path('theme', 'gavias_synery') . '/css/' . ($skin ? ('skins/' . $skin . '/') : '') . 'template.css', [
+      'group' => CSS_DEFAULT,
+      'type' => 'file',
+    ]);
+    drupal_add_css(drupal_get_path('theme', 'gavias_synery') . '/css/' . ($skin ? ('skins/' . $skin . '/') : '') . 'bootstrap.css', [
+      'group' => CSS_DEFAULT,
+      'type' => 'file',
+    ]);
+  }
 
-  $viewport = array(
-     '#type' => 'html_tag',
-     '#tag' => 'meta',
-     '#attributes' => array(
-       'name' => 'viewport',
-       'content' =>  'width=device-width, initial-scale=1, maximum-scale=1',
-     ),
-     '#weight' => 1,
-   );
+  $viewport = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1, maximum-scale=1',
+    ],
+    '#weight' => 1,
+  ];
 
-    $background_image = array(
-     '#type' => 'markup',
-     '#markup' => "<style type='text/css'>body {background-image:url(".$parent_root."/images/patterns/".theme_get_setting('background_select').".png);}</style> ",
-     '#weight' => 2,
-   );
+  $background_image = [
+    '#type' => 'markup',
+    '#markup' => "<style type='text/css'>body {background-image:url(" . $parent_root . "/images/patterns/" . theme_get_setting('background_select') . ".png);}</style> ",
+    '#weight' => 2,
+  ];
 
-   $background_color = array(
-     '#type' => 'markup',
-     '#markup' => "<style type='text/css'>body {background-color: #".theme_get_setting('body_background_color')." !important;}</style> ",
-     '#weight' => 3,
-   );
-   
-   drupal_add_html_head( $viewport, 'viewport');
+  $background_color = [
+    '#type' => 'markup',
+    '#markup' => "<style type='text/css'>body {background-color: #" . theme_get_setting('body_background_color') . " !important;}</style> ",
+    '#weight' => 3,
+  ];
 
-   if ( theme_get_setting('site_layout') == "boxed") {
-     drupal_add_html_head( $background_image, 'background_image');
-   }
+  drupal_add_html_head($viewport, 'viewport');
 
-   if (theme_get_setting('body_background') == "custom_background_color") {
-     drupal_add_html_head( $background_color, 'background_color');
-   }
-   // Add boxed class if layout is set that way.
-   if (theme_get_setting('site_layout') == 'boxed'){
-     $vars['classes_array'][] = 'boxed';
-   }
+  if (theme_get_setting('site_layout') == "boxed") {
+    drupal_add_html_head($background_image, 'background_image');
+  }
+
+  if (theme_get_setting('body_background') == "custom_background_color") {
+    drupal_add_html_head($background_color, 'background_color');
+  }
+  // Add boxed class if layout is set that way.
+  if (theme_get_setting('site_layout') == 'boxed') {
+    $vars['classes_array'][] = 'boxed';
+  }
+  // add theme identifier
+  $vars['classes_array'][] = 'synergy';
 }
 
 function gavias_synery_process_html(&$vars) {
@@ -94,7 +110,7 @@ function gavias_synery_process_html(&$vars) {
 
 /**
  * Implements hook_preprocess_region().
- */ 
+ */
 function gavias_synery_preprocess_region(&$variables) {
   global $theme;
   static $wells;
@@ -119,10 +135,10 @@ function gavias_synery_preprocess_region(&$variables) {
 }
 
 /**
-*  Implements theme_css_alter().
-*/
+ *  Implements theme_css_alter().
+ */
 function gavias_synery_css_alter(&$css) {
- if (theme_get_setting('rtl') == 1) {
-   unset($css[drupal_get_path('theme', 'gavias_synery') . '/css/bootstrap.css']);
- }
+  if (theme_get_setting('rtl') == 1) {
+    unset($css[drupal_get_path('theme', 'gavias_synery') . '/css/bootstrap.css']);
+  }
 }
