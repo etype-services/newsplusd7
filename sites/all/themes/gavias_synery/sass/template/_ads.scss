@@ -3,7 +3,10 @@
   display: flex;
   justify-content: center;
 }
-/* assumes region-header-right is just for ads */
+/*
+ * Assumes region-header-right is just for ads
+ * Centers ad vertically and also right-aligns ad
+ */
 .region-header-right {
   display: flex;
   align-items: center;
