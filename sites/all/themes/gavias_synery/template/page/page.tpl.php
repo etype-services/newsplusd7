@@ -47,7 +47,9 @@
 
 		<?php if ($page['before_content']) { ?>
 			<div class="before_content area">
-				<?php print render($page['before_content']); ?>
+                <div class="container">
+                  <?php print render($page['before_content']); ?>
+                </div>
 			</div>
 		<?php } ?>
 
