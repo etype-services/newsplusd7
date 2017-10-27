@@ -1622,6 +1622,10 @@ div#acquia-agent-no-search {
 .region-before-content .block-simpleads {
   margin-bottom: 3px; }
 
+.sidebar .block-simpleads {
+  margin-top: 20px;
+  margin-bottom: 3px; }
+
 .front {
   /* for ad below slideshow on home page */ }
   .front .region-content-bottom {
