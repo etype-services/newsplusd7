@@ -1587,7 +1587,7 @@ div#acquia-agent-no-search {
 @media screen and (max-width: 768px) {
   .header-main {
     /* move ad under logo */ }
-    .header-main .col-xs-3, .header-main .col-xs-9 {
+    .header-main .col-xs-6 {
       width: 100%; }
     .header-main h1.logo {
       margin-top: 0;
