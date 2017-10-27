@@ -1,0 +1,12 @@
+@media screen and (max-width: $screen-sm) {
+  .header-main {
+    /* move ad under logo */
+    .col-xs-3, .col-xs-9 {
+      width: 100%;
+    }
+    h1.logo {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

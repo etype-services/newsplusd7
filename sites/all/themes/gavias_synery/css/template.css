@@ -1584,6 +1584,14 @@ div#acquia-agent-no-search {
   margin: 100px 0 0 -15px;
   display: block; }
 
+@media screen and (max-width: 768px) {
+  .header-main {
+    /* move ad under logo */ }
+    .header-main .col-xs-3, .header-main .col-xs-9 {
+      width: 100%; }
+    .header-main h1.logo {
+      margin-top: 0;
+      margin-bottom: 0; } }
 #drupal_tabs {
   margin: 20px 0; }
 
