@@ -9,7 +9,7 @@
     attach: function () {
       var pathname = window.location.pathname; // Returns path only
       // only on Home Page
-      if ((pathname === "/") || (pathname === "front")) {
+      if ((pathname === "/") || (pathname === "/front")) {
         $(".tb-megamenu-nav > li").each(function() {
           if ($(this).hasClass("dropdown")) {
             $(this).removeClass("active");
