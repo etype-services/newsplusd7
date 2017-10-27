@@ -1617,3 +1617,6 @@ div#acquia-agent-no-search {
   min-height: 92px; }
   .region-header-right .block-simpleads {
     margin-bottom: 0; }
+
+.region-before-content .block-simpleads {
+  margin-bottom: 0; }
