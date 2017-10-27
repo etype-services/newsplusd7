@@ -1591,7 +1591,9 @@ div#acquia-agent-no-search {
       width: 100%; }
     .header-main h1.logo {
       margin-top: 0;
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+    .header-main .region-header-right {
+      justify-content: center; } }
 #drupal_tabs {
   margin: 20px 0; }
 
