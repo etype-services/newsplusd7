@@ -17,9 +17,16 @@
     margin-bottom: 0;
   }
 }
-
+/* Remove margin for region-before-content ad */
 .region-before-content {
   .block-simpleads {
-    margin-bottom: 0;
+    margin-bottom: 3px;
+  }
+}
+
+.front {
+  /* for ad below slideshow on home page */
+  .region-content-bottom {
+    margin-top: 28px;
   }
 }
