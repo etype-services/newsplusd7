@@ -1309,6 +1309,10 @@ ul.widget-twitter > li {
 #block-poll-recent .bar {
   width: 75%;
   float: left; }
+#block-poll-recent .form-type-radio input[type="radio"] {
+  margin: 0 3px 2px 0; }
+#block-poll-recent .form-type-radio label {
+  font-size: 12px; }
 
 .poll .title {
   margin-bottom: 15px;

@@ -342,4 +342,12 @@ ul.widget-twitter{
     width: 75%;
     float: left;
   }
+  .form-type-radio {
+    input[type="radio"] {
+      margin: 0 3px 2px 0;
+    }
+    label {
+      font-size: 12px;
+    }
+  }
 }
