@@ -328,6 +328,9 @@ ul.widget-twitter{
     font-size: 14px;
     line-height: 1.4;
   }
+  .text {
+    color: $text-color;
+  }
   .text, .percent, .total, .links{
     font-weight: normal;
     font-size: 12px;

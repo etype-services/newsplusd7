@@ -1299,6 +1299,8 @@ ul.widget-twitter > li {
 #block-poll-recent .title {
   font-size: 14px;
   line-height: 1.4; }
+#block-poll-recent .text {
+  color: #848484; }
 #block-poll-recent .text, #block-poll-recent .percent, #block-poll-recent .total, #block-poll-recent .links {
   font-weight: normal;
   font-size: 12px; }
