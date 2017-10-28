@@ -112,18 +112,6 @@ global $parent_root;
     ?>
   </div>
 
-  <?php
-    // Only display the wrapper div if there are links.
-      $links = render($content['links']);
-      if ($links):
-    ?>
-    <?php if (!$teaser): ?>
-      <div class="link-wrapper">
-        <?php print $links; ?>
-      </div>
-    <?php endif; ?>  
-  <?php endif; ?>
-
 </div>
 
 
