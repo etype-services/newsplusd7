@@ -95,7 +95,7 @@ global $parent_root;
         <span class="month"><?php print t(format_date($node->created, 'custom', 'M')); ?></span>
       </div>
     <?php endif; ?> 
-    <div class="block-title">
+    <div class="post-title">
       <?php print render($title_prefix); ?>
           <h2 <?php print $title_attributes; ?>><?php print $title; ?></h2>
        <?php print render($title_suffix); ?>
