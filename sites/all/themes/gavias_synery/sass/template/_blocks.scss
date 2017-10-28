@@ -315,7 +315,9 @@ ul.widget-twitter{
     position: relative;
     top: 4px;
     .form-type-radio {
-      margin: 0 3px 2px 0
+      input[type="radio"]{
+        margin: 0 3px 2px 0
+      }
     }
   }
 }
