@@ -302,20 +302,20 @@ ul.widget-twitter{
       float: left;
       padding-left: 11px;
       width: 126px;
-      margin-top: -14px;
+      margin-top: -13px;
       h2 {
         font-size: 14px;
         font-weight: normal;
         line-height: 1.4;
       }
     }
-    .content {
-      clear: both;
-      position: relative;
-      top: 4px;
-      .form-type-radio {
-        margin: 0 3px 2px 0
-      }
+  }
+  .content {
+    clear: both;
+    position: relative;
+    top: 4px;
+    .form-type-radio {
+      margin: 0 3px 2px 0
     }
   }
 }
