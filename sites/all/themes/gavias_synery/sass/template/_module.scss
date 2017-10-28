@@ -16,7 +16,6 @@
 
 .block-poll{
 	ul.links{
-		text-align: center;
 		overflow: hidden;
 		padding: 15px 0 0;
 		li{
@@ -40,6 +39,32 @@
 			&:last-child{
 				margin: 0;
 			}
+		}
+	}
+	.title {
+		font-size: 14px;
+		line-height: 1.4;
+	}
+	.text {
+		color: $text-color;
+	}
+	.text, .percent, .total, .links{
+		font-weight: normal;
+		font-size: 12px;
+	}
+	.bar {
+		width: 75%;
+		float: left;
+	}
+	.vote-form {
+		text-align: inherit;
+	}
+	.form-type-radio {
+		input[type="radio"] {
+			margin: 0 3px 2px 0;
+		}
+		label {
+			font-size: 12px;
 		}
 	}
 }
