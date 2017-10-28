@@ -97,7 +97,7 @@ global $parent_root;
     <?php endif; ?> 
     <div class="post-title">
       <?php print render($title_prefix); ?>
-          <h2 <?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+          <h2 <?php print $title_attributes; ?>><?php print $title; ?></h2>
        <?php print render($title_suffix); ?>
     </div>
 
