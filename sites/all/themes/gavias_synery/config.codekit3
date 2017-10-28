@@ -3098,6 +3098,12 @@
 		"oAP": "\/template\/contact\/contact.pages.inc",
 		"oF": 0
 		},
+	"\/template\/node\/node--advpoll.tpl.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template\/node\/node--advpoll.tpl.php",
+		"oF": 0
+		},
 	"\/template\/node\/node--article.tpl.php": {
 		"ft": 8192,
 		"oA": 2,
