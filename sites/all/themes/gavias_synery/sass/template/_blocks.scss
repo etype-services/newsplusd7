@@ -322,9 +322,21 @@ ul.widget-twitter{
   }
 }
 
+/* Poll Most Recent Block style fixes */
 #block-poll-recent {
   .title {
     font-size: 14px;
     line-height: 1.4;
+  }
+  .text, .percent, .total, .links{
+    font-weight: normal;
+    font-size: 12px;
+    ul.links {
+      padding: 0;
+    }
+  }
+  .bar {
+    width: 75%;
+    float: left;
   }
 }

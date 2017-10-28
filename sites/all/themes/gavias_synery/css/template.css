@@ -1295,9 +1295,18 @@ ul.widget-twitter > li {
   #block-advpoll-advpoll-recent .content .form-type-radio input[type="radio"] {
     margin: 0 3px 2px 0; }
 
+/* Poll Most Recent Block style fixes */
 #block-poll-recent .title {
   font-size: 14px;
   line-height: 1.4; }
+#block-poll-recent .text, #block-poll-recent .percent, #block-poll-recent .total, #block-poll-recent .links {
+  font-weight: normal;
+  font-size: 12px; }
+  #block-poll-recent .text ul.links, #block-poll-recent .percent ul.links, #block-poll-recent .total ul.links, #block-poll-recent .links ul.links {
+    padding: 0; }
+#block-poll-recent .bar {
+  width: 75%;
+  float: left; }
 
 .poll .title {
   margin-bottom: 15px;
