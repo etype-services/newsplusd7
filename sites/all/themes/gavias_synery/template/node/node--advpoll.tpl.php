@@ -87,7 +87,7 @@ if (module_exists('profile2')) {
 }
 global $parent_root;
 ?>
-<div id="node-<?php print $node->nid; ?>" class="blog-single-post <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<div id="node-<?php print $node->nid; ?>" class="blog-single-post post-style-list small <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="content-first">
     <?php if ($display_submitted): ?>
       <div class="post-date">
@@ -95,7 +95,7 @@ global $parent_root;
         <span class="month"><?php print t(format_date($node->created, 'custom', 'M')); ?></span>
       </div>
     <?php endif; ?> 
-    <div class="post-title">
+    <div class="block-title">
       <?php print render($title_prefix); ?>
           <h2 <?php print $title_attributes; ?>><?php print $title; ?></h2>
        <?php print render($title_suffix); ?>
