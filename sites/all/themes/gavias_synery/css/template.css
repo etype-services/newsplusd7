@@ -1295,6 +1295,10 @@ ul.widget-twitter > li {
   #block-advpoll-advpoll-recent .content .form-type-radio input[type="radio"] {
     margin: 0 3px 2px 0; }
 
+#block-poll-recent .title {
+  font-size: 14px;
+  line-height: 1.4; }
+
 .poll .title {
   margin-bottom: 15px;
   font-weight: 400 !important;
