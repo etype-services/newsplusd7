@@ -349,7 +349,7 @@ header .header-main {
       -webkit-transform: scale(1.2) rotate(6deg);
       transform: scale(1.2) rotate(6deg); }
   .post-block .post-title {
-    padding: 10px 0 5px; }
+    padding: 10px 0 0; }
     .post-block .post-title h2, .post-block .post-title h3, .post-block .post-title h4 {
       margin: 0; }
     .post-block .post-title a {
@@ -549,7 +549,7 @@ header .header-main {
   width: 70%;
   padding-left: 10px; }
 .post-style-list.small .post-title {
-  padding-top: 3px; }
+  margin-top: -4px; }
   .post-style-list.small .post-title a {
     font-weight: 400;
     font-size: 14px !important; }
