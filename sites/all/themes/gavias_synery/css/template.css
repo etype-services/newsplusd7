@@ -1275,6 +1275,26 @@ ul.widget-twitter > li {
 .contact-info {
   line-height: 28px; }
 
+/* AdvPoll Most Recent Block style fixes */
+.block-advpoll-advpoll-recent .content-first .post-date {
+  position: inherit;
+  float: left; }
+.block-advpoll-advpoll-recent .content-first .post-title {
+  float: left;
+  padding-left: 11px;
+  width: 126px;
+  margin-top: -14px; }
+  .block-advpoll-advpoll-recent .content-first .post-title h2 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4; }
+.block-advpoll-advpoll-recent .content-first .content {
+  clear: both;
+  position: relative;
+  top: 4px; }
+  .block-advpoll-advpoll-recent .content-first .content .form-type-radio {
+    margin: 0 3px 2px 0; }
+
 .poll .title {
   margin-bottom: 15px;
   font-weight: 400 !important;
