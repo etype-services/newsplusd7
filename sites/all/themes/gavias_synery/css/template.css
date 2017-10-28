@@ -175,9 +175,6 @@ header .header-main {
 
 .area {
   margin-bottom: 20px; }
-  .area.before_footer {
-    background: #F6F7F9;
-    border: 1px solid rgba(0, 0, 0, 0.1); }
 
 .sidebar {
   position: relative; }
