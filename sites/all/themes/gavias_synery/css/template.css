@@ -1305,10 +1305,13 @@ ul.widget-twitter > li {
   font-weight: normal;
   font-size: 12px; }
   #block-poll-recent .text ul.links, #block-poll-recent .percent ul.links, #block-poll-recent .total ul.links, #block-poll-recent .links ul.links {
-    padding: 0; }
+    padding: 0;
+    text-align: inherit; }
 #block-poll-recent .bar {
   width: 75%;
   float: left; }
+#block-poll-recent .vote-form {
+  text-align: inherit; }
 #block-poll-recent .form-type-radio input[type="radio"] {
   margin: 0 3px 2px 0; }
 #block-poll-recent .form-type-radio label {
