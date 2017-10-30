@@ -1,5 +1,5 @@
 .tb-megamenu {
-	background: none;  
+	background: none;
 	.dropdown-menu {
 		@include rtl-text-align-left();
 		a{
@@ -11,9 +11,9 @@
 		}
 	}
 	.block{
-		
-	}   
-   .nav-collapse ul.nav{
+
+	}
+    .nav-collapse ul.nav{
    	> li {
    		border-left: 1px solid $border-color;
    		&:last-child{
@@ -50,7 +50,7 @@
 					> a {
 						color: $theme-color!important;
 						&:focus, &:hover {
-							
+
 						}
 					}
 				}
@@ -75,22 +75,25 @@
 						}
 					}
 				}
-				
+
 				ul.menu > li {
 					padding: 5px 0;
 					> a{
 						padding: 5px 5px 5px 15px;
 					}
 				}
-			}	
+			}
 		}
+      &.collapse {
+        display: block;
+      }
 	}
 	.tb-megamenu-subnav{
 		a{
 			background: none!important;
 		}
 	}
-}		
+}
 
 @media(max-width: $screen-sm-max){
 	.tb-megamenu {
@@ -104,7 +107,7 @@
 					&:hover{
 						color: $theme-color!important;
 					}
-				}	
+				}
 			}
 		}
 		.tb-megamenu-button{

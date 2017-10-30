@@ -1421,6 +1421,8 @@ ul.pagination {
         padding: 5px 0; }
         .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu ul.menu > li > a {
           padding: 5px 5px 5px 15px; }
+  .tb-megamenu .nav-collapse ul.nav.collapse {
+    display: block; }
   .tb-megamenu .tb-megamenu-subnav a {
     background: none !important; }
 
