@@ -1379,50 +1379,52 @@ ul.pagination {
       font-weight: 300 !important; }
       .tb-megamenu .dropdown-menu a:hover {
         color: #0099CC !important; }
-  .tb-megamenu .nav-collapse ul.nav > li {
-    border-left: 1px solid rgba(0, 0, 0, 0.1); }
-    .tb-megamenu .nav-collapse ul.nav > li:last-child {
-      border-right: 1px solid rgba(0, 0, 0, 0.1); }
-    .tb-megamenu .nav-collapse ul.nav > li > a {
-      color: #000 !important; }
-    .tb-megamenu .nav-collapse ul.nav > li.open > a {
-      color: #0099CC !important; }
-    .tb-megamenu .nav-collapse ul.nav > li > a {
-      text-transform: uppercase;
-      border-right: none;
-      color: #fff;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 15px 20px;
-      border: none;
-      background: none !important;
-      border-left: 1px solid rgba(255, 255, 255, 0.1); }
-      .tb-megamenu .nav-collapse ul.nav > li > a:focus, .tb-megamenu .nav-collapse ul.nav > li > a:hover {
-        color: #0099CC; }
-    .tb-megamenu .nav-collapse ul.nav > li.active > a {
-      color: #0099CC !important;
-      border-left: 1px solid rgba(255, 255, 255, 0.1) !important; }
-    .tb-megamenu .nav-collapse ul.nav > li.dropdown.open .active > a {
-      color: #0099CC !important; }
-    .tb-megamenu .nav-collapse ul.nav > li.dropdown .caret {
-      margin-top: 10px !important; }
-    .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu {
-      padding: 10px;
-      background: #fff;
-      border: none;
-      border-bottom: 2px solid #0099CC; }
-      .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu .tb-megamenu-subnav > li > a {
+  .tb-megamenu .nav-collapse {
+    /* override bootstrap component animations css */ }
+    .tb-megamenu .nav-collapse.collapse {
+      display: block; }
+    .tb-megamenu .nav-collapse ul.nav > li {
+      border-left: 1px solid rgba(0, 0, 0, 0.1); }
+      .tb-megamenu .nav-collapse ul.nav > li:last-child {
+        border-right: 1px solid rgba(0, 0, 0, 0.1); }
+      .tb-megamenu .nav-collapse ul.nav > li > a {
+        color: #000 !important; }
+      .tb-megamenu .nav-collapse ul.nav > li.open > a {
+        color: #0099CC !important; }
+      .tb-megamenu .nav-collapse ul.nav > li > a {
+        text-transform: uppercase;
+        border-right: none;
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 15px 20px;
         border: none;
-        padding: 5px 0; }
-        .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu .tb-megamenu-subnav > li > a:hover, .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu .tb-megamenu-subnav > li > a:focus, .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu .tb-megamenu-subnav > li > a:active {
-          background: none;
+        background: none !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.1); }
+        .tb-megamenu .nav-collapse ul.nav > li > a:focus, .tb-megamenu .nav-collapse ul.nav > li > a:hover {
           color: #0099CC; }
-      .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu ul.menu > li {
-        padding: 5px 0; }
-        .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu ul.menu > li > a {
-          padding: 5px 5px 5px 15px; }
-  .tb-megamenu .nav-collapse ul.nav.collapse {
-    display: block; }
+      .tb-megamenu .nav-collapse ul.nav > li.active > a {
+        color: #0099CC !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.1) !important; }
+      .tb-megamenu .nav-collapse ul.nav > li.dropdown.open .active > a {
+        color: #0099CC !important; }
+      .tb-megamenu .nav-collapse ul.nav > li.dropdown .caret {
+        margin-top: 10px !important; }
+      .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu {
+        padding: 10px;
+        background: #fff;
+        border: none;
+        border-bottom: 2px solid #0099CC; }
+        .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu .tb-megamenu-subnav > li > a {
+          border: none;
+          padding: 5px 0; }
+          .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu .tb-megamenu-subnav > li > a:hover, .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu .tb-megamenu-subnav > li > a:focus, .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu .tb-megamenu-subnav > li > a:active {
+            background: none;
+            color: #0099CC; }
+        .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu ul.menu > li {
+          padding: 5px 0; }
+          .tb-megamenu .nav-collapse ul.nav > li .dropdown-menu ul.menu > li > a {
+            padding: 5px 5px 5px 15px; }
   .tb-megamenu .tb-megamenu-subnav a {
     background: none !important; }
 
