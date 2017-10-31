@@ -25,7 +25,7 @@ CKEDITOR.editorConfig = function(config) {
   config.protectedSource.push(/<\?[\s\S]*?\?>/g); // PHP Code
 
   // [#1762328] Uncomment the line below to protect <code> tags in CKEditor (hide them in wysiwyg mode).
-  // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
+  config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
   config.extraPlugins = 'videoembed, youtube';
   config.youtube_responsive = true;
 
