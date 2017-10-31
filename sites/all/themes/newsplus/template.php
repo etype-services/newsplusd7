@@ -948,9 +948,9 @@ function newsplus_preprocess_page(&$variables) {
   }
 
   if (isset($header_top_right)) {
-    $variables['header_top_inside_left_grid_class'] = 'col-md-6';
+    $variables['header_top_inside_left_grid_class'] = 'col-md-9';
   } else { 
-    $variables['header_top_inside_left_grid_class'] = 'col-md-12';
+    $variables['header_top_inside_left_grid_class'] = 'col-md-3';
   } 
 
   if (isset($footer_first) && isset($footer_second) && isset($footer_third) &&
