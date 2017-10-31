@@ -3636,10 +3636,10 @@ Adjustments for ads
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: nowrap; }
 
 @media (max-width: 767px) {
   #header-top #header-top-inside .row {
-    flex-wrap: nowrap; }
+    flex-wrap: wrap; }
   #header-top #header-top-inside .col-md-4, #header-top #header-top-inside .col-md-8 {
     width: 100%; } }

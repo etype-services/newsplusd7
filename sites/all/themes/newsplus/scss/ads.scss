@@ -33,7 +33,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
   }
 }
@@ -42,7 +42,7 @@
   #header-top {
     #header-top-inside {
       .row {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
       }
       .col-md-4, .col-md-8 {
         width: 100%;
