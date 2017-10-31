@@ -83,10 +83,3 @@ Adjustments for ads
 #block-views-calendar-block-2 .views-row div {
   display: inline-block;
 }
-/* header with logo and ad */
-#header-top #header-top-inside .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}

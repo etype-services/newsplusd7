@@ -4,10 +4,6 @@
   justify-content: center;
 }
 
-.region-header-top-right .adslist {
-  justify-content: flex-end;
-}
-
 .region-top-content .block-simpleads {
   padding: 0;
 }
@@ -24,4 +20,17 @@
 
 .region-footer-ad .block-simpleads.block {
   padding-bottom: 40px;
+}
+
+/* header with logo and ad */
+#header-top #header-top-inside .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  #header-top #header-top-inside .col-md-4, #header-top #header-top-inside .col-md-8 {
+    width: 100%;
+  }
 }
