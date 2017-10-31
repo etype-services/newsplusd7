@@ -3641,5 +3641,7 @@ Adjustments for ads
 @media (max-width: 767px) {
   #header-top #header-top-inside .row {
     flex-wrap: wrap; }
-  #header-top #header-top-inside .col-md-4, #header-top #header-top-inside .col-md-8 {
-    width: 100%; } }
+    #header-top #header-top-inside .row #logo-and-site-name-wrapper {
+      padding-bottom: 0; }
+    #header-top #header-top-inside .row .col-md-4, #header-top #header-top-inside .row .col-md-8 {
+      width: 100%; } }

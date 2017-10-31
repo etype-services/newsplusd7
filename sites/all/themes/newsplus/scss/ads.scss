@@ -43,9 +43,12 @@
     #header-top-inside {
       .row {
         flex-wrap: wrap;
-      }
-      .col-md-4, .col-md-8 {
-        width: 100%;
+        #logo-and-site-name-wrapper {
+          padding-bottom: 0;
+        }
+        .col-md-4, .col-md-8 {
+          width: 100%;
+        }
       }
     }
   }
