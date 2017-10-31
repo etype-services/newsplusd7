@@ -89,7 +89,8 @@
             
             
                 <?php if ($page['header_top_right']) :?>
-                <div class="col-md-6">
+                <div class="<?php print $header_top_inside_right_grid_class;
+                ?>">
                     <!-- #header-top-right -->
                     <div id="header-top-right" class="clearfix">
                         <div class="header-top-area">                    
