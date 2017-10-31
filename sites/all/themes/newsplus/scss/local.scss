@@ -85,5 +85,7 @@ Adjustments for ads
 }
 /* for block classes */
 .with-border {
-  border: 2px solid $gray;
+  .content {
+    border: 2px solid $gray;
+  }
 }
