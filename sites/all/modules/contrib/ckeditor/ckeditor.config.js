@@ -105,3 +105,5 @@ Drupal.settings.cke_toolbar_DrupalFull = [
   ['Maximize', 'ShowBlocks'],
   ['DrupalBreak', 'DrupalPageBreak']
 ];
+
+config.extraPlugins = 'videoembed';
