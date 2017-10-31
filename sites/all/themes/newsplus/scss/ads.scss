@@ -8,15 +8,19 @@
   padding: 0;
 }
 
-/* ad divs have padding between them */
-.sidebar .block.block-simpleads .simplead-container {
-  padding-bottom: 40px;
+.sidebar {
+  .block.block-simpleads {
+    /* ad divs have padding between them */
+    .simplead-container {
+      padding-bottom: 20px;
+    }
+    /* last one with no padding */
+    .adslist > div > div > div:last-child {
+      padding-bottom: 0;
+    }
+  }
 }
 
-/* last one with no padding */
-.sidebar .block.block-simpleads .adslist > div > div > div:last-child {
-  padding-bottom: 0;
-}
 
 .region-footer-ad .block-simpleads.block {
   padding-bottom: 40px;
@@ -30,7 +34,11 @@
   flex-wrap: wrap;
 }
 @media (max-width: 767px) {
-  #header-top #header-top-inside .col-md-4, #header-top #header-top-inside .col-md-8 {
-    width: 100%;
+  #header-top {
+    #header-top-inside {
+      .col-md-4, .col-md-8 {
+        width: 100%;
+      }
+    }
   }
 }
