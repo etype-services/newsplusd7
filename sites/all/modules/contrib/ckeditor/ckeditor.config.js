@@ -26,7 +26,8 @@ CKEDITOR.editorConfig = function(config) {
 
   // [#1762328] Uncomment the line below to protect <code> tags in CKEditor (hide them in wysiwyg mode).
   // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
-  config.extraPlugins = '';
+  config.extraPlugins = 'videoembed, youtube';
+  config.youtube_responsive = true;
 
   /*
     * Append here extra CSS rules that should be applied into the editing area.
@@ -65,8 +66,6 @@ CKEDITOR.editorConfig = function(config) {
     config.height = this.element.$.rows * 20 + 'px';
   }
 
-  // extra plugins
-  config.extraPlugins = 'videoembed, youtube';
 }
 
 /*
