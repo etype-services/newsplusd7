@@ -64,6 +64,9 @@ CKEDITOR.editorConfig = function(config) {
   if (this.element.$.rows > 0) {
     config.height = this.element.$.rows * 20 + 'px';
   }
+
+  // extra plugins
+  config.extraPlugins = 'videoembed';
 }
 
 /*
@@ -105,5 +108,3 @@ Drupal.settings.cke_toolbar_DrupalFull = [
   ['Maximize', 'ShowBlocks'],
   ['DrupalBreak', 'DrupalPageBreak']
 ];
-
-config.extraPlugins = 'videoembed';
