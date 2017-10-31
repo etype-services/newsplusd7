@@ -66,7 +66,7 @@ CKEDITOR.editorConfig = function(config) {
   }
 
   // extra plugins
-  config.extraPlugins = 'videoembed';
+  config.extraPlugins = 'videoembed, youtube';
 }
 
 /*
