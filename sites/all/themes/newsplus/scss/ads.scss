@@ -27,15 +27,23 @@
 }
 
 /* header with logo and ad */
-#header-top #header-top-inside .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+#header-top {
+  #header-top-inside {
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
 }
+
 @media (max-width: 767px) {
   #header-top {
     #header-top-inside {
+      .row {
+        flex-wrap: nowrap;
+      }
       .col-md-4, .col-md-8 {
         width: 100%;
       }
