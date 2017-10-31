@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25900",
 "files": {
+	"\/block.tpl.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/block.tpl.php",
+		"oF": 0
+		},
 	"\/bootstrap\/css\/bootstrap-theme.css": {
 		"aP": 1,
 		"bl": 0,
