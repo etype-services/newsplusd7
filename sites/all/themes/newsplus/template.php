@@ -975,7 +975,6 @@ function newsplus_preprocess_page(&$variables) {
       $url = field_get_items('node', $variables['node'], 'field_ad_url');
       $arr['img_url'] = $url[0]['safe_value'];
       $variables['node_ad'] = theme_render_template('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $arr);
-      var_dump($variables['node_ad']);
     }
   }
 
