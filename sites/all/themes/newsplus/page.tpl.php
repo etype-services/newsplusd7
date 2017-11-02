@@ -319,7 +319,7 @@
                             <?php print $feed_icons; ?>
                             <?php endif; ?>
 
-                            <?php print render($page['node_Ad']); ?>
+                            <?php print render($page['node_ad']); ?>
 
                         </div>
                         <!-- EOF:#main -->
