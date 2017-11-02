@@ -319,8 +319,6 @@
                             <?php print $feed_icons; ?>
                             <?php endif; ?>
 
-                            <?php print $node_ad; ?>
-
                         </div>
                         <!-- EOF:#main -->
 

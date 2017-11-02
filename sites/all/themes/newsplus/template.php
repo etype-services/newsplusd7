@@ -964,10 +964,20 @@ function newsplus_preprocess_page(&$variables) {
 
   $variables['footer_ad_class'] = 'col-md-12';
 
+}
+
+/**
+ * @param $variables
+ * Preprocess variables for node template.
+ */
+function newsplus_preprocess_node(&$variables) {
+  $variables['posted_ago'] = format_interval((time() - $variables['created']), 1);
+  $variables['changed_ago'] = format_interval((time() - $variables['changed']), 1);
+
   /* Sponsor Ad */
   $variables['node_ad'] = '';
-  if (isset($variables['node'])) {
-    $node = $variables['node'];
+  $node = $variables['node'];
+  if ($variables['element']['#view_mode'] != 'teaser')  {
     $ad = field_get_items('node', $node, 'field_ad_image');
     if (!empty($ad[0]['uri'])) {
       $arr = array();
@@ -978,15 +988,6 @@ function newsplus_preprocess_page(&$variables) {
     }
   }
 
-}
-
-/**
- * @param $variables
- * Preprocess variables for node template.
- */
-function newsplus_preprocess_node(&$variables) {
-  $variables['posted_ago'] = format_interval((time() - $variables['created']), 1);
-  $variables['changed_ago'] = format_interval((time() - $variables['changed']), 1);
 }
 
 /**
