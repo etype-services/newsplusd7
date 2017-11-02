@@ -977,8 +977,7 @@ function newsplus_preprocess_node(&$variables) {
   /* Sponsor Ad */
   $variables['node_ad'] = '';
   $node = $variables['node'];
-  var_dump($variables);
-  if ($variables['element']['#view_mode'] != 'teaser')  {
+  if ($variables['elements']['#view_mode'] != 'teaser')  {
     $ad = field_get_items('node', $node, 'field_ad_image');
     if (!empty($ad[0]['uri'])) {
       $arr = array();
