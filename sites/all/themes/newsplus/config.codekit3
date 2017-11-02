@@ -7,9 +7,10 @@
 		"uuidString": "AFF0E95E-89F7-4E36-832B-AFECAFAD26CA"
 		}
 	],
-"creatorBuild": "25900",
+"creatorBuild": "26097",
 "files": {
 	"\/block.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/block.tpl.php",
@@ -26,6 +27,7 @@
 		"oS": 3
 		},
 	"\/bootstrap\/css\/bootstrap-theme.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bootstrap\/css\/bootstrap-theme.css.map",
@@ -52,6 +54,7 @@
 		"oS": 3
 		},
 	"\/bootstrap\/css\/bootstrap.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bootstrap\/css\/bootstrap.css.map",
@@ -68,6 +71,7 @@
 		"oS": 3
 		},
 	"\/bootstrap\/fonts\/glyphicons-halflings-regular.eot": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bootstrap\/fonts\/glyphicons-halflings-regular.eot",
@@ -84,18 +88,21 @@
 		"prP": 0
 		},
 	"\/bootstrap\/fonts\/glyphicons-halflings-regular.ttf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bootstrap\/fonts\/glyphicons-halflings-regular.ttf",
 		"oF": 0
 		},
 	"\/bootstrap\/fonts\/glyphicons-halflings-regular.woff": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bootstrap\/fonts\/glyphicons-halflings-regular.woff",
 		"oF": 0
 		},
 	"\/bootstrap\/fonts\/glyphicons-halflings-regular.woff2": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bootstrap\/fonts\/glyphicons-halflings-regular.woff2",
@@ -132,30 +139,35 @@
 		"tS": 0
 		},
 	"\/comment-wrapper.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/comment-wrapper.tpl.php",
 		"oF": 0
 		},
 	"\/comment.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/comment.tpl.php",
 		"oF": 0
 		},
 	"\/field--field-ad-image--article.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/field--field-ad-image--article.tpl.php",
 		"oF": 0
 		},
 	"\/field--field_image.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/field--field_image.tpl.php",
 		"oF": 0
 		},
 	"\/flippy.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/flippy.tpl.php",
@@ -782,6 +794,7 @@
 		"oS": 3
 		},
 	"\/html.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/html.tpl.php",
@@ -799,6 +812,7 @@
 		"q": 100
 		},
 	"\/js\/flexslider\/changelog.txt": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/js\/flexslider\/changelog.txt",
@@ -815,6 +829,7 @@
 		"oS": 3
 		},
 	"\/js\/flexslider\/fonts\/flexslider-icon.eot": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/js\/flexslider\/fonts\/flexslider-icon.eot",
@@ -831,12 +846,14 @@
 		"prP": 0
 		},
 	"\/js\/flexslider\/fonts\/flexslider-icon.ttf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/js\/flexslider\/fonts\/flexslider-icon.ttf",
 		"oF": 0
 		},
 	"\/js\/flexslider\/fonts\/flexslider-icon.woff": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/js\/flexslider\/fonts\/flexslider-icon.woff",
@@ -914,6 +931,7 @@
 		"oS": 3
 		},
 	"\/js\/meanmenu\/gpl.txt": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/js\/meanmenu\/gpl.txt",
@@ -970,10 +988,10 @@
 		"oS": 3
 		},
 	"\/js\/meanmenu\/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
@@ -999,12 +1017,14 @@
 		"q": 100
 		},
 	"\/maintenance-page.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/maintenance-page.tpl.php",
 		"oF": 0
 		},
 	"\/newsplus.info": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/newsplus.info",
@@ -1021,24 +1041,28 @@
 		"oS": 3
 		},
 	"\/node--blog.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/node--blog.tpl.php",
 		"oF": 0
 		},
 	"\/node--mt_post.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/node--mt_post.tpl.php",
 		"oF": 0
 		},
 	"\/node.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/node.tpl.php",
 		"oF": 0
 		},
 	"\/page.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page.tpl.php",
@@ -1201,30 +1225,35 @@
 		"oS": 3
 		},
 	"\/template.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template.php",
 		"oF": 0
 		},
 	"\/theme-settings.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/theme-settings.php",
 		"oF": 0
 		},
 	"\/user-profile.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/user-profile.tpl.php",
 		"oF": 0
 		},
 	"\/views-view-list--mt_internal_banner--block.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views-view-list--mt_internal_banner--block.tpl.php",
 		"oF": 0
 		},
 	"\/views-view-list--slideshow--block.tpl.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views-view-list--slideshow--block.tpl.php",
@@ -1775,6 +1804,10 @@
 			"active": 0,
 			"optionString": "'expression'"
 			},
+		"function-paren-newline": {
+			"active": 0,
+			"optionString": "'multiline'"
+			},
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
@@ -1839,9 +1872,9 @@
 			"active": 0,
 			"optionString": "{'beforeBlockComment': true}"
 			},
-		"lines-around-directive": {
+		"lines-between-class-members": {
 			"active": 0,
-			"optionString": "{'before': 'always', 'after': 'always'}"
+			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
 		"max-depth": {
 			"active": 0,
@@ -1871,6 +1904,10 @@
 			"active": 0,
 			"optionString": "{'max': 1}"
 			},
+		"multiline-comment-style": {
+			"active": 0,
+			"optionString": "'starred-block'"
+			},
 		"multiline-ternary": {
 			"active": 0,
 			"optionString": "'always'"
@@ -1880,14 +1917,6 @@
 			"optionString": "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
 			},
 		"new-parens": {
-			"active": 0,
-			"optionString": ""
-			},
-		"newline-after-var": {
-			"active": 0,
-			"optionString": "'always'"
-			},
-		"newline-before-return": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -2991,7 +3020,8 @@
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 1,
+		"transpilerStyle": 1
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 0,
@@ -3024,6 +3054,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"outputStyle": 0,
+		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -3065,7 +3096,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -3097,13 +3129,13 @@
 		"enableFootnotes": 1,
 		"enableLabels": 1,
 		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
 		"maskEmailAddresses": 1,
 		"outputFormat": 0,
 		"outputStyle": 0,
 		"parseMetadata": 1,
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
+		"shouldRunCacheBuster": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -3112,7 +3144,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -3132,7 +3165,8 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
-		"outputStyle": 0
+		"outputStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -3160,7 +3194,8 @@
 		"logicless": 0,
 		"outputFormat": 0,
 		"outputStyle": 1,
-		"railsCompatible": 0
+		"railsCompatible": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
