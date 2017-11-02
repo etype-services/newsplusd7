@@ -969,6 +969,7 @@ function newsplus_preprocess_page(&$variables) {
   if (isset($variables['node'])) {
     $node = $variables['node'];
     $ad = field_get_items('node', $node, 'field_ad_image');
+    var_dump($ad);
     if (!empty($ad[0]['uri'])) {
       $arr = array();
       $arr['img_src'] = file_create_url($ad[0]['uri']);
