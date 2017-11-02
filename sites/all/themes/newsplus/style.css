@@ -3652,6 +3652,6 @@ Adjustments for ads
       width: 100%; } }
 
 /* Sponsor ad */
-.node-type-article .field-ad-image {
+.node-footer .field-ad-image {
   border-top: 1px solid #ddd;
   padding-top: 0.6em; }
