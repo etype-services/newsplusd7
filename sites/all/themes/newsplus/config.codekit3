@@ -143,6 +143,12 @@
 		"oAP": "\/comment.tpl.php",
 		"oF": 0
 		},
+	"\/field--field-ad-image--article.tpl.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/field--field-ad-image--article.tpl.php",
+		"oF": 0
+		},
 	"\/field--field_image.tpl.php": {
 		"ft": 8192,
 		"oA": 2,
