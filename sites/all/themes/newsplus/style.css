@@ -3650,3 +3650,8 @@ Adjustments for ads
       padding-bottom: 0; }
     #header-top #header-top-inside .row .col-md-4, #header-top #header-top-inside .row .col-md-8 {
       width: 100%; } }
+
+/* Sponsor ad */
+.node-type-article .field-ad-image {
+  border-top: 1px solid #ddd;
+  padding-top: 0.6em; }

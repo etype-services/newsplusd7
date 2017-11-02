@@ -787,16 +787,6 @@
 		"oAP": "\/html.tpl.php",
 		"oF": 0
 		},
-	"\/ie9.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/ie9-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/images\/footer-logo.png": {
 		"ft": 32768,
 		"iS": 288,
