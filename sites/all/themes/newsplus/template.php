@@ -299,8 +299,6 @@ function newsplus_preprocess_html(&$variables) {
     drupal_add_css('http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array('type' => 'external')); 
   }
 
-  drupal_add_css(path_to_theme() . '/ie9.css', array('group' => CSS_THEME, 'browsers' => array('IE' => '(IE 9)&(!IEMobile)', '!IE' => FALSE), 'preprocess' => FALSE));
-
   /**
   * Add Javascript - Enable/disable Bootstrap 3 Javascript.
   */
