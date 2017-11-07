@@ -1,3 +1,6 @@
 [submodule "sites/all/modules/contrib/etype_xml_importer"]
 	path = sites/all/modules/contrib/etype_xml_importer
 	url = https://github.com/etype-services/etype_xml_importer.git
+[submodule "sites/all/modules/etype"]
+	path = sites/all/modules/etype
+	url = git@github.com:etype-services/etype.git
