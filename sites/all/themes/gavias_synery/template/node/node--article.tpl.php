@@ -41,10 +41,10 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                             ?>
                           </div>
                     <?php } else {
-                      print render($content['field_post_image']);
+                      print render($content['field_image']);
                     } ?>
                   <?php } else {
-                    print render($content['field_post_image']);
+                    print render($content['field_image']);
                   }
                   ?>
                 </div>
