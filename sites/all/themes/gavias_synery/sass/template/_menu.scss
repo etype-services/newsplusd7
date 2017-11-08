@@ -106,9 +106,7 @@
   }
 }
 
-
-/* removed "tablet" width use wider width instead
-@media(max-width: $screen-sm-max){
+@media(max-width: $screen-md){
 	.tb-megamenu {
 		> .nav-collapse{
 			margin-top: 20px;
