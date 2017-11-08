@@ -112,7 +112,7 @@ function gavias_synery_process_html(&$vars) {
 }
 
 function gavias_synery_process_node(&$vars) {
-  dpm($vars['content']);
+  dpm($vars['content']['field_post_image']);
 }
 
 /**
