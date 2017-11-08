@@ -1430,7 +1430,7 @@ ul.pagination {
 #block-tb-megamenu-main-menu {
   margin: 0 66px 0 0; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   #block-tb-megamenu-main-menu {
     margin: 10px 0 0 0; } }
 /* removed "tablet" width use wider width instead
