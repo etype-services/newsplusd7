@@ -112,8 +112,10 @@ function gavias_synery_process_html(&$vars) {
 }
 
 function gavias_synery_process_node(&$vars) {
-  dpm($vars['content']['field_image']);
-  dpm ($vars['view_mode']);
+  if ($vars['view_mode'] === 'teaser') {
+    $count = count($vars['node']->content['field_image']);
+    dpm($count);
+  }
 }
 
 /**
