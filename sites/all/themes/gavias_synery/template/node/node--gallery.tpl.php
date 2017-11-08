@@ -147,27 +147,6 @@
 	    </div>
 	  <?php endif; ?>  
   <?php endif; ?>
-
-	  <?php if( (!$teaser) AND (module_exists('profile2')) ): ?>
-	
-	  	<div class="post-block post-author clearfix">
-			<h3><i class="icon icon-user"></i><?php print t('Author'); ?></h3>
-			<div class="img-thumbnail">
-           <?php 
-             if (!$user_picture) {
-               echo '<img src="'.$parent_root.'/images/anon.png" alt="anon">'; 
-             }
-             else { 
-               print $user_picture;   
-             }
-           ?>
-         </div>
-			<p><strong class="name"><?php print $name; ?> </strong></p>
-		    <?php if (isset($profile->field_bio['und'][0]['value'])): ?>
-          <?php print ($profile->field_bio['und'][0]['value']); ?>
-        <?php endif; ?>
-		</div>
-		<?php endif; ?>  
   
 	<?php
     // Remove the "Add new comment" link on the teaser page or if the comment
