@@ -113,7 +113,7 @@ function gavias_synery_process_html(&$vars) {
 
 function gavias_synery_process_node(&$vars) {
   if ($vars['view_mode'] === 'teaser') {
-    $count = count($vars['node']->content['field_image']);
+    $count = count($vars['node']['field_image']);
     dpm($count);
   }
 }
