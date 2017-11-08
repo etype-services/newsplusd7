@@ -46,17 +46,19 @@ function field_multiple_limit_field_formatter_settings_summary_alter(&$summary, 
       $summary .= '<br />' . t('Skipping the first @offset values', array('@offset' => $settings['field_multiple_limit_offset']));
     }
 
-    switch ($settings['field_multiple_limit_order']) {
-      case FIELD_MULTIPLE_LIMIT_ORDER_REVERSE:
-        $summary .= '<br/>' . t('Reverse Order');
-        break;
+    if (isset($settings['field_multiple_limit_order'])) {
+      switch ($settings['field_multiple_limit_order']) {
+        case FIELD_MULTIPLE_LIMIT_ORDER_REVERSE:
+          $summary .= '<br/>' . t('Reverse Order');
+          break;
 
-      case FIELD_MULTIPLE_LIMIT_ORDER_RANDOM:
-        $summary .= '<br/>' . t('Random Order');
-        break;
+        case FIELD_MULTIPLE_LIMIT_ORDER_RANDOM:
+          $summary .= '<br/>' . t('Random Order');
+          break;
 
-      default:
-        break;
+        default:
+          break;
+      }
     }
   }
 }
