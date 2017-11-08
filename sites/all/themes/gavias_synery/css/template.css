@@ -1442,8 +1442,6 @@ ul.pagination {
       color: #000 !important; }
       .tb-megamenu > .nav-collapse > ul.nav > li > a:hover {
         color: #0099CC !important; }
-  .tb-megamenu .tb-megamenu-button {
-    margin: 5px 0 5px 5px; }
   .tb-megamenu .nav-collapse .dropdown-menu a {
     border: none;
     padding: 0; }
