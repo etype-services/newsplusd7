@@ -104,8 +104,15 @@ function gavias_synery_preprocess_html(&$vars) {
   $vars['classes_array'][] = 'synergy';
 }
 
+/**
+ * @param $vars
+ */
 function gavias_synery_process_html(&$vars) {
   $vars['head_scripts'] = drupal_get_js('head_scripts');
+}
+
+function gavias_synery_process_node(&$vars) {
+  dpm($vars['content']);
 }
 
 /**
