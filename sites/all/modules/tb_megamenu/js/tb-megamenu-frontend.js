@@ -15,7 +15,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
         navCollapse.css({height: 0, overflow: 'hidden'});
       }
     } else {
-      // If width of window is greater than 980 (supported screen).
+      // If width of window is greater than 990 (supported screen).
       navCollapse.removeClass('collapse');
       if (navCollapse.height() <= 0) {
         navCollapse.css({height: 'auto', overflow: 'visible'});
