@@ -1432,12 +1432,10 @@ ul.pagination {
     margin-top: 20px;
     -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
-    .tb-megamenu > .nav-collapse > ul.nav > li {
-      border: none !important; }
-      .tb-megamenu > .nav-collapse > ul.nav > li > a {
-        color: #fff !important; }
-        .tb-megamenu > .nav-collapse > ul.nav > li > a:hover {
-          color: #0099CC !important; }
+    .tb-megamenu > .nav-collapse > ul.nav > li > a {
+      color: #000 !important; }
+      .tb-megamenu > .nav-collapse > ul.nav > li > a:hover {
+        color: #0099CC !important; }
   .tb-megamenu .tb-megamenu-button {
     margin: 5px 0 5px 5px; }
   .tb-megamenu .nav-collapse .dropdown-menu a {
@@ -1448,7 +1446,7 @@ ul.pagination {
     .tb-megamenu .dropdown-menu a {
       color: #333 !important; }
   .tb-megamenu .tb-megamenu-nav {
-    background: #444444 !important; } }
+    background: #fff !important; } }
 .view-list ul {
   overflow: hidden; }
   .view-list ul li.view-list-item {
