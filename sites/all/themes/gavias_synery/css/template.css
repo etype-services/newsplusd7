@@ -1427,26 +1427,6 @@ ul.pagination {
   .tb-megamenu .tb-megamenu-subnav a {
     background: none !important; }
 
-@media (max-width: 991px) {
-  .tb-megamenu > .nav-collapse {
-    margin-top: 20px;
-    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
-    .tb-megamenu > .nav-collapse > ul.nav > li > a {
-      color: #000 !important; }
-      .tb-megamenu > .nav-collapse > ul.nav > li > a:hover {
-        color: #0099CC !important; }
-  .tb-megamenu .tb-megamenu-button {
-    margin: 5px 0 5px 5px; }
-  .tb-megamenu .nav-collapse .dropdown-menu a {
-    border: none;
-    padding: 0; }
-  .tb-megamenu .dropdown-menu {
-    color: #333 !important; }
-    .tb-megamenu .dropdown-menu a {
-      color: #333 !important; }
-  .tb-megamenu .tb-megamenu-nav {
-    background: #fff !important; } }
 .view-list ul {
   overflow: hidden; }
   .view-list ul li.view-list-item {
