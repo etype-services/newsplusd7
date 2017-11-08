@@ -95,3 +95,50 @@
 		}
 	}
 }
+
+#block-tb-megamenu-main-menu {
+  margin: 0 66px 0 0;
+}
+
+@media screen and (max-width: $screen-sm) {
+  #block-tb-megamenu-main-menu {
+    margin: 10px 0 0 0;
+  }
+}
+
+
+/* removed "tablet" width use wider width instead
+@media(max-width: $screen-sm-max){
+	.tb-megamenu {
+		> .nav-collapse{
+			margin-top: 20px;
+			@include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+			> ul.nav > li {
+				// border: none!important;
+				> a{
+					color: #000!important;
+					&:hover{
+						color: $theme-color!important;
+					}
+				}
+			}
+		}
+		.tb-megamenu-button{
+			margin: 5px 0 5px 5px;
+		}
+		.nav-collapse .dropdown-menu a{
+			border: none;
+			padding: 0;
+		}
+		.dropdown-menu{
+			color: #333!important;
+			a{
+				color: #333!important;;
+			}
+		}
+		.tb-megamenu-nav{
+			background: $white!important;
+		}
+	}
+}
+*/
