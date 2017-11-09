@@ -112,9 +112,8 @@ function gavias_synery_process_html(&$vars) {
 }
 
 function gavias_synery_process_node(&$vars) {
-  dpm($vars);
   $entity = entity_load('node', array($vars['nid']));
-  dpm($entity);
+  dpm($entity->field_dateline->value);
 }
 
 /**
