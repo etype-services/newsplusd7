@@ -112,6 +112,7 @@ function gavias_synery_process_html(&$vars) {
 }
 
 function gavias_synery_process_node(&$vars) {
+  dpm($vars);
   /* author info */
   $node = node_load('node', $vars['nid']);
   $wrapper = entity_metadata_wrapper('node', $node);
