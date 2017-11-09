@@ -111,6 +111,9 @@ function gavias_synery_process_html(&$vars) {
   $vars['head_scripts'] = drupal_get_js('head_scripts');
 }
 
+/**
+ * @param $vars
+ */
 function gavias_synery_process_node(&$vars) {
   if ($vars['type'] == 'article') {
     /* author info */
@@ -129,9 +132,10 @@ function gavias_synery_process_node(&$vars) {
     } else {
       $vars['byline'] = $vars['name'];
     }
-    if (count($vars['field_image']) == 1) {
-      $vars['content']['field_image']['#formatter'] = 'image';
-    }
+    // TODO: change image display if only one image
+    //if (count($vars['field_image']) == 1) {
+    //
+    //}
   }
 }
 
