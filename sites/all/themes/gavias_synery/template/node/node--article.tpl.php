@@ -60,7 +60,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                             </div>
                           <?php if (!$page && $teaser): ?>
                               <div class="post-meta">
-                                  <span class="post-date-blog"><?php print format_date($node->created, 'custom', 'M d, Y'); ?></span>
+                                  <span class="post-date-blog"><?php print format_date($dateline, 'custom', 'M d, Y'); ?></span>
                                   <span> / </span>
                                 <?php if (module_exists('comment')): ?>
                                     <span class="post-meta-comments"> <a
@@ -133,8 +133,8 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
         <div class="content-first">
           <?php if ($display_submitted): ?>
               <div class="post-date">
-                  <span class="day"><?php print format_date($node->created, 'custom', 'd'); ?></span>
-                  <span class="month"><?php print t(format_date($node->created, 'custom', 'M')); ?></span>
+                  <span class="day"><?php print format_date($dateline, 'custom', 'd'); ?></span>
+                  <span class="month"><?php print t(format_date($dateline, 'custom', 'M')); ?></span>
               </div>
           <?php endif; ?>
             <div class="post-title">
