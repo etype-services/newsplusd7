@@ -114,7 +114,7 @@ function gavias_synery_process_html(&$vars) {
 function gavias_synery_process_node(&$vars) {
   $entity = entity_load('node', array($vars['nid']));
   $wrapper = entity_metadata_wrapper('node', $entity);
-  dpm($wrapper->field_dateline->value);
+  echo $wrapper->field_dateline->value;
 }
 
 /**
