@@ -148,7 +148,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
 
               <div class="post-meta">
                   <span class="post-meta-user"><i
-                              class="icon icon-user"></i> <?php print t('By'); ?> <?php print $name; ?> </span>
+                              class="icon icon-user"></i> <?php print t('By'); ?> <?php print $byline; ?> </span>
                 <?php if (module_exists('comment')): ?>
                     <span class="post-meta-comments"><i
                                 class="icon icon-comments"></i> <a

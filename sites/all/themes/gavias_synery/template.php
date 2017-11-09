@@ -112,9 +112,21 @@ function gavias_synery_process_html(&$vars) {
 }
 
 function gavias_synery_process_node(&$vars) {
+  /* author info */
   $node = node_load('node', $vars['nid']);
   $wrapper = entity_metadata_wrapper('node', $node);
   $vars['dateline'] = $wrapper->field_dateline->value();
+  $byline = $wrapper->field_byline->value();
+  if (!empty($byline)) {
+    $email = $wrapper->field_email>value();
+    if (!empty($email)) {
+      $vars['byline'] = '<a href="mailto:' . $email . '">' . $byline . '</a>';
+    } else {
+      $vars['byline'] = $byline;
+    }
+  } else {
+    $vars['byline'] = $vars['name'];
+  }
 }
 
 /**
