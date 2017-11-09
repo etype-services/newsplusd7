@@ -118,7 +118,7 @@ function gavias_synery_process_node(&$vars) {
   $vars['dateline'] = $wrapper->field_dateline->value();
   $byline = $wrapper->field_byline->value();
   if (!empty($byline)) {
-    $email = $wrapper->field_email>value();
+    $email = $wrapper->field_email->value();
     if (!empty($email)) {
       $vars['byline'] = '<a href="mailto:' . $email . '">' . $byline . '</a>';
     } else {
