@@ -115,6 +115,7 @@ function gavias_synery_process_node(&$vars) {
   if ($vars['type'] == 'article') {
     /* author info */
     $node = node_load('node', $vars['nid']);
+    dpm($node);
     $wrapper = entity_metadata_wrapper('node', $node);
     $vars['dateline'] = $wrapper->field_dateline->value();
     $byline = $wrapper->field_byline->value();
