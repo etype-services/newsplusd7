@@ -245,14 +245,14 @@
 		},
 	"\/scss\/font-awesome.scss": {
 		"aP": 0,
-		"bl": 1,
+		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"dS": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/font-awesome.min.css",
-		"oF": 2,
+		"oF": 3,
 		"oS": 3,
 		"uL": 0
 		}

@@ -6,4 +6,6 @@ sites/*/files
 sites/*/private
 sites/*/tmp
 .idea/
+.sass-cache/
+.codekit3
 
