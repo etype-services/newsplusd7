@@ -1051,7 +1051,7 @@ function newsplus_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
   unset($form['search_block_form']['#title']);
   $form['search_block_form']['#title_display'] = 'invisible';
-  $form_default = t('Type some test then press Search...');
+  $form_default = t('Type some text...');
   $form['search_block_form']['#default_value'] = $form_default;
 
   $form['actions']['submit']['#attributes']['value'][] = '';
