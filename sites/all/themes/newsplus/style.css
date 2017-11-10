@@ -2245,7 +2245,6 @@ ul.user-social-bookmarks li a:hover {
   .block-search .form-actions input:hover {
     background-color: transparent; }
   .block-search .form-actions i.fa {
-    color: #898989;
     font-size: 31px;
     position: relative;
     right: 21px;
