@@ -293,11 +293,8 @@ function newsplus_preprocess_html(&$variables) {
   
   drupal_add_css(path_to_theme() . '/fonts' .$protocol. '/ptsans-font.css', array('group' => CSS_THEME, 'type' => 'file'));
 
-  if (isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on') {
-    drupal_add_css('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array('type' => 'external')); 
-  } else {
-    drupal_add_css('http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array('type' => 'external')); 
-  }
+  drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array('type' => 'external'));
+
 
   /**
   * Add Javascript - Enable/disable Bootstrap 3 Javascript.
