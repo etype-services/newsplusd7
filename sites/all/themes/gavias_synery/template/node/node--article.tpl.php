@@ -109,7 +109,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                   </div>
               </div>
         <?php } else {
-          print render($content['field_post_image']);
+          isset($single_image)? print $single_image: print render($content['field_post_image']);
         } ?>
       <?php } elseif ($post_format == 'video' || $post_format == 'audio') { ?>
         <?php if (render($content['field_post_embed'])) { ?>
@@ -123,10 +123,10 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                 ?>
               </div>
         <?php } else {
-          print render($content['field_post_image']);
+          isset($single_image)? print $single_image: print render($content['field_post_image']);
         } ?>
       <?php } else {
-        print render($content['field_post_image']);
+        isset($single_image)? print $single_image: print render($content['field_post_image']);
       }
       ?>
 

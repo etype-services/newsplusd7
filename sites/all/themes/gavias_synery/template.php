@@ -138,6 +138,12 @@ function gavias_synery_process_node(&$vars) {
         // unset ($vars['content']['field_image']);
         $image_uri = $wrapper->field_image[0]->value()['uri'];
         dpm($image_uri);
+        $file_path = file_create_url($image_uri);
+        $vars['single_image'] = '
+<div class="field field-name-field-image field-type-image field-label-hidden">
+    <img src="' . $file_path . '"/>
+    <div class-"jb-caption-desc">' . $wrapper->field_image[0]->value()['title'] . '</div>
+</div>';
       }
     }
   }
