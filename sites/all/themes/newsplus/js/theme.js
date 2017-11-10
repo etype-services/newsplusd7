@@ -11,7 +11,7 @@
   };
   Drupal.behaviors.SearchFixer = {
     attach: function (context, settings) {
-      $(".block-search .form-actions").append('<i class="fa fa-search-plus"' +
+      $(".block-search .form-actions").append('<i class="fa fa-search"' +
           ' aria-hidden="true"></i>');
     }
   };
