@@ -293,10 +293,6 @@ function newsplus_preprocess_html(&$variables) {
   
   drupal_add_css(path_to_theme() . '/fonts' .$protocol. '/ptsans-font.css', array('group' => CSS_THEME, 'type' => 'file'));
 
-  drupal_add_css(libraries_get_path('font-awesome') . '/font-awesome.min.css',
-    array('type' => 'file'));
-
-
   /**
   * Add Javascript - Enable/disable Bootstrap 3 Javascript.
   */
