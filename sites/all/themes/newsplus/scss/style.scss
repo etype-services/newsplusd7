@@ -345,7 +345,7 @@ text-transform: none; }
 /*superfish menu arrows*/
 #main-navigation ul.sf-menu li a.menuparent:after,
 #pre-header ul.sf-menu li a.menuparent:after,
-#header-top ul.sf-menu li a.menuparent:after { content: "\f107"; font-family: $font-awesome; position: absolute;
+#header-top ul.sf-menu li a.menuparent:after { content: "<i class='fa-arrow-circle-right'></i>"; position: absolute;
 top: 17px; right: 16px; font-size: 12px; font-weight: 400; line-height: 20px; -webkit-transition: all 0.2s ease-in-out; 
 -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
