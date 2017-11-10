@@ -700,7 +700,7 @@ h5 {
 #pre-header ul.sf-menu li a.menuparent:after,
 #header-top ul.sf-menu li a.menuparent:after {
   content: "\f107";
-  font-family: "'FontAwesome', Arial, sans-serif";
+  font-family: "FontAwesome, Arial, sans-serif";
   position: absolute;
   top: 17px;
   right: 16px;
@@ -875,7 +875,7 @@ ul.menu li.expanded ul {
 /*menu arrows  */
 ul.menu li.collapsed > a:before {
   content: "\f105";
-  font-family: "'FontAwesome', Arial, sans-serif";
+  font-family: "FontAwesome, Arial, sans-serif";
   position: absolute;
   left: 0px;
   font-size: 20px;
@@ -890,7 +890,7 @@ ul.menu li.collapsed > a:before {
 
 ul.menu li.expanded > a:before {
   content: "\f107";
-  font-family: "'FontAwesome', Arial, sans-serif";
+  font-family: "FontAwesome, Arial, sans-serif";
   position: absolute;
   left: 0px;
   font-size: 20px;
@@ -2261,7 +2261,7 @@ ul.user-social-bookmarks li a:hover {
   margin: 0; }
 
 .block-search .form-actions:after {
-  font-family: "'FontAwesome', Arial, sans-serif";
+  font-family: "FontAwesome, Arial, sans-serif";
   content: "\f002";
   position: absolute;
   top: 0px;
@@ -2633,7 +2633,7 @@ span.button-operator {
 
 .more-link a:after {
   content: " \f101";
-  font-family: "'FontAwesome', Arial, sans-serif";
+  font-family: "FontAwesome, Arial, sans-serif";
   font-style: normal;
   font-size: 12px; }
 
