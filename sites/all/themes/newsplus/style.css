@@ -692,8 +692,7 @@ h5 {
 #main-navigation ul.sf-menu li a.menuparent:after,
 #pre-header ul.sf-menu li a.menuparent:after,
 #header-top ul.sf-menu li a.menuparent:after {
-  content: "\f107";
-  font-family: "'FontAwesome', Arial, sans-serif";
+  content: "<i class='fa-arrow-circle-right'></i>";
   position: absolute;
   top: 17px;
   right: 16px;
