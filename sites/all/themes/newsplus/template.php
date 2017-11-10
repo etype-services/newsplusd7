@@ -293,9 +293,6 @@ function newsplus_preprocess_html(&$variables) {
   
   drupal_add_css(path_to_theme() . '/fonts' .$protocol. '/ptsans-font.css', array('group' => CSS_THEME, 'type' => 'file'));
 
-  $path = libraries_get_path('font-awesome') . '/font-awesome.min.css';
-  dpm($path);
-
   drupal_add_css(libraries_get_path('font-awesome') . '/font-awesome.min.css',
     array('type' => 'file'));
 
