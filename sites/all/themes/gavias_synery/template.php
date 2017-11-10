@@ -135,7 +135,7 @@ function gavias_synery_process_node(&$vars) {
       }
       // TODO: change image display if only one image
       if (count($vars['field_image']) == 1) {
-        // unset ($vars['content']['field_image']);
+        unset ($vars['content']['field_image']);
         $image_uri = $wrapper->field_image[0]->value()['uri'];
         dpm($image_uri);
         $file_path = file_create_url($image_uri);

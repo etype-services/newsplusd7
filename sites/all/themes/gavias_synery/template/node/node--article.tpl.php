@@ -108,9 +108,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                     <?php endif; ?>
                   </div>
               </div>
-        <?php } else {
-          isset($single_image)? print $single_image: print render($content['field_post_image']);
-        } ?>
+        <?php } ?>
       <?php } elseif ($post_format == 'video' || $post_format == 'audio') { ?>
         <?php if (render($content['field_post_embed'])) { ?>
               <div class="video-media video-responsive">
@@ -122,13 +120,8 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                 }
                 ?>
               </div>
-        <?php } else {
-          isset($single_image)? print $single_image: print render($content['field_post_image']);
-        } ?>
-      <?php } else {
-        isset($single_image)? print $single_image: print render($content['field_post_image']);
-      }
-      ?>
+        <?php } ?>
+      <?php } ?>
 
         <div class="content-first">
           <?php if ($display_submitted): ?>
@@ -164,6 +157,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
         <div class="clearfix"></div>
         <div class="post-content">
             <div class="article_content"<?php print $content_attributes; ?>>
+              <?php if (isset($single_image)) print $single_image; ?>
               <?php
               // Hide comments, tags, and links now so that we can render them later.
               hide($content['taxonomy_forums']);
