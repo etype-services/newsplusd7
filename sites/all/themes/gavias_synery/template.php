@@ -133,16 +133,15 @@ function gavias_synery_process_node(&$vars) {
       } else {
         $vars['byline'] = $vars['name'];
       }
-      // TODO: change image display if only one image
       if (count($vars['field_image']) == 1) {
         unset ($vars['content']['field_image']);
         $image_uri = $wrapper->field_image[0]->value()['uri'];
-        dpm($image_uri);
         $file_path = file_create_url($image_uri);
+        // TODO: use theme() function
         $vars['single_image'] = '
-<div class="field field-name-field-image field-type-image field-label-hidden">
+<div class="field field-name-field-image field-type-image single-image">
     <img src="' . $file_path . '"/>
-    <div class-"jb-caption-desc">' . $wrapper->field_image[0]->value()['title'] . '</div>
+    <div class="single-image-caption">' . $wrapper->field_image[0]->value()['title'] . '</div>
 </div>';
       }
     }
