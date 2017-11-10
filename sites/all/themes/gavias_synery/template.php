@@ -121,21 +121,22 @@ function gavias_synery_process_node(&$vars) {
     dpm($vars);
     $wrapper = entity_metadata_wrapper('node', $node);
     $vars['dateline'] = $wrapper->field_dateline->value();
-
-    $byline = $wrapper->field_byline->value();
-    if (!empty($byline)) {
-      $email = $wrapper->field_email->value();
-      if (!empty($email)) {
-        $vars['byline'] = '<a href="mailto:' . $email . '">' . $byline . '</a>';
+    if ($vars['teaser'] === FALSE) {
+      $byline = $wrapper->field_byline->value();
+      if (!empty($byline)) {
+        $email = $wrapper->field_email->value();
+        if (!empty($email)) {
+          $vars['byline'] = '<a href="mailto:' . $email . '">' . $byline . '</a>';
+        } else {
+          $vars['byline'] = $byline;
+        }
       } else {
-        $vars['byline'] = $byline;
+        $vars['byline'] = $vars['name'];
       }
-    } else {
-      $vars['byline'] = $vars['name'];
-    }
-    // TODO: change image display if only one image
-    if (count($vars['field_image']) == 1) {
-      //
+      // TODO: change image display if only one image
+      if (count($vars['field_image']) == 1) {
+        unset ($vars['content']['field_image']);
+      }
     }
   }
 }
