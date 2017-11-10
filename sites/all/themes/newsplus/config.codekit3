@@ -7,7 +7,7 @@
 		"uuidString": "AFF0E95E-89F7-4E36-832B-AFECAFAD26CA"
 		}
 	],
-"creatorBuild": "26097",
+"creatorBuild": "26142",
 "files": {
 	"\/block.tpl.php": {
 		"cB": 0,
@@ -171,51 +171,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/flippy.tpl.php",
-		"oF": 0
-		},
-	"\/fonts\/font-awesome\/fontawesome-webfont.eot": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/fonts\/font-awesome\/fontawesome-webfont.eot",
-		"oF": 0
-		},
-	"\/fonts\/font-awesome\/fontawesome-webfont.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/fonts\/font-awesome\/fontawesome-webfont.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/fonts\/font-awesome\/fontawesome-webfont.ttf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/fonts\/font-awesome\/fontawesome-webfont.ttf",
-		"oF": 0
-		},
-	"\/fonts\/font-awesome\/fontawesome-webfont.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/fonts\/font-awesome\/fontawesome-webfont.woff",
-		"oF": 0
-		},
-	"\/fonts\/font-awesome\/fontawesome-webfont.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/fonts\/font-awesome\/fontawesome-webfont.woff2",
-		"oF": 0
-		},
-	"\/fonts\/font-awesome\/FontAwesome.otf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/fonts\/font-awesome\/FontAwesome.otf",
 		"oF": 0
 		},
 	"\/fonts\/http\/alegreya-font.css": {
@@ -1049,6 +1004,16 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/js\/theme.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/js\/theme.js",
+		"oF": 3,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/logo.png": {
 		"ft": 32768,

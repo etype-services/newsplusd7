@@ -7,10 +7,11 @@
 		"uuidString": "08B73612-0BA5-462B-962C-E9B3322BECD6"
 		}
 	],
-"creatorBuild": "26097",
+"creatorBuild": "26142",
 "files": {
 	"\/config.rb": {
-		"ft": 131072,
+		"cB": 0,
+		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/config.rb",
 		"oF": 0

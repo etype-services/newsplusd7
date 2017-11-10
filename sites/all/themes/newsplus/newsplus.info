@@ -9,6 +9,7 @@ stylesheets[all][] = style.css
 
 scripts[] = js/flexslider/jquery.flexslider.js
 scripts[] = js/jquery.browser.min.js
+scripts[] = js/theme.js
 
 regions[pre_header_left] = Pre Header Left
 regions[pre_header_right] = Pre header Right
