@@ -4,7 +4,7 @@
   'use strict';
   Drupal.behaviors.MenuFixer = {
     attach: function(context, settings){
-      $("#superfish-1").find(".menuparent").each(function(i, obj) {
+      $("#superfish-1").find("a.menuparent").each(function(i, obj) {
         $(this).append('<i class="fa fa-caret-down"></i>');
       });
     }
