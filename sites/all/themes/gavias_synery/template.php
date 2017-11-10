@@ -118,9 +118,10 @@ function gavias_synery_process_node(&$vars) {
   if ($vars['type'] == 'article') {
     /* author info */
     $node = node_load('node', $vars['nid']);
-    // dpm($vars);
+    dpm($vars);
     $wrapper = entity_metadata_wrapper('node', $node);
     $vars['dateline'] = $wrapper->field_dateline->value();
+
     $byline = $wrapper->field_byline->value();
     if (!empty($byline)) {
       $email = $wrapper->field_email->value();
@@ -133,9 +134,9 @@ function gavias_synery_process_node(&$vars) {
       $vars['byline'] = $vars['name'];
     }
     // TODO: change image display if only one image
-    //if (count($vars['field_image']) == 1) {
-    //
-    //}
+    if (count($vars['field_image']) == 1) {
+      //
+    }
   }
 }
 
