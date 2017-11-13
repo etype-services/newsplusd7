@@ -116,7 +116,7 @@ ga(\'send\', \'pageview\');
     ', [
         'type' => 'inline',
         'scope' => 'header',
-        'weight' => 50,
+        'weight' => 108,
       ]
     );
   }
