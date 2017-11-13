@@ -102,6 +102,11 @@ function gavias_synery_preprocess_html(&$vars) {
   }
   // add theme identifier
   $vars['classes_array'][] = 'synergy';
+
+  $etype_google_analytics_property_id = variable_get('etype_google_analytics_property_id');
+  if (! empty($etype_google_analytics_property_id)) {
+
+  }
 }
 
 /**
