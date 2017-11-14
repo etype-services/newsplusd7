@@ -9,7 +9,7 @@
       });
       $(".block-search .form-actions").append('<i class="fa fa-search"' +
           ' aria-hidden="true"></i>');
-      $(".more-link a:after").append('<i class="fa fa-chevron-right" aria-hidden="true"></i>');
+      $(".more-link a").append('<i class="fa fa-chevron-right" aria-hidden="true"></i>');
     }
   };
 })(jQuery);
