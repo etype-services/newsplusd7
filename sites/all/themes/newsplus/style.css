@@ -1677,9 +1677,6 @@ ul.pager li.pager-current, .item-list ul li.pager-current.last {
   line-height: 1;
   min-height: 41px; }
 
-.view-titles .more-link a:after {
-  content: ""; }
-
 /*.view-titles:after { position: absolute; content: "\f101"; font-family: "FontAwesome"; font-size: 26px; right: 10px; color: #ea2d49; top: 3px; z-index: 1; }*/
 .view-titles .flexslider {
   background-color: transparent; }
@@ -2527,7 +2524,6 @@ span.button-operator {
   padding: 0;
   font-size: 14px; }
 
-/*.more-link a:after { content: " \f101"; font-family: $font-awesome; font-style: normal; font-size: 12px; }*/
 .footer-area .more-link {
   text-align: left; }
 
