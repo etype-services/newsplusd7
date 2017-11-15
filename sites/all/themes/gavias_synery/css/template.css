@@ -1303,6 +1303,11 @@ ul.widget-twitter > li {
   #block-advpoll-advpoll-recent .content .form-type-radio input[type="radio"] {
     margin: 0 3px 2px 0; }
 
+/* Scoreboard Block */
+#block-views-scoreboard-block {
+  margin-bottom: 0;
+  margin-top: 20px; }
+
 .poll .title {
   margin-bottom: 15px;
   font-weight: 400 !important;
