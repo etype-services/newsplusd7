@@ -327,3 +327,44 @@ ul.widget-twitter{
   margin-bottom: 0;
   margin-top: 20px;
 }
+
+/* Business Directory JCarousel */
+#block-views-business-directory-block {
+  .jcarousel-skin-default {
+    text-align: center;
+    position: relative;
+    top: -20px;
+    left: -29px;
+    .jcarousel-container-horizontal {
+      width: 483px;
+      height: 102px;
+      padding: 20px 40px;
+      margin: auto;
+      .jcarousel-clip-horizontal {
+        width: 435px;
+        overflow: hidden;
+        .jcarousel-item {
+          padding: 0;
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+          border: none;
+          list-style: none;
+          background: #fff none;
+        }
+      }
+      .jcarousel-prev-horizontal {
+        position: absolute;
+        top: 55px;
+        left: 10px;
+        background-position: 0 0;
+      }
+      .jcarousel-next-horizontal {
+        position: absolute;
+        top: 55px;
+        right: -20px;
+        background-position: 0 -32px;
+      }
+    }
+  }
+}
