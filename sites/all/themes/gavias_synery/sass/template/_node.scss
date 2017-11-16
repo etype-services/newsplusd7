@@ -342,3 +342,9 @@
     }  
   }
 }
+
+// hide actual Home Page, since it has no content
+.front .content-main .node-page {
+  display: none;
+  visibility: hidden;
+}

@@ -566,6 +566,10 @@ header .header-main {
         .view-videos-block .post-block .post-title a:hover {
           color: #0099CC; }
 
+.front .content-main .node-page {
+  display: none;
+  visibility: hidden; }
+
 .margin-top-10 {
   margin-top: 10px; }
 
