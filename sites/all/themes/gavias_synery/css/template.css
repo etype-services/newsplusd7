@@ -1335,14 +1335,18 @@ ul.widget-twitter > li {
         background: #fff none; }
     #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-prev-horizontal {
       position: absolute;
-      top: 55px;
-      left: 10px;
+      top: 20px;
+      left: -25px;
       background: none; }
+      #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-prev-horizontal a:hover, #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-prev-horizontal a:focus {
+        color: #4089ea; }
     #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-next-horizontal {
       position: absolute;
-      top: 55px;
-      right: -20px;
+      top: 40px;
+      right: -25px;
       background: none; }
+      #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-next-horizontal a:hover, #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-next-horizontal a:focus {
+        color: #4089ea; }
 
 .poll .title {
   margin-bottom: 15px;

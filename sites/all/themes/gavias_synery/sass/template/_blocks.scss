@@ -354,15 +354,21 @@ ul.widget-twitter{
       }
       .jcarousel-prev-horizontal {
         position: absolute;
-        top: 55px;
-        left: 10px;
+        top: 20px;
+        left: -25px;
         background: none;
+        a:hover, a:focus {
+          color: #4089ea;
+        }
       }
       .jcarousel-next-horizontal {
         position: absolute;
-        top: 55px;
-        right: -20px;
+        top: 40px;
+        right: -25px;
         background: none;
+        a:hover, a:focus {
+          color: #4089ea;
+        }
       }
     }
   }
