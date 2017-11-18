@@ -1316,15 +1316,14 @@ ul.widget-twitter > li {
 #block-views-business-directory-block .jcarousel-skin-default {
   text-align: center;
   position: relative;
-  top: -20px;
-  left: -29px; }
+  width: 100%; }
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 483px;
+    width: 100%;
     height: 102px;
-    padding: 20px 40px;
+    padding: 0;
     margin: auto; }
     #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-clip-horizontal {
-      width: 435px;
+      width: 100%;
       overflow: hidden; }
       #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-clip-horizontal .jcarousel-item {
         padding: 0;
@@ -1338,12 +1337,12 @@ ul.widget-twitter > li {
       position: absolute;
       top: 55px;
       left: 10px;
-      background-position: 0 0; }
+      background: none; }
     #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-next-horizontal {
       position: absolute;
       top: 55px;
       right: -20px;
-      background-position: 0 -32px; }
+      background: none; }
 
 .poll .title {
   margin-bottom: 15px;

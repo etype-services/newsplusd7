@@ -333,15 +333,14 @@ ul.widget-twitter{
   .jcarousel-skin-default {
     text-align: center;
     position: relative;
-    top: -20px;
-    left: -29px;
+    width: 100%;
     .jcarousel-container-horizontal {
-      width: 483px;
+      width: 100%;
       height: 102px;
-      padding: 20px 40px;
+      padding: 0;
       margin: auto;
       .jcarousel-clip-horizontal {
-        width: 435px;
+        width: 100%;
         overflow: hidden;
         .jcarousel-item {
           padding: 0;
@@ -357,13 +356,13 @@ ul.widget-twitter{
         position: absolute;
         top: 55px;
         left: 10px;
-        background-position: 0 0;
+        background: none;
       }
       .jcarousel-next-horizontal {
         position: absolute;
         top: 55px;
         right: -20px;
-        background-position: 0 -32px;
+        background: none;
       }
     }
   }
