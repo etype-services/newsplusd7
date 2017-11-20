@@ -1685,9 +1685,12 @@ div#acquia-agent-no-search {
       margin-bottom: 0; }
     .header-main .region-header-right {
       justify-content: center; } }
+@media screen and (max-width: 991px) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 648px; } }
 @media screen and (max-width: 767px) {
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 327px; } }
+    width: 435px; } }
 @media screen and (max-width: 480px) {
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 327px; } }

@@ -15,9 +15,15 @@
 
 }
 
+@media screen and (max-width: $screen-sm-max) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 648px;
+  }
+}
+
 @media screen and (max-width: $screen-xs-max) {
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 327px;
+    width: 435px;
   }
 }
 
