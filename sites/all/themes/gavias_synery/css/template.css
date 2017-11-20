@@ -1318,7 +1318,7 @@ ul.widget-twitter > li {
   position: relative;
   width: 100%; }
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 95%;
+    width: 538px;
     height: 102px;
     padding: 0;
     margin: auto; }
@@ -1675,7 +1675,13 @@ div#acquia-agent-no-search {
   margin: 100px 0 0 -15px;
   display: block; }
 
+@media screen and (max-width: 1199px) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 435px; } }
 @media screen and (max-width: 991px) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 648px; }
+
   .header-main {
     /* move ad under logo */ }
     .header-main .col-xs-6 {
@@ -1685,9 +1691,6 @@ div#acquia-agent-no-search {
       margin-bottom: 0; }
     .header-main .region-header-right {
       justify-content: center; } }
-@media screen and (max-width: 991px) {
-  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 648px; } }
 @media screen and (max-width: 767px) {
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 435px; } }

@@ -1,4 +1,14 @@
+@media screen and (max-width: $screen-md-max) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 435px;
+  }
+}
+
 @media screen and (max-width: $screen-sm-max) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 648px;
+  }
+
   .header-main {
     /* move ad under logo */
     .col-xs-6 {
@@ -11,13 +21,6 @@
     .region-header-right {
       justify-content: center;
     }
-  }
-
-}
-
-@media screen and (max-width: $screen-sm-max) {
-  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 648px;
   }
 }
 
