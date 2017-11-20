@@ -1686,7 +1686,7 @@ div#acquia-agent-no-search {
     .header-main .region-header-right {
       justify-content: center; } }
 @media screen and (max-width: 767px) {
-  .jcarousel-container-horizontal {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 327px; } }
 #drupal_tabs {
   margin: 20px 0; }
