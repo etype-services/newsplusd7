@@ -1688,6 +1688,9 @@ div#acquia-agent-no-search {
 @media screen and (max-width: 767px) {
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 327px; } }
+@media screen and (max-width: 480px) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 327px; } }
 #drupal_tabs {
   margin: 20px 0; }
 

@@ -20,3 +20,9 @@
     width: 327px;
   }
 }
+
+@media screen and (max-width: $screen-xs) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 327px;
+  }
+}
