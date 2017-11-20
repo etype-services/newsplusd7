@@ -1318,7 +1318,7 @@ ul.widget-twitter > li {
   position: relative;
   width: 100%; }
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 100%;
+    width: 95%;
     height: 102px;
     padding: 0;
     margin: auto; }
@@ -1675,7 +1675,7 @@ div#acquia-agent-no-search {
   margin: 100px 0 0 -15px;
   display: block; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .header-main {
     /* move ad under logo */ }
     .header-main .col-xs-6 {
@@ -1685,6 +1685,9 @@ div#acquia-agent-no-search {
       margin-bottom: 0; }
     .header-main .region-header-right {
       justify-content: center; } }
+@media screen and (max-width: 767px) {
+  .jcarousel-container-horizontal {
+    width: 327px; } }
 #drupal_tabs {
   margin: 20px 0; }
 

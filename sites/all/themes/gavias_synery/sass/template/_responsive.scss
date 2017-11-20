@@ -1,4 +1,4 @@
-@media screen and (max-width: $screen-sm) {
+@media screen and (max-width: $screen-sm-max) {
   .header-main {
     /* move ad under logo */
     .col-xs-6 {
@@ -11,5 +11,12 @@
     .region-header-right {
       justify-content: center;
     }
+  }
+
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  .jcarousel-container-horizontal {
+    width: 327px;
   }
 }
