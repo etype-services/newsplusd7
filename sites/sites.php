@@ -54,8 +54,10 @@
  * @see http://drupal.org/documentation/install/multi-site
  */
 
+/* test, demo, and base sites */
 $sites['www.etypegoogle10.com'] = 'demo.etypegoogle10.com';
 $sites['demo.etypegoogle10.com'] = 'demo.etypegoogle10.com';
+$sites['newsplus-base.etypegoogle10.com'] = 'newsplus-base.etypegoogle10.com';
 
 /* freemansd.etypegoogle10.com */
 $sites['freemansd.etypegoogle10.com'] = 'freemansd.etypegoogle10.com';
