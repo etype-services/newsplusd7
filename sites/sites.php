@@ -63,6 +63,7 @@ $sites['synergy-base.etypegoogle10.com'] = 'synergy-base.etypegoogle10.com';
 /* freemansd.etypegoogle10.com */
 $sites['freemansd.etypegoogle10.com'] = 'freemansd.etypegoogle10.com';
 $sites['www.freemansd.com'] = 'freemansd.etypegoogle10.com';
+$sites['freemansd.com'] = 'freemansd.etypegoogle10.com';
 
 /* gunnisontimes.etypegoogle10.com */
 $sites['gunnisontimes.etypegoogle10.com'] = 'gunnisontimes.etypegoogle10.com';
