@@ -21,3 +21,7 @@
   margin-right: 220px;
   margin-left: 0;
 }
+
+.one-sidebar.page-taxonomy .view-post-category-feed .views-field-field-image img {
+  min-width: 190px;
+}
