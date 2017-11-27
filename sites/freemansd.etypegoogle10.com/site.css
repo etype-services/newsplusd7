@@ -7,3 +7,17 @@
 #block-etype-e-edition .content p {
   text-align: center;
 }
+
+/* make images all the same side on taxonomy pages */
+.view-feed .latest-object .views-field-field-image {
+  float: right;
+  margin-left: 30px;
+  margin-bottom: 15px;
+  max-width: 190px;
+  margin-right: 0;
+}
+
+.view-feed .latest-object .with-image {
+  margin-right: 220px;
+  margin-left: 0;
+}

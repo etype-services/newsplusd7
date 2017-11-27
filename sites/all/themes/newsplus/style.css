@@ -3449,7 +3449,12 @@ Adjustments for ads
   padding: 0; }
 
 .sidebar .block.block-simpleads {
-  /* ad divs have padding between them */ }
+  /* ad divs have padding between them */
+  /* last one with no padding -- removed for rotating ads (Freeman)
+    .adslist > div > div > div:last-child {
+      padding-bottom: 0;
+    }
+    */ }
   .sidebar .block.block-simpleads .simplead-container {
     padding-bottom: 20px; }
 
