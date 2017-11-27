@@ -3036,7 +3036,7 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
   filter: alpha(opacity=50); }
 
 #internal-slider-carousel .flex-direction-nav a:before {
-  font-size: 30px;
+  font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%; }
