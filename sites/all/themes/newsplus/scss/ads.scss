@@ -10,9 +10,9 @@
 
 .sidebar {
   .block.block-simpleads {
-    /* ad divs have padding between them */
+    /* padding between ads */
     .simplead-container {
-      padding-bottom: 20px;
+      padding-bottom: 0;
     }
     /* last one with no padding -- removed for rotating ads (Freeman)
     .adslist > div > div > div:last-child {

@@ -444,7 +444,7 @@ h5 {
   padding: 15px 0 10px; }
 
 .sidebar .block {
-  padding: 0 0 20px 0; }
+  padding: 0 0 10px 0; }
 
 .footer-area .block {
   padding: 0 0 35px 0; }
@@ -3449,14 +3449,14 @@ Adjustments for ads
   padding: 0; }
 
 .sidebar .block.block-simpleads {
-  /* ad divs have padding between them */
+  /* padding between ads */
   /* last one with no padding -- removed for rotating ads (Freeman)
     .adslist > div > div > div:last-child {
       padding-bottom: 0;
     }
     */ }
   .sidebar .block.block-simpleads .simplead-container {
-    padding-bottom: 20px; }
+    padding-bottom: 0; }
 
 .region-footer-ad .block-simpleads.block {
   padding-bottom: 40px; }
