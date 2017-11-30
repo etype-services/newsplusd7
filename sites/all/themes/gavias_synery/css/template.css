@@ -1193,10 +1193,19 @@ div.resizable-textarea textarea {
   .sidebar .block .post-block {
     margin-bottom: 20px; }
 
-.region-main-menu .block {
-  background: transparent; }
-  .region-main-menu .block .block-content {
-    padding: 0; }
+.region-main-menu {
+  position: relative;
+  /* eType social in header */ }
+  .region-main-menu .block {
+    background: transparent; }
+    .region-main-menu .block .block-content {
+      padding: 0; }
+  .region-main-menu #block-etype-social-search {
+    position: absolute;
+    right: 0;
+    top: -37px; }
+    .region-main-menu #block-etype-social-search ul.social-bookmarks li {
+      float: left; }
 
 .recent-comment-block .views-field-picture {
   margin-right: 10px; }

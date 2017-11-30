@@ -161,17 +161,21 @@
 }
 
 .region-main-menu{
+  position: relative;
   .block{
     background: $nocolor;
     .block-content{
       padding: 0;
     }
   }
-}
-
-.footer{
-  .block{
-    
+  /* eType social in header */
+  #block-etype-social-search {
+    position: absolute;
+    right: 0;
+    top: -37px;
+    ul.social-bookmarks li {
+      float: left;
+    }
   }
 }
 
