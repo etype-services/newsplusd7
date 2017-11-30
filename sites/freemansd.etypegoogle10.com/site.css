@@ -9,6 +9,17 @@
 }
 
 /* make images all the same side on taxonomy pages */
+.view-feed .view-header {
+  background-color: inherit;
+  padding-bottom: 19px;
+}
+
+.view-feed .latest-object {
+  background-color: inherit;
+  border-bottom: solid 1px #e4e4e4;
+  padding-right: 0;
+}
+
 .view-feed .latest-object .views-field-field-image {
   float: right;
   margin-left: 30px;
