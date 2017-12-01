@@ -50,6 +50,10 @@
         margin-right: 0;
         padding-left: 0;
     }
+    .view-feed .latest-object .with-image {
+        margin-right: 0;
+        margin-left: 0;
+    }
     .view-feed .latest-object .views-field-field-image {
         float: none;
         margin-left: 0;
