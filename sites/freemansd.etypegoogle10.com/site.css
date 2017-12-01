@@ -1,38 +1,58 @@
 /* local css overrides for freeman sd */
 
 #header-top {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 #block-etype-e-edition .content p {
-  text-align: center;
+    text-align: center;
 }
 
 /* make images all the same side on taxonomy pages */
 .view-feed .view-header {
-  background-color: inherit;
-  padding-bottom: 19px;
+    background-color: inherit;
+    padding-bottom: 19px;
 }
 
 .view-feed .latest-object {
-  background-color: inherit;
-  border-bottom: solid 1px #e4e4e4;
-  padding-right: 0;
+    background-color: inherit;
+    border-bottom: solid 1px #e4e4e4;
+    padding-right: 0;
 }
 
 .view-feed .latest-object .views-field-field-image {
-  float: right;
-  margin-left: 30px;
-  margin-bottom: 15px;
-  max-width: 190px;
-  margin-right: 0;
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    max-width: 190px;
+    margin-right: 0;
 }
 
 .view-feed .latest-object .with-image {
-  margin-right: 220px;
-  margin-left: 0;
+    margin-right: 220px;
+    margin-left: 0;
 }
 
 .one-sidebar.page-taxonomy .view-post-category-feed .views-field-field-image img {
-  min-width: 190px;
+    min-width: 190px;
+}
+
+@media (max-width: 991px) {
+    .view-feed .latest-object {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .view-feed .latest-object {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+    }
+    .view-feed .latest-object .views-field-field-image {
+        float: none;
+        margin-left: 0;
+        max-width: 100%;
+    }
 }
