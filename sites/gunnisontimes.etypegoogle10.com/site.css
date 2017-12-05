@@ -1,10 +1,10 @@
 /* weather block in header */
-#block-11 {
+#block-block-11 {
     margin-top: 17px;
 }
 
 @media screen and (max-width: 991px) {
-    #block-11 {
+    #block-block-11 {
         margin-top: 0;
         margin-bottom: 30px;
     }
