@@ -6,6 +6,24 @@
 @media screen and (max-width: 991px) {
     #block-block-11 {
         margin-top: 0;
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
+}
+
+@media screen and (min-width: 1200px) {
+    #block-block-11 {
+        margin-top: 27px;
+    }
+}
+
+#block-etype-social-search .fa {
+    font-size: 24px;
+}
+
+#block-etype-social-search .social-bookmarks {
+    margin-bottom: 6px;
+}
+
+#logo img {
+    width: 100%;
 }
