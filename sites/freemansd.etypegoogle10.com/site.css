@@ -37,10 +37,12 @@
 }
 
 /* advpoll */
-#block-advpoll-advpoll-recent {
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+@media (min-width: 992px) {
+    #block-advpoll-advpoll-recent {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 991px) {
