@@ -3,6 +3,12 @@
     margin-top: 17px;
 }
 
+@media screen and (max-width: 480px) {
+    #block-block-11 {
+        margin-bottom: 17px;
+    }
+}
+
 @media screen and (max-width: 991px) {
     #block-block-11 {
         margin-top: 0;
@@ -16,6 +22,7 @@
     }
 }
 
+/* Social icons */
 #block-etype-social-search .fa {
     font-size: 24px;
 }
@@ -24,6 +31,7 @@
     margin-bottom: 6px;
 }
 
+/* Logo */
 #logo img {
     width: 100%;
 }
