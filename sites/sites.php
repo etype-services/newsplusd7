@@ -71,3 +71,7 @@ $sites['www.gunnisontimes.com'] = 'gunnisontimes.etypegoogle10.com';
 /* thechronicle.etypegoogle10.com */
 $sites['thechronicle.etypegoogle10.com'] = 'thechronicle.etypegoogle10.com';
 $sites['www.thechronicle.news'] = 'thechronicle.etypegoogle10.com';
+
+/* hartington.etypegoogle10.com */
+$sites['hartington.etypegoogle10.com'] = 'hartington.etypegoogle10.com';
+$sites['www.hartington.net'] = 'hartington.etypegoogle10.com';
