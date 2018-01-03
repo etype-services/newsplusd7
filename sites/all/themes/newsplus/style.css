@@ -3497,6 +3497,9 @@ Adjustments for ads
   padding: 20px 0;
   margin: auto; }
 
+.jcarousel-skin-default .jcarousel-item {
+  border: none; }
+
 @media (min-width: 1200px) {
   .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 652px; }
