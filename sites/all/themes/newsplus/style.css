@@ -3441,7 +3441,7 @@ Adjustments for ads
   border: 2px solid #ebebeb; }
 
 /* special sections */
-#promoted .view-id-special_sections .views.row:after {
+#promoted .view-id-special_sections .view-content:after {
   display: table;
   content: " "; }
 
