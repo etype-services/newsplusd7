@@ -3497,14 +3497,14 @@ Adjustments for ads
   padding: 20px 0;
   margin: auto; }
 
-@media (max-width: 480px) {
-  .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 327px; }
-  .jcarousel-skin-default .jcarousel-clip-horizontal {
-    width: 327px; } }
-
 @media (max-width: 767px) {
   .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 400px; }
   .jcarousel-skin-default .jcarousel-clip-horizontal {
     width: 400px; } }
+
+@media (max-width: 480px) {
+  .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 327px; }
+  .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 327px; } }
