@@ -90,7 +90,13 @@ Adjustments for ads
   }
 }
 /* special sections */
-#promoted .view-id-special_sections .view-content:after {
-  display: table;
-  content: " ";
+#promoted .view-id-special_sections {
+  .view-content:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+  .more-link {
+    margin-top: 30px;
+  }
 }
