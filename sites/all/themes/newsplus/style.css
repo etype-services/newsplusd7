@@ -3497,7 +3497,13 @@ Adjustments for ads
   padding: 20px 0;
   margin: auto; }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
+  .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 544px; }
+  .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 544px; } }
+
+@media (max-width: 1199px) {
   .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 544px; }
   .jcarousel-skin-default .jcarousel-clip-horizontal {
