@@ -11,6 +11,9 @@
           ' class="fa fa-search"' +
           ' aria-hidden="true"></i>');
       $(".more-link a").append('<i class="fa fa-chevron-right" aria-hidden="true"></i>');
+      $(".jcarousel-prev-horizontal").append('<i class="fa fa-arrow-left" aria-hidden="true"></i>');
+      $(".jcarousel-next-horizontal").append('<i class="fa fa-arrow-right" aria-hidden="true"></i>');
     }
   };
 })(jQuery);
+

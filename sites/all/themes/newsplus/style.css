@@ -3484,13 +3484,13 @@ Adjustments for ads
   position: absolute;
   top: 55px;
   left: -32px;
-  background-position: 0 0; }
+  background-image: none; }
 
 .jcarousel-skin-default .jcarousel-next-horizontal {
   position: absolute;
   top: 55px;
   right: -27px;
-  background-position: 0 -32px; }
+  background-image: none; }
 
 .jcarousel-skin-default .jcarousel-container-horizontal {
   height: inherit;
