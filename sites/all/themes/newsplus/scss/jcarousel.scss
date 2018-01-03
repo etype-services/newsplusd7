@@ -15,12 +15,28 @@
   padding: 20px 0;
   margin: auto;
 }
-@media (max-width: 767px) {
+@media (min-width: 992px) {
   .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 438px;
+    width: 572px;
   }
   .jcarousel-skin-default .jcarousel-clip-horizontal {
-    width: 438px;
+    width: 572px;
+  }
+}
+@media (max-width: 991px) {
+  .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 436px;
+  }
+  .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 436px;
+  }
+}
+@media (max-width: 767px) {
+  .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 436px;
+  }
+  .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 436px;
   }
 }
 @media (max-width: 480px) {
