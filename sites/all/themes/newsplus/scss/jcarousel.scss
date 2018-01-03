@@ -1,0 +1,24 @@
+@media (max-width: 480px) {
+  .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 327px;
+    height: inherit;
+    padding: 20px 0;
+    margin: auto;
+  }
+  .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 327px;
+    overflow: hidden;
+  }
+  .jcarousel-skin-default .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 35px;
+    left: -32px;
+    background-position: 0 0;
+  }
+  .jcarousel-skin-default .jcarousel-next-horizontal {
+    position: absolute;
+    top: 35px;
+    right: -27px;
+    background-position: 0 -32px;
+  }
+}
