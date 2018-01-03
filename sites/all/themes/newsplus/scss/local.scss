@@ -89,3 +89,8 @@ Adjustments for ads
     border: 2px solid $gray;
   }
 }
+/* special sections */
+#promoted .view-id-special_sections .views.row:after {
+  display: table;
+  content: " ";
+}

@@ -3440,6 +3440,11 @@ Adjustments for ads
 .with-border .content {
   border: 2px solid #ebebeb; }
 
+/* special sections */
+#promoted .view-id-special_sections .views.row:after {
+  display: table;
+  content: " "; }
+
 /* Simple Ads */
 .adslist {
   display: flex;
