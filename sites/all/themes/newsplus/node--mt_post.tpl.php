@@ -155,7 +155,7 @@ $post_progress = theme_get_setting('post_progress');
       <?php if ($links = render($content['links'])): ?>
       <footer class="node-footer">
         <?php print render($content['links']); ?>
-        <?php print $node_ad; ?>
+        <?php print $sponsor_ad; ?>
       </footer>
       <?php endif; ?>
 
