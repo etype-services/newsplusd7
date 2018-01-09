@@ -32,7 +32,16 @@
 
 .front {
   /* for ad below slideshow on home page */
-  .region-content-bottom {
-    margin-top: 28px;
+  .region-content {
+    .block-simpleads {
+      margin-top: 30px;
+    }
+  }
+}
+
+/* simple ad */
+.region-before-footer {
+  .block-simpleads {
+    margin-top: 30px;
   }
 }
