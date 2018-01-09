@@ -3487,12 +3487,15 @@ Adjustments for ads
 
 /* Sponsor ad */
 .node-footer .field-ad-image {
-  margin-top: 30px; }
+  margin-top: 30px;
+  width: 50%; }
 
 .node-footer .field-ad-image-wrapper {
   font-family: 'Lato', sans-serif;
   font-size: 0.9em;
-  border-top: 1px solid #dddddd; }
+  border-top: 1px solid #dddddd;
+  display: flex;
+  flex-wrap: wrap; }
 
 .jcarousel-skin-default .jcarousel-prev-horizontal {
   position: absolute;
