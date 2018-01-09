@@ -3489,6 +3489,11 @@ Adjustments for ads
 .node-footer .field-ad-image {
   margin-top: 30px; }
 
+.node-footer .field-ad-image-wrapper {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
+  border-top: 1px solid #dddddd; }
+
 .jcarousel-skin-default .jcarousel-prev-horizontal {
   position: absolute;
   top: 63px;
