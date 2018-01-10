@@ -1053,9 +1053,9 @@ function newsplus_preprocess_field(&$vars)
                 $arr['img_url'] = $url[$k]['safe_value'];
                 $items[] = $arr;
             }
-            $vars = array('items' => $items);
+            $build = array('items' => $items);
             $markup = theme_render_template
-            ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $vars);
+            ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $build);
         }
     }
     $vars['items'][0]['#markup'] = $markup;
