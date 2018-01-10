@@ -1061,7 +1061,6 @@ function newsplus_preprocess_field(&$vars)
         }
     }
     print ($markup);
-    $vars['items'] = [];
     return;
 }
 
