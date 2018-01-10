@@ -1061,7 +1061,7 @@ function newsplus_preprocess_field(&$vars)
         }
     }
     print ($markup);
-    // $vars['items'][0]['#markup'] = $markup;
+    $vars['items'] = [];
     return;
 }
 
