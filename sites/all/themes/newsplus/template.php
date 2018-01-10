@@ -1058,7 +1058,7 @@ function newsplus_preprocess_field(&$vars)
             ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $build);
         }
     }
-    $vars['items'][0]['#markup'] = $markup;
+    // $vars['items'][0]['#markup'] = $markup;
 }
 
 /**
