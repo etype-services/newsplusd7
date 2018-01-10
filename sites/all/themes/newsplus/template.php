@@ -1034,9 +1034,13 @@ function newsplus_page_alter($page)
 
 }
 
+/**
+ * @param $vars
+ */
 function newsplus_preprocess_field(&$vars)
 {
     $markup = '';
+    dpm ($vars);
     if($vars['element']['#field_name'] == 'field_ad_image')
     {
         $node = $vars['node'];
