@@ -55,11 +55,11 @@
   }
 }
 
-/* Sponsor ad */
+/* Sponsor ads on article nodes */
 .node-footer {
   .field-ad-image {
     margin-top: 30px;
-    width: 50%;
+    flex-basis: 30%;
   }
   .field-ad-image-wrapper {
     font-family: 'Lato', sans-serif;
@@ -67,5 +67,6 @@
     border-top: 1px solid #dddddd;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
