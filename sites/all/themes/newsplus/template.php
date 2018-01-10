@@ -1061,6 +1061,7 @@ function newsplus_preprocess_field(&$vars)
         }
     }
     print ($markup);
+    $vars['class_array'][] = 'field-hidden';
     return;
 }
 

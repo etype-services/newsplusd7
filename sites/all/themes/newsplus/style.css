@@ -3449,6 +3449,10 @@ Adjustments for ads
 #promoted .view-id-special_sections .more-link {
   margin-top: 30px; }
 
+.field-hidden {
+  display: none;
+  visibility: hidden; }
+
 /* Simple Ads */
 .adslist {
   display: flex;
