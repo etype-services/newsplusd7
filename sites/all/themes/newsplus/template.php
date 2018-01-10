@@ -1043,7 +1043,7 @@ function newsplus_preprocess_field(&$vars)
     dpm ($vars);
     if($vars['element']['#field_name'] == 'field_ad_image')
     {
-        /*$node = $vars['node'];
+        $node = node_load($vars['#object']->nid);
         $ad = field_get_items('node', $node, 'field_ad_image');
         if (count($ad) > 0) {
             $url = field_get_items('node', $vars['node'], 'field_ad_url');
@@ -1058,7 +1058,7 @@ function newsplus_preprocess_field(&$vars)
             $markup = theme_render_template
             ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $vars);
         }
-    }*/
+    }
     $vars['items'][0]['#markup'] = $markup;
     return;
 }
