@@ -1060,6 +1060,7 @@ function newsplus_preprocess_field(&$vars)
             ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $build);
         }
     }
+    echo $markup;
     // $vars['items'][0]['#markup'] = $markup;
     return;
 }
@@ -1071,7 +1072,6 @@ function newsplus_preprocess_field(&$vars)
  */
 function newsplus_form_alter(&$form, &$form_state, $form_id)
 {
-
     if ($form_id == 'search_block_form') {
         unset($form['search_block_form']['#title']);
         $form['search_block_form']['#title_display'] = 'invisible';
@@ -1082,5 +1082,4 @@ function newsplus_form_alter(&$form, &$form_state, $form_id)
 
         $form['search_block_form']['#attributes'] = array('onblur' => "if (this.value == '') {this.value = '{$form_default}';}", 'onfocus' => "if (this.value == '{$form_default}') {this.value = '';}");
     }
-
 }
