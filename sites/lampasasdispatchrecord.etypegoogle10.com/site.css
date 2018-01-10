@@ -1,0 +1,11 @@
+#header .header-main-inner .col-xs-8 {
+    width: 100%;
+}
+
+#header .header-main-inner .col-xs-4 {
+    width: 0;
+}
+
+#header h1.logo {
+    text-align: center;
+}
