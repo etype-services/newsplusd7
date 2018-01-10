@@ -1060,6 +1060,7 @@ function newsplus_preprocess_field(&$vars)
             ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $build);
         }
     }
+    // TODO -- fix this
     print ($markup);
     $vars['class_array'][] = 'field-hidden';
     return;
