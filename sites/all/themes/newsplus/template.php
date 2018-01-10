@@ -1062,7 +1062,6 @@ function newsplus_preprocess_field(&$vars)
     }
     // TODO -- fix this
     print ($markup);
-    $vars['class_array'][] = 'field-hidden';
     return;
 }
 
