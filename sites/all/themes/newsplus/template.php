@@ -973,27 +973,6 @@ function newsplus_preprocess_node(&$variables)
 {
     $variables['posted_ago'] = format_interval((time() - $variables['created']), 1);
     $variables['changed_ago'] = format_interval((time() - $variables['changed']), 1);
-
-    /* Sponsor Ad */
-    $variables['node_ad'] = '';
-    $node = $variables['node'];
-    if ($variables['elements']['#view_mode'] != 'teaser') {
-        $ad = field_get_items('node', $node, 'field_ad_image');
-        if (count($ad) > 0) {
-            $url = field_get_items('node', $variables['node'], 'field_ad_url');
-            $items = [];
-            foreach ($ad as $k => $v) {
-                $arr = [];
-                $arr['img_src'] = file_create_url($v['uri']);
-                $arr['img_url'] = $url[$k]['safe_value'];
-                $items[] = $arr;
-            }
-            $vars = array('items' => $items);
-            $variables['sponsor_ad'] = theme_render_template
-            ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $vars);
-        }
-    }
-
 }
 
 /**
@@ -1053,6 +1032,30 @@ function newsplus_page_alter($page)
     drupal_add_html_head($handheldfriendly, 'HandheldFriendly');
     drupal_add_html_head($viewport, 'viewport');
 
+}
+
+function newsplus_preprocess_field(&$vars)
+{
+    $markup = '';
+    if($vars['element']['#field_name'] == 'field_ad_image')
+    {
+        $node = $vars['node'];
+        $ad = field_get_items('node', $node, 'field_ad_image');
+        if (count($ad) > 0) {
+            $url = field_get_items('node', $vars['node'], 'field_ad_url');
+            $items = [];
+            foreach ($ad as $k => $v) {
+                $arr = [];
+                $arr['img_src'] = file_create_url($v['uri']);
+                $arr['img_url'] = $url[$k]['safe_value'];
+                $items[] = $arr;
+            }
+            $vars = array('items' => $items);
+            $markup = theme_render_template
+            ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $vars);
+        }
+    }
+    $vars['items'][0]['#markup'] = $markup;
 }
 
 /**
