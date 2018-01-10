@@ -4,3 +4,6 @@
 [submodule "sites/all/modules/etype"]
 	path = sites/all/modules/etype
 	url = git@github.com:etype-services/etype.git
+[submodule "sites/all/modules/etype_zenfolio"]
+	path = sites/all/modules/etype_zenfolio
+	url = git@github.com:etype-services/etype_zenfolio.git
