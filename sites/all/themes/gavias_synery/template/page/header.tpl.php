@@ -1,3 +1,9 @@
+<?php if (isset($page['topbar'])) : ?>
+<div id="topbar">
+    <?php print render($page['topbar']); ?>
+</div>
+<?php endif; ?>
+
 <header id="header">
    
    <?php if (isset($page['branding'])) : ?>
