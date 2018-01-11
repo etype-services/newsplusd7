@@ -1040,10 +1040,8 @@ function newsplus_page_alter($page)
  */
 function newsplus_preprocess_field(&$vars)
 {
-    $markup = '';
     if($vars['element']['#field_name'] == 'field_ad_image')
     {
-        // dpm($vars);
         $node = node_load($vars['element']['#object']->nid);
         $ad = field_get_items('node', $node, 'field_ad_image');
         if (count($ad) > 0) {
@@ -1055,13 +1053,9 @@ function newsplus_preprocess_field(&$vars)
                 $arr['img_url'] = $url[$k]['safe_value'];
                 $items[] = $arr;
             }
-            $build = array('items' => $items);
-            $markup = theme_render_template
-            ('sites/all/themes/newsplus/field--field-ad-image--article.tpl.php', $build);
+            $vars['field_ad_image_items'] = $items;
         }
     }
-    // TODO -- fix this
-    print ($markup);
     return;
 }
 
@@ -1077,9 +1071,7 @@ function newsplus_form_alter(&$form, &$form_state, $form_id)
         $form['search_block_form']['#title_display'] = 'invisible';
         $form_default = t('Type some text...');
         $form['search_block_form']['#default_value'] = $form_default;
-
         $form['actions']['submit']['#attributes']['value'][] = '';
-
         $form['search_block_form']['#attributes'] = array('onblur' => "if (this.value == '') {this.value = '{$form_default}';}", 'onfocus' => "if (this.value == '{$form_default}') {this.value = '';}");
     }
 }
