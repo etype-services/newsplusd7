@@ -1053,7 +1053,7 @@ function newsplus_preprocess_field(&$vars)
                 $arr['img_url'] = $url[$k]['safe_value'];
                 $items[] = $arr;
             }
-            $vars['field_sponsor_ad_image'] = $items;
+            $vars['field_sponsor_ad_image_items'] = $items;
         }
     }
     return;
