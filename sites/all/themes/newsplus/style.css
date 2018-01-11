@@ -3486,10 +3486,10 @@ Adjustments for ads
       width: 100%; } }
 
 /* Sponsor ads on article nodes */
-.node-mt-post .field-sponsor-ad-image‎ {
+.node-mt-post .field-sponsor-ad-image {
   margin-top: 18px; }
 
-.node-mt-post .field-sponsor-ad-wrapper {
+.node-mt-post .field-sponsor-ad-image-wrapper {
   font-family: 'Lato', sans-serif;
   font-size: 0.9em;
   border-top: 1px solid #dddddd;
