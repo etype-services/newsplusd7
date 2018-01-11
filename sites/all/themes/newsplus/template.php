@@ -1040,10 +1040,10 @@ function newsplus_page_alter($page)
  */
 function newsplus_preprocess_field(&$vars)
 {
-    if($vars['element']['#field_name'] == 'field_ad_image')
+    if($vars['element']['#field_name'] == 'field_sponsor_ad_image')
     {
         $node = node_load($vars['element']['#object']->nid);
-        $ad = field_get_items('node', $node, 'field_ad_image');
+        $ad = field_get_items('node', $node, 'field_sponsor_ad_image');
         if (count($ad) > 0) {
             $url = field_get_items('node', $node, 'field_ad_url');
             $items = [];
@@ -1053,7 +1053,7 @@ function newsplus_preprocess_field(&$vars)
                 $arr['img_url'] = $url[$k]['safe_value'];
                 $items[] = $arr;
             }
-            $vars['field_ad_image_items'] = $items;
+            $vars['field_sponsor_ad_image'] = $items;
         }
     }
     return;
