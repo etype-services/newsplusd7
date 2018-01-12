@@ -2057,7 +2057,7 @@ function format_date($timestamp, $type = 'medium', $format = '', $timezone = NUL
   }
 
   // Create a DateTime object from the timestamp.
-  $date_time = date_create('@' . $timestamp);
+  $date_time = date_create('@' . (int) $timestamp);
   // Set the time zone for the DateTime object.
   date_timezone_set($date_time, $timezones[$timezone]);
 
