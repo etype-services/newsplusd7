@@ -29,7 +29,7 @@
 
 /* images in articles */
 .node-article .article_content .field-name-field-image {
-    margin-bottom: 2em;
+
 }
 
 .node-article .article_content .field-name-field-image .single-image-caption {
@@ -46,5 +46,5 @@
 .node-article .article_content .field-name-field-photo-credit {
     float: right;
     position: relative;
-    top: -2em;
+    margin-bottom: 2em;
 }
