@@ -27,7 +27,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                               </div>
                           </div>
                     <?php } else {
-                        dpm($content['field_image']);
+                        var_dump($content['field_image']);
                         // https://www.gunnisontimes.com/sites/gunnisontimes.etypegoogle10.com/files/styles/medium/public/default_images/GCTLogo_0_0.jpg
                       print render($content['field_image']);
                     } ?>
