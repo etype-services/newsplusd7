@@ -26,3 +26,8 @@
 #logo img {
     width: 100%;
 }
+
+/* images in articles */
+.node-article .article_content .field-name-field-image {
+    margin-bottom: 2em;
+}
