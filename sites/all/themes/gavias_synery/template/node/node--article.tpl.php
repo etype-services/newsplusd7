@@ -27,7 +27,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                               </div>
                           </div>
                     <?php } else {
-                      print render($content['field_post_image']);
+                      print render($content['field_image']);
                     } ?>
                   <?php } elseif ($post_format == 'video' || $post_format == 'audio') { ?>
                     <?php if (render($content['field_post_embed'])) { ?>
@@ -78,7 +78,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                           hide($content['comments']);
                           hide($content['links']);
                           hide($content['field_tags']);
-                          hide($content['field_post_image']);
+                          hide($content['field_image']);
                           hide($content['field_post_gallery']);
                           hide($content['field_post_embed']);
                           hide($content['field_post_format']);
@@ -164,7 +164,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
               hide($content['comments']);
               hide($content['links']);
               hide($content['field_tags']);
-              hide($content['field_post_image']);
+              hide($content['field_image']);
               hide($content['field_post_gallery']);
               hide($content['field_post_embed']);
               hide($content['field_post_format']);
