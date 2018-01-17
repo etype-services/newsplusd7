@@ -157,7 +157,7 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
         <div class="clearfix"></div>
         <div class="post-content">
             <div class="article_content"<?php print $content_attributes; ?>>
-              <?php if (isset($single_image)) print $single_image; ?>
+              <?php if (isset($single_image)) {print $single_image;} else {print render($content['field_image']);} ?>
               <?php
               // Hide comments, tags, and links now so that we can render them later.
               hide($content['taxonomy_forums']);
