@@ -176,6 +176,9 @@ function gavias_synery_process_node(&$vars)
                 unset ($vars['content']['field_image']);
                 $image_uri = $wrapper->field_image[0]->value()['uri'];
                 $file_path = file_create_url($image_uri);
+                if (empty($file_path)) {
+                    $file_path = "/sites/gunnisontimes.etypegoogle10.com/files/styles/medium/public/default_images/GCTLogo_0_0.jpg";
+                }
                 // TODO: use theme() function
                 $vars['single_image'] = '
 <div class="field field-name-field-image field-type-image single-image">
