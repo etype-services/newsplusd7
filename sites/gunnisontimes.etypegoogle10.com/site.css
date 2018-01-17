@@ -30,6 +30,7 @@
 /* images in articles */
 .node-article .article_content .field-name-field-image {
     margin-bottom: 2em;
+    font-style: italic;
 }
 
 .node-article .article_content .field-name-field-subhead {
