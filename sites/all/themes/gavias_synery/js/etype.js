@@ -16,6 +16,9 @@
           }
         });
       }
+      $(".block-search .form-actions, .block-search .trigger").append('<i' +
+            ' class="fa fa-search"' +
+            ' aria-hidden="true"></i>');
       $(".jcarousel-prev-horizontal").append('<i class="fa fa-chevron-left"' +
           ' aria-hidden="true"></i>');
       $(".jcarousel-next-horizontal").append('<i class="fa fa-chevron-right"' +
