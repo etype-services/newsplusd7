@@ -172,8 +172,15 @@
   #block-etype-social-search {
     position: absolute;
     right: 0;
-    top: -37px;
-    ul.social-bookmarks li {
+    top: -34px;
+    ul.social-bookmarks {
+      float: left;
+      margin-bottom: 0;
+      li {
+        float: left;
+      }
+    }
+    div.block-search {
       float: left;
     }
   }
