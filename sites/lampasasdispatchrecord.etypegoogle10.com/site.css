@@ -10,3 +10,11 @@
     text-align: center;
     margin-bottom: 15px;
 }
+
+#block-search-form {
+    position: absolute;
+    top: -48px;
+    right: 76px;
+    height: 46px;
+    overflow: hidden;
+}
