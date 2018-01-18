@@ -139,6 +139,11 @@ ga(\'send\', \'pageview\');
             ]
         );
     }
+
+    /**
+     * Add Javascript - Enable/disable Bootstrap 3 Javascript.
+     */
+    drupal_add_js(drupal_get_path('theme', 'newsplus') . '/bootstrap.js');
 }
 
 /**
