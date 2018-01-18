@@ -143,7 +143,7 @@ ga(\'send\', \'pageview\');
     /**
      * Add Javascript - Enable/disable Bootstrap 3 Javascript.
      */
-    drupal_add_js(drupal_get_path('theme', 'newsplus') . '/bootstrap.min.js');
+    drupal_add_js(drupal_get_path('theme', 'gavias_synery') . '/bootstrap.min.js');
 }
 
 /**
