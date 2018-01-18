@@ -18,3 +18,7 @@
     height: 46px;
     overflow: hidden;
 }
+
+#block-search-form #search-block-form input {
+    outline: none;
+}
