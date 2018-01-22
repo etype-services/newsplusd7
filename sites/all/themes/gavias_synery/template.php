@@ -46,6 +46,7 @@ function gavias_synery_preprocess_html(&$vars)
     $base_path = base_path();
     $conf_path = conf_path();
     $site_css = $base_path . $conf_path . '/site.css';
+    $site_js = $base_path . $conf_path . '/site.js';
 
     if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_css)) {
         drupal_add_css(
@@ -58,6 +59,10 @@ function gavias_synery_preprocess_html(&$vars)
                 'group' => CSS_THEME
             )
         );
+    }
+
+    if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_js)) {
+        drupal_add_js($site_js);
     }
 
     global $parent_root;
