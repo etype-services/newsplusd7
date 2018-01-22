@@ -62,7 +62,7 @@ function gavias_synery_preprocess_html(&$vars)
     }
 
     if (file_exists($_SERVER['DOCUMENT_ROOT'] . $site_js)) {
-        drupal_add_js($site_js);
+        drupal_add_js($_SERVER['DOCUMENT_ROOT'] . $site_js);
     }
 
     global $parent_root;
