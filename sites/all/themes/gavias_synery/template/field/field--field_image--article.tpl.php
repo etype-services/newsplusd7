@@ -49,8 +49,8 @@
 $gallery = $items[0]['gallery']['#gallery_images'];
 if (count($gallery) == 1) { ?>
     <div class="field field-name-field-image field-type-image single-image">
-        <img src="<?php echo $gallery['src_data']['imageURL']?>" alt="<?php echo $gallery['caption']; ?>" />
-        <div class="single-image-caption"><?php echo $gallery['caption']; ?></div>
+        <img src="<?php echo $gallery[0]['src_data']['imageURL']?>" alt="<?php echo $gallery[0]['caption']; ?>" />
+        <div class="single-image-caption"><?php echo $gallery[0]['caption']; ?></div>
     </div>
     <?php } else { ?>
     <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
