@@ -183,20 +183,6 @@ function gavias_synery_process_node(&$vars)
             } else {
                 $vars['byline'] = $vars['name'];
             }
-            if (count($vars['field_image']) == 1) {
-                unset ($vars['content']['field_image']);
-                $image_uri = $wrapper->field_image[0]->value()['uri'];
-                $file_path = file_create_url($image_uri);
-                if ((empty($file_path)) || ($file_path == "https://www.gunnisontimes.com/")) {
-                    $file_path = "/sites/gunnisontimes.etypegoogle10.com/files/styles/medium/public/default_images/GCTLogo_0_0.jpg";
-                }
-                // TODO: use theme() function
-                $vars['single_image'] = '
-<div class="field field-name-field-image field-type-image single-image">
-    <img src="' . $file_path . '"/>
-    <div class="single-image-caption">' . $wrapper->field_image[0]->value()['title'] . '</div>
-</div>';
-            }
         }
     }
 }

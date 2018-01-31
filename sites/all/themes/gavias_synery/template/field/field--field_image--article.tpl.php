@@ -49,7 +49,7 @@
 var_dump($items);
 if (count($items) == 1) { ?>
     <div class="field field-name-field-image field-type-image single-image">
-        <img src=""/>
+        <img src="" />
         <div class="single-image-caption"></div>
     </div>
     <?php } else { ?>
