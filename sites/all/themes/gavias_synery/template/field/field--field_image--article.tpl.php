@@ -45,22 +45,23 @@
  *
  * @ingroup themeable
  */
-
-$gallery = $items[0]['gallery']['#gallery_images'];
-if (count($gallery) == 1) { ?>
+if (isset($items[0]['gallery'])) {
+    $gallery = $items[0]['gallery']['#gallery_images'];
+    if (count($gallery) == 1) { ?>
     <div class="field field-name-field-image field-type-image single-image">
         <img src="<?php echo $gallery[0]['src_data']['imageURL']?>" alt="<?php echo $gallery[0]['caption']; ?>" />
         <div class="single-image-caption"><?php echo $gallery[0]['caption']; ?></div>
     </div>
     <?php } else { ?>
     <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-    <?php if (!$label_hidden): ?>
-        <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
-    <?php endif; ?>
+        <?php if (!$label_hidden): ?>
+            <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
+        <?php endif; ?>
         <div class="field-items"<?php print $content_attributes; ?>>
             <?php foreach ($items as $delta => $item): ?>
                 <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></div>
             <?php endforeach; ?>
         </div>
     </div>
-<?php } ?>
+<?php }
+}
