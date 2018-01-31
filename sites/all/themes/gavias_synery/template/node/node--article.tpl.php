@@ -114,8 +114,6 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                 <?php print render($title_suffix); ?>
             </div>
 
-            <?php print render($content['field_subhead']); ?>
-
             <?php if ($display_submitted): ?>
 
                 <div class="post-meta">
@@ -148,7 +146,6 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                 hide($content['links']);
                 hide($content['field_tags']);
                 hide($content['field_image']);
-                hide($content['field_subhead']);
                 print render($content);
                 ?>
             </div>
