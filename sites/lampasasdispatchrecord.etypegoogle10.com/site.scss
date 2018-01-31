@@ -13,6 +13,7 @@
     margin-bottom: 31px;
   }
 
+  /* search form overrides */
   #block-search-form {
     position: absolute;
     top: -44px;
@@ -24,8 +25,17 @@
       outline: none;
       height: 28px;
 
+      &:focus {
+        width: 100px;
+      }
+
       .form-submit {
         background: none;
+        top: 0;
+
+        &:focus {
+          width: 19px;
+        }
       }
     }
 
