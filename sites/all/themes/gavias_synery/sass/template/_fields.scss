@@ -18,11 +18,11 @@
   font-weight: 700;
 }
 
-/* article fields */
+/* article fields formatting */
 .node-article {
   .post-content {
     .field-name-field-subhead {
-      margin-top: 0.6em;
+      margin-bottom: 0.6em;
       color: $black;
     }
     .field-name-field-photo-credit {
@@ -36,8 +36,12 @@
     .field-name-field-kicker {
       font-size: 13px;
       font-style: italic;
-      border-top: 1px solid $gray-light;
-      color: $gray-light;
+      border-top: 1px solid $gray-lighter;
+      color: $gray-lighter;
+      margin-top: 1em;
+    }
+    .post-meta-tag {
+      font-size: 12px;
     }
   }
 }
