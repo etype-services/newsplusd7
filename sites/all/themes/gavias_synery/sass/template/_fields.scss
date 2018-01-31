@@ -21,6 +21,16 @@
 /* article fields */
 article {
   .blog-single-post {
-
+    .field-name-field-subhead {
+      color: $black;
+    }
+    .field-name-field-photo-credit {
+      float: right;
+      font-style: italic;
+      font-size: 12px;
+    }
+    .field-name-field-image.single-image {
+      margin-bottom: 1em;
+    }
   }
 }
