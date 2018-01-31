@@ -18,10 +18,10 @@
       height: 28px; }
       #header #block-search-form #search-block-form input:focus {
         width: 100px; }
-      #header #block-search-form #search-block-form input .form-submit {
-        background: none;
-        top: 0; }
-        #header #block-search-form #search-block-form input .form-submit:focus {
-          width: 19px; }
+    #header #block-search-form #search-block-form input.form-submit {
+      background: none;
+      top: 0; }
+      #header #block-search-form #search-block-form input.form-submit:focus {
+        width: 19px; }
 
 /*# sourceMappingURL=site.css.map */

@@ -21,15 +21,18 @@
     height: 36px;
     overflow: hidden;
 
-    #search-block-form input {
-      outline: none;
-      height: 28px;
+    #search-block-form {
 
-      &:focus {
-        width: 100px;
+      input {
+        outline: none;
+        height: 28px;
+
+        &:focus {
+          width: 100px;
+        }
       }
 
-      .form-submit {
+      input.form-submit {
         background: none;
         top: 0;
 
@@ -38,7 +41,5 @@
         }
       }
     }
-
   }
-
 }
