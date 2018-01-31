@@ -40,6 +40,17 @@
           width: 19px;
         }
       }
+
+      #edit-actions {
+        .fa-search {
+          position: absolute;
+          top: 2px;
+          right: 5px;
+          font-size: 22px;
+          color: #000000;
+        }
+      }
+
     }
   }
 }
