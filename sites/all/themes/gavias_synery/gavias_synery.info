@@ -9,7 +9,7 @@ screenshot = 'screenshot.png'
 ;Stylesheets
 stylesheets[all][] = vendor/owl-carousel/owl.carousel.css
 stylesheets[all][] = vendor/owl-carousel/owl.theme.default.css
-stylesheets[all][] = 'css/font-awesome.css'
+;stylesheets[all][] = 'css/font-awesome.css'
 
 ;Scripts
 scripts[] = js/imagesloader.min.js
