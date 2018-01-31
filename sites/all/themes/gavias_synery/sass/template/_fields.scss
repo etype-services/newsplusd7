@@ -22,6 +22,7 @@
 .node-article {
   .post-content {
     .field-name-field-subhead {
+      margin-top: 0.6em;
       color: $black;
     }
     .field-name-field-photo-credit {
@@ -31,6 +32,12 @@
     }
     .field-name-field-image.single-image {
       margin-bottom: 1em;
+    }
+    .field-name-field-kicker {
+      font-size: 13px;
+      font-style: italic;
+      border-top: 1px solid $gray-light;
+      color: $gray-light;
     }
   }
 }
