@@ -46,7 +46,7 @@
  * @ingroup themeable
  */
 
-var_dump($items[0]);
+var_dump($items);
 if (count($items) == 1) { ?>
     <div class="field field-name-field-image field-type-image single-image">
         <img src=""/>
