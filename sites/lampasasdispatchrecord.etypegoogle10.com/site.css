@@ -15,9 +15,10 @@
     overflow: hidden; }
     #header #block-search-form #search-block-form input {
       outline: none;
-      height: 28px; }
+      height: 28px;
+      width: 200px; }
       #header #block-search-form #search-block-form input:focus {
-        width: 100px; }
+        width: 200px; }
     #header #block-search-form #search-block-form input.form-submit {
       background: none;
       top: 0; }
