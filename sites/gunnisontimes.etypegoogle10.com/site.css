@@ -28,9 +28,6 @@
 }
 
 /* images in articles */
-.node-article .article_content .field-name-field-image {
-
-}
 
 .node-article .article_content .field-name-field-image .single-image-caption {
     font-style: italic;
@@ -40,12 +37,5 @@
     font-size: 16px;
     font-weight: bold;
     line-height: 1.3em;
-    margin-bottom: 0.4em;
     clear: both;
-}
-
-.node-article .article_content .field-name-field-photo-credit {
-    float: right;
-    position: relative;
-    margin-bottom: 0.4em;
 }

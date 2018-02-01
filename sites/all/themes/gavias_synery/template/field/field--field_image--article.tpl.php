@@ -44,6 +44,9 @@
  * @see theme_field()
  *
  * @ingroup themeable
+ *
+ * This template removes juicebox formatting if there is only one image -- requires that Juicebox is enabled for article display
+ *
  */
 if (isset($items[0]['gallery'])) {
     $gallery = $items[0]['gallery']['#gallery_images'];
