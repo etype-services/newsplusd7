@@ -43,3 +43,13 @@
     height: 50px;
   }
 }
+
+/* pages to replace core taxonomy pages */
+.not-front {
+  .view-main-post {
+    .node-teaser-display {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+}
