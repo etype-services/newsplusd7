@@ -61,8 +61,8 @@ if (isset(field_get_items('node', $node, 'field_post_format')[0]['value']) && fi
                             <?php if (!$page && $teaser): ?>
                                 <div class="post-meta">
                                     <span class="post-date-blog"><?php print format_date($dateline, 'custom', 'M d, Y'); ?></span>
-                                    <span> / </span>
                                     <?php if (module_exists('comment')): ?>
+                                        <span> / </span>
                                         <span class="post-meta-comments"> <a
                                                     href="<?php print $node_url; ?>/#comments"><?php print $comment_count; ?><?php print t('Comment'); ?><?php if ($comment_count != "1") {
                                                     echo "s";
