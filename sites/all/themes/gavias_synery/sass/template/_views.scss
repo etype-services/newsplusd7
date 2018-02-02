@@ -51,6 +51,9 @@
       .post-content {
         width: 100%;
         padding-left: 0;
+        .post-title {
+          padding: 0;
+        }
       }
     }
   }
