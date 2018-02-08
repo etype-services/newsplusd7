@@ -106,9 +106,15 @@ div.resizable-textarea {
     border: 1px solid $border-color;
   }
 }
-.search-advanced .criterion {
-  float: none;
-  margin: 0 5px;
+.search-advanced {
+  height: auto;
+  legend {
+    margin-bottom: 0;
+  }
+  .criterion {
+    float: none;
+    margin: 0 5px;
+  }
 }
 #edit-keywords-fieldset .form-item {
   &:first-child {
