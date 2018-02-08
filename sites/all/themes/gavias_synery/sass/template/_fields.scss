@@ -24,6 +24,10 @@
     .field-name-field-subhead {
       margin-bottom: 0.6em;
       color: $black;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.3em;
+      clear: both;
     }
     .field-name-field-photo-credit {
       float: right;
@@ -45,12 +49,6 @@
       color: $gray-light;
       margin-top: 1em;
       padding-top: 0.4em;
-    }
-    .field-name-field-subhead {
-      font-size: 16px;
-      font-weight: bold;
-      line-height: 1.3em;
-      clear: both;
     }
     .post-meta-tag {
       font-size: 12px;
