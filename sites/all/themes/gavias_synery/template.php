@@ -223,3 +223,7 @@ function gavias_synery_css_alter(&$css)
         unset($css[drupal_get_path('theme', 'gavias_synery') . '/css/bootstrap.css']);
     }
 }
+
+function gavias_synery_preprocess_search_results(&$variables) {
+    $variables['e_edition'] = variable_get('etype_e_edition');
+}
