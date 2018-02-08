@@ -74,13 +74,16 @@
 }
 
 #search-form{
-	.panel {
-		border: none;;
-		box-shadow: none;
-	}
-	.panel-default > .panel-heading {
-		border-bottom: none;
-	}
+  .panel {
+    border: none;;
+    box-shadow: none;
+  }
+  .panel-default > .panel-heading {
+    border-bottom: none;
+  }
+  fieldset.collapsed {
+    height: auto;
+  }
 }
 
 .hide-label label {
@@ -107,7 +110,6 @@ div.resizable-textarea {
   }
 }
 .search-advanced {
-  height: auto;
   legend {
     margin-bottom: 0;
   }
