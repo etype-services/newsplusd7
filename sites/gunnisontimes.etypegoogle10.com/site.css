@@ -28,11 +28,6 @@
 }
 
 /* images in articles */
-
-.node-article .article_content .field-name-field-image .single-image-caption {
-    font-style: italic;
-}
-
 .node-article .article_content .field-name-field-subhead {
     font-size: 16px;
     font-weight: bold;
