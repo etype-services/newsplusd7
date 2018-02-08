@@ -225,6 +225,7 @@ function gavias_synery_css_alter(&$css)
 }
 
 function gavias_synery_preprocess_search_results(&$variables) {
-    $variables['e_edition'] = variable_get('etype_e_edition');
-    $variables['site_name'] = variable_get('site_name');
+    $e_edition = variable_get('etype_e_edition');
+    $variables['extra_content'] = "<p>If you are a subscriber, <a href=\"/content/custom-login-page\">please log in to search the PDF archives</a></p>
+        <a>If you are not yet a subscriber, <a href=\"https://etypeservices.com/$e_edition\">become one today!</a></p>";
 }
