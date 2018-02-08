@@ -226,4 +226,5 @@ function gavias_synery_css_alter(&$css)
 
 function gavias_synery_preprocess_search_results(&$variables) {
     $variables['e_edition'] = variable_get('etype_e_edition');
+    $variables['site_name'] = variable_get('site_name');
 }
