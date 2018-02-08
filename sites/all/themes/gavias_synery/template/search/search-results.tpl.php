@@ -32,6 +32,5 @@
 <?php else : ?>
   <h2><?php print t('Your search yielded no results');?></h2>
   <?php print search_help('search#noresults', drupal_help_arg()); ?>
-<?php echo $e_edition; ?>
-<?php echo $site_name; ?>
+<?php echo $extra_content; ?>
 <?php endif; ?>
