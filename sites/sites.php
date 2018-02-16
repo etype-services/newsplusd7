@@ -83,3 +83,7 @@ $sites['www.lampasasdispatchrecord.com'] = 'lampasasdispatchrecord.etypegoogle10
 /* theexaminer.etypegoogle10.com */
 $sites['theexaminer.etypegoogle10.com'] = 'theexaminer.etypegoogle10.com';
 $sites['www.theexaminer.com'] = 'theexaminer.etypegoogle10.com';
+
+/* beaumontbusinessjournal.etypegoogle10.com */
+$sites['beaumontbusinessjournal.etypegoogle10.com'] = 'beaumontbusinessjournal.etypegoogle10.com';
+$sites['www.beaumontbusinessjournal.com'] = 'beaumontbusinessjournal.etypegoogle10.com';
