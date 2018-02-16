@@ -119,10 +119,9 @@ abstract class EntityMetadataWrapper {
    */
   public function set($value) {
     if (!$this->validate($value)) {
-dpm(debug_backtrace());      
-throw new EntityMetadataWrapperException(t('Invalid data value given. Be sure it matches the required data type and format. Value at !location: !value.', array(
+      throw new EntityMetadataWrapperException(t('Invalid data value given. Be sure it matches the required data type and format. Value at !location: !value.', array(
         // An exception's message is output through check_plain().
-        '!value' => is_array($value) || is_object($value) ? var_export($value) : $value,
+        '!value' => is_array($value) || is_object($value) ? var_export($value, TRUE) : $value,
         '!location' => $this->debugIdentifierLocation(),
       )));
     }
@@ -756,7 +755,7 @@ class EntityDrupalWrapper extends EntityStructureWrapper {
     if (!$this->validate($value)) {
       throw new EntityMetadataWrapperException(t('Invalid data value given. Be sure it matches the required data type and format. Value at !location: !value.', array(
         // An exception's message is output through check_plain().
-        '!value' => is_array($value) || is_object($value) ? var_export($value) : $value,
+        '!value' => is_array($value) || is_object($value) ? var_export($value, TRUE) : $value,
         '!location' => $this->debugIdentifierLocation(),
       )));
     }
@@ -1117,7 +1116,7 @@ class EntityListWrapper extends EntityMetadataWrapper implements IteratorAggrega
    */
   public function getIterator() {
     // In case there is no data available, just iterate over the first item.
-    return new EntityMetadataWrapperIterator($this, $this->dataAvailable() ? array_keys(parent::value()) : array(0));
+    return new EntityMetadataWrapperIterator($this, ($this->dataAvailable() && is_array(parent::value())) ? array_keys(parent::value()) : array(0));
   }
 
   /**
