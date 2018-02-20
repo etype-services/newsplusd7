@@ -50,8 +50,6 @@ function newsplus_preprocess_block(&$variables)
  */
 function newsplus_preprocess_html(&$variables)
 {
-
-
     /* add site-specific css */
     $base_path = base_path();
     $conf_path = conf_path();
