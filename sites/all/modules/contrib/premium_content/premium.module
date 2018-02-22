@@ -478,7 +478,7 @@ function premium_user_content_access($node, $account = NULL) {
  * @param string $machine_name
  *   Machine name of the premium level we want to set.
  */
-function _premium_set_premium($node, $machine_name = FALSE) {
+function _premium_set_premium($node, $machine_name = 'default') {
     // First, delete the current premium status, if any.
     db_delete('premium_nodes')->condition('nid', $node->nid)->execute();
 

@@ -2057,7 +2057,7 @@ function format_date($timestamp, $type = 'medium', $format = '', $timezone = NUL
   }
 
   // Create a DateTime object from the timestamp.
-  $date_time = date_create('@' . (int) $timestamp);
+  $date_time = date_create('@' . $timestamp);
   // Set the time zone for the DateTime object.
   date_timezone_set($date_time, $timezones[$timezone]);
 
@@ -2236,8 +2236,11 @@ function url($path = NULL, array $options = array()) {
     'prefix' => ''
   );
 
+  // Determine whether this is an external link, but ensure that the current
+  // path is always treated as internal by default (to prevent external link
+  // injection vulnerabilities).
   if (!isset($options['external'])) {
-    $options['external'] = url_is_external($path);
+    $options['external'] = $path === $_GET['q'] ? FALSE : url_is_external($path);
   }
 
   // Preserve the original path before altering or aliasing.
