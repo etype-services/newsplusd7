@@ -26,3 +26,8 @@
 #logo img {
     width: 100%;
 }
+
+/* paragraph spacing */
+.blog-single-post .article_content .field-name-body p {
+    margin: 0 0 0.4em 0;
+}
