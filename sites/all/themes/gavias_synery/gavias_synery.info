@@ -40,7 +40,7 @@ features[] = 'go_to_top_button'
 ;Core regions
 regions[topbar] = Topbar
 regions[search] = Search
-regions[header_right] = 'Header Right'
+;regions[header_right] = 'Header Right'
 regions[main_menu] = 'Main menu'
 
 ;Region Promotion

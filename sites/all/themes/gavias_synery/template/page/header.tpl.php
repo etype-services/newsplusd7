@@ -13,7 +13,7 @@
       <div class="container">
          <div class="header-main-inner">
             <div class="row">
-               <div class="col-xs-8">
+               <div class="col-xs-12">
                   <?php if ($logo): ?>
                         <h1 class="logo">
                               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
@@ -54,14 +54,6 @@
                         </div> <!-- /#name-and-slogan -->
                   <?php endif; ?>
                </div>
-
-               <div class="col-xs-4 header-right">
-                  <?php if (isset($page['header_right'])) : ?>
-                     <div class="header-right-inner">
-                        <?php print render($page['header_right']); ?>
-                     </div>
-                  <?php endif; ?>
-               </div>   
             </div> 
          </div>     
       </div>
