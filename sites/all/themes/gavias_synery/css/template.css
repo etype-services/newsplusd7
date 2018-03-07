@@ -1738,14 +1738,18 @@ div#acquia-agent-no-search {
     width: 648px; }
 
   .header-main {
-    /* move ad under logo */ }
+    /* move ad under logo */
+    /*.region-header-right {
+      justify-content: center;
+    }*/ }
     .header-main .col-xs-8, .header-main .col-xs-4 {
       width: 100%; }
     .header-main h1.logo {
       margin-top: 0;
       margin-bottom: 0; }
-    .header-main .region-header-right {
-      justify-content: center; } }
+      .header-main h1.logo a {
+        display: block;
+        text-align: center; } }
 @media screen and (max-width: 767px) {
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 435px; } }
