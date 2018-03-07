@@ -1759,4 +1759,43 @@ div#acquia-agent-no-search {
   max-width: 1100px;
   overflow-x: auto; }
 
+/* Simple Ads */
+.adslist {
+  display: flex;
+  justify-content: center; }
+
+/*
+ * Assumes region-header-right is just for ads
+ * Centers ad vertically and also right-aligns ad
+ */
+.region-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 92px; }
+  .region-header-right .block {
+    margin-bottom: 0; }
+
+/* Remove margin for region-before-content ad */
+.region-before-content .block-simpleads {
+  margin-bottom: 3px; }
+
+.sidebar .block-simpleads {
+  margin-top: 20px; }
+
+.front {
+  /* for ad below slideshow on home page */ }
+  .front .region-content .block-simpleads {
+    margin-top: 30px;
+    margin-bottom: 24px; }
+
+/* simple ad */
+.region-before-footer .block-simpleads {
+  margin-top: 30px; }
+
+/* added for lampasasdispatchrecord.com */
+#topbar .block-simpleads {
+  margin-top: 30px;
+  margin-bottom: 0; }
+
 /*# sourceMappingURL=template.css.map */
