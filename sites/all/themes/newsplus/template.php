@@ -41,6 +41,7 @@ function newsplus_preprocess_block(&$variables)
 
     $variables['title_attributes_array']['class'][] = 'title';
     $variables['classes_array'][] = 'clearfix';
+    /* to fix errors -- not sure that css_class is ever generated */
     if (!isset($variables['block']->css_class)) {
         $variables['block']->css_class = '';
     }
