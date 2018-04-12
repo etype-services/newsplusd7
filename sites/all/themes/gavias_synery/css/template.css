@@ -1728,15 +1728,15 @@ div#acquia-agent-no-search {
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 648px; }
 
-  .header .header-main {
+  #header .header-main {
     margin-bottom: 3vh;
     /* move ad under logo */
     /*.region-header-right {
       justify-content: center;
     }*/ }
-    .header .header-main .col-xs-8, .header .header-main .col-xs-4 {
+    #header .header-main .col-xs-8, #header .header-main .col-xs-4 {
       width: 100%; }
-    .header .header-main h1.logo {
+    #header .header-main h1.logo {
       margin-top: 0;
       margin-bottom: 0; } }
 @media screen and (max-width: 767px) {
