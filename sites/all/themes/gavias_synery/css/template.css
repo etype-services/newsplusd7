@@ -1219,7 +1219,7 @@ div.resizable-textarea textarea {
   margin-bottom: 30px; }
   .sidebar .block .block-title {
     padding: 0 20px;
-    margin: 0;
+    margin: 14px 0 0;
     border: none; }
     .sidebar .block .block-title h2 {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
