@@ -1,94 +1,96 @@
-body{
+body {
   overflow-x: hidden;
-  &.boxed{
-    max-width: $container-large-desktop + 20px; 
+  &.boxed {
+    max-width: $container-large-desktop + 20px;
     @include box-shadow(0 0 5px lighten($gray, 50%));
-    margin: 0 auto;    
-    .container{
+    margin: 0 auto;
+    .container {
       width: auto;
     }
   }
 }
 
-.content-full{
-   overflow: hidden;
-   .content-main-inner{
+.content-full {
+  overflow: hidden;
+  .content-main-inner {
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
-   }
-   #page-main-content{
+  }
+  #page-main-content {
     padding-top: 30px;
-   }
-}
-header{
-   .header-main{
-      padding: 10px 0;
-   }
-   h1.logo {
-     a {
-       display: block;
-       text-align: center;
-     }
-   }
+  }
 }
 
-.area{
-   margin-bottom: 20px;
-   &.highlighted{
-    
-   }
-   &.before_footer{
-
-   }
+header {
+  .header-main {
+    padding: 10px 0;
+    margin-bottom: 20px; //for social icons
+  }
+  h1.logo {
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
 }
 
-.sidebar{
+.area {
+  margin-bottom: 20px;
+  &.highlighted {
+
+  }
+  &.before_footer {
+
+  }
+}
+
+.sidebar {
   position: relative;
-  &:before, &:after{
+  &:before, &:after {
     content: "";
     @include size(1px, 10000px);
-    position: absolute; 
+    position: absolute;
     top: 0;
     background: $border-color;
     z-index: 1;
   }
-  &:before{
+  &:before {
     left: 0;
   }
-  &:after{
+  &:after {
     right: 0;
   }
 }
 
-.main-menu{
+.main-menu {
   margin-bottom: 20px;
-  .region-main-menu{
-  border-top: 2px solid $theme-color;
-  background: $white;
-  border-bottom: 1px solid $border-color;
+  .region-main-menu {
+    border-top: 2px solid $theme-color;
+    background: $white;
+    border-bottom: 1px solid $border-color;
   }
 }
 
-.footer{
+.footer {
   background: $white;
 }
 
-.copyright{
-  .copyright-inner{
+.copyright {
+  .copyright-inner {
     padding: 30px 0;
     border-top: 1px solid $border-color;
-    .block{
+    .block {
       margin: 0;
     }
-  }  
+  }
 }
 
-.hidden-breadcrumb #breadcrumbs{
+.hidden-breadcrumb #breadcrumbs {
   display: none;
 }
 
-#breadcrumbs{
-  .breadcrumb{
+#breadcrumbs {
+  .breadcrumb {
     margin: 0;
     padding: 10px;
   }

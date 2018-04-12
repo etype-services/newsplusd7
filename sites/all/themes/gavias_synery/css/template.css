@@ -173,6 +173,9 @@ body {
 
 header .header-main {
   padding: 10px 0; }
+header h1.logo a {
+  display: block;
+  text-align: center; }
 
 .area {
   margin-bottom: 20px; }
@@ -422,10 +425,10 @@ header .header-main {
 .post-slide.post-block {
   position: relative; }
   .post-slide.post-block .post-meta-wrap {
-    background: linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 transparent;
-    background: -webkit-linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 transparent;
-    background: -o-linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 transparent;
-    background: -moz-linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 transparent;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
     width: 100%;
     padding: 20px;
     position: absolute;
@@ -1236,12 +1239,7 @@ div.resizable-textarea textarea {
   .region-main-menu #block-etype-social-search {
     position: absolute;
     right: 0;
-    top: -34px; }
-    .region-main-menu #block-etype-social-search ul.social-bookmarks {
-      float: left;
-      margin-bottom: 0; }
-      .region-main-menu #block-etype-social-search ul.social-bookmarks li {
-        float: left; }
+    top: -26px; }
     .region-main-menu #block-etype-social-search div.block-search {
       float: left; }
 
@@ -1394,14 +1392,6 @@ ul.widget-twitter > li {
       background: none; }
       #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-next-horizontal a:hover, #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-next-horizontal a:focus {
         color: #4089ea; }
-
-/* Social icons */
-#block-etype-social-search .fa {
-  font-size: 24px; }
-#block-etype-social-search li {
-  margin-right: 8px; }
-#block-etype-social-search .social-bookmarks {
-  margin-bottom: 6px; }
 
 .poll .title {
   margin-bottom: 15px;
@@ -1746,10 +1736,7 @@ div#acquia-agent-no-search {
       width: 100%; }
     .header-main h1.logo {
       margin-top: 0;
-      margin-bottom: 0; }
-      .header-main h1.logo a {
-        display: block;
-        text-align: center; } }
+      margin-bottom: 0; } }
 @media screen and (max-width: 767px) {
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 435px; } }

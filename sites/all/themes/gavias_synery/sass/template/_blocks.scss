@@ -172,14 +172,7 @@
   #block-etype-social-search {
     position: absolute;
     right: 0;
-    top: -34px;
-    ul.social-bookmarks {
-      float: left;
-      margin-bottom: 0;
-      li {
-        float: left;
-      }
-    }
+    top: -26px;
     div.block-search {
       float: left;
     }
@@ -382,18 +375,5 @@ ul.widget-twitter{
         }
       }
     }
-  }
-}
-
-/* Social icons */
-#block-etype-social-search {
-  .fa {
-    font-size: 24px;
-  }
-  li {
-    margin-right: 8px;
-  }
-  .social-bookmarks {
-    margin-bottom: 6px;
   }
 }
