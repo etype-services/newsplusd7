@@ -173,7 +173,7 @@ body {
 
 header .header-main {
   padding: 10px 0;
-  margin-bottom: 20px; }
+  margin-bottom: 1vh; }
 header h1.logo a {
   display: block;
   text-align: center; }
@@ -1240,7 +1240,7 @@ div.resizable-textarea textarea {
   .region-main-menu #block-etype-social-search {
     position: absolute;
     right: 0;
-    top: -26px; }
+    top: -36px; }
     .region-main-menu #block-etype-social-search div.block-search {
       float: left; }
 
