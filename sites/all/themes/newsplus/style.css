@@ -619,7 +619,7 @@ h5 {
 #pre-header ul.menu li a,
 #header-top ul.menu li a {
   font-size: 14px;
-  padding: 10px 18px 10px;
+  padding: 10px 9px 10px;
   color: #fff; }
 
 #main-navigation ul.menu li.expanded > a:before, #main-navigation ul.menu li.collapsed > a:before,
@@ -2172,11 +2172,10 @@ ul.user-social-bookmarks li a:hover {
   top: 0;
   z-index: 20; }
   .dropdown.search-bar .trigger {
-    font-size: 20px;
+    font-size: 23px;
     display: inline-block;
-    padding: 0 10px 0 10px;
     text-decoration: none;
-    line-height: 54px;
+    line-height: 45px;
     height: 54px;
     color: #fff; }
     .dropdown.search-bar .trigger .fa {
@@ -2187,7 +2186,6 @@ ul.user-social-bookmarks li a:hover {
   margin: 0;
   box-shadow: none;
   border-radius: 0;
-  padding: 10px;
   border-color: #ddd;
   background-color: #f8f8f8; }
 
