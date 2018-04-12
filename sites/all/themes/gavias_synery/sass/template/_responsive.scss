@@ -9,20 +9,23 @@
     width: 648px;
   }
 
-  .header-main {
-    margin-bottom: 3vh;
-    /* move ad under logo */
-    .col-xs-8, .col-xs-4 {
-      width: 100%;
+  .header {
+    .header-main {
+      margin-bottom: 3vh;
+      /* move ad under logo */
+      .col-xs-8, .col-xs-4 {
+        width: 100%;
+      }
+      h1.logo {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      /*.region-header-right {
+        justify-content: center;
+      }*/
     }
-    h1.logo {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    /*.region-header-right {
-      justify-content: center;
-    }*/
   }
+
 }
 
 @media screen and (max-width: $screen-xs-max) {
