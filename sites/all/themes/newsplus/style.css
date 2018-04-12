@@ -2074,8 +2074,7 @@ ul.social-bookmarks li a, ul.brands li a {
   display: block;
   width: 45px;
   height: 45px;
-  text-align: center;
-  border: 2px solid #c5c5c5; }
+  text-align: center; }
 
 ul.social-bookmarks li i, ul.brands li i {
   width: 100%;
@@ -2092,10 +2091,10 @@ ul.social-bookmarks.large li, ul.brands.large li {
   margin: 0; }
 
 ul.social-bookmarks.large li a, ul.brands.large li a {
-  width: 90px;
-  height: 90px; }
+  width: auto;
+  height: auto; }
 
-ul.social-bookmarks.large li a i, ul.brands.large li a i {
+ul.brands.large li a i {
   font-size: 46px;
   line-height: 90px; }
 
