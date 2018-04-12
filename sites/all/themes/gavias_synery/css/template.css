@@ -1729,6 +1729,7 @@ div#acquia-agent-no-search {
     width: 648px; }
 
   .header-main {
+    margin-bottom: 3vh;
     /* move ad under logo */
     /*.region-header-right {
       justify-content: center;
