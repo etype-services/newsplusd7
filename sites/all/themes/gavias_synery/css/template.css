@@ -172,7 +172,8 @@ body {
     padding-top: 30px; }
 
 header .header-main {
-  padding: 10px 0; }
+  padding: 10px 0;
+  margin-bottom: 20px; }
 header h1.logo a {
   display: block;
   text-align: center; }
