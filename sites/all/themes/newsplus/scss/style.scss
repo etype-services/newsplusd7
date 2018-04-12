@@ -401,8 +401,8 @@ blockquote {
 /*Blockquote quote symbol*/
 blockquote:after {
   position: absolute;
-  font-family: 'PT Sans', Helvetica Neue, Arial, Sans-serif;
-  content: "“";
+  font-family: 'PT Sans', Helvetica Neue, Arial, sans-serif;
+  content: "\xE2";
   left: 15px;
   color: #ddd;
   font-style: normal;
@@ -2667,6 +2667,7 @@ ul.user-social-bookmarks li a:hover {
 /*Navigation search bar*/
 .navigation-social-bookmarks {
   position: relative;
+  display: flex;
 }
 
 .navigation-social-bookmarks .social-bookmarks {
