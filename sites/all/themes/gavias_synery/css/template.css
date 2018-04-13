@@ -173,7 +173,7 @@ body {
 
 header .header-main {
   padding: 10px 0;
-  margin-bottom: 1vh; }
+  margin-bottom: 4vh; }
 header .main-menu {
   margin-bottom: 0; }
 header h1.logo a {
@@ -1723,33 +1723,6 @@ div#acquia-agent-no-search {
   margin: 100px 0 0 -15px;
   display: block; }
 
-@media screen and (max-width: 1199px) {
-  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 435px; } }
-@media screen and (max-width: 991px) {
-  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 648px; }
-
-  #topbar .block-simpleads {
-    margin-top: 0; }
-
-  header .header-main {
-    margin-bottom: 5vh;
-    /* move ad under logo */
-    /*.region-header-right {
-      justify-content: center;
-    }*/ }
-    header .header-main .col-xs-8, header .header-main .col-xs-4 {
-      width: 100%; }
-    header .header-main h1.logo {
-      margin-top: 0;
-      margin-bottom: 0; } }
-@media screen and (max-width: 767px) {
-  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 435px; } }
-@media screen and (max-width: 480px) {
-  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 327px; } }
 #drupal_tabs {
   margin: 20px 0; }
 
@@ -1795,5 +1768,33 @@ div#acquia-agent-no-search {
 #topbar .block-simpleads {
   margin-top: 30px;
   margin-bottom: 0; }
+
+@media screen and (max-width: 1199px) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 435px; } }
+@media screen and (max-width: 991px) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 648px; }
+
+  #topbar .block-simpleads {
+    margin-top: 0; }
+
+  header .header-main {
+    margin-bottom: 5vh;
+    /* move ad under logo */
+    /*.region-header-right {
+      justify-content: center;
+    }*/ }
+    header .header-main .col-xs-8, header .header-main .col-xs-4 {
+      width: 100%; }
+    header .header-main h1.logo {
+      margin-top: 0;
+      margin-bottom: 0; } }
+@media screen and (max-width: 767px) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 435px; } }
+@media screen and (max-width: 480px) {
+  #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 327px; } }
 
 /*# sourceMappingURL=template.css.map */

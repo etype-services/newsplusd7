@@ -9,8 +9,10 @@
     width: 648px;
   }
 
-  #topbar .block-simpleads {
-    margin-top: 0;
+  #topbar {
+    .block-simpleads {
+      margin-top: 0;
+    }
   }
 
   header {
