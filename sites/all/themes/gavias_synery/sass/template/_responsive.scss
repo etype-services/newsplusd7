@@ -9,9 +9,13 @@
     width: 648px;
   }
 
+  #topbar .block-simpleads {
+    margin-top: 0;
+  }
+
   header {
     .header-main {
-      margin-bottom: 3vh;
+      margin-bottom: 5vh;
       /* move ad under logo */
       .col-xs-8, .col-xs-4 {
         width: 100%;
