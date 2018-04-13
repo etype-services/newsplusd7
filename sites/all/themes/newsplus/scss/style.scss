@@ -1581,7 +1581,7 @@ ul.pager li.pager-current, .item-list ul li.pager-current.last {
   text-decoration: none;
 }
 
-.node-navigation .fa {
+.node-navigation .fas {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -2687,7 +2687,7 @@ ul.user-social-bookmarks li a:hover {
     line-height: 45px;
     height: 54px;
     color: #fff;
-    .fa {
+    .fas {
       color: #fff;
     }
   }
@@ -2728,7 +2728,7 @@ ul.user-social-bookmarks li a:hover {
     input:hover {
       background-color: transparent;
     }
-    i.fa {
+    i.fas {
       font-size: 31px;
       position: relative;
       right: 40px;

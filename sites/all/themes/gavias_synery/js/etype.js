@@ -3,7 +3,7 @@
 (function ($) {
   Drupal.behaviors.theme_gavias_synery = {
     // this function is to remove the active class from the main item of
-    // a dropdown menu in the Synery Template
+    // a dropdown menu in the Synergy Template
     // So that that item can be given a path of / but not be active on the
     // home page. You cannot have an empty path in the Drupal menu system
     attach: function () {
@@ -16,9 +16,10 @@
           }
         });
       }
-      $(".jcarousel-prev-horizontal").append('<i class="fa fa-chevron-left"' +
+      // jcarousel use fontawesome for the arrows
+      $(".jcarousel-prev-horizontal").append('<i class="fas fa-chevron-left"' +
           ' aria-hidden="true"></i>');
-      $(".jcarousel-next-horizontal").append('<i class="fa fa-chevron-right"' +
+      $(".jcarousel-next-horizontal").append('<i class="fas fa-chevron-right"' +
           ' aria-hidden="true"></i>');
     }
   };

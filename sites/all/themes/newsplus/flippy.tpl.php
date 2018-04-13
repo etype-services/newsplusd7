@@ -39,7 +39,7 @@ $current_node = node_load($current['nid']);
           <div class="text">Prev article</div>
             <?php print l($links['prev']['title'], $links['prev']['href'], array('html' => TRUE, 'attributes' => array('title' => $links['prev']['title']))); ?>
         </div>
-        <i class="fa fa-angle-left"></i>
+        <i class="fas fa-angle-left"></i>
       <?php endif; ?>
     </div>
     <div class="col-xs-6">
@@ -48,7 +48,7 @@ $current_node = node_load($current['nid']);
           <div class="text">Next article</div>
             <?php print l($links['next']['title'], $links['next']['href'], array('html' => TRUE, 'attributes' => array('title' => $links['next']['title']))); ?>
         </div>
-        <i class="fa fa-angle-right"></i>
+        <i class="fas fa-angle-right"></i>
       <?php endif; ?>
     </div>
   </div>

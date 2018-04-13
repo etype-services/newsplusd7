@@ -1275,7 +1275,7 @@ ul.pager li.pager-current, .item-list ul li.pager-current.last {
   color: #ea2d49;
   text-decoration: none; }
 
-.node-navigation .fa {
+.node-navigation .fas {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -2176,7 +2176,7 @@ ul.user-social-bookmarks li a:hover {
     line-height: 45px;
     height: 54px;
     color: #fff; }
-    .dropdown.search-bar .trigger .fa {
+    .dropdown.search-bar .trigger .fas {
       color: #fff; }
 
 .dropdown.search-bar .dropdown-menu {
@@ -2208,7 +2208,7 @@ ul.user-social-bookmarks li a:hover {
     height: 43px; }
   .block-search .form-actions input:hover {
     background-color: transparent; }
-  .block-search .form-actions i.fa {
+  .block-search .form-actions i.fas {
     font-size: 31px;
     position: relative;
     right: 40px;

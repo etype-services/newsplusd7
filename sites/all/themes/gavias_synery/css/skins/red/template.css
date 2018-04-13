@@ -1398,14 +1398,6 @@ ul.widget-twitter > li {
       #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-next-horizontal a:hover, #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal .jcarousel-next-horizontal a:focus {
         color: #4089ea; }
 
-/* Social icons */
-#block-etype-social-search .fa {
-  font-size: 24px; }
-#block-etype-social-search li {
-  margin-right: 8px; }
-#block-etype-social-search .social-bookmarks {
-  margin-bottom: 6px; }
-
 .poll .title {
   margin-bottom: 15px;
   font-weight: 400 !important;

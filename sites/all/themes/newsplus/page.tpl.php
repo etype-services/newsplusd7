@@ -1,5 +1,5 @@
 <?php if (theme_get_setting('scrolltop_display')): ?>
-<div id="toTop"><i class="fa fa-play-circle fa-rotate-270"></i></div>
+<div id="toTop"><i class="fas fa-play-circle fa-rotate-270"></i></div>
 <?php endif; ?>
 
 <?php if ($page['pre_header_left'] || $page['pre_header_right']):?>

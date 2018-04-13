@@ -56,9 +56,9 @@ $post_progress = theme_get_setting('post_progress');
           <?php print t('Share'); ?>
           <?php $path = isset($_GET['q']) ? $_GET['q'] : '<front>'; ?>
           <ul>
-            <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php print urlencode(url($path, array('absolute' => TRUE)))?>&t=<?php print urlencode($title) ?>" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span><i class="fa fa-facebook"></i></span></a></li>
-            <li><a href="https://plus.google.com/share?url=<?php print urlencode(url($path, array('absolute' => TRUE))) ?>" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"><span><i class="fa fa-google-plus"></i></span></a></li>
-            <li><a href="http://twitter.com/share?text=<?php print urlencode($title) ?>&url=<?php print urlencode(url($path, array('absolute' => TRUE))) ?>" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><span><i class="fa fa-twitter"></i></span></a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php print urlencode(url($path, array('absolute' => TRUE)))?>&t=<?php print urlencode($title) ?>" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span><i class="fab fa-facebook"></i></span></a></li>
+            <li><a href="https://plus.google.com/share?url=<?php print urlencode(url($path, array('absolute' => TRUE))) ?>" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"><span><i class="fab fa-google-plus"></i></span></a></li>
+            <li><a href="http://twitter.com/share?text=<?php print urlencode($title) ?>&url=<?php print urlencode(url($path, array('absolute' => TRUE))) ?>" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><span><i class="fab fa-twitter"></i></span></a></li>
           </ul>
         </div>
         <!-- EOF:share-links -->
@@ -69,7 +69,7 @@ $post_progress = theme_get_setting('post_progress');
         <div class="submitted-info">
           <?php if ($print_button) { ?>
           <div class="print">
-            <i class="fa fa-print"></i> <a href="javascript:window.print()" class="print-button"> <?php print t(' Print')?></a>
+            <i class="fas fa-print"></i> <a href="javascript:window.print()" class="print-button"> <?php print t(' Print')?></a>
           </div>
           <?php } ?>
           <?php if ($font_resize) { ?>
@@ -126,18 +126,18 @@ $post_progress = theme_get_setting('post_progress');
               <!-- custom section for byline & email -->
             <?php if (isset($content['field_email']) && !empty($content['field_email'])) { ?>
                 <div class="node-info-item byline">
-                    <i class="fa fa-pencil"></i> <?php print render($content['field_byline']);  ?>
+                    <i class="fas fa-pencil"></i> <?php print render($content['field_byline']);  ?>
                   <?php print render($content['field_email']);  ?>
                 </div>
             <?php } ?>
             <?php if ($display_submitted) { ?>
-            <div class="node-info-item"><i class="fa fa-clock-o"></i> <?php print format_date($created, 'custom', 'F d, Y - H:i'); ?></div>
+            <div class="node-info-item"><i class="fas fa-clock-o"></i> <?php print format_date($created, 'custom', 'F d, Y - H:i'); ?></div>
             <?php } ?>
             <?php if (isset($content['field_mt_post_categories'])) { ?>
-            <div class="node-info-item"><i class="fa fa-tags"></i> <?php print t('Posted in: ');?><?php print render($content['field_mt_post_categories']);  ?></div>
+            <div class="node-info-item"><i class="fas fa-tags"></i> <?php print t('Posted in: ');?><?php print render($content['field_mt_post_categories']);  ?></div>
             <?php } ?>
             <?php if (module_exists('comment') && ($node->comment == COMMENT_NODE_OPEN || ($node->comment == COMMENT_NODE_CLOSED && $node->comment_count > 0))) { ?>
-            <div class="node-info-item"><i class="fa fa-comments"></i> <?php print $comment_count; ?> comments</div>
+            <div class="node-info-item"><i class="fas fa-comments"></i> <?php print $comment_count; ?> comments</div>
             <?php } ?>
           </div>
         <?php } ?>

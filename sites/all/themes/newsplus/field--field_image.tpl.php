@@ -17,7 +17,7 @@ if ($element['#view_mode'] == 'teaser') : ?>
         <div class="image-wrapper clearfix">
             <a class="image-popup overlayed" href="<?php print file_create_url($node->field_image[$lang][0]['uri']); ?>" title="<?php print $node->field_image[$lang][0]['title']; ?>">
                 <img src="<?php print image_style_url('large', $node->field_image[$lang][0]['uri']); ?>" alt="<?php print $node->field_image[$lang][0]['alt']; ?>" title="<?php print $node->field_image[$lang][0]['title']; ?>"/>
-                <span class="overlay"><i class="fa fa-plus"></i></span>
+                <span class="overlay"><i class="fas fa-plus"></i></span>
             </a>
         </div>
     
@@ -41,7 +41,7 @@ if ($element['#view_mode'] == 'teaser') : ?>
             <div class="image-listing-item">
                 <a class="image-popup overlayed" href="<?php print file_create_url($node->field_image[$lang][$key]['uri']) ?>" title="<?php print $node->field_image[$lang][$key]['title']; ?>">
                 <img src="<?php print image_style_url('mt_thumbnails', $node->field_image[$lang][$key]['uri']); ?>" alt="<?php print $node->field_image[$lang][$key]['alt']; ?>" title="<?php print $node->field_image[$lang][$key]['title']; ?>"/>
-                <span class="overlay small"><i class="fa fa-plus"></i></span>
+                <span class="overlay small"><i class="fas fa-plus"></i></span>
                 </a>
             </div>  
             <?php } ?>

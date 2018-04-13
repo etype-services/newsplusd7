@@ -145,11 +145,6 @@ ga(\'send\', \'pageview\');
         );
     }
 
-    /**
-     * Add Javascript - Enable/disable Bootstrap 3 Javascript.
-     * This was a test
-     */
-    // drupal_add_js(drupal_get_path('theme', 'gavias_synery') . '/js/bootstrap.min.js');
 }
 
 /**
