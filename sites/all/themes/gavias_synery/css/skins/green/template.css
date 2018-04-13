@@ -172,7 +172,10 @@ body {
     padding-top: 30px; }
 
 header .header-main {
-  padding: 10px 0; }
+  padding: 10px 0;
+  margin-bottom: 1vh; }
+header .main-menu {
+  margin-bottom: 0; }
 header h1.logo a {
   display: block;
   text-align: center; }
@@ -425,10 +428,10 @@ header h1.logo a {
 .post-slide.post-block {
   position: relative; }
   .post-slide.post-block .post-meta-wrap {
-    background: linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 transparent;
-    background: -webkit-linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 transparent;
-    background: -o-linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 transparent;
-    background: -moz-linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 transparent;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.99) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
     width: 100%;
     padding: 20px;
     position: absolute;
@@ -1218,7 +1221,7 @@ div.resizable-textarea textarea {
   margin-bottom: 30px; }
   .sidebar .block .block-title {
     padding: 0 20px;
-    margin: 0;
+    margin: 14px 0 0;
     border: none; }
     .sidebar .block .block-title h2 {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
@@ -1239,12 +1242,7 @@ div.resizable-textarea textarea {
   .region-main-menu #block-etype-social-search {
     position: absolute;
     right: 0;
-    top: -34px; }
-    .region-main-menu #block-etype-social-search ul.social-bookmarks {
-      float: left;
-      margin-bottom: 0; }
-      .region-main-menu #block-etype-social-search ul.social-bookmarks li {
-        float: left; }
+    top: -36px; }
     .region-main-menu #block-etype-social-search div.block-search {
       float: left; }
 
@@ -1732,14 +1730,18 @@ div#acquia-agent-no-search {
   #block-views-business-directory-block .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 648px; }
 
-  .header-main {
+  #topbar .block-simpleads {
+    margin-top: 0; }
+
+  header .header-main {
+    margin-bottom: 5vh;
     /* move ad under logo */
     /*.region-header-right {
       justify-content: center;
     }*/ }
-    .header-main .col-xs-8, .header-main .col-xs-4 {
+    header .header-main .col-xs-8, header .header-main .col-xs-4 {
       width: 100%; }
-    .header-main h1.logo {
+    header .header-main h1.logo {
       margin-top: 0;
       margin-bottom: 0; } }
 @media screen and (max-width: 767px) {
