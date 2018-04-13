@@ -1,6 +1,5 @@
 <?php
 
-define('FONT_AWESOME_44', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css');
 define('JS_CHOSEN_142', 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js');
 define('CSS_CHOSEN_142', 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css');
 
@@ -40,15 +39,6 @@ function theme_tb_megamenu_admin_settings($variables) {
 }
 
 function tb_megamenu_configure_form($form, &$form_state, $menu_names = array()) {
-  $lib_fontawesome = tb_megamenu_check_library('fontawesome', 'fontawesome');
-  if(module_exists('fontawesome') && $lib_fontawesome) {
-    tb_megamenu_add_css($lib_fontawesome['css']);
-  }
-  else {
-    drupal_add_css(FONT_AWESOME_44, array(
-      'type' => 'external'
-    ));
-  }
 
   $lib_chosen = tb_megamenu_check_library('chosen', 'chosen');
   $lib_chosen_existed = module_exists('chosen') && $lib_chosen;

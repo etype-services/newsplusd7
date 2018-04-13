@@ -5,8 +5,8 @@
     <li>
       <label class="hasTip" title="<?php print t('Add/remove Column') . ' - ' . t('Click + to add a new column on the right of the selected column. Click - to remove the selected column') ?>"><?php print t('Add/remove Column') ?></label>
       <fieldset class="btn-group">
-        <a href="" class="btn toolcol-addcol toolbox-action first" data-action="addColumn" title="<?php print t('Add a new column on the right of the selected column') ?>"><i class="fa fa-plus"></i></a>
-        <a href="" class="btn toolcol-removecol toolbox-action last" data-action="removeColumn" title="<?php print t('Remove the selected column') ?>"><i class="fa fa-minus"></i></a>
+        <a href="" class="btn toolcol-addcol toolbox-action first" data-action="addColumn" title="<?php print t('Add a new column on the right of the selected column') ?>"><i class="fas fa-plus"></i></a>
+        <a href="" class="btn toolcol-removecol toolbox-action last" data-action="removeColumn" title="<?php print t('Remove the selected column') ?>"><i class="fasfa-minus"></i></a>
       </fieldset>
     </li>
   </ul>
