@@ -43,9 +43,7 @@
  *
  * @ingroup themeable
  */
-
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie ie6" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
 <!--[if IE 7]>    <html class="ie ie7" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
 <!--[if IE 8]>    <html class="ie ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
