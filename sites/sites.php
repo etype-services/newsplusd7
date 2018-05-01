@@ -87,3 +87,7 @@ $sites['www.theexaminer.com'] = 'theexaminer.etypegoogle10.com';
 /* beaumontbusinessjournal.etypegoogle10.com */
 $sites['beaumontbusinessjournal.etypegoogle10.com'] = 'beaumontbusinessjournal.etypegoogle10.com';
 $sites['www.beaumontbusinessjournal.com'] = 'beaumontbusinessjournal.etypegoogle10.com';
+
+/* malakoffnews.etypegoogle10.com */
+$sites['malakoffnews.etypegoogle10.com'] = 'malakoffnews.etypegoogle10.com';
+$sites['www.malakoffnews.net'] = 'malakoffnews.etypegoogle10.com';
