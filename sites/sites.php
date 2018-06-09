@@ -91,6 +91,8 @@ $sites['www.beaumontbusinessjournal.com'] = 'beaumontbusinessjournal.etypegoogle
 /* malakoffnews.etypegoogle10.com */
 $sites['malakoffnews.etypegoogle10.com'] = 'malakoffnews.etypegoogle10.com';
 $sites['www.malakoffnews.net'] = 'malakoffnews.etypegoogle10.com';
+$sites['www.themonitor.net'] = 'malakoffnews.etypegoogle10.com';
+$sites['themonitor.net'] = 'malakoffnews.etypegoogle10.com';
 
 /* lakeoconeenews.etypegoogle10.com */
 $sites['lakeoconeenews.etypegoogle10.com'] = 'lakeoconeenews.etypegoogle10.com';
