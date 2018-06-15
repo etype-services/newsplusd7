@@ -450,6 +450,17 @@ blockquote:after {
     font-size: 190px;
     top: -15px;
   }
+  /* mobile menu */
+  #pre-header-inside {
+    position: relative;
+    .col-md-4 {
+      position: absolute;
+      top: 0;
+      .dropdown.search-bar {
+        position: inherit;
+      }
+    }
+  }
 }
 
 ul {

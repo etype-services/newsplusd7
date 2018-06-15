@@ -361,7 +361,16 @@ blockquote:after {
   blockquote:after {
     left: 0;
     font-size: 190px;
-    top: -15px; } }
+    top: -15px; }
+
+  /* mobile menu */
+  #pre-header-inside {
+    position: relative; }
+    #pre-header-inside .col-md-4 {
+      position: absolute;
+      top: 0; }
+      #pre-header-inside .col-md-4 .dropdown.search-bar {
+        position: inherit; } }
 ul {
   list-style-type: square; }
 
