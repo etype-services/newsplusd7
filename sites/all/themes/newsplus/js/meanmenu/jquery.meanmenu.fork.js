@@ -195,7 +195,6 @@
                   if( menuOn == false ) {
                           $navreveal.css("text-align", "center");
                           $navreveal.css("text-indent", "0");
-                          $navreveal.css("top", "-2px");
                           $navreveal.css("font-size", meanMenuCloseSize);
                           jQuery(meanContainer+' .mean-nav ul:first').slideDown(); 
                           menuOn = true;

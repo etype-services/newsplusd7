@@ -721,7 +721,8 @@ h5 {
   color: #fff;
   font-size: 18px;
   text-indent: 0;
-  padding: 13px 0 13px; }
+  padding: 13px 0 13px;
+  top: -2px; }
 
 .mean-container a.meanmenu-reveal span {
   background: #fff; }
