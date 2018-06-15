@@ -119,8 +119,7 @@
             function meanInner() {
                 // get last class name
                 if (jQuery($navreveal).is(".meanmenu-reveal.meanclose")) {
-                    // $navreveal.html(meanMenuClose);
-                    $navreveal.html("<span></span><span></span><span></span>");
+                    $navreveal.html(meanMenuClose);
                 } else {
                     $navreveal.html(meanMenuOpen);
                 }
