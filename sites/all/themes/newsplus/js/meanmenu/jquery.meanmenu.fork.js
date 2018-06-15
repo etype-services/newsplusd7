@@ -30,8 +30,6 @@
         var defaults = {
             meanMenuTarget: jQuery(this), // Target the current HTML markup you wish to replace
             meanMenuContainer: 'body', // Choose where meanmenu will be placed within the HTML
-            meanMenuClose: "X", // single character you want to represent the close menu button
-            meanMenuCloseSize: "18px", // set font size of close button
             meanMenuOpen: "<span /><span /><span />", // text/markup you want when menu is closed
             meanRevealPosition: "right", // left right or center positions
             meanRevealPositionDistance: "0", // Tweak the position of the menu
@@ -115,15 +113,6 @@
             // set all styles for mean-reveal
             var meanStyles = "background:"+meanRevealColour+";color:"+meanRevealColour+";"+meanRevealPos;
       var $navreveal = "";
-      
-            function meanInner() {
-                // get last class name
-                if (jQuery($navreveal).is(".meanmenu-reveal.meanclose")) {
-                    $navreveal.html(meanMenuClose);
-                } else {
-                    $navreveal.html(meanMenuOpen);
-                }
-            }
             
             //re-instate original nav (and call this on window.width functions)
             function meanOriginal() {
@@ -200,8 +189,7 @@
                      
                     // add last class to tidy up borders
                     jQuery(meanContainer+' .mean-nav ul li').last().addClass('mean-last');
-                
-                    //$navreveal.removeClass("meanclose");
+
                     jQuery($navreveal).click(function(e){
                       e.preventDefault();
                   if( menuOn == false ) {
@@ -213,9 +201,7 @@
                       } else {
                         jQuery(meanContainer+' .mean-nav ul:first').slideUp();
                         menuOn = false;
-                      }    
-                        //$navreveal.toggleClass("meanclose");
-                        //meanInner();
+                      }
                         jQuery(removeElements).addClass('mean-remove');
                     });
                     
@@ -225,7 +211,7 @@
             jQuery(meanContainer+' .mean-nav ul > li > a:first-child').on( "click" , function () {
               jQuery(meanContainer+' .mean-nav ul:first').slideUp();
               menuOn = false;
-              jQuery($navreveal).toggleClass("meanclose").html(meanMenuOpen);
+              jQuery($navreveal).html(meanMenuOpen);
             
             });
                     
