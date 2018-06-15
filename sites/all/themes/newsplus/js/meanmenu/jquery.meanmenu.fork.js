@@ -30,7 +30,7 @@
         var defaults = {
             meanMenuTarget: jQuery(this), // Target the current HTML markup you wish to replace
             meanMenuContainer: 'body', // Choose where meanmenu will be placed within the HTML
-            meanMenuClose: "<span /><span /><span />", // single character you want to represent the close menu button
+            meanMenuClose: "X", // single character you want to represent the close menu button
             meanMenuCloseSize: "18px", // set font size of close button
             meanMenuOpen: "<span /><span /><span />", // text/markup you want when menu is closed
             meanRevealPosition: "right", // left right or center positions
@@ -201,7 +201,7 @@
                     // add last class to tidy up borders
                     jQuery(meanContainer+' .mean-nav ul li').last().addClass('mean-last');
                 
-                    $navreveal.removeClass("meanclose");
+                    //$navreveal.removeClass("meanclose");
                     jQuery($navreveal).click(function(e){
                       e.preventDefault();
                   if( menuOn == false ) {
@@ -214,8 +214,8 @@
                         jQuery(meanContainer+' .mean-nav ul:first').slideUp();
                         menuOn = false;
                       }    
-                        $navreveal.toggleClass("meanclose");
-                        meanInner();
+                        //$navreveal.toggleClass("meanclose");
+                        //meanInner();
                         jQuery(removeElements).addClass('mean-remove');
                     });
                     
