@@ -723,7 +723,7 @@ h5 {
 
 .mean-container .mean-bar {
   background: transparent;
-  z-index: 11;
+  z-index: 9;
   padding: 0; }
 
 .mean-container a.meanmenu-reveal {
