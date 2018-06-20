@@ -95,3 +95,6 @@ $sites['www.themonitor.net'] = 'malakoffnews.etypegoogle10.com';
 /* lakeoconeenews.etypegoogle10.com */
 $sites['lakeoconeenews.etypegoogle10.com'] = 'lakeoconeenews.etypegoogle10.com';
 $sites['www.lakeoconeenews.us'] = 'lakeoconeenews.etypegoogle10.com';
+
+/* brownfieldonline.etypegoogle10.com */
+$sites['www.brownfieldonline.com'] = 'brownfieldonline.etypegoogle10.com';
