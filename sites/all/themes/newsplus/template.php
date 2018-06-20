@@ -1077,3 +1077,19 @@ function newsplus_form_alter(&$form, &$form_state, $form_id)
         $form['search_block_form']['#attributes'] = array('onblur' => "if (this.value == '') {this.value = '{$form_default}';}", 'onfocus' => "if (this.value == '{$form_default}') {this.value = '';}");
     }
 }
+
+/**
+ * @param $vars
+ */
+function newsplus_preprocess_views_view_row_rss(&$vars) {
+  $item = $vars['row'];
+  $result = $vars['view']->result;
+  $id = $vars['id'];
+  $node = node_load( $result[$id-1]->nid );
+  $vars['title'] = trim(check_plain($item->title));
+  $vars['link'] = check_url($item->link);
+  $vars['description'] = check_plain($item->description);
+  $vars['node'] = $node;
+  $vars['item_elements'] = empty($item->elements) ? '' : format_xml_elements($item->elements);
+  empty($node->field_image['und'][0]['uri'])? $vars['img'] = '': $vars['img']  = file_create_url($node->field_image['und'][0]['uri']);
+}
