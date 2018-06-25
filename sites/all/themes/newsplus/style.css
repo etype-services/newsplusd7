@@ -440,7 +440,10 @@ h5 {
 
 @media (max-width: 767px) {
   .node h1.title {
-    font-size: 36px; } }
+    font-size: 36px; }
+
+  #header-top {
+    padding-top: 0; } }
 @media (max-width: 480px) {
   #block-views-mt-user-latest-posts-block.block-views h2.title {
     margin-bottom: 20px; } }
