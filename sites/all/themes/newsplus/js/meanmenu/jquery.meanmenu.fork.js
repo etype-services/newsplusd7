@@ -83,7 +83,7 @@
             }
 
             function meanCentered() {
-                if (meanRevealPosition == "center") {
+                if (meanRevealPosition === "center") {
                     var newWidth = window.innerWidth || document.documentElement.clientWidth;
                     var meanCenter = ((newWidth / 2) - 22) + "px";
                     meanRevealPos = "left:" + meanCenter + ";right:auto;";
@@ -124,7 +124,8 @@
                 jQuery(removeElements).removeClass('mean-remove');
             }
 
-            //navigation reveal 
+            // navigation reveal
+            // adjusted to add superfish 1 elements to superfish 2
             function showMeanMenu() {
                 if (currentWidth <= meanScreenWidth) {
                     jQuery(removeElements).addClass('mean-remove');
@@ -133,7 +134,7 @@
                     jQuery(meanContainer).addClass("mean-container");
                     jQuery(meanContainer).prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="' + meanStyles + '">Show Navigation</a><nav class="mean-nav"></nav></div>');
 
-                    //push meanMenu navigation into .mean-nav
+                    // push meanMenu navigation into .mean-nav
                     var meanMenuContents = jQuery(meanMenu).html();
                     jQuery(meanContainer + ' .mean-nav').html(meanMenuContents);
 
