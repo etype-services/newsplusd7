@@ -464,8 +464,7 @@ function newsplus_preprocess_html(&$variables)
       $("#main-navigation .meanmenu-wrapper").meanmenu({
         meanScreenWidth: "767",
         meanRemoveAttrs: true,
-        meanMenuContainer: "#header-inside",
-        meanMenuClose: ""
+        meanMenuContainer: "#pre-header-inside"
       }); 
 
       if ($("#pre-header .sf-menu").length>0 || $("#pre-header .content>ul.menu").length>0) {
@@ -473,8 +472,7 @@ function newsplus_preprocess_html(&$variables)
         $("#pre-header .pre-header-meanmenu-wrapper").meanmenu({
           meanScreenWidth: "767",
           meanRemoveAttrs: true,
-          meanMenuContainer: "#pre-header-inside",
-          meanMenuClose: ""
+          meanMenuContainer: "#pre-header-inside"
         });
       }
 
@@ -483,8 +481,7 @@ function newsplus_preprocess_html(&$variables)
         $("#header-top .header-top-meanmenu-wrapper").meanmenu({
           meanScreenWidth: "767",
           meanRemoveAttrs: true,
-          meanMenuContainer: "#header-top-inside",
-          meanMenuClose: ""
+          meanMenuContainer: "#pre-header-inside"
         });
       }
 
