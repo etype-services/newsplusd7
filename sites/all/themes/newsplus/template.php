@@ -465,7 +465,8 @@ function newsplus_preprocess_html(&$variables)
         $("#pre-header .pre-header-meanmenu-wrapper").meanmenu({
           meanScreenWidth: "767",
           meanRemoveAttrs: true,
-          meanMenuContainer: "#pre-header-inside"
+          meanMenuContainer: "#pre-header-inside",
+          meanShowChildren: false,
         });
       }
 
