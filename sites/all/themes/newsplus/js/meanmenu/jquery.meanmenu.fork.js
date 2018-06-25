@@ -130,6 +130,7 @@
             function showMeanMenu() {
                 if (currentWidth <= meanScreenWidth) {
                     jQuery("#superfish-1").css("display", "none");
+                    $('#superfish-1 li').clone().appendTo($('#superfish-2'));
                     jQuery(removeElements).addClass('mean-remove');
                     meanMenuExist = true;
                     // add class to body so we don't need to worry about media queries here, all CSS is wrapped in '.mean-container'
