@@ -453,7 +453,7 @@ function newsplus_preprocess_html(&$variables)
     if ($responsive_meanmenu) {
 
         drupal_add_css(drupal_get_path('theme', 'newsplus') . '/js/meanmenu/meanmenu.css');
-        drupal_add_js(drupal_get_path('theme', 'newsplus') . '/js/meanmenu/jquery.meanmenu.fork.js', array('preprocess' => false));
+        drupal_add_js(drupal_get_path('theme', 'newsplus') . '/js/meanmenu/jquery.meanmenu.fork.min.js', array('preprocess' => false));
 
         /**
          * Add Javascript - Mobile mean menu
