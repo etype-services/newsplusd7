@@ -460,6 +460,13 @@ function newsplus_preprocess_html(&$variables)
          */
         drupal_add_js('jQuery(document).ready(function($) {
 
+      $("#main-navigation .sf-menu, #main-navigation .content>ul.menu, #main-navigation ul.main-menu").wrap("<div class=\'meanmenu-wrapper\'></div>");
+      $("#main-navigation .meanmenu-wrapper").meanmenu({
+        meanScreenWidth: "767",
+        meanRemoveAttrs: true,
+        meanMenuContainer: "#pre-header-inside"
+      }); 
+
       if ($("#pre-header .sf-menu").length>0 || $("#pre-header .content>ul.menu").length>0) {
         $("#pre-header .sf-menu, #pre-header .content>ul.menu").wrap("<div class=\'pre-header-meanmenu-wrapper\'></div>");
         $("#pre-header .pre-header-meanmenu-wrapper").meanmenu({

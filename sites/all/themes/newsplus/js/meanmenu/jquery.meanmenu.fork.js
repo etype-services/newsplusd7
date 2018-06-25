@@ -128,6 +128,7 @@
             // adjusted to add superfish 1 elements to superfish 2
             function showMeanMenu() {
                 if (currentWidth <= meanScreenWidth) {
+                    jQuery("#superfish-1")
                     jQuery(removeElements).addClass('mean-remove');
                     meanMenuExist = true;
                     // add class to body so we don't need to worry about media queries here, all CSS is wrapped in '.mean-container'
