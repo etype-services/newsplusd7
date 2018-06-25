@@ -118,6 +118,7 @@
             function meanOriginal() {
                 jQuery(meanContainer + ' .mean-bar, ' + meanContainer + ' .mean-push').remove();
                 jQuery(meanContainer).removeClass("mean-container");
+                jQuery("#superfish-1").css("display", "block");
                 jQuery(meanMenu).show();
                 menuOn = false;
                 meanMenuExist = false;
