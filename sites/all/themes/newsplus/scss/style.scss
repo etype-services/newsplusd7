@@ -549,9 +549,6 @@ h5 {
   .node h1.title {
     font-size: 36px;
   }
-  #header-top {
-    padding-top: 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -709,9 +706,6 @@ h5 {
 }
 
 @media (max-width: 767px) {
-  #header-top {
-    padding-top: 10px;
-  }
   /*Header Mobile Layout*/
   #header-inside {
     position: relative;

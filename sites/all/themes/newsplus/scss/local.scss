@@ -13,6 +13,11 @@
 #header-top {
   padding-top: 32px;
 }
+@media (max-width: 767px) {
+  #header-top {
+    padding-top: 0;
+  }
+}
 /* reduce size of name in footer */
 #footer-site-name {
   font-size: 2em;
