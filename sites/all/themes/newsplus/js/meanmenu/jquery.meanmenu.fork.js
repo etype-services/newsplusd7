@@ -28,7 +28,7 @@
     "use strict";
     $.fn.meanmenu = function (options) {
         var defaults = {
-            meanMenuTarget: jQuery(this), // Target the current HTML markup you wish to replace
+            meanMenuTarget: $(this), // Target the current HTML markup you wish to replace
             meanMenuContainer: 'body', // Choose where meanmenu will be placed within the HTML
             meanMenuOpen: "<span /><span /><span />", // text/markup you want when menu is closed
             meanRevealPosition: "right", // left right or center positions
@@ -79,7 +79,7 @@
 
             if ((navigator.userAgent.match(/MSIE 8/i)) || (navigator.userAgent.match(/MSIE 7/i))) {
                 // add scrollbar for IE7 & 8 to stop breaking resize function on small content sites
-                jQuery('html').css("overflow-y", "scroll");
+                $('html').css("overflow-y", "scroll");
             }
 
             function meanCentered() {
@@ -89,9 +89,9 @@
                     meanRevealPos = "left:" + meanCenter + ";right:auto;";
 
                     if (!isMobile) {
-                        jQuery('.meanmenu-reveal').css("left", meanCenter);
+                        $('.meanmenu-reveal').css("left", meanCenter);
                     } else {
-                        jQuery('.meanmenu-reveal').animate({
+                        $('.meanmenu-reveal').animate({
                             left: meanCenter
                         });
                     }
@@ -116,110 +116,110 @@
 
             //re-instate original nav (and call this on window.width functions)
             function meanOriginal() {
-                jQuery(meanContainer + ' .mean-bar, ' + meanContainer + ' .mean-push').remove();
-                jQuery(meanContainer).removeClass("mean-container");
-                jQuery("#superfish-1").css("display", "block");
-                jQuery(".menu-moved").remove();
-                jQuery(meanMenu).show();
+                $(meanContainer + ' .mean-bar, ' + meanContainer + ' .mean-push').remove();
+                $(meanContainer).removeClass("mean-container");
+                $("#superfish-1").css("display", "block");
+                $(".menu-moved").remove();
+                $(meanMenu).show();
                 menuOn = false;
                 meanMenuExist = false;
-                jQuery(removeElements).removeClass('mean-remove');
+                $(removeElements).removeClass('mean-remove');
             }
 
             // navigation reveal
             // adjusted to add superfish 1 elements to superfish 2
             function showMeanMenu() {
                 if (currentWidth <= meanScreenWidth) {
-                    jQuery("#superfish-1").css("display", "none");
-                    jQuery('#superfish-1 li').clone().appendTo(jQuery('#superfish-2')).addClass('menu-moved');
-                    jQuery(removeElements).addClass('mean-remove');
+                    $("#superfish-1").css("display", "none");
+                    $('#superfish-1 li').clone().appendTo($('#superfish-2')).addClass('menu-moved');
+                    $(removeElements).addClass('mean-remove');
                     meanMenuExist = true;
                     // add class to body so we don't need to worry about media queries here, all CSS is wrapped in '.mean-container'
-                    jQuery(meanContainer).addClass("mean-container");
-                    jQuery(meanContainer).prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="' + meanStyles + '">Show Navigation</a><nav class="mean-nav"></nav></div>');
+                    $(meanContainer).addClass("mean-container");
+                    $(meanContainer).prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="' + meanStyles + '">Show Navigation</a><nav class="mean-nav"></nav></div>');
 
                     // push meanMenu navigation into .mean-nav
-                    var meanMenuContents = jQuery(meanMenu).html();
-                    jQuery(meanContainer + ' .mean-nav').html(meanMenuContents);
+                    var meanMenuContents = $(meanMenu).html();
+                    $(meanContainer + ' .mean-nav').html(meanMenuContents);
 
                     // remove all classes from EVERYTHING inside meanmenu nav
                     if (meanRemoveAttrs) {
-                        jQuery(meanContainer + ' nav.mean-nav ul, ' + meanContainer + ' nav.mean-nav ul *').each(function () {
-                            jQuery(this).removeAttr("style");
-                            jQuery(this).removeAttr("class");
-                            jQuery(this).removeAttr("id");
+                        $(meanContainer + ' nav.mean-nav ul, ' + meanContainer + ' nav.mean-nav ul *').each(function () {
+                            $(this).removeAttr("style");
+                            $(this).removeAttr("class");
+                            $(this).removeAttr("id");
                         });
                     }
 
                     // push in a holder div (this can be used if removal of nav is causing layout issues)
-                    jQuery(meanMenu).before('<div class="mean-push" />');
-                    jQuery(meanContainer + ' .mean-push').css("margin-top", meanNavPush);
+                    $(meanMenu).before('<div class="mean-push" />');
+                    $(meanContainer + ' .mean-push').css("margin-top", meanNavPush);
 
                     // hide current navigation and reveal mean nav link
-                    jQuery(meanMenu).hide();
-                    jQuery(meanContainer + " .meanmenu-reveal").show();
+                    $(meanMenu).hide();
+                    $(meanContainer + " .meanmenu-reveal").show();
 
                     // turn 'X' on or off 
-                    jQuery(meanContainer + ' ' + meanRevealClass).html(meanMenuOpen);
-                    $navreveal = jQuery(meanContainer + ' ' + meanRevealClass);
+                    $(meanContainer + ' ' + meanRevealClass).html(meanMenuOpen);
+                    $navreveal = $(meanContainer + ' ' + meanRevealClass);
 
                     //hide mean-nav ul
-                    jQuery(meanContainer + ' .mean-nav ul').hide();
+                    $(meanContainer + ' .mean-nav ul').hide();
 
                     // hide sub nav
                     if (meanShowChildren) {
                         // allow expandable sub nav(s)
                         if (meanExpandableChildren) {
-                            jQuery(meanContainer + ' .mean-nav ul ul').each(function () {
-                                if (jQuery(this).children().length) {
-                                    jQuery(this, 'li:first').parent().append('<a class="mean-expand" href="#" style="font-size: ' + meanMenuCloseSize + '">' + meanExpand + '</a>');
+                            $(meanContainer + ' .mean-nav ul ul').each(function () {
+                                if ($(this).children().length) {
+                                    $(this, 'li:first').parent().append('<a class="mean-expand" href="#" style="font-size: ' + meanMenuCloseSize + '">' + meanExpand + '</a>');
                                 }
                             });
-                            jQuery(meanContainer + ' .mean-expand').on("click", function (e) {
+                            $(meanContainer + ' .mean-expand').on("click", function (e) {
                                 e.preventDefault();
-                                if (jQuery(this).hasClass("mean-clicked")) {
-                                    jQuery(this).text(meanExpand);
-                                    jQuery(this).prev('ul').slideUp(300, function () {
+                                if ($(this).hasClass("mean-clicked")) {
+                                    $(this).text(meanExpand);
+                                    $(this).prev('ul').slideUp(300, function () {
                                     });
                                 } else {
-                                    jQuery(this).text(meanContract);
-                                    jQuery(this).prev('ul').slideDown(300, function () {
+                                    $(this).text(meanContract);
+                                    $(this).prev('ul').slideDown(300, function () {
                                     });
                                 }
-                                jQuery(this).toggleClass("mean-clicked");
+                                $(this).toggleClass("mean-clicked");
                             });
                         } else {
-                            jQuery(meanContainer + ' .mean-nav ul ul').show();
+                            $(meanContainer + ' .mean-nav ul ul').show();
                         }
                     } else {
-                        jQuery(meanContainer + ' .mean-nav ul ul').hide();
+                        $(meanContainer + ' .mean-nav ul ul').hide();
                     }
 
                     // add last class to tidy up borders
-                    jQuery(meanContainer + ' .mean-nav ul li').last().addClass('mean-last');
+                    $(meanContainer + ' .mean-nav ul li').last().addClass('mean-last');
 
-                    jQuery($navreveal).click(function (e) {
+                    $($navreveal).click(function (e) {
                         e.preventDefault();
                         if (menuOn == false) {
                             $navreveal.css("text-align", "center");
                             $navreveal.css("text-indent", "0");
                             $navreveal.css("font-size", meanMenuCloseSize);
-                            jQuery(meanContainer + ' .mean-nav ul:first').slideDown();
+                            $(meanContainer + ' .mean-nav ul:first').slideDown();
                             menuOn = true;
                         } else {
-                            jQuery(meanContainer + ' .mean-nav ul:first').slideUp();
+                            $(meanContainer + ' .mean-nav ul:first').slideUp();
                             menuOn = false;
                         }
-                        jQuery(removeElements).addClass('mean-remove');
+                        $(removeElements).addClass('mean-remove');
                     });
 
                     // for one page websites, reset all variables...
                     if (onePage) {
 
-                        jQuery(meanContainer + ' .mean-nav ul > li > a:first-child').on("click", function () {
-                            jQuery(meanContainer + ' .mean-nav ul:first').slideUp();
+                        $(meanContainer + ' .mean-nav ul > li > a:first-child').on("click", function () {
+                            $(meanContainer + ' .mean-nav ul:first').slideUp();
                             menuOn = false;
-                            jQuery($navreveal).html(meanMenuOpen);
+                            $($navreveal).html(meanMenuOpen);
 
                         });
 
@@ -232,7 +232,7 @@
 
             if (!isMobile) {
                 //reset menu on resize above meanScreenWidth
-                jQuery(window).resize(function () {
+                $(window).resize(function () {
                     currentWidth = window.innerWidth || document.documentElement.clientWidth;
                     if (currentWidth > meanScreenWidth) {
                         meanOriginal();
