@@ -15,7 +15,7 @@
             $(".jcarousel-next-horizontal").append('<i class="fas fa-arrow-right" aria-hidden="true"></i>');
 
             /* fix search */
-            $("#search-block-form .form-actions svg").click(function(){
+            $("#search-block-form .form-actions").click(function(){
                 alert('clicked');
                 $("#search-block-form").submit();
             });
