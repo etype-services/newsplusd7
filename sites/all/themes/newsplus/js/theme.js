@@ -16,7 +16,6 @@
 
             /* fix search */
             $("#search-block-form .form-actions").click(function(){
-                alert('clicked');
                 $("#search-block-form").submit();
             });
         }
