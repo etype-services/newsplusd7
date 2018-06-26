@@ -119,6 +119,7 @@
                 jQuery(meanContainer + ' .mean-bar, ' + meanContainer + ' .mean-push').remove();
                 jQuery(meanContainer).removeClass("mean-container");
                 jQuery("#superfish-1").css("display", "block");
+                jQuery(".menu-moved").remove();
                 jQuery(meanMenu).show();
                 menuOn = false;
                 meanMenuExist = false;
@@ -130,7 +131,7 @@
             function showMeanMenu() {
                 if (currentWidth <= meanScreenWidth) {
                     jQuery("#superfish-1").css("display", "none");
-                    jQuery('#superfish-1 li').clone().appendTo(jQuery('#superfish-2')).addClass('one');
+                    jQuery('#superfish-1 li').clone().appendTo(jQuery('#superfish-2')).addClass('menu-moved');
                     jQuery(removeElements).addClass('mean-remove');
                     meanMenuExist = true;
                     // add class to body so we don't need to worry about media queries here, all CSS is wrapped in '.mean-container'
