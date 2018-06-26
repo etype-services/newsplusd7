@@ -141,11 +141,11 @@
                     // push meanMenu navigation into .mean-nav
                     var meanMenuContents = jQuery(meanMenu).html();
                     jQuery(meanContainer + ' .mean-nav').html(meanMenuContents);
-                    jQuery(this).removeAttr("style");
 
                     // remove all classes from EVERYTHING inside meanmenu nav
                     if (meanRemoveAttrs) {
                         jQuery(meanContainer + ' nav.mean-nav ul, ' + meanContainer + ' nav.mean-nav ul *').each(function () {
+                            jQuery(this).removeAttr("style");
                             jQuery(this).removeAttr("class");
                             jQuery(this).removeAttr("id");
                         });
