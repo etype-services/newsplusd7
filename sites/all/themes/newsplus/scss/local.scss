@@ -105,3 +105,16 @@ Adjustments for ads
     margin-top: 30px;
   }
 }
+
+/* search */
+#search-block-form {
+  #edit-actions {
+    svg {
+      position: relative;
+      color: white;
+      left: -35px;
+      font-size: 20px;
+      z-index: 1;
+    }
+  }
+}

@@ -3491,6 +3491,14 @@ Adjustments for ads
 #promoted .view-id-special_sections .more-link {
   margin-top: 30px; }
 
+/* search */
+#search-block-form #edit-actions svg {
+  position: relative;
+  color: white;
+  left: -35px;
+  font-size: 20px;
+  z-index: 1; }
+
 /* Simple Ads */
 .adslist {
   display: flex;
