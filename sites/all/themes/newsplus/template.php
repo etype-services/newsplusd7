@@ -453,20 +453,12 @@ function newsplus_preprocess_html(&$variables)
     if ($responsive_meanmenu) {
 
         drupal_add_css(drupal_get_path('theme', 'newsplus') . '/js/meanmenu/meanmenu.css');
-        drupal_add_js(drupal_get_path('theme', 'newsplus') . '/js/meanmenu/jquery.meanmenu.fork.js', array('preprocess' => false));
+        drupal_add_js(drupal_get_path('theme', 'newsplus') . '/js/meanmenu/jquery.meanmenu.fork.min.js', array('preprocess' => false));
 
         /**
          * Add Javascript - Mobile mean menu
          */
         drupal_add_js('jQuery(document).ready(function($) {
-
-      $("#main-navigation .sf-menu, #main-navigation .content>ul.menu, #main-navigation ul.main-menu").wrap("<div class=\'meanmenu-wrapper\'></div>");
-      $("#main-navigation .meanmenu-wrapper").meanmenu({
-        meanScreenWidth: "767",
-        meanRemoveAttrs: true,
-        meanMenuContainer: "#header-inside",
-        meanMenuClose: ""
-      }); 
 
       if ($("#pre-header .sf-menu").length>0 || $("#pre-header .content>ul.menu").length>0) {
         $("#pre-header .sf-menu, #pre-header .content>ul.menu").wrap("<div class=\'pre-header-meanmenu-wrapper\'></div>");
@@ -474,17 +466,7 @@ function newsplus_preprocess_html(&$variables)
           meanScreenWidth: "767",
           meanRemoveAttrs: true,
           meanMenuContainer: "#pre-header-inside",
-          meanMenuClose: ""
-        });
-      }
-
-      if ($("#header-top .sf-menu").length>0 || $("#header-top .content>ul.menu").length>0) {
-        $("#header-top .sf-menu, #header-top .content>ul.menu").wrap("<div class=\'header-top-meanmenu-wrapper\'></div>");
-        $("#header-top .header-top-meanmenu-wrapper").meanmenu({
-          meanScreenWidth: "767",
-          meanRemoveAttrs: true,
-          meanMenuContainer: "#header-top-inside",
-          meanMenuClose: ""
+          meanShowChildren: false,
         });
       }
 

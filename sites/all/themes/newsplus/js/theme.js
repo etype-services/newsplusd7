@@ -13,6 +13,11 @@
             $(".more-link a").append('<i class="fas fa-chevron-right" aria-hidden="true"></i>');
             $(".jcarousel-prev-horizontal").append('<i class="fas fa-arrow-left" aria-hidden="true"></i>');
             $(".jcarousel-next-horizontal").append('<i class="fas fa-arrow-right" aria-hidden="true"></i>');
+
+            /* fix search */
+            $("#search-block-form .form-actions").click(function(){
+                $("#search-block-form").submit();
+            });
         }
     };
 

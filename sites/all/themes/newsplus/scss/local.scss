@@ -13,6 +13,11 @@
 #header-top {
   padding-top: 32px;
 }
+@media (max-width: 767px) {
+  #header-top {
+    padding-top: 0;
+  }
+}
 /* reduce size of name in footer */
 #footer-site-name {
   font-size: 2em;
@@ -98,5 +103,19 @@ Adjustments for ads
   }
   .more-link {
     margin-top: 30px;
+  }
+}
+
+/* search */
+#search-block-form {
+  .form-actions {
+    svg {
+      position: relative;
+      color: white;
+      left: -42px;
+      font-size: 26px;
+      z-index: 1;
+      cursor: pointer;
+    }
   }
 }
