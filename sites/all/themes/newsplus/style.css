@@ -3497,7 +3497,8 @@ Adjustments for ads
   color: white;
   left: -42px;
   font-size: 26px;
-  z-index: 1; }
+  z-index: 1;
+  cursor: pointer; }
 
 /* Simple Ads */
 .adslist {
