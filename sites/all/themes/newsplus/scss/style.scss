@@ -456,13 +456,16 @@ blockquote:after {
     .col-md-4 {
       position: absolute;
       top: 0;
-      .dropdown.search-bar {
-        position: inherit;
-        margin-left: 0.6em;
-        .dropdown-menu {
-          top: 40px;
-          left: -157px;
-          width: 372px;
+      width: 100%;
+      #block-etype-social-search {
+        margin-right: 1em;
+        .dropdown.search-bar {
+          position: inherit;
+          .dropdown-menu {
+            top: 40px;
+            left: -157px;
+            width: 372px;
+          }
         }
       }
     }

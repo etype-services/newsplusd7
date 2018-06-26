@@ -368,14 +368,16 @@ blockquote:after {
     position: relative; }
     #pre-header-inside .col-md-4 {
       position: absolute;
-      top: 0; }
-      #pre-header-inside .col-md-4 .dropdown.search-bar {
-        position: inherit;
-        margin-left: 0.6em; }
-        #pre-header-inside .col-md-4 .dropdown.search-bar .dropdown-menu {
-          top: 40px;
-          left: -157px;
-          width: 372px; } }
+      top: 0;
+      width: 100%; }
+      #pre-header-inside .col-md-4 #block-etype-social-search {
+        margin-right: 1em; }
+        #pre-header-inside .col-md-4 #block-etype-social-search .dropdown.search-bar {
+          position: inherit; }
+          #pre-header-inside .col-md-4 #block-etype-social-search .dropdown.search-bar .dropdown-menu {
+            top: 40px;
+            left: -157px;
+            width: 372px; } }
 ul {
   list-style-type: square; }
 
