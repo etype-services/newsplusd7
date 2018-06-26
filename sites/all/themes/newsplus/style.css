@@ -3492,7 +3492,7 @@ Adjustments for ads
   margin-top: 30px; }
 
 /* search */
-#search-block-form #edit-actions svg {
+#search-block-form .form-actions svg {
   position: relative;
   color: white;
   left: -42px;
