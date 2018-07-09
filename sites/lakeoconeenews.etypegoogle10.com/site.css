@@ -4,6 +4,10 @@
     background-color: #ffffff;
 }
 
+#block-dfp-smith-communications-mobile1 {
+    text-align: center;
+}
+
 @media (max-width: 767px) {
     #block-dfp-6beba47003bc450ce577ee64f82402ef {
         display: none;
