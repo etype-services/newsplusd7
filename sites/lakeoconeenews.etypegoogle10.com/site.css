@@ -3,3 +3,17 @@
 #header-top {
     background-color: #ffffff;
 }
+
+@media (max-width: 767px) {
+    #block-dfp-6beba47003bc450ce577ee64f82402ef {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 768px) {
+    #block-dfp-smith-communications-mobile1 {
+        display: none;
+        visibility: hidden;
+    }
+}
