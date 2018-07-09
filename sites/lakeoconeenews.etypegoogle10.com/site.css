@@ -4,7 +4,9 @@
     background-color: #ffffff;
 }
 
-#block-dfp-smith-communications-mobile1 {
+#block-dfp-smith-communications-mobile1,
+#block-dfp-smith-communications-mobile2,
+#block-dfp-smith-communications-mobile3 {
     text-align: center;
 }
 
