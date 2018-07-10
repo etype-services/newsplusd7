@@ -8,8 +8,6 @@
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     
-    <?php print $user_picture; ?>
-    
     <?php if ($display_submitted): ?>
       <div class="node-info">
         <?php print $submitted; ?>

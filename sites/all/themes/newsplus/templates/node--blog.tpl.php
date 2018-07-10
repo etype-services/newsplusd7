@@ -14,15 +14,6 @@ $post_progress = theme_get_setting('post_progress');
     <!-- node-side -->
     <div class="node-side">
       
-      <?php if ($display_submitted) { ?>
-      <div class="user-info">
-        <?php print $user_picture; ?>
-        <?php if ($display_submitted) { ?>
-        <?php print t('By ');?> <?php print $name; ?>
-        <?php } ?>
-      </div>
-      <?php } ?>
-      
       <?php if ($reading_time) { ?>
       <!-- reading-time -->
       <div class="reading-time">

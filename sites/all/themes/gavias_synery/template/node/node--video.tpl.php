@@ -80,7 +80,6 @@ global $parent_root;
 		<?php if ($display_submitted): ?>
 	  
 	    	<div class="post-meta">
-				<span class="post-meta-user"><i class="icon icon-user"></i> <?php print t('By'); ?> <?php print $name; ?> </span>
 				<?php if (render($content['field_tags'])): ?> 
 				  <span class="post-meta-tag"><i class="icon icon-tag"></i> <?php print render($content['field_tags']); ?> </span>
 				<?php endif; ?> 

@@ -103,7 +103,6 @@ global $parent_root;
     
     <?php if ($display_submitted): ?>
     <div class="post-meta">
-        <span class="post-meta-user"><i class="icon icon-user"></i> <?php print t('By'); ?> <?php print $name; ?> </span>
         <?php if (module_exists('comment')):?>
         <span class="post-meta-comments"><i class="icon icon-comments"></i> <a href="<?php print $node_url;?>/#comments"><?php print $comment_count; ?> <?php print t('Comment'); ?><?php if ($comment_count != "1" ) { echo "s"; } ?></a></span>
         <?php endif; ?>
