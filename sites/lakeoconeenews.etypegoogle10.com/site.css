@@ -10,6 +10,11 @@
     text-align: center;
 }
 
+/* mobile logo */
+#block-block-20 {
+    padding: 10px 0;
+}
+
 @media (max-width: 767px) {
     #block-dfp-6beba47003bc450ce577ee64f82402ef,
     #block-dfp-56c6e18bfc1ec0d944d3583e7151e383,
@@ -27,8 +32,5 @@
     #block-block-20 {
         display: none;
         visibility: hidden;
-    }
-    #block-block-20 {
-        padding: 10px 0;
     }
 }
