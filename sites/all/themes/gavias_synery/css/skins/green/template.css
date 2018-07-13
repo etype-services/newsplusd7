@@ -173,7 +173,7 @@ body {
 
 header .header-main {
   padding: 10px 0;
-  margin-bottom: 1vh; }
+  margin-bottom: 4vh; }
 header .main-menu {
   margin-bottom: 0; }
 header h1.logo a {
@@ -282,10 +282,7 @@ header h1.logo a {
       color: #fff;
       font-size: 0.9em;
       padding: 0 10px 2px; }
-  .blog-single-post .content-first .post-title, .blog-single-post .content-first .post-meta {
-    padding-left: 60px; }
     .rtl .blog-single-post .content-first .post-title, .rtl .blog-single-post .content-first .post-meta {
-      padding-right: 60px;
       padding-left: inherit; }
 .blog-single-post .post-content {
   line-height: 1.7; }
