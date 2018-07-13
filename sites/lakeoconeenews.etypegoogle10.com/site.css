@@ -13,7 +13,8 @@
 @media (max-width: 767px) {
     #block-dfp-6beba47003bc450ce577ee64f82402ef,
     #block-dfp-56c6e18bfc1ec0d944d3583e7151e383,
-    #block-dfp-a2146cbba22e730cffcf56c553b06ae0{
+    #block-dfp-a2146cbba22e730cffcf56c553b06ae0,
+    #header-top-right ˚{
         display: none;
         visibility: hidden;
     }
@@ -22,7 +23,8 @@
 @media (min-width: 768px) {
     #block-dfp-smith-communications-mobile1,
     #block-dfp-smith-communications-mobile2,
-    #block-dfp-smith-communications-mobile3 {
+    #block-dfp-smith-communications-mobile3,
+    #header-top-left {
         display: none;
         visibility: hidden;
     }
