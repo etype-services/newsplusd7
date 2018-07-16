@@ -39,7 +39,9 @@
         background-color: #FAE477 ;
     }
 
-    #menu-2609-1 a, #menu-2609-1 a:hover #menu-2609-1 a:visited {
+    #main-navigation ul.menu li#menu-2609-1 a,
+    #main-navigation ul.menu li#menu-2609-1 a:hover
+    #main-navigation ul.menu li#menu-2609-1 a:visited {
         color: #2C68AE;
     }
 }
