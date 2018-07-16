@@ -35,11 +35,11 @@
     }
 
     /* calendar menu item */
-    #menu-2609-1 {
-        background-color: #FAE477;
+    #menu-2609-1 a {
+        background-color: #FAE477 ;
     }
 
     #menu-2609-1 a, #menu-2609-1 a:hover #menu-2609-1 a:visited {
-        background-color: #2C68AE;
+        color: #2C68AE;
     }
 }
