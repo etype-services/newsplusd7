@@ -62,40 +62,34 @@ $sites['synergy-base.etypegoogle10.com'] = 'synergy-base.etypegoogle10.com';
 $sites['test.etypegoogle10.com'] = 'freemansd.etypegoogle10.com';
 
 /* freemansd.etypegoogle10.com */
-$sites['freemansd.etypegoogle10.com'] = 'freemansd.etypegoogle10.com';
 $sites['www.freemansd.com'] = 'freemansd.etypegoogle10.com';
 
 /* gunnisontimes.etypegoogle10.com */
-$sites['gunnisontimes.etypegoogle10.com'] = 'gunnisontimes.etypegoogle10.com';
 $sites['www.gunnisontimes.com'] = 'gunnisontimes.etypegoogle10.com';
 
 /* thechronicle.etypegoogle10.com */
-$sites['thechronicle.etypegoogle10.com'] = 'thechronicle.etypegoogle10.com';
 $sites['www.thechronicle.news'] = 'thechronicle.etypegoogle10.com';
 
 /* hartington.etypegoogle10.com */
-$sites['hartington.etypegoogle10.com'] = 'hartington.etypegoogle10.com';
 $sites['www.hartington.net'] = 'hartington.etypegoogle10.com';
 
 /* lampasasdispatchrecord.etypegoogle10.com */
-$sites['lampasasdispatchrecord.etypegoogle10.com'] = 'lampasasdispatchrecord.etypegoogle10.com';
 $sites['www.lampasasdispatchrecord.com'] = 'lampasasdispatchrecord.etypegoogle10.com';
 
 /* theexaminer.etypegoogle10.com */
-$sites['theexaminer.etypegoogle10.com'] = 'theexaminer.etypegoogle10.com';
 $sites['www.theexaminer.com'] = 'theexaminer.etypegoogle10.com';
 
 /* beaumontbusinessjournal.etypegoogle10.com */
-$sites['beaumontbusinessjournal.etypegoogle10.com'] = 'beaumontbusinessjournal.etypegoogle10.com';
 $sites['www.beaumontbusinessjournal.com'] = 'beaumontbusinessjournal.etypegoogle10.com';
 
 /* malakoffnews.etypegoogle10.com */
-$sites['malakoffnews.etypegoogle10.com'] = 'malakoffnews.etypegoogle10.com';
 $sites['www.themonitor.net'] = 'malakoffnews.etypegoogle10.com';
 
 /* lakeoconeenews.etypegoogle10.com */
-$sites['lakeoconeenews.etypegoogle10.com'] = 'lakeoconeenews.etypegoogle10.com';
 $sites['www.lakeoconeenews.us'] = 'lakeoconeenews.etypegoogle10.com';
 
 /* brownfieldonline.etypegoogle10.com */
 $sites['www.brownfieldonline.com'] = 'brownfieldonline.etypegoogle10.com';
+
+/* coalgaterecordregister.etypegoogle10.com */
+$sites['www.coalgaterecordregister.com'] = 'coalgaterecordregister.etypegoogle10.com';
