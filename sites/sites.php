@@ -102,3 +102,6 @@ $sites['www.holdenvilletribune.com'] = 'holdenvilletribune.etypegoogle10.com';
 
 /* allennewspaper.etypegoogle10.com */
 $sites['www.allennewspaper.com'] = 'allennewspaper.etypegoogle10.com';
+
+/* boernestar.etypegoogle10.com */
+$sites['www.boernestar.com'] = 'boernestar.etypegoogle10.com';
