@@ -108,3 +108,6 @@ $sites['www.allennewspaper.com'] = 'allennewspaper.etypegoogle10.com';
 
 /* boernestar.etypegoogle10.com */
 $sites['www.boernestar.com'] = 'boernestar.etypegoogle10.com';
+
+/* postandwave.etypegoogle10.com */
+$sites['www.postandwave.com'] = 'postandwave.etypegoogle10.com';
