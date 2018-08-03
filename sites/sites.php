@@ -96,3 +96,15 @@ $sites['www.brownfieldonline.com'] = 'brownfieldonline.etypegoogle10.com';
 
 /* coalgaterecordregister.etypegoogle10.com */
 $sites['www.coalgaterecordregister.com'] = 'coalgaterecordregister.etypegoogle10.com';
+
+/* hughescountytimes.etypegoogle10.com */
+$sites['www.hughescountytimes.com'] = 'hughescountytimes.etypegoogle10.com';
+
+/* holdenvilletribune.etypegoogle10.com */
+$sites['www.holdenvilletribune.com'] = 'holdenvilletribune.etypegoogle10.com';
+
+/* allennewspaper.etypegoogle10.com */
+$sites['www.allennewspaper.com'] = 'allennewspaper.etypegoogle10.com';
+
+/* boernestar.etypegoogle10.com */
+$sites['www.boernestar.com'] = 'boernestar.etypegoogle10.com';
