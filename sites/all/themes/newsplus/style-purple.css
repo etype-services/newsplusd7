@@ -59,3 +59,4 @@ pre {  border-left: 10px solid #a96cc3; }
 #pre-header-inside.mean-container .mean-nav ul li li a:hover, #header-top-inside.mean-container .mean-nav ul li li a:hover { border-top: 1px solid #793395; }
 
 #header { border-bottom: 6px solid #793395; }
+#header-top {background-color: #ffffff;}
