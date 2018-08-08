@@ -111,3 +111,6 @@ $sites['www.boernestar.com'] = 'boernestar.etypegoogle10.com';
 
 /* bbnews.etypegoogle10.com */
 $sites['www.bbnews.today'] = 'bbnews.etypegoogle10.com';
+
+/* postandwave.etypegoogle10.com */
+$sites['www.postandwave.com'] = 'postandwave.etypegoogle10.com';
