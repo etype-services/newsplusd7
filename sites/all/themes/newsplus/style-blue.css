@@ -24,7 +24,7 @@ ul.user-social-bookmarks li a:hover, .flex-direction-nav a, #internal-slider-car
 .item-list ul.quicktabs-tabs > li.active > a:after, .nav-tabs > li.active > a:after, .prev-node a:hover, .next-node a:hover, 
 .node-navigation div:hover > .fa-angle-left, .node-navigation div:hover > .fa-angle-right { color: #4f91dd; }
 
-#pre-header,  #header-top, #main-navigation .sf-menu>li.sfHover>a, ul.menu li a:hover, ul.pager li > a:hover, ul.pager li.pager-current, 
+#pre-header,  #main-navigation .sf-menu>li.sfHover>a, ul.menu li a:hover, ul.pager li > a:hover, ul.pager li.pager-current,
 .item-list ul li.pager-current.last, .field-type-taxonomy-term-reference a:hover, .view-taxonomy .views-row a:hover, 
 .views-field-field-mt-post-categories a:hover, .view-titles .more-link a, .view-popular-objects .views-row:hover .views-field-field-mt-post-categories a, 
 .view-feed .view-header p, .header-area ul.social-bookmarks li a:hover, .header-area ul.brands li a:hover, .overlay i, 
