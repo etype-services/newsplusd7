@@ -572,6 +572,7 @@ function newsplus_form_system_theme_settings_alter(&$form, &$form_state)
         '#default_value' => theme_get_setting('google_map_apikey', 'newsplus'),
     );
 
+    // see http://ghosty.co.uk/2014/03/managed-file-upload-in-drupal-theme-settings/
     $form['#submit'][] = 'newsplus_form_system_theme_settings_submit';
     $themes = list_themes();
     $active_theme = $GLOBALS['theme_key'];
