@@ -114,7 +114,10 @@ function newsplus_form_system_theme_settings_alter(&$form, &$form_state)
         '#title' => t('Mobile Logo Image'),
         '#description' => t('Displayed on phones, etc, in place of main logo'),
         '#default_value' => theme_get_setting('mobile_logo'),
-        '#destination' => 'public://',
+        '#upload_location' => 'public://',
+        '#upload_validators' => [
+            'file_validate_extensions' => ['gif png jpg jpeg'],
+        ],
     );
 
     $form['mtt_settings']['tabs']['layout'] = array(
@@ -576,8 +579,23 @@ function newsplus_form_system_theme_settings_alter(&$form, &$form_state)
 
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ * See http://ghosty.co.uk/2014/03/managed-file-upload-in-drupal-theme-settings/
+ */
 function newsplus_form_system_theme_settings_submit (&$form, &$form_state) {
-    $file = file_load($form_state['values']['mobile_logo']);
-    $file->status = FILE_STATUS_PERMANENT;
-    file_save($file);
+    $image_fid = $form_state['values']['mobile_logo'];
+    $image = file_load($image_fid);
+    if (is_object($image)) {
+        // Check to make sure that the file is set to be permanent.
+        if ($image->status == 0) {
+            // Update the status.
+            $image->status = FILE_STATUS_PERMANENT;
+            // Save the update.
+            file_save($image);
+            // Add a reference to prevent warnings.
+            file_usage_add($image, 'newsplus', 'theme', 1);
+        }
+    }
 }
