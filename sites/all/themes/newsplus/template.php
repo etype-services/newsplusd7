@@ -948,10 +948,12 @@ function newsplus_preprocess_page(&$variables)
     $variables['footer_ad_class'] = 'col-md-12';
 
     /* Mobile logo */
-    $mobile_logo = theme_get_setting('mobile_logo');
-    echo $mobile_logo;
-    if (!empty($mobile_logo)) {
-        $variables['$mobile_logo'] = $mobile_logo;
+    $mobile_logo_fid = theme_get_setting('mobile_logo');
+    if (!empty($mobile_logo_fid)) {
+        $file = field_load($mobile_logo_fid);
+        $mobile_logo_uri = $file->uri;
+        $mobile_logo_url = file_create_url($mobile_logo_uri);
+        $variables['$mobile_logo'] = $mobile_logo_url;
     }
 
 }
