@@ -947,6 +947,12 @@ function newsplus_preprocess_page(&$variables)
 
     $variables['footer_ad_class'] = 'col-md-12';
 
+    /* Mobile logo */
+    $mobile_logo = theme_get_setting('mobile_logo');
+    if (!empty($mobile_logo)) {
+        $variables['$mobile_logo'] = $mobile_logo;
+    }
+
 }
 
 /**

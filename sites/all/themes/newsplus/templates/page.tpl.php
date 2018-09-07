@@ -64,6 +64,12 @@
                                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /> </a>
                                 </div>
                                 <?php endif; ?>
+
+                                <?php if ($mobile_logo):?>
+                                    <div id="logo">
+                                        <?php echo $mobile_logo; ?>
+                                    </div>
+                                <?php endif; ?>
                                 
                                 <?php if ($site_name):?>
                                 <div id="site-name">
