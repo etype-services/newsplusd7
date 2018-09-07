@@ -570,6 +570,9 @@ function newsplus_form_system_theme_settings_alter(&$form, &$form_state)
     );
 
     $form['#submit'][] = 'newsplus_form_system_theme_settings_submit';
+    $themes = list_themes();
+    $active_theme = $GLOBALS['theme_key'];
+    $form_state['build_info']['files'][] = str_replace("/$active_theme.info", '', $themes[$active_theme]->filename) . '/theme-settings.php';
 
 }
 
