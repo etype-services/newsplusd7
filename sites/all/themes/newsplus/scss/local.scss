@@ -17,7 +17,20 @@
   #header-top {
     padding-top: 0;
   }
+  #mobile_logo {
+    display: none;
+    visibility: hidden;
+  }
 }
+
+@media (min-width: 768px) {
+  #logo {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
 /* reduce size of name in footer */
 #footer-site-name {
   font-size: 2em;
