@@ -3415,13 +3415,21 @@ ul.contextual-links li a {
   #header-top {
     padding-top: 0; }
 
-  #mobile_logo {
-    display: none;
-    visibility: hidden; } }
-@media (min-width: 768px) {
   #logo {
     display: none;
-    visibility: hidden; } }
+    visibility: hidden; }
+
+  #mobile_logo {
+    display: block;
+    visibility: visible; } }
+@media (min-width: 768px) {
+  #mobile_logo {
+    display: none;
+    visibility: hidden; }
+
+  #logo {
+    display: block;
+    visibility: visible; } }
 /* reduce size of name in footer */
 #footer-site-name {
   font-size: 2em; }

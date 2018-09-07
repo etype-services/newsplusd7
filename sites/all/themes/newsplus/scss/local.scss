@@ -17,16 +17,24 @@
   #header-top {
     padding-top: 0;
   }
-  #mobile_logo {
+  #logo {
     display: none;
     visibility: hidden;
+  }
+  #mobile_logo {
+    display: block;
+    visibility: visible;
   }
 }
 
 @media (min-width: 768px) {
-  #logo {
+  #mobile_logo {
     display: none;
     visibility: hidden;
+  }
+  #logo {
+    display: block;
+    visibility: visible;
   }
 }
 
