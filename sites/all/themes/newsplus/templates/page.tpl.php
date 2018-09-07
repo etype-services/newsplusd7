@@ -66,7 +66,7 @@
                                 <?php endif; ?>
 
                                 <?php if ($mobile_logo):?>
-                                    <div id="logo">
+                                    <div id="mobile_logo">
                                         <?php echo $mobile_logo; ?>
                                     </div>
                                 <?php endif; ?>
