@@ -949,6 +949,7 @@ function newsplus_preprocess_page(&$variables)
 
     /* Mobile logo */
     $mobile_logo_fid = theme_get_setting('mobile_logo');
+    echo $mobile_logo_fid; exit;
     if (!empty($mobile_logo_fid)) {
         $mobile_logo_file = file_load($mobile_logo_fid);
         $mobile_logo_uri = $mobile_logo_file->uri;
