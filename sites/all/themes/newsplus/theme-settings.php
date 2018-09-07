@@ -573,7 +573,7 @@ function newsplus_form_system_theme_settings_alter(&$form, &$form_state)
 
 }
 
-function newsplus_form_system_theme_settings_submit(&$form, &$form_state) {
+function newsplus_form_system_theme_settings_submit (&$form, &$form_state) {
     $file = file_load($form_state['values']['mobile_logo']);
     $file->status = FILE_STATUS_PERMANENT;
     file_save($file);
