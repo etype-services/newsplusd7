@@ -114,7 +114,7 @@ function newsplus_form_system_theme_settings_alter(&$form, &$form_state)
         '#title' => t('Mobile Logo Image'),
         '#description' => t('Displayed on phones, etc, in place of main logo'),
         '#default_value' => theme_get_setting('mobile_logo'),
-        '#destination' => 'public://foo/bar',
+        '#destination' => 'public://',
     );
 
     $form['mtt_settings']['tabs']['layout'] = array(
