@@ -10,16 +10,10 @@
     text-align: center;
 }
 
-/* mobile logo */
-#block-block-20 {
-    padding: 10px 0;
-}
-
 @media (max-width: 767px) {
     #block-dfp-6beba47003bc450ce577ee64f82402ef,
     #block-dfp-56c6e18bfc1ec0d944d3583e7151e383,
-    #block-dfp-a2146cbba22e730cffcf56c553b06ae0,
-    #logo-and-site-name-wrapper {
+    #block-dfp-a2146cbba22e730cffcf56c553b06ae0 {
         display: none;
         visibility: hidden;
     }
@@ -28,8 +22,7 @@
 @media (min-width: 768px) {
     #block-dfp-smith-communications-mobile1,
     #block-dfp-smith-communications-mobile2,
-    #block-dfp-smith-communications-mobile3,
-    #block-block-20 {
+    #block-dfp-smith-communications-mobile3 {
         display: none;
         visibility: hidden;
     }
@@ -40,7 +33,7 @@
     }
 
     #main-navigation ul.menu li#menu-2609-1 a,
-    #main-navigation ul.menu li#menu-2609-1 a:hover
+    #main-navigation ul.menu li#menu-2609-1 a:hover,
     #main-navigation ul.menu li#menu-2609-1 a:visited {
         color: #ffffff;
     }
@@ -112,4 +105,5 @@ pre {  border-left: 10px solid #672467; }
 #header { border-bottom: 6px solid #BE45BE; }
 
 .view-titles .more-link a {
-    border-bottom: 6px solid rgba(190,69,190,0.65);
+    border-bottom: 6px solid rgba(190, 69, 190, 0.65);
+}

@@ -3421,7 +3421,10 @@ ul.contextual-links li a {
 
   #mobile_logo {
     display: block;
-    visibility: visible; } }
+    visibility: visible; }
+
+  .header-top-area {
+    margin-top: 7px; } }
 @media (min-width: 768px) {
   #mobile_logo {
     display: none;
