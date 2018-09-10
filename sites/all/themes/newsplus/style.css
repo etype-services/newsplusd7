@@ -3414,7 +3414,7 @@ ul.contextual-links li a {
   #header-top {
     padding-top: 0; }
 
-  #logo {
+  #logo_hide {
     display: none;
     visibility: hidden; }
 
@@ -3429,7 +3429,7 @@ ul.contextual-links li a {
     display: none;
     visibility: hidden; }
 
-  #logo {
+  #logo_hide {
     display: block;
     visibility: visible; } }
 /* reduce size of name in footer */
