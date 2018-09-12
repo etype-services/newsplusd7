@@ -117,3 +117,6 @@ $sites['www.postandwave.com'] = 'postandwave.etypegoogle10.com';
 
 /* jcnews.etypegoogle10.com */
 $sites['www.jcnews.com'] = 'jcnews.etypegoogle10.com';
+
+/* gothenburgtimes.etypegoogle10.com */
+$sites['www.gothenburgtimes.com'] = 'gothenburgtimes.etypegoogle10.com';
