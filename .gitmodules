@@ -10,3 +10,6 @@
 [submodule "sites/all/modules/contrib/etype_newsletters"]
 	path = sites/all/modules/contrib/etype_newsletters
 	url = git@github.com:etype-services/etype_newsletters.git
+[submodule "sites/all/modules/contrib/etype_wire"]
+	path = sites/all/modules/contrib/etype_wire
+	url = https://github.com/etype-services/etype_wire.git
