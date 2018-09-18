@@ -120,3 +120,6 @@ $sites['www.jcnews.com'] = 'jcnews.etypegoogle10.com';
 
 /* gothenburgtimes.etypegoogle10.com */
 $sites['www.gothenburgtimes.com'] = 'gothenburgtimes.etypegoogle10.com';
+
+/* guthriecountynewspapers.etypegoogle10.com */
+$sites['www.guthriecountynewspapers.com'] = 'guthriecountynewspapers.etypegoogle10.com';
