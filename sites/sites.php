@@ -102,7 +102,7 @@ $sites['www.hughescountytimes.com'] = 'hughescountytribune.etypegoogle10.com';
 $sites['www.hughescountytribune.com'] = 'hughescountytribune.etypegoogle10.com';
 
 /* holdenvilletribune.etypegoogle10.com */
-$sites['www.holdenvilletribune.com'] = 'holdenvilletribune.etypegoogle10.com';
+$sites['www.holdenvilletribune.com'] = 'hughescountytribune.etypegoogle10.com';
 
 /* allennewspaper.etypegoogle10.com */
 $sites['www.allennewspaper.com'] = 'allennewspaper.etypegoogle10.com';

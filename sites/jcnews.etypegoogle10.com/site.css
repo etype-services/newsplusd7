@@ -107,3 +107,6 @@ pre {  border-left: 10px solid #672467; }
 .view-titles .more-link a {
     border-bottom: 6px solid rgba(190, 69, 190, 0.65);
 }
+
+/* make poll header font white */
+#block-advpoll-advpoll-recent h2 a { color: #ffffff; }
