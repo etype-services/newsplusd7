@@ -9,4 +9,5 @@ sites/*/tmp
 .sass-cache/
 *.codekit3
 vendor
+.DS_Store
 
