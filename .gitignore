@@ -8,4 +8,5 @@ sites/*/tmp
 .idea/
 .sass-cache/
 *.codekit3
+vendor
 
