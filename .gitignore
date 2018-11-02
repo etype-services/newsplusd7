@@ -5,6 +5,7 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 sites/*/tmp
+.htaccess
 .idea/
 .sass-cache/
 *.codekit3
