@@ -10,4 +10,3 @@ sites/*/tmp
 *.codekit3
 vendor
 .DS_Store
-

@@ -131,3 +131,6 @@ $sites['www.heatbarbados.com'] = 'heatbarbados.etypegoogle10.com';
 
 /* vanzandtnews.etypegoogle10.com */
 $sites['www.vanzandtnews.com'] = 'vanzandtnews.etypegoogle10.com';
+
+/* mysanfordherald.etypegoogle10.com */
+$sites['www.mysanfordherald.com'] = 'mysanfordherald.etypegoogle10.com';
