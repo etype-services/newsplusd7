@@ -2769,6 +2769,29 @@ ul.user-social-bookmarks li a:hover {
   border: 1px solid #e5e5e5;
 }
 
+/*article images styles for page, not teaser*/
+.node-type-mt-post {
+  .node-mt-post {
+    .node-content {
+      .images-container {
+        .image-wrapper {
+          img {
+            /* center images */
+            margin: auto;
+          }
+        }
+      }
+      .field-name-field-mugshot {
+        border: none;
+        float: left;
+        margin-right: 1em;
+        margin-top: 1.2em;
+        margin-bottom: auto;
+      }
+    }
+  }
+}
+
 .node-teaser .field-type-image {
   border: none;
 }

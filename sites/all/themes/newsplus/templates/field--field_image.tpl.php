@@ -9,16 +9,21 @@ if ($element['#view_mode'] == 'teaser') : ?>
     <?php return; endif; ?>
 
 <?php $node=$element['#object']; $lang="und"; ?>
-
+<?php
+    // make sure preferred style is available
+    $image_styles = image_style_options();
+    if (isset($image_styles['article600'])) {
+        $image_style = 'article600';
+    } else {
+        $image_style = 'large';
+    }
+?>
     <div class="images-container clearfix">
 
         <div class="image-preview clearfix">
 
             <div class="image-wrapper clearfix">
-                <a class="image-popup overlayed" href="<?php print file_create_url($node->field_image[$lang][0]['uri']); ?>" title="<?php print $node->field_image[$lang][0]['title']; ?>">
-                    <img src="<?php print image_style_url('large', $node->field_image[$lang][0]['uri']); ?>" alt="<?php print $node->field_image[$lang][0]['alt']; ?>" title="<?php print $node->field_image[$lang][0]['title']; ?>"/>
-                    <span class="overlay"><i class="fas fa-plus"></i></span>
-                </a>
+                <img src="<?php print image_style_url($image_style, $node->field_image[$lang][0]['uri']); ?>" alt="<?php print $node->field_image[$lang][0]['alt']; ?>" title="<?php print $node->field_image[$lang][0]['title']; ?>"/>
             </div>
 
             <?php if ($node->field_image[$lang][0]['title']) :?>
