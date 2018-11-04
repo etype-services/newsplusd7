@@ -2769,15 +2769,26 @@ ul.user-social-bookmarks li a:hover {
   border: 1px solid #e5e5e5;
 }
 
-/*article images styles for page, not teaser*/
+/* article images styles for page, not teaser */
 .node-type-mt-post {
   .node-mt-post {
     .node-content {
-      .images-container {
-        .image-wrapper {
-          img {
-            /* center images */
-            margin: auto;
+      /* flexslider in node only for in-page images */
+      .field-name-field-image {
+        padding: 0.3em;
+        .flexslider {
+          display: block;
+          ul.slides {
+            li {
+              img {
+                width: auto; /* do not enlarge */
+                margin: auto;
+              }
+              .flex-caption {
+                font-size: 0.8em;
+                margin-top: 1em;
+              }
+            }
           }
         }
       }
@@ -2785,13 +2796,13 @@ ul.user-social-bookmarks li a:hover {
         border: none;
         float: left;
         margin-right: 1em;
-        margin-top: 1.2em;
         margin-bottom: auto;
       }
     }
   }
 }
 
+/* teaser */
 .node-teaser .field-type-image {
   border: none;
 }
@@ -3607,7 +3618,7 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
 }
 
 .flex-control-paging li a {
-  background: #fff;
+  background: #e5e5e5;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
