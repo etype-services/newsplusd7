@@ -75,7 +75,7 @@ function newsplus_preprocess_html(&$variables)
     $color_scheme = theme_get_setting('color_scheme');
 
     if ($color_scheme != 'default') {
-        drupal_add_css(drupal_get_path('theme', 'newsplus') . '/style-' . $color_scheme . '.css', array('group' => CSS_THEME, 'every_page' => TRUE,));
+        drupal_add_css(drupal_get_path('theme', 'newsplus') . '/css/style-' . $color_scheme . '.css', array('group' => CSS_THEME, 'every_page' => TRUE,));
     }
 
     if (isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on') {
@@ -628,7 +628,7 @@ function newsplus_preprocess_html(&$variables)
         /**
          * Add print.css
          */
-        drupal_add_css(drupal_get_path('theme', 'newsplus') . '/print.css', array('media' => 'print'));
+        drupal_add_css(drupal_get_path('theme', 'newsplus') . '/css/print.css', array('media' => 'print'));
     }
 
     /**
