@@ -135,7 +135,7 @@ $post_progress = theme_get_setting('post_progress');
                         <?php } ?>
                         <?php if ($display_submitted) { ?>
                             <div class="node-info-item"><i
-                                        class="fas fa-clock-o"></i> <?php print format_date($created, 'custom', 'F d, Y - H:i'); ?>
+                                        class="fas fa-clock"></i> <?php print format_date($created, 'custom', 'F d, Y - H:i'); ?>
                             </div>
                         <?php } ?>
                         <?php if (isset($content['field_mt_post_categories'])) { ?>
