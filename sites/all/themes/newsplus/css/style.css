@@ -2902,13 +2902,15 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
 .flex-direction-nav .flex-next {
   right: 0 !important;
   text-align: center;
-  height: 52px; }
+  height: 54px;
+  /* for front slideshow */ }
 
 .flexslider:hover .flex-prev {
   opacity: 0.7;
   left: auto;
   right: 40px;
-  height: 52px; }
+  height: 54px;
+  /* for front slideshow */ }
 
 .flexslider:hover .flex-next {
   opacity: 0.7;
@@ -2919,7 +2921,6 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
   background-color: #ea2d49;
   text-decoration: none; }
 
-/*.flex-direction-nav a:before { font-family: "FontAwesome"; font-size: 26px; display: inline-block; content: '\f104'; line-height: 38px; color: inherit; }*/
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev {
     opacity: 0;
