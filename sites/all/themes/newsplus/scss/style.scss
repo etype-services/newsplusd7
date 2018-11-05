@@ -706,6 +706,9 @@ h5 {
 
 @media (max-width: 991px) {
   /*#highlighted, #slideshow { margin-right: -15px; margin-left: -15px; }*/
+  .front #banner #slideshow {
+    padding: 0 15px;
+  }
 }
 
 @media (max-width: 767px) {

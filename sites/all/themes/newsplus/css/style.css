@@ -564,7 +564,9 @@ h5 {
   .not-front.sidebar-first #slideshow {
     margin-right: -17.8%; } }
 @media (max-width: 991px) {
-  /*#highlighted, #slideshow { margin-right: -15px; margin-left: -15px; }*/ }
+  /*#highlighted, #slideshow { margin-right: -15px; margin-left: -15px; }*/
+  .front #banner #slideshow {
+    padding: 0 15px; } }
 @media (max-width: 767px) {
   /*Header Mobile Layout*/
   #header-inside {
