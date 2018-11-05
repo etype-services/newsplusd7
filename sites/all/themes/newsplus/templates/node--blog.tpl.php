@@ -115,13 +115,13 @@ $post_progress = theme_get_setting('post_progress');
         <?php if (isset($content['field_mt_post_categories']) || $display_submitted || (module_exists('comment') && ($node->comment == COMMENT_NODE_OPEN || ($node->comment == COMMENT_NODE_CLOSED && $node->comment_count > 0)))) { ?>
           <div class="node-info">
             <?php if ($display_submitted) { ?>
-            <div class="node-info-item"><i class="fab fa-clock-o"></i> <?php print format_date($created, 'custom', 'F d, Y - H:i'); ?></div>
+            <div class="node-info-item"><i class="fas fa-clock"></i> <?php print format_date($created, 'custom', 'F d, Y - H:i'); ?></div>
             <?php } ?>
             <?php if (isset($content['field_mt_post_categories'])) { ?>
-            <div class="node-info-item"><i class="fab fa-tags"></i> <?php print t('Posted in: ');?><?php print render($content['field_mt_post_categories']);  ?></div>
+            <div class="node-info-item"><i class="fas fa-tags"></i> <?php print t('Posted in: ');?><?php print render($content['field_mt_post_categories']);  ?></div>
             <?php } ?>
             <?php if (module_exists('comment') && ($node->comment == COMMENT_NODE_OPEN || ($node->comment == COMMENT_NODE_CLOSED && $node->comment_count > 0))) { ?>
-            <div class="node-info-item"><i class="fab fa-comments"></i> <?php print $comment_count; ?> comments</div>
+            <div class="node-info-item"><i class="fas fa-comments"></i> <?php print $comment_count; ?> comments</div>
             <?php } ?>
           </div>
         <?php } ?>
