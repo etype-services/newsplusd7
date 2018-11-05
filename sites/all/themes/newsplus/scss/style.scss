@@ -3568,12 +3568,14 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
 .flex-direction-nav .flex-next {
   right: 0 !important;
   text-align: center;
+  height: 52px;
 }
 
 .flexslider:hover .flex-prev {
   opacity: 0.7;
   left: auto;
   right: 40px;
+  height: 52px;
 }
 
 .flexslider:hover .flex-next {
