@@ -2873,14 +2873,14 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
 
 @media (min-width: 992px) {
   .sidebar-first .flexslider .caption {
-    padding-right: 15px; }
+    padding-right: 0; }
 
   .sidebar-second .flexslider .caption {
-    padding-left: 15px; } }
+    padding-left: 0; } }
 @media (max-width: 991px) {
   .flexslider .caption {
     padding-right: 15px;
-    padding-left: 15px; } }
+    padding-left: 0; } }
 /* Direction Nav */
 .flex-direction-nav a {
   width: 40px;
