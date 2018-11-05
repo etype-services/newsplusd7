@@ -13,3 +13,6 @@
 [submodule "sites/all/modules/contrib/etype_xml_importer"]
 	path = sites/all/modules/contrib/etype_xml_importer
 	url = git@github.com:etype-services/etype_xml_importer.git
+[submodule "sites/all/modules/contrib/etype_zenfolio"]
+	path = sites/all/modules/contrib/etype_zenfolio
+	url = https://github.com/etype-services/etype_zenfolio.git

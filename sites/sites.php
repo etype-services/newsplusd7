@@ -60,6 +60,7 @@ $sites['demo.etypegoogle10.com'] = 'demo.etypegoogle10.com';
 $sites['newsplus-base.etypegoogle10.com'] = 'newsplus-base.etypegoogle10.com';
 $sites['synergy-base.etypegoogle10.com'] = 'synergy-base.etypegoogle10.com';
 $sites['test.etypegoogle10.com'] = 'freemansd.etypegoogle10.com';
+$sites['newsplus.local'] = 'hartington.etypegoogle10.com';
 
 /* freemansd.etypegoogle10.com */
 $sites['www.freemansd.com'] = 'freemansd.etypegoogle10.com';
@@ -109,7 +110,6 @@ $sites['www.allennewspaper.com'] = 'allennewspaper.etypegoogle10.com';
 
 /* boernestar.etypegoogle10.com */
 $sites['www.boernestar.com'] = 'boernestar.etypegoogle10.com';
-$sites['newsplus.local'] = 'boernestar.etypegoogle10.com';
 
 /* bbnews.etypegoogle10.com */
 $sites['www.bbnews.today'] = 'bbnews.etypegoogle10.com';
