@@ -2239,6 +2239,27 @@ ul.user-social-bookmarks li a:hover {
 .image-wrapper > a, .node-teaser .field-type-image .overlayed-teaser {
   border: 1px solid #e5e5e5; }
 
+/* article images styles for page, not teaser */
+.node-type-mt-post .node-mt-post .node-content {
+  /* flexslider in node only for in-page images */ }
+  .node-type-mt-post .node-mt-post .node-content .flexslider {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 0.3em;
+    display: block; }
+    .node-type-mt-post .node-mt-post .node-content .flexslider ul.slides li img {
+      width: auto;
+      /* do not enlarge */
+      margin: auto; }
+    .node-type-mt-post .node-mt-post .node-content .flexslider ul.slides li .flex-caption {
+      font-size: 0.8em;
+      margin-top: 1em; }
+  .node-type-mt-post .node-mt-post .node-content .field-name-field-mugshot {
+    border: none;
+    float: left;
+    margin: 1.2em 1em auto 0; }
+
+/* teaser */
 .node-teaser .field-type-image {
   border: none; }
 
@@ -2921,7 +2942,7 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
   margin: 0 3px; }
 
 .flex-control-paging li a {
-  background: #fff;
+  background: #e5e5e5;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
