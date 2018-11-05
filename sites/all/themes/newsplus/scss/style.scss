@@ -2774,20 +2774,20 @@ ul.user-social-bookmarks li a:hover {
   .node-mt-post {
     .node-content {
       /* flexslider in node only for in-page images */
-      .field-name-field-image {
+      .flexslider {
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
         padding: 0.3em;
-        .flexslider {
-          display: block;
-          ul.slides {
-            li {
-              img {
-                width: auto; /* do not enlarge */
-                margin: auto;
-              }
-              .flex-caption {
-                font-size: 0.8em;
-                margin-top: 1em;
-              }
+        display: block;
+        ul.slides {
+          li {
+            img {
+              width: auto; /* do not enlarge */
+              margin: auto;
+            }
+            .flex-caption {
+              font-size: 0.8em;
+              margin-top: 1em;
             }
           }
         }
@@ -2795,8 +2795,7 @@ ul.user-social-bookmarks li a:hover {
       .field-name-field-mugshot {
         border: none;
         float: left;
-        margin-right: 1em;
-        margin-bottom: auto;
+        margin: 1.2em 1em auto 0;
       }
     }
   }
