@@ -128,7 +128,7 @@ $post_progress = theme_get_setting('post_progress');
                     <div class="node-info">
                         <!-- custom section for byline & email -->
                         <div class="node-info-item byline">
-                            <i class="fas fa-pencil"></i> <?php print render($content['field_byline']); ?>
+                            <i class="fas fa-pencil-alt"></i> <?php print render($content['field_byline']); ?>
                             <?php print render($content['field_email']); ?>
                         </div>
                         <?php if ($display_submitted) { ?>
