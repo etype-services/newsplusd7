@@ -5,7 +5,7 @@ core = 7.x
 
 stylesheets[all][] = bootstrap/css/bootstrap.css
 stylesheets[all][] = js/flexslider/flexslider.css
-stylesheets[all][] = style.css
+stylesheets[all][] = css/style.css
 
 scripts[] = js/flexslider/jquery.flexslider.js
 scripts[] = js/jquery.browser.min.js

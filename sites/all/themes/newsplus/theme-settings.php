@@ -20,7 +20,7 @@ function newsplus_form_system_theme_settings_alter(&$form, &$form_state)
     $form['mtt_settings']['tabs'] = array(
         '#type' => 'vertical_tabs',
         '#attached' => array(
-            'css' => array(drupal_get_path('theme', 'newsplus') . '/newsplus.settings.form.css'),
+            'css' => array(drupal_get_path('theme', 'newsplus') . '/css/newsplus.settings.form.css'),
         ),
     );
 
