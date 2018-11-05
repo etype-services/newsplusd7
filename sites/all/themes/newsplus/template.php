@@ -747,7 +747,7 @@ function newsplus_preprocess_html(&$variables)
   });',
         array('type' => 'inline', 'scope' => 'header'));
 
-    drupal_add_js(libraries_get_path('flexslider') . '/jquery.flexslider-min.js');
+    drupal_add_js(libraries_get_path('flexslider') . '/jquery.flexslider.js');
 
 }
 

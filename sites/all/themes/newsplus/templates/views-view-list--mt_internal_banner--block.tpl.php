@@ -75,8 +75,7 @@ drupal_add_js('
         slideshow: false,
         itemWidth: 166,
         itemMargin: 4.8,
-        prevText: "",           
-        nextText: "",
+        directionNav: false,
         asNavFor: "#internal-banner-slider",
         minItems: getGridSize(), // use function to pull in initial value
         maxItems: getGridSize(), // use function to pull in initial value
