@@ -85,7 +85,7 @@ drupal_add_js('
         });
 
         $("#internal-banner-slider").flexslider({
-        useCSS: false,            
+        useCSS: true,            
         animation: "'.$internal_banner_effect.'",
         controlNav: false,
         directionNav: false,

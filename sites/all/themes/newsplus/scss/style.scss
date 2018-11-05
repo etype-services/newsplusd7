@@ -3642,8 +3642,14 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
 }
 
 /*Internal banner*/
-#internal-banner-slider .slides > li {
-  position: relative;
+#internal-banner-slider {
+  .slides {
+    position: relative;
+    left: -40px; /* why */
+    li {
+      position: relative;
+    }
+  }
 }
 
 #internal-banner-slider.one-value .slides > li {
@@ -3702,6 +3708,7 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
 }
 
 /*Internal banner carousel*/
+
 #internal-slider-carousel-container {
   position: absolute;
   bottom: 0;

@@ -515,7 +515,8 @@ h5 {
   padding-top: 10px; }
 
 .front #banner #slideshow {
-  margin-top: 10px; }
+  margin-top: 10px;
+  padding: 0; }
 
 #main-content {
   padding-top: 45px; }
@@ -2963,8 +2964,12 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
   filter: alpha(opacity=90); }
 
 /*Internal banner*/
-#internal-banner-slider .slides > li {
-  position: relative; }
+#internal-banner-slider .slides {
+  position: relative;
+  left: -40px;
+  /* why */ }
+  #internal-banner-slider .slides li {
+    position: relative; }
 
 #internal-banner-slider.one-value .slides > li {
   display: block; }
