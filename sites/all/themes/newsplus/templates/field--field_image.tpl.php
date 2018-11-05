@@ -1,4 +1,5 @@
 <?php if (module_exists('flexslider')) {
+    /* flexslider is all you need */
     print render($content['field_image']);
 } else {
 
