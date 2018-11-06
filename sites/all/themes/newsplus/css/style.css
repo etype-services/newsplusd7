@@ -2250,7 +2250,8 @@ ul.user-social-bookmarks li a:hover {
     border-bottom: 1px solid #ebebeb;
     padding: 0.3em;
     display: block;
-    margin-bottom: 9px; }
+    margin-bottom: 9px;
+    position: relative; }
     .node-type-mt-post .node-mt-post .node-content .flexslider ul.slides li img {
       width: auto;
       /* do not enlarge */
@@ -2258,6 +2259,9 @@ ul.user-social-bookmarks li a:hover {
     .node-type-mt-post .node-mt-post .node-content .flexslider ul.slides li .flex-caption {
       font-size: 0.8em;
       margin-top: 1em; }
+    .node-type-mt-post .node-mt-post .node-content .flexslider ul.flex-direction-nav {
+      position: absolute;
+      top: 5px; }
   .node-type-mt-post .node-mt-post .node-content .field-name-field-mugshot {
     border: none;
     float: left;

@@ -2784,6 +2784,7 @@ ul.user-social-bookmarks li a:hover {
         padding: 0.3em;
         display: block;
         margin-bottom: 9px;
+        position: relative;
         ul.slides {
           li {
             img {
@@ -2795,6 +2796,11 @@ ul.user-social-bookmarks li a:hover {
               margin-top: 1em;
             }
           }
+        }
+        ul.flex-direction-nav {
+          position: absolute;
+          top: 5px;
+          right: 4px;
         }
       }
       .field-name-field-mugshot {
