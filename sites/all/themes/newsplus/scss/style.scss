@@ -4241,11 +4241,11 @@ ul.contextual-links li a {
   }
 }
 
-/* hide images on preview pages */
+/* hide multiple images on preview pages */
 .not-logged-in {
   .node-mt-post {
     .content {
-      a.active {
+      a.active:not(:first-child) {
         display: none;
       }
     }
