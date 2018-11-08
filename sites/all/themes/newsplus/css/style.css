@@ -2261,7 +2261,9 @@ ul.user-social-bookmarks li a:hover {
       margin-top: 1em; }
     .node-type-mt-post .node-mt-post .node-content .flexslider ul.flex-direction-nav {
       position: absolute;
-      top: 5px; }
+      top: 0;
+      width: 100%;
+      margin: 0; }
   .node-type-mt-post .node-mt-post .node-content .field-name-field-mugshot {
     border: none;
     float: left;

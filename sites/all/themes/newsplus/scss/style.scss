@@ -2799,8 +2799,9 @@ ul.user-social-bookmarks li a:hover {
         }
         ul.flex-direction-nav {
           position: absolute;
-          top: 5px;
-          right: 4px;
+          top: 0;
+          width: 100%;
+          margin: 0;
         }
       }
       .field-name-field-mugshot {
