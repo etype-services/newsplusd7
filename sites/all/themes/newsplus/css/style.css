@@ -2248,7 +2248,7 @@ ul.user-social-bookmarks li a:hover {
   .node-type-mt-post .node-mt-post .node-content .flexslider {
     border-top: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
-    padding: 0.3em;
+    padding: 4px 0;
     display: block;
     margin-bottom: 9px;
     position: relative; }
@@ -2261,7 +2261,7 @@ ul.user-social-bookmarks li a:hover {
       margin-top: 1em; }
     .node-type-mt-post .node-mt-post .node-content .flexslider ul.flex-direction-nav {
       position: absolute;
-      top: 0;
+      top: 4px;
       width: 100%;
       margin: 0; }
   .node-type-mt-post .node-mt-post .node-content .field-name-field-mugshot {
@@ -2895,7 +2895,7 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
   width: 40px;
   height: 40px;
   margin: 0;
-  top: 0%;
+  top: 0;
   color: #ea2d49;
   text-shadow: none;
   background-color: #fff; }
@@ -3436,6 +3436,10 @@ ul.contextual-links li a {
   .subfooter-area, .comment .field-name-comment-body, .views-field-field-mt-post-categories a, .image-caption p,
   a.button, input[type="submit"], input[type="reset"], input[type="button"] {
     font-size: 12px; } }
+/* hide images on preview pages */
+.not-logged-in .node-mt-post .content a.active {
+  display: none; }
+
 /* Custom CSS overrides */
 /* Uncomment this line to hide site name into fixed navigation header*/
 /* #navigation-site-name { display: none!important; } */
