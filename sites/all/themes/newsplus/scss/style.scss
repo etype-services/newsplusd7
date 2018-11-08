@@ -4248,6 +4248,11 @@ ul.contextual-links li a {
       a.active:not(:first-child) {
         display: none;
       }
+      a.active {
+        img {
+          margin:0 auto 1em;
+        }
+      }
     }
   }
 }

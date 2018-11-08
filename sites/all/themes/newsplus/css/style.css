@@ -3439,6 +3439,8 @@ ul.contextual-links li a {
 /* hide multiple images on preview pages */
 .not-logged-in .node-mt-post .content a.active:not(:first-child) {
   display: none; }
+.not-logged-in .node-mt-post .content a.active img {
+  margin: 0 auto 1em; }
 
 /* Custom CSS overrides */
 /* Uncomment this line to hide site name into fixed navigation header*/
