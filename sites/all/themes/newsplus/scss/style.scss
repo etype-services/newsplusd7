@@ -2809,21 +2809,22 @@ ul.user-social-bookmarks li a:hover {
         float: left;
         margin: 1.2em 1em auto 0;
       }
-      .field-name-field-pull-quote {
-        width: 50%;
-        font-size: 18px;
-        float: right;
-        margin-left: 10px;
-        border: 1px solid #ccc;
-        padding: 10px;
-        font-family: "Roboto Condensed";
-        color: dimgray;
-        font-weight: bold;
-        p {
-          padding-bottom: 0;
-        }
-      }
     }
+  }
+}
+
+.field-name-field-pull-quote {
+  width: 50%;
+  font-size: 18px;
+  float: right;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: "Roboto Condensed";
+  color: dimgray;
+  font-weight: bold;
+  p {
+    padding-bottom: 0;
   }
 }
 

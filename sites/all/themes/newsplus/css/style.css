@@ -2268,18 +2268,19 @@ ul.user-social-bookmarks li a:hover {
     border: none;
     float: left;
     margin: 1.2em 1em auto 0; }
-  .node-type-mt-post .node-mt-post .node-content .field-name-field-pull-quote {
-    width: 50%;
-    font-size: 18px;
-    float: right;
-    margin-left: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    font-family: "Roboto Condensed";
-    color: dimgray;
-    font-weight: bold; }
-    .node-type-mt-post .node-mt-post .node-content .field-name-field-pull-quote p {
-      padding-bottom: 0; }
+
+.field-name-field-pull-quote {
+  width: 50%;
+  font-size: 18px;
+  float: right;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: "Roboto Condensed";
+  color: dimgray;
+  font-weight: bold; }
+  .field-name-field-pull-quote p {
+    padding-bottom: 0; }
 
 /* teaser */
 .node-teaser .field-type-image {
@@ -3449,7 +3450,7 @@ ul.contextual-links li a {
   a.button, input[type="submit"], input[type="reset"], input[type="button"] {
     font-size: 12px; }
 
-  .field-name-field-pulled-quote {
+  .field-name-field-pull-quote {
     width: auto;
     float: none;
     margin-left: 0; } }
