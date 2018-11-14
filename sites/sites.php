@@ -134,3 +134,9 @@ $sites['www.vanzandtnews.com'] = 'vanzandtnews.etypegoogle10.com';
 
 /* mysanfordherald.etypegoogle10.com */
 $sites['www.mysanfordherald.com'] = 'mysanfordherald.etypegoogle10.com';
+
+/* navasotaexaminer.etypegoogle10.com */
+$sites['www.navasotaexaminer.com'] = 'navasotaexaminer.etypegoogle10.com';
+
+/* coloradocountycitizen.etypegoogle10.com  */
+$sites['www.coloradocountycitizen.com'] = 'coloradocountycitizen.etypegoogle10.com';
