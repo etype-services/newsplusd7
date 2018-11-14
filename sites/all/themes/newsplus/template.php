@@ -771,6 +771,7 @@ function newsplus_process_html(&$vars)
     $classes[] = theme_get_setting('headings_font_family');
     $classes[] = theme_get_setting('paragraph_font_family');
     $classes[] = $layout_body_class;
+    $classes[] = 'newsplus'; // identify theme
     $vars['classes'] = trim(implode(' ', $classes));
 
 }
