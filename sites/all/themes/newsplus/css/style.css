@@ -2272,13 +2272,14 @@ ul.user-social-bookmarks li a:hover {
     width: 50%;
     font-size: 18px;
     float: right;
-    margin-top: 14px;
     margin-left: 10px;
     border: 1px solid #ccc;
     padding: 10px;
     font-family: "Roboto Condensed";
     color: dimgray;
     font-weight: bold; }
+    .node-type-mt-post .node-mt-post .node-content .field-name-field-pull-quote p {
+      padding-bottom: 0; }
 
 /* teaser */
 .node-teaser .field-type-image {
@@ -3446,7 +3447,12 @@ ul.contextual-links li a {
 
   .subfooter-area, .comment .field-name-comment-body, .views-field-field-mt-post-categories a, .image-caption p,
   a.button, input[type="submit"], input[type="reset"], input[type="button"] {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .field-name-field-pulled-quote {
+    width: auto;
+    float: none;
+    margin-left: 0; } }
 /* hide multiple images on preview pages */
 .not-logged-in .node-mt-post .content a.active:not(:first-child) {
   display: none; }
