@@ -67,7 +67,7 @@
                                         </div>
                                     <?php endif; ?>
 
-                                    <?php if ($mobile_logo): ?>
+                                    <?php if (isset ($mobile_logo)): ?>
                                         <div id="mobile_logo">
                                             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"
                                                rel="home"> <img src="<?php print $mobile_logo; ?>"
