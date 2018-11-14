@@ -2809,6 +2809,18 @@ ul.user-social-bookmarks li a:hover {
         float: left;
         margin: 1.2em 1em auto 0;
       }
+      .field-name-field-pull-quote {
+        width: 50%;
+        font-size: 18px;
+        float: right;
+        margin-top: 14px;
+        margin-left: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-family: "Roboto Condensed";
+        color: dimgray;
+        font-weight: bold;
+      }
     }
   }
 }
