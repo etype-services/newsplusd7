@@ -16,3 +16,6 @@
 [submodule "sites/all/modules/contrib/etype_zenfolio"]
 	path = sites/all/modules/contrib/etype_zenfolio
 	url = https://github.com/etype-services/etype_zenfolio.git
+[submodule "sites/all/modules/etype_sliderad"]
+	path = sites/all/modules/etype_sliderad
+	url = git@github.com:etype-services/etype_sliderad.git
