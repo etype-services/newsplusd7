@@ -98,8 +98,8 @@ drupal_add_js('
         // check grid size on resize event
         $window.resize(function() {
             var gridSize = getGridSize();
-            $window.flexslider.vars.minItems = gridSize;
-            $window.flexslider.vars.maxItems = gridSize;
+            flexslider.vars.minItems = gridSize;
+            flexslider.vars.maxItems = gridSize;
         });
  
     });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
