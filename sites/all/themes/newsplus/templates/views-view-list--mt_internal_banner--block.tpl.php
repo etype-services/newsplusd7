@@ -58,7 +58,7 @@ drupal_add_js('
 
         // tiny helper function to add breakpoints
         function getGridSize() {
-            return (window.innerWidth < 992) ? 3 : 6;
+            return (window.width < 992) ? 3 : 6;
         }
 
         //$(window).load(function() {
