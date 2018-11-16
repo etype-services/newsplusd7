@@ -77,8 +77,10 @@ drupal_add_js('
                 itemMargin: 4.8,
                 directionNav: false,
                 asNavFor: "#internal-banner-slider",
-                minItems: getGridSize(), // use function to pull in initial value
-                maxItems: getGridSize(), // use function to pull in initial value
+                //minItems: getGridSize(), // use function to pull in initial value
+                minItems: 6
+                //maxItems: getGridSize(), // use function to pull in initial value
+                maxItems: 6
                 start: function(slider){
                     flexslider = slider;
                 }        
@@ -97,11 +99,11 @@ drupal_add_js('
         //});
 
         // check grid size on resize event
-        $window.resize(function() {
-            var gridSize = getGridSize();
-            flexslider.vars.minItems = gridSize;
-            flexslider.vars.maxItems = gridSize;
-        });
+        //$window.resize(function() {
+        //    var gridSize = getGridSize();
+        //    flexslider.vars.minItems = gridSize;
+        //    flexslider.vars.maxItems = gridSize;
+        //});
  
     });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
 } else {
