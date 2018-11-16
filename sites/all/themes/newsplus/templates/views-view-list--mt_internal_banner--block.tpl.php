@@ -57,10 +57,10 @@ drupal_add_js('
         var $window = $(window), flexslider;
 
         // tiny helper function to add breakpoints
-        function getGridSize() {
-            var w = $(window).width();
-            return (w < 992) ? 3 : 6;
-        }
+        //function getGridSize() {
+        //    var w = $(window).width();
+        //    return (w < 992) ? 3 : 6;
+        //}
 
         //$(window).load(function() {
         
