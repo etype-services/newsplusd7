@@ -78,9 +78,9 @@ drupal_add_js('
                 directionNav: false,
                 asNavFor: "#internal-banner-slider",
                 //minItems: getGridSize(), // use function to pull in initial value
-                minItems: 6
+                minItems: 6,
                 //maxItems: getGridSize(), // use function to pull in initial value
-                maxItems: 6
+                maxItems: 6,
                 start: function(slider){
                     flexslider = slider;
                 }        
