@@ -56,6 +56,12 @@ drupal_add_js('
         // store the slider in a local variable
         var $window = $(window); var flexslider;
 
+        // tiny helper function to add breakpoints
+        function getGridSize() {
+            var w = $(window).width();
+            return (w < 992) ? 3 : 6;
+        }
+
         //$(window).load(function() {
         
           $("#internal-banner-slider").fadeIn("slow");
@@ -92,8 +98,7 @@ drupal_add_js('
 
         // check grid size on resize event
         $window.resize(function() {
-            var w = $(window).width();
-            var gridSize = (w < 992) ? 3 : 6;
+            var gridSize = getGridSize();
             flexslider.vars.minItems = gridSize;
             flexslider.vars.maxItems = gridSize;
         });
