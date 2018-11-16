@@ -61,9 +61,9 @@ drupal_add_js('
             return (window.innerWidth < 768) ? 3 : 6;
         }
 
-        $(window).load(function() {
+        //$(window).load(function() {
         
-            $("#internal-banner-slider").fadeIn("slow");
+          $("#internal-banner-slider").fadeIn("slow");
             $("#internal-slider-carousel").fadeIn("slow");
 
             // The slider being synced must be initialized first
@@ -91,9 +91,9 @@ drupal_add_js('
                 animationLoop: false,
                 slideshow: false,
                 sync: "#internal-slider-carousel"
-            });
+            });  
         
-        });
+        //});
 
         // check grid size on resize event
         $window.resize(function() {
