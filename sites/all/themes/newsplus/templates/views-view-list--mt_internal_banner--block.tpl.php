@@ -1,7 +1,7 @@
 <?php foreach ($rows as $id => $row) {
-$view = views_get_current_view();
-$nid = $view->result[$id]->nid;
-$node = node_load($nid);
+    $view = views_get_current_view();
+    $nid = $view->result[$id]->nid;
+    $node = node_load($nid);
 }
 $thumbnails = field_get_items('node', $node, 'field_mt_banner_image');
 
