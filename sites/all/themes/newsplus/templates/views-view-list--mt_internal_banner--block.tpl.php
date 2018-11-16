@@ -69,7 +69,7 @@ drupal_add_js('
             // The slider being synced must be initialized first
             $("#internal-slider-carousel").flexslider({
 		        animation: "slide",
-                controlNav: true,
+                controlNav: false,
                 animationLoop: false,
                 slideshow: false,
                 itemWidth: 166,
