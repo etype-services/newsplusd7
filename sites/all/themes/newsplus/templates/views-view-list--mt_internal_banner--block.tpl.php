@@ -54,53 +54,53 @@ if ($numberOfImages>1) {
 drupal_add_js('
     jQuery(document).ready(function($) {
         // store the slider in a local variable
-        var $window = $(window),
-        flexslider;
+        console.log(flexslider);
+        var $window = $(window), flexslider;
 
         // tiny helper function to add breakpoints
         function getGridSize() {
-        return (window.innerWidth < 768) ? 3 : 6;
+            return (window.innerWidth < 768) ? 3 : 6;
         }
 
         $(window).load(function() {
         
-        $("#internal-banner-slider").fadeIn("slow");
-        $("#internal-slider-carousel").fadeIn("slow");
+            $("#internal-banner-slider").fadeIn("slow");
+            $("#internal-slider-carousel").fadeIn("slow");
 
-        // The slider being synced must be initialized first
-        $("#internal-slider-carousel").flexslider({
-		animation: "slide",
-        controlNav: false,
-        animationLoop: false,
-        slideshow: false,
-        itemWidth: 166,
-        itemMargin: 4.8,
-        directionNav: false,
-        asNavFor: "#internal-banner-slider",
-        minItems: getGridSize(), // use function to pull in initial value
-        maxItems: getGridSize(), // use function to pull in initial value
-        start: function(slider){
-        flexslider = slider;
-        }        
-        });
+            // The slider being synced must be initialized first
+            $("#internal-slider-carousel").flexslider({
+		        animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 166,
+                itemMargin: 4.8,
+                directionNav: false,
+                asNavFor: "#internal-banner-slider",
+                minItems: getGridSize(), // use function to pull in initial value
+                maxItems: getGridSize(), // use function to pull in initial value
+                start: function(slider){
+                    flexslider = slider;
+                }        
+            });
 
-        $("#internal-banner-slider").flexslider({
-        useCSS: true,            
-        animation: "'.$internal_banner_effect.'",
-        controlNav: false,
-        directionNav: false,
-        animationLoop: false,
-        slideshow: false,
-        sync: "#internal-slider-carousel"
-        });
+            $("#internal-banner-slider").flexslider({
+                useCSS: true,            
+                animation: "'.$internal_banner_effect.'",
+                controlNav: false,
+                directionNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#internal-slider-carousel"
+            });
         
         });
 
         // check grid size on resize event
         $window.resize(function() {
-        var gridSize = getGridSize();
-        flexslider.vars.minItems = gridSize;
-        flexslider.vars.maxItems = gridSize;
+            var gridSize = getGridSize();
+            flexslider.vars.minItems = gridSize;
+            flexslider.vars.maxItems = gridSize;
         });
     });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
 } else {
