@@ -54,7 +54,7 @@ if ($numberOfImages>1) {
 drupal_add_js('
     jQuery(document).ready(function($) {
         // store the slider in a local variable
-        var $window = $(window); var flexslider;
+        var $window = $(window), flexslider;
 
         // tiny helper function to add breakpoints
         function getGridSize() {
