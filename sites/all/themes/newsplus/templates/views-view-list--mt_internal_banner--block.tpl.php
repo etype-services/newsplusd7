@@ -54,8 +54,7 @@ if ($numberOfImages>1) {
 drupal_add_js('
     jQuery(document).ready(function($) {
         // store the slider in a local variable
-        console.log(flexslider);
-        var $window = $(window), flexslider;
+        var flexslider;
 
         // tiny helper function to add breakpoints
         function getGridSize() {
@@ -102,6 +101,7 @@ drupal_add_js('
             flexslider.vars.minItems = gridSize;
             flexslider.vars.maxItems = gridSize;
         });
+ 
     });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
 } else {
 drupal_add_js('
