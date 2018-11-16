@@ -91,7 +91,7 @@ drupal_add_js('
             animation: "'.$internal_banner_effect.'",
             controlNav: false,
             keyboard: true,
-            directionNav: false,
+            directionNav: true,
             animationLoop: false,
             slideshow: false,
             sync: "#internal-slider-carousel"
