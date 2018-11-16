@@ -62,41 +62,40 @@ drupal_add_js('
         //    return (w < 992) ? 3 : 6;
         //}
 
-        //$(window).load(function() {
-        
-          $("#internal-banner-slider").fadeIn("slow");
-            $("#internal-slider-carousel").fadeIn("slow");
 
-            // The slider being synced must be initialized first
-            $("#internal-slider-carousel").flexslider({
-		        animation: "slide",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                itemWidth: 166,
-                itemMargin: 4.8,
-                directionNav: false,
-                asNavFor: "#internal-banner-slider",
-                //minItems: getGridSize(), // use function to pull in initial value
-                minItems: 6,
-                //maxItems: getGridSize(), // use function to pull in initial value
-                maxItems: 6,
-                start: function(slider){
-                    flexslider = slider;
-                }        
-            });
-
-            $("#internal-banner-slider").flexslider({
-                useCSS: true,            
-                animation: "'.$internal_banner_effect.'",
-                controlNav: false,
-                directionNav: false,
-                animationLoop: false,
-                slideshow: false,
-                sync: "#internal-slider-carousel"
-            });  
         
-        //});
+        $("#internal-banner-slider").fadeIn("slow");
+        $("#internal-slider-carousel").fadeIn("slow");
+
+        // The slider being synced must be initialized first
+         $("#internal-slider-carousel").flexslider({
+		    animation: "slide",
+            controlNav: true,
+            animationLoop: false,
+            slideshow: false,
+            itemWidth: 166,
+            itemMargin: 4.8,
+            directionNav: false,
+            asNavFor: "#internal-banner-slider",
+            //minItems: getGridSize(), // use function to pull in initial value
+            minItems: 6,
+            //maxItems: getGridSize(), // use function to pull in initial value
+            maxItems: 6,
+            start: function(slider){
+                flexslider = slider;
+            }        
+         });
+
+         $("#internal-banner-slider").flexslider({
+            useCSS: true,            
+            animation: "'.$internal_banner_effect.'",
+            controlNav: false,
+            keyboard: true,
+            directionNav: false,
+            animationLoop: false,
+            slideshow: false,
+            sync: "#internal-slider-carousel"
+         });
 
         // check grid size on resize event
         //$window.resize(function() {
