@@ -7,7 +7,7 @@
             $("#superfish-1").find("a.menuparent").each(function (i, obj) {
                 $(this).append('&nbsp;<i class="fas fa-caret-down" aria-hidden="true"></i>');
             });
-            $(".block-search .form-actions, .block-search .trigger, .block-search #edit-submit").append('<i' +
+            $(".block-search .form-actions, .block-search .trigger").append('<i' +
                 ' class="fas fa-search"' +
                 ' aria-hidden="true"></i>');
             $(".more-link a").append('<i class="fas fa-chevron-right" aria-hidden="true"></i>');
