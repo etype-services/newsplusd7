@@ -2708,21 +2708,19 @@ ul.user-social-bookmarks li a:hover {
       color: #fff;
     }
   }
-}
-
-.dropdown.search-bar .dropdown-menu {
-  right: 0;
-  margin: 0;
-  box-shadow: none;
-  border-radius: 0;
-  border-color: #ddd;
-  background-color: #f8f8f8;
-  position: fixed;
-  top: 12vh;
-  left: 0;
-  float: none;
-  width: 90vw;
-  margin: auto;
+  .dropdown-menu {
+    right: 0;
+    box-shadow: none;
+    border-radius: 0;
+    border-color: #ddd;
+    background-color: #f8f8f8;
+    position: fixed;
+    top: 12vh;
+    left: 0;
+    float: none;
+    width: 90vw;
+    margin: auto;
+  }
 }
 
 /*Search Bar*/
