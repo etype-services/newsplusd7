@@ -461,11 +461,6 @@ blockquote:after {
         margin-right: 1em;
         .dropdown.search-bar {
           position: inherit;
-          .dropdown-menu {
-            top: 40px;
-            left: -157px;
-            width: 372px;
-          }
         }
       }
     }
@@ -2722,6 +2717,12 @@ ul.user-social-bookmarks li a:hover {
   border-radius: 0;
   border-color: #ddd;
   background-color: #f8f8f8;
+  position: fixed;
+  top: 12vh;
+  left: 0;
+  float: none;
+  width: 90vw;
+  margin: auto;
 }
 
 /*Search Bar*/
@@ -2753,8 +2754,9 @@ ul.user-social-bookmarks li a:hover {
     i.fas {
       font-size: 31px;
       position: relative;
-      right: 40px;
-      top: 4px;
+      right: 45px;
+      top: 1px;
+      z-index: 9;
     }
   }
   .form-item input:focus {

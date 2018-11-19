@@ -373,11 +373,7 @@ blockquote:after {
       #pre-header-inside .col-md-4 #block-etype-social-search {
         margin-right: 1em; }
         #pre-header-inside .col-md-4 #block-etype-social-search .dropdown.search-bar {
-          position: inherit; }
-          #pre-header-inside .col-md-4 #block-etype-social-search .dropdown.search-bar .dropdown-menu {
-            top: 40px;
-            left: -157px;
-            width: 372px; } }
+          position: inherit; } }
 ul {
   list-style-type: square; }
 
@@ -2202,7 +2198,13 @@ ul.user-social-bookmarks li a:hover {
   box-shadow: none;
   border-radius: 0;
   border-color: #ddd;
-  background-color: #f8f8f8; }
+  background-color: #f8f8f8;
+  position: fixed;
+  top: 11vh;
+  left: 0;
+  float: none;
+  width: 90vw;
+  margin: auto; }
 
 /*Search Bar*/
 .sidebar .block-search {
@@ -2228,8 +2230,9 @@ ul.user-social-bookmarks li a:hover {
   .block-search .form-actions i.fas {
     font-size: 31px;
     position: relative;
-    right: 40px;
-    top: 4px; }
+    right: 45px;
+    top: 1px;
+    z-index: 9; }
 .block-search .form-item input:focus {
   border-color: #c5c5c5; }
 
