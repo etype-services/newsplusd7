@@ -2870,7 +2870,7 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
-  display: none; }
+  /*display: none;*/ }
 
 /*caption*/
 #top-content .flexslider .caption {
