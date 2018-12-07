@@ -140,3 +140,6 @@ $sites['www.navasotaexaminer.com'] = 'navasotaexaminer.etypegoogle10.com';
 
 /* coloradocountycitizen.etypegoogle10.com  */
 $sites['www.coloradocountycitizen.com'] = 'coloradocountycitizen.etypegoogle10.com';
+
+/* lonestarliterary.etypegoogle10.com  */
+$sites['www.lonestarliterary.com'] = 'lonestarliterary.etypegoogle10.com';
