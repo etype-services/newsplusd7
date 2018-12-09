@@ -36,18 +36,18 @@ interface RulesDataInputOptionsListInterface extends RulesDataDirectInputFormInt
   /**
    * Returns the options list for the data type.
    *
-   * @param RulesPlugin $element
-   *   The rules element to get the options for.
-   * @param string $name
-   *   The name of the parameter for which to get options.
-   *
    * For retrieving information about the used data type and parameter, the
    * helper RulesDataUI::getTypeInfo() may be used as following:
    * @code
    *   list($type, $parameter_info) = RulesDataUI::getTypeInfo($element, $name);
    * @endcode
    *
-   * @return
+   * @param RulesPlugin $element
+   *   The rules element to get the options for.
+   * @param string $name
+   *   The name of the parameter for which to get options.
+   *
+   * @return array
    *   An array of options as used by hook_options_list().
    */
   public static function optionsList(RulesPlugin $element, $name);
@@ -207,6 +207,7 @@ class RulesDataUIText extends RulesDataUI implements RulesDataDirectInputFormInt
     else {
       $form[$name] = array(
         '#type' => 'textarea',
+        '#rows' => 3,
       );
       RulesDataInputEvaluator::attachForm($form, $settings, $info, $element->availableVariables());
     }
@@ -216,7 +217,6 @@ class RulesDataUIText extends RulesDataUI implements RulesDataDirectInputFormInt
       '#default_value' => $settings[$name],
       '#required' => empty($info['optional']),
       '#after_build' => array('rules_ui_element_fix_empty_after_build'),
-      '#rows' => 3,
     );
     return $form;
   }
@@ -421,7 +421,7 @@ class RulesDataUIURI extends RulesDataUIText {
   public static function inputForm($name, $info, $settings, RulesPlugin $element) {
     $form = parent::inputForm($name, $info, $settings, $element);
     $form[$name]['#rows'] = 1;
-    $form[$name]['#description'] = t('You may enter relative URLs like %url as well as absolute URLs like %absolute-url.', array('%url' => 'user/login?destination=node', '%absolute-url' => 'http://drupal.org'));
+    $form[$name]['#description'] = t('You may enter relative URLs like %url as well as absolute URLs like %absolute-url.', array('%url' => 'user/login?destination=node', '%absolute-url' => 'https://www.drupal.org'));
     return $form;
   }
 

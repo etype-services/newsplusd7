@@ -2,6 +2,8 @@
 
 /**
  * @file
+ * Documentation for hooks provided by the Rules API.
+ *
  * This file contains no working PHP code; it exists to provide additional
  * documentation for doxygen as well as to document hooks in the standard
  * Drupal manner.
@@ -13,7 +15,7 @@
  * Module integrations with the rules module.
  *
  * The Rules developer documentation describes how modules can integrate with
- * rules: http://drupal.org/node/298486.
+ * rules: https://www.drupal.org/node/298486.
  */
 
 /**
@@ -33,7 +35,7 @@
  * handlers may be provided by implementing RulesActionHandlerInterface. See
  * the interface for details.
  *
- * @return
+ * @return array
  *   An array of information about the module's provided rules actions.
  *   The array contains a sub-array for each action, with the action name as
  *   the key. Actions names may only contain lowercase alpha-numeric characters
@@ -65,7 +67,7 @@
  *   - 'access callback': (optional) A callback which has to return whether the
  *     currently logged in user is allowed to configure this action. See
  *     rules_node_integration_access() for an example callback.
- *  Each 'parameter' array may contain the following properties:
+ *   Each 'parameter' array may contain the following properties:
  *   - label: The label of the parameter. Start capitalized. Required.
  *   - type: The rules data type of the parameter, which is to be passed to the
  *     action. All types declared in hook_rules_data_info() may be specified, as
@@ -113,7 +115,7 @@
  *     to clean inserted replacements; e.g. this is used by the token evaluator.
  *   - wrapped: (optional) Set this to TRUE in case the data should be passed
  *     wrapped. This only applies to wrapped data types, e.g. entities.
- *  Each 'provides' array may contain the following properties:
+ *   Each 'provides' array may contain the following properties:
  *   - label: The label of the variable. Start capitalized. Required.
  *   - type: The rules data type of the variable. All types declared in
  *     hook_rules_data_info() may be specified. Types may be parametrized e.g.
@@ -166,7 +168,7 @@ function hook_rules_action_info() {
  * will be treated as grouping in the given category (e.g. group "paypal" in
  * category "commerce payment").
  *
- * @return
+ * @return array
  *   An array of information about the module's provided categories.
  *   The array contains a sub-array for each category, with the category name as
  *   the key. Names may only contain lowercase alpha-numeric characters
@@ -178,7 +180,7 @@ function hook_rules_action_info() {
  *     a previously used 'group'.
  *   - icon: (optional) The file path of an icon to use, relative to the module
  *     or specified icon path. The icon should be a transparent SVG containing
- *     no colors (only #fff). See https://drupal.org/node/2090265 for
+ *     no colors (only #fff). See https://www.drupal.org/node/2090265 for
  *     instructions on how to create a suiting icon.
  *     Note that the icon is currently not used by Rules, however other UIs
  *     building upon Rules (like fluxkraft) do, and future releases of Rules
@@ -220,7 +222,7 @@ function hook_rules_category_info() {
  * plugin method callbacks in any file without having to care about file
  * inclusion.
  *
- * @return
+ * @return array
  *   An array of file names without the file ending which defaults to '.inc'.
  */
 function hook_rules_file_info() {
@@ -259,7 +261,7 @@ function hook_rules_directory() {
  *   hook_rules_action_info() as well as an array containing the action's
  *   configuration settings.
  *
- * @return
+ * @return array
  *   The action may return an array containing parameter or provided variables
  *   with their names as key. This is used update the value of a parameter or to
  *   provide the value for a provided variable.
@@ -321,7 +323,7 @@ function hook_rules_condition_info() {
  * handlers may be provided by implementing RulesEventHandlerInterface. See
  * the interface for details.
  *
- * @return
+ * @return array
  *   An array of information about the module's provided rules events. The array
  *   contains a sub-array for each event, with the event name as the key. The
  *   name may only contain lower case alpha-numeric characters and underscores
@@ -360,7 +362,7 @@ function hook_rules_condition_info() {
  *     - handler: (optional) A handler to load the actual variable value. This
  *       is useful for lazy loading variables. The handler gets all so far
  *       available variables passed in the order as defined. Also see
- *       http://drupal.org/node/884554.
+ *       https://www.drupal.org/node/884554.
  *       Note that for lazy-loading entities just the entity id may be passed
  *       as variable value, so a handler is not necessary in that case.
  *
@@ -413,7 +415,7 @@ function hook_rules_event_info() {
  * module.
  * For a list of data types defined by rules see rules_rules_core_data_info().
  *
- * @return
+ * @return array
  *   An array of information about the module's provided data types. The array
  *   contains a sub-array for each data type, with the data type name as the
  *   key. The name may only contain lower case alpha-numeric characters and
@@ -496,7 +498,7 @@ function hook_rules_data_info() {
  * A rules configuration may consist of elements being instances of any rules
  * plugin. This hook can be used to define new or to extend rules plugins.
  *
- * @return
+ * @return array
  *   An array of information about the module's provided rules plugins. The
  *   array contains a sub-array for each plugin, with the plugin name as the
  *   key. The name may only contain lower case alpha-numeric characters,
@@ -542,7 +544,7 @@ function hook_rules_data_info() {
  *     of the 'or' plugin. Note that only uppercase values are allowed, as
  *     lower case values are treated as action or condition exports.
  *
- * @see class RulesPlugin
+ * @see RulesPlugin
  * @see hook_rules_plugin_info_alter()
  */
 function hook_rules_plugin_info() {
@@ -582,7 +584,7 @@ function hook_rules_plugin_info() {
  * and help() could be overridden in order to control access permissions or to
  * provide some usage help.
  *
- * @return
+ * @return array
  *   An array of information about the module's provided input evaluators. The
  *   array contains a sub-array for each evaluator, with the evaluator name as
  *   the key. The name may only contain lower case alpha-numeric characters and
@@ -596,7 +598,7 @@ function hook_rules_plugin_info() {
  *     used. Defaults to 'text'. Multiple data types may be specified using an
  *     array.
  *
- * @see class RulesDataInputEvaluator
+ * @see RulesDataInputEvaluator
  * @see hook_rules_evaluator_info_alter()
  */
 function hook_rules_evaluator_info() {
@@ -620,7 +622,7 @@ function hook_rules_evaluator_info() {
  * access() could be overridden in order to provide a configuration form or
  * to control access permissions.
  *
- * @return
+ * @return array
  *   An array of information about the module's provided data processors. The
  *   array contains a sub-array for each processor, with the processor name as
  *   the key. The name may only contain lower case alpha-numeric characters and
@@ -635,7 +637,7 @@ function hook_rules_evaluator_info() {
  *     used. Defaults to 'text'. Multiple data types may be specified using an
  *     array.
  *
- * @see class RulesDataProcessor
+ * @see RulesDataProcessor
  * @see hook_rules_data_processor_info_alter()
  */
 function hook_rules_data_processor_info() {
@@ -644,7 +646,7 @@ function hook_rules_data_processor_info() {
       'class' => 'RulesDateOffsetProcessor',
       'type' => 'date',
       'weight' => -2,
-     ),
+    ),
   );
 }
 
@@ -657,7 +659,7 @@ function hook_rules_data_processor_info() {
  * @param $actions
  *   The items of all modules as returned from hook_rules_action_info().
  *
- * @see hook_rules_action_info().
+ * @see hook_rules_action_info()
  */
 function hook_rules_action_info_alter(&$actions) {
   // The rules action is more powerful, so hide the core action.
@@ -690,7 +692,7 @@ function hook_rules_condition_info_alter(&$conditions) {
  * @param $events
  *   The items of all modules as returned from hook_rules_event_info().
  *
- * @see hook_rules_event_info().
+ * @see hook_rules_event_info()
  */
 function hook_rules_event_info_alter(&$events) {
   // Change events.
@@ -856,7 +858,7 @@ function hook_rules_config_execute($config) {
  * should be placed into the file MODULENAME.rules_defaults.inc, which gets
  * automatically included when the hook is invoked.
  *
- * @return
+ * @return array
  *   An array of rules configurations with the configuration names as keys.
  *
  * @see hook_default_rules_configuration_alter()
@@ -985,7 +987,7 @@ function hook_rules_event_set_alter($event_name, RulesEventSet $event_set) {
  *   The element array of a configured condition or action which is to be
  *   upgraded.
  *
- * @return
+ * @return string
  *   The name of the action or condition which should be used.
  */
 function hook_rules_action_base_upgrade_map_name($element) {
@@ -993,7 +995,7 @@ function hook_rules_action_base_upgrade_map_name($element) {
 }
 
 /**
- * D6 to D7 upgrade procedure hook for mapping action or condition configuration.
+ * D6 to D7 upgrade process hook for mapping action or condition configuration.
  *
  * During upgrading Drupal 6 rule configurations to Drupal 7 Rules is taking
  * care of upgrading the configuration of all known parameters, which only works
@@ -1021,7 +1023,7 @@ function hook_rules_action_base_upgrade($element, RulesPlugin $target) {
 }
 
 /**
- * D6 to D7 upgrade procedure hook for mapping action or condition configuration.
+ * D6 to D7 upgrade process hook for mapping action or condition configuration.
  *
  * A alter hook that is called after the action/condition specific callback for
  * each element of a configuration that is upgraded.

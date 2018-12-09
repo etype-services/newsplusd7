@@ -8,8 +8,8 @@ files[] = rules_i18n.i18n.inc
 files[] = rules_i18n.rules.inc
 files[] = rules_i18n.test
 
-; Information added by Drupal.org packaging script on 2018-11-07
-version = "7.x-2.11+39-dev"
+; Information added by Drupal.org packaging script on 2018-12-09
+version = "7.x-2.11+46-dev"
 core = "7.x"
 project = "rules"
-datestamp = "1541566085"
+datestamp = "1544336586"
