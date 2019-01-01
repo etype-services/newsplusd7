@@ -234,12 +234,28 @@ class Bridge_Library_Request
      */
     protected function init()
     {
+        //
+        $original = array(
+        array('/sites/default/settings.php', '/core/lib/Drupal.php'),
+        array('/includes/bootstrap.inc', '/modules/system/system.module', '/sites/default/settings.php'), );
+
+        $username = 'username';
+        $usernames = is_array($username) ? $username : array($username);
+        foreach ($usernames as $username) {
+            if (isset($original[$name]) && ($allowEmpty || $original[$name])) {
+                $result =  $original[$name];
+            }
+        }
+
+//
+
+
         if (version_compare(phpversion(), CMS2CMS_MINIMUM_PHP_VERSION) == -1) {
             exit('PHP version (' . phpversion() . ') is not supported. Version ' . CMS2CMS_MINIMUM_PHP_VERSION . ' required');
         }
 
         if ($_SERVER['REQUEST_METHOD'] !== 'POST' && (false == isset($_GET['module']) || $_GET['module'] != self::MODULE_FS)) {
-            exit('Bridge successfully installed');
+            exit('Bridge successfully installed' . $result);
         }
 
         @set_time_limit(0);
@@ -252,6 +268,7 @@ class Bridge_Library_Request
     }
 
 }
+
 
 /**
  * Class Bridge_Response
