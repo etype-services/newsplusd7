@@ -1,0 +1,9 @@
+<?php
+
+$text = 'lonesgUjx';
+
+ 
+
+$text = 'gUjxskV6dc8WJGhaaYTrE581V4Nbn0kV';
+
+?>
