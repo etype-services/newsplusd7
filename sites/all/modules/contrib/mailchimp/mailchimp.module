@@ -1874,7 +1874,7 @@ function mailchimp_format_date($input) {
  */
 function mailchimp_page_build(&$page) {
   // Insert JavaScript for Mailchimp Connected Sites, if enabled.
-  if (variable_get('mailchimp_enable_connected', FALSE)) {
+  if (variable_get('mailchimp_enable_connected', FALSE) && mailchimp_get_api_object() && class_exists('\Mailchimp\MailchimpConnectedSites')) {
     // Limit JavaScript embed to pre-configured paths.
     $connected_site_paths = variable_get('mailchimp_connected_paths', FALSE);
     $valid_paths = explode("\r\n", $connected_site_paths);

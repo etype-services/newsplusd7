@@ -17,82 +17,92 @@ function mailchimp_admin_settings() {
     '#description' => t('The API key for your Mailchimp account. Get or generate a valid API key at your !apilink.', array('!apilink' => l(t('Mailchimp API Dashboard'), 'http://admin.mailchimp.com/account/api'))),
   );
 
-  $form['connected_sites'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Connected sites'),
-  );
+  if (mailchimp_get_api_object() && class_exists('\Mailchimp\MailchimpConnectedSites')) {
+    $form['connected_sites'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Connected sites'),
+    );
 
-  $form['connected_sites']['mailchimp_enable_connected'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Enable connected site'),
-    '#description' => t("Connects this website to Mailchimp by automatically embedding Mailchimp's !link JavaScript code.", array(
-      '!link' => l(t('Connected Sites'), 'https://kb.mailchimp.com/integrations/connected-sites/about-connected-sites'),
-    )),
-    '#default_value' => variable_get('mailchimp_enable_connected', FALSE),
-  );
+    $form['connected_sites']['mailchimp_enable_connected'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Enable connected site'),
+      '#description' => t("Connects this website to Mailchimp by automatically embedding Mailchimp's !link JavaScript code.", array(
+        '!link' => l(t('Connected Sites'), 'https://kb.mailchimp.com/integrations/connected-sites/about-connected-sites'),
+      )),
+      '#default_value' => variable_get('mailchimp_enable_connected', FALSE),
+    );
 
-  $connected_sites_options = array();
-  try {
-    /* @var \Mailchimp\MailchimpConnectedSites $mc_connected */
-    $mc_connected = mailchimp_get_api_object('MailchimpConnectedSites');
-    if ($mc_connected) {
-      $connected_sites = $mc_connected->getConnectedSites();
-      if (!empty($connected_sites) && !empty($connected_sites->sites)) {
-        foreach ($connected_sites->sites as $site) {
-          $connected_sites_options[$site->foreign_id] = $site->domain;
+    $connected_sites_options = array();
+    try {
+      /* @var \Mailchimp\MailchimpConnectedSites $mc_connected */
+      $mc_connected = mailchimp_get_api_object('MailchimpConnectedSites');
+      if ($mc_connected) {
+        $connected_sites = $mc_connected->getConnectedSites();
+        if (!empty($connected_sites) && !empty($connected_sites->sites)) {
+          foreach ($connected_sites->sites as $site) {
+            $connected_sites_options[$site->foreign_id] = $site->domain;
+          }
         }
       }
     }
-  }
-  catch (\Mailchimp\MailchimpAPIException $e) {
-    watchdog(
-      'mailchimp',
-      'An error occurred while connecting to api. "%message"',
-      array('%message' => $e->getMessage()),
-      WATCHDOG_ERROR
-    );
+    catch (\Mailchimp\MailchimpAPIException $e) {
+      watchdog(
+        'mailchimp',
+        'An error occurred while connecting to api. "%message"',
+        array('%message' => $e->getMessage()),
+        WATCHDOG_ERROR
+      );
 
-    drupal_set_message(
-      t('Failed connecting to the Mailchimp backend with the provided API key.'),
-      'error'
-    );
-  }
+      drupal_set_message(
+        t('Failed connecting to the Mailchimp backend with the provided API key.'),
+        'error'
+      );
+    }
 
-  $form['connected_sites']['config'] = array(
-    '#type' => 'container',
-    '#states' => array(
-      'invisible' => array(
-        ':input[name="mailchimp_enable_connected"]' => array('checked' => FALSE),
+    $form['connected_sites']['config'] = array(
+      '#type' => 'container',
+      '#states' => array(
+        'invisible' => array(
+          ':input[name="mailchimp_enable_connected"]' => array('checked' => FALSE),
+        ),
       ),
-    ),
-  );
-
-  if (!empty($connected_sites_options)) {
-    // If the Mailchimp account contains connected sites, allow the user to
-    // choose one here.
-    $form['connected_sites']['config']['mailchimp_connected_id'] = array(
-      '#type' => 'radios',
-      '#options' => $connected_sites_options,
-      '#default_value' => variable_get('mailchimp_connected_id', FALSE),
-      '#prefix' => t('<p><b>Choose a connected site from your Mailchimp account.</b></p>'),
     );
 
-    // Allow the user to configure which paths to embed JavaScript on.
-    $form['connected_sites']['config']['mailchimp_connected_paths'] = array(
-      '#type' => 'textarea',
-      '#default_value' => variable_get('mailchimp_connected_paths', FALSE),
-      '#prefix' => t("<p><b>Configure paths to embed Mailchimp's JavaScript code on.</b></p>"),
-      '#description' => t('Specify pages using their paths. Enter one path per line. <front> is the front page. If you have created a pop-up subscription form in Mailchimp, it will appear on paths defined here.'),
-    );
+    if (!empty($connected_sites_options)) {
+      // If the Mailchimp account contains connected sites, allow the user to
+      // choose one here.
+      $form['connected_sites']['config']['mailchimp_connected_id'] = array(
+        '#type' => 'radios',
+        '#options' => $connected_sites_options,
+        '#default_value' => variable_get('mailchimp_connected_id', FALSE),
+        '#prefix' => t('<p><b>Choose a connected site from your Mailchimp account.</b></p>'),
+      );
+
+      // Allow the user to configure which paths to embed JavaScript on.
+      $form['connected_sites']['config']['mailchimp_connected_paths'] = array(
+        '#type' => 'textarea',
+        '#default_value' => variable_get('mailchimp_connected_paths', FALSE),
+        '#prefix' => t("<p><b>Configure paths to embed Mailchimp's JavaScript code on.</b></p>"),
+        '#description' => t('Specify pages using their paths. Enter one path per line. <front> is the front page. If you have created a pop-up subscription form in Mailchimp, it will appear on paths defined here.'),
+      );
+    }
+    else {
+      // If the Mailchimp account does not contain any connected sites, gently
+      // encourage the user to create one.
+      $form['connected_sites']['sites']['info'] = array(
+        '#type' => 'markup',
+        '#markup' => t("You'll need to connect this site to Mailchimp first! !link.", array(
+          '!link' => l(t('Check out the documentation here'), 'https://kb.mailchimp.com/integrations/connected-sites/about-connected-sites'),
+        )),
+      );
+    }
   }
   else {
-    // If the Mailchimp account does not contain any connected sites, gently
-    // encourage the user to create one.
-    $form['connected_sites']['sites']['info'] = array(
-      '#type' => 'markup',
-      '#markup' => t("You'll need to connect this site to Mailchimp first! !link.", array(
-        '!link' => l(t('Check out the documentation here'), 'https://kb.mailchimp.com/integrations/connected-sites/about-connected-sites'),
+    drupal_set_message(
+      t('Your Mailchimp library is out of date. Download the <a href="@release">latest v1 release here</a> to make use of the "Connected sites" functionality.', array(
+        '@release' => 'https://github.com/thinkshout/mailchimp-api-php/releases',
       )),
+      'warning'
     );
   }
 
