@@ -8,8 +8,8 @@ configure = admin/config/workflow/rules
 ; Test cases
 files[] = tests/rules_admin.test
 
-; Information added by Drupal.org packaging script on 2019-01-04
-version = "7.x-2.11+53-dev"
+; Information added by Drupal.org packaging script on 2019-01-05
+version = "7.x-2.11+54-dev"
 core = "7.x"
 project = "rules"
-datestamp = "1546583294"
+datestamp = "1546667589"
