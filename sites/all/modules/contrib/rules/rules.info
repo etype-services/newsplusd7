@@ -28,8 +28,8 @@ files[] = tests/rules_test.rules.inc
 dependencies[] = entity_token
 dependencies[] = entity
 
-; Information added by Drupal.org packaging script on 2019-01-05
-version = "7.x-2.11+54-dev"
+; Information added by Drupal.org packaging script on 2019-01-10
+version = "7.x-2.11+55-dev"
 core = "7.x"
 project = "rules"
-datestamp = "1546667589"
+datestamp = "1547104086"
