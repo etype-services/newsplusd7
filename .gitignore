@@ -11,3 +11,6 @@ sites/*/tmp
 *.codekit3
 vendor
 .DS_Store
+
+#lsll
+lsll_archive
