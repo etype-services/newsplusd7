@@ -123,16 +123,15 @@
  *   - save: (optional) If this is set to TRUE, the provided variable is saved
  *     by rules when the rules evaluation ends. Only possible for savable data
  *     types. Defaults to FALSE.
- *
- *  The module has to provide an implementation for each action, being a
- *  function named as specified in the 'base' key or for the execution callback.
- *  All other possible callbacks are optional.
- *  Supported action callbacks by rules are defined and documented in the
- *  RulesPluginImplInterface. However any module may extend the action plugin
- *  based upon a defined interface using hook_rules_plugin_info(). All methods
- *  defined in those interfaces can be overridden by the action implementation.
- *  The callback implementations for those interfaces may reside in any file
- *  specified in hook_rules_file_info().
+ *   The module has to provide an implementation for each action, being a
+ *   function named as specified in the 'base' key or for the execution callback.
+ *   All other possible callbacks are optional.
+ *   Supported action callbacks by rules are defined and documented in the
+ *   RulesPluginImplInterface. However any module may extend the action plugin
+ *   based upon a defined interface using hook_rules_plugin_info(). All methods
+ *   defined in those interfaces can be overridden by the action implementation.
+ *   The callback implementations for those interfaces may reside in any file
+ *   specified in hook_rules_file_info().
  *
  * @see hook_rules_file_info()
  * @see rules_action_execution_callback()
@@ -181,14 +180,14 @@ function hook_rules_action_info() {
  *   - icon: (optional) The file path of an icon to use, relative to the module
  *     or specified icon path. The icon should be a transparent SVG containing
  *     no colors (only #fff). See https://www.drupal.org/node/2090265 for
- *     instructions on how to create a suiting icon.
+ *     instructions on how to create a suitable icon.
  *     Note that the icon is currently not used by Rules, however other UIs
  *     building upon Rules (like fluxkraft) do, and future releases of Rules
  *     might do as well. Consequently, the definition of an icon is optional.
  *     However, if both an icon font and icon is given, the icon is preferred.
  *   - icon path: (optional) The base path for the icon. Defaults to the
  *     providing module's directory.
- *   - icon font class: (optional) An icon font class referring to a suiting
+ *   - icon font class: (optional) An icon font class referring to a suitable
  *     icon. Icon font class names should map to the ones as defined by Font
  *     Awesome, while themes might want to choose to provide another icon font.
  *     See http://fortawesome.github.io/Font-Awesome/cheatsheet/.
@@ -1073,7 +1072,7 @@ function hook_rules_ui_menu_alter(&$items, $base_path, $base_count) {
  * a given user has access to perform a given operation on a Rules
  * configuration.
  *
- * @param $op
+ * @param string $op
  *   The operation being performed. One of 'view', 'create', 'update' or
  *   'delete'.
  * @param $rules_config
@@ -1083,7 +1082,7 @@ function hook_rules_ui_menu_alter(&$items, $base_path, $base_count) {
  *   (optional) The user to check for. If no account is passed, access is
  *   determined for the current user.
  *
- * @return bool
+ * @return bool|null
  *   Return TRUE to grant access, FALSE to explicitly deny access. Return NULL
  *   or nothing to not affect the operation.
  *   Access is granted as soon as a module grants access and no one denies
