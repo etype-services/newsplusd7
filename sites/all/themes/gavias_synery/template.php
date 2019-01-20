@@ -164,7 +164,7 @@ function gavias_synery_process_node(&$vars)
         /* author info */
         $node = node_load('node', $vars['nid']);
         dpm($vars);
-        //$wrapper = entity_metadata_wrapper('node', $node);
+        $wrapper = entity_metadata_wrapper('node', $node);
         /*$vars['dateline'] = $wrapper->field_dateline->value();
         if ($vars['teaser'] === FALSE) {
             $byline = $wrapper->field_byline->value();
