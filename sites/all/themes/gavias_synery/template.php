@@ -162,10 +162,9 @@ function gavias_synery_process_node(&$vars)
 {
     if ($vars['type'] == 'article') {
         /* author info */
-        $node = node_load('node', $vars['nid']);
         dpm($vars);
         $wrapper = entity_metadata_wrapper('node', $vars['nid']);
-        /*$vars['dateline'] = $wrapper->field_dateline->value();
+        $vars['dateline'] = $wrapper->field_dateline->value();
         if ($vars['teaser'] === FALSE) {
             $byline = $wrapper->field_byline->value();
             if (!empty($byline)) {
@@ -178,7 +177,7 @@ function gavias_synery_process_node(&$vars)
             } else {
                 $vars['byline'] = $vars['name'];
             }
-        }*/
+        }
     }
 }
 
