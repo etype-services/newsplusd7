@@ -88,6 +88,7 @@ $sites['www.coloradocountycitizen.com'] = 'coloradocountycitizen.etypegoogle10.c
 
 /* lonestarliterary.etypegoogle10.com  */
 $sites['www.lonestarliterary.com'] = 'lonestarliterary.etypegoogle10.com';
+$sites['test.etypegoogle10.com'] = 'lonestarliterary.etypegoogle10.com';
 
 /* thecantonherald.etypegoogle10.com  */
 $sites['www.thecantonherald.com'] = 'thecantonherald.etypegoogle10.com';
