@@ -157,11 +157,10 @@ function gavias_synery_process_html(&$vars)
 
 /**
  * @param $vars
- */
+
 function gavias_synery_process_node(&$vars)
 {
     if ($vars['type'] == 'article') {
-        /* author info */
         $node = node_load('node', $vars['nid']);
         dpm($vars);
         $wrapper = entity_metadata_wrapper('node', $node);
@@ -181,6 +180,7 @@ function gavias_synery_process_node(&$vars)
         }
     }
 }
+*/
 
 /**
  * Implements hook_preprocess_region().
