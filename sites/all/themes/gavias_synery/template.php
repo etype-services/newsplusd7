@@ -162,7 +162,7 @@ function gavias_synery_process_node(&$vars)
 {
     if ($vars['type'] == 'article') {
         /* author info */
-        dpm($vars);
+        // dpm($vars);
         $wrapper = entity_metadata_wrapper('node', $vars['nid']);
         $vars['dateline'] = $wrapper->field_dateline->value();
         if ($vars['teaser'] === FALSE) {
