@@ -4,7 +4,7 @@ $sites['www.etypegoogle10.com'] = 'demo.etypegoogle10.com';
 $sites['demo.etypegoogle10.com'] = 'demo.etypegoogle10.com';
 $sites['newsplus-base.etypegoogle10.com'] = 'newsplus-base.etypegoogle10.com';
 $sites['synergy-base.etypegoogle10.com'] = 'synergy-base.etypegoogle10.com';
-$sites['test.etypegoogle10.com'] = 'freemansd.etypegoogle10.com';
+$sites['test.etypegoogle10.com'] = 'lonestarliterary.etypegoogle10.com';
 $sites['newsplus.local'] = 'hartington.etypegoogle10.com';
 
 /* freemansd.etypegoogle10.com */
@@ -88,7 +88,6 @@ $sites['www.coloradocountycitizen.com'] = 'coloradocountycitizen.etypegoogle10.c
 
 /* lonestarliterary.etypegoogle10.com  */
 $sites['www.lonestarliterary.com'] = 'lonestarliterary.etypegoogle10.com';
-$sites['test.etypegoogle10.com'] = 'lonestarliterary.etypegoogle10.com';
 
 /* thecantonherald.etypegoogle10.com  */
 $sites['www.thecantonherald.com'] = 'thecantonherald.etypegoogle10.com';
