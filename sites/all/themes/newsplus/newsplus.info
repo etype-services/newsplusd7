@@ -15,6 +15,7 @@ regions[pre_header_left] = Pre Header Left
 regions[pre_header_right] = Pre header Right
 regions[header_top_left] = Header Top Left
 regions[header_top_right] = Header Top Right
+regions[above_nav] = Above Navigation
 regions[navigation] = Navigation
 regions[header] = Header
 regions[page_intro] = Page Intro
