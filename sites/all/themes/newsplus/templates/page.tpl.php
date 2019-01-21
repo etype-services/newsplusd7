@@ -120,6 +120,13 @@
     </header>
     <!-- EOF: #header-top -->
 
+<!-- above-nav -->
+<?php if ($page['above_nav']) : ?>
+    <div id="above-nav" class="clearfix">
+        <?php print render($page['above_nav']); ?>
+    </div>
+<?php endif; ?>
+
     <!-- #header -->
     <header id="header">
 
