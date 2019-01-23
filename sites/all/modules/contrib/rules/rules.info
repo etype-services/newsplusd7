@@ -29,7 +29,7 @@ dependencies[] = entity_token
 dependencies[] = entity
 
 ; Information added by Drupal.org packaging script on 2019-01-22
-version = "7.x-2.11+58-dev"
+version = "7.x-2.11+59-dev"
 core = "7.x"
 project = "rules"
-datestamp = "1548141188"
+datestamp = "1548184990"
