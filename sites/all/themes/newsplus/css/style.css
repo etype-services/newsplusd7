@@ -915,7 +915,9 @@ ul.menu li.expanded > a:hover:before {
     padding: 0 10px; } }
 /* Logo - Site name*/
 #logo-and-site-name-wrapper {
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center; }
 
 #logo, #footer-logo {
   padding: 0;

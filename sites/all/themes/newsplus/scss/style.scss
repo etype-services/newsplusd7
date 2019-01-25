@@ -1139,6 +1139,9 @@ ul.menu li.expanded > a:hover:before {
 /* Logo - Site name*/
 #logo-and-site-name-wrapper {
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+
 }
 
 #logo, #footer-logo {
