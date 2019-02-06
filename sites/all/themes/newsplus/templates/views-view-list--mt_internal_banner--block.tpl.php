@@ -51,9 +51,19 @@ foreach ($thumbnails as $key=>$file) { $numberOfImages++;  }
 <?php
 $internal_banner_effect=theme_get_setting('internal_banner_effect');
 if ($numberOfImages>1) {
-?>
-<script type="javascript">
+drupal_add_js('
     jQuery(document).ready(function($) {
+        // store the slider in a local variable
+        var $window = $(window), flexslider;
+
+        // tiny helper function to add breakpoints
+        //function getGridSize() {
+        //    var w = $(window).width();
+        //    return (w < 992) ? 3 : 6;
+        //}
+
+
+        
         $("#internal-banner-slider").fadeIn("slow");
         $("#internal-slider-carousel").fadeIn("slow");
 
@@ -94,9 +104,7 @@ if ($numberOfImages>1) {
         //    flexslider.vars.maxItems = gridSize;
         //});
  
-    });
-</script>
-<?php
+    });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
 } else {
 drupal_add_js('
     jQuery(document).ready(function($) {
