@@ -19,9 +19,9 @@
                 $("#search-block-form").submit();
             });
 
-            var val = $(".views-field-field-mt-banner-image > .field-content > img").attr("alt");
+            var val = $(".views-field-field-mt-banner-image .field-content img").attr("alt");
             console.log(val);
-            $(".views-field-field-mt-banner-image > .field-content").append(val);
+            $(".views-field-field-mt-banner-image .field-content").append(val);
         }
     };
 
