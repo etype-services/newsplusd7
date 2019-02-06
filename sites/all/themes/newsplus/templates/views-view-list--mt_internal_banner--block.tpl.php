@@ -48,6 +48,7 @@ foreach ($thumbnails as $key=>$file) { $numberOfImages++;  }
 	<!-- EOF:#internal-slider-carousel --> 
 	<?php } ?> 
 </div>
+<script type="javascript" src="/sites/all/libraries/flexslider/jquery.flexslider-min.js"></script>
 <?php
 $internal_banner_effect=theme_get_setting('internal_banner_effect');
 if ($numberOfImages>1) {
