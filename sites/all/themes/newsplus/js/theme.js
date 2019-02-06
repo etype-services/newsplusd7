@@ -21,7 +21,7 @@
         }
     };
 
-    Drupal.behaviors.Internlabanner = {
+    Drupal.behaviors.InternalBanner = {
         attach: function (context, settings) {
             $("#internal-banner-slider").fadeIn("slow");
             $("#internal-slider-carousel").fadeIn("slow");
