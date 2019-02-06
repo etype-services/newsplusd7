@@ -48,22 +48,13 @@ foreach ($thumbnails as $key=>$file) { $numberOfImages++;  }
 	<!-- EOF:#internal-slider-carousel --> 
 	<?php } ?> 
 </div>
+<script src="sites/all/modules/contrib/flexslider/assets/js/flexslider.load.js"></script>
 <?php
 $internal_banner_effect=theme_get_setting('internal_banner_effect');
 if ($numberOfImages>1) {
 drupal_add_js('
     jQuery(document).ready(function($) {
-        // store the slider in a local variable
-        var $window = $(window), flexslider;
 
-        // tiny helper function to add breakpoints
-        //function getGridSize() {
-        //    var w = $(window).width();
-        //    return (w < 992) ? 3 : 6;
-        //}
-
-
-        
         $("#internal-banner-slider").fadeIn("slow");
         $("#internal-slider-carousel").fadeIn("slow");
 
@@ -97,12 +88,7 @@ drupal_add_js('
             sync: "#internal-slider-carousel"
          });
 
-        // check grid size on resize event
-        //$window.resize(function() {
-        //    var gridSize = getGridSize();
-        //    flexslider.vars.minItems = gridSize;
-        //    flexslider.vars.maxItems = gridSize;
-        //});
+    });
  
     });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
 } else {
