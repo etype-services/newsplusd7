@@ -102,7 +102,7 @@ $sites['www.willspointchronicle.com'] = 'willspointchronicle.etypegoogle10.com';
 $sites['www.kansaspregame.com'] = 'kansaspregame.etypegoogle10.com';
 
 /* kingfisherpress.etypegoogle10.com  */
-$sites['www.kingfisherpress.'] = 'kingfisherpress.etypegoogle10.com';
+$sites['www.kingfisherpress.net'] = 'kingfisherpress.etypegoogle10.com';
 
 /* clintondailynews.etypegoogle10.com  */
 $sites['www.clintondailynews.com'] = 'clintondailynews.etypegoogle10.com';

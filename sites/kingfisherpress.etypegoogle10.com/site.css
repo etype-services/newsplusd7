@@ -129,6 +129,6 @@ pre {  border-left: 10px solid #c4181c; }
 
 #pre-header-inside.mean-container .mean-nav ul li li a:hover, #header-top-inside.mean-container .mean-nav ul li li a:hover { border-top: 1px solid #c4181c; }
 
-#header { border-bottom: 6px solid #000000; }
+#header { border-bottom: 2px solid #000000; }
 .block-search .fas {color:#c4181c;}
 #header-top {background-color: #ffffff;}
