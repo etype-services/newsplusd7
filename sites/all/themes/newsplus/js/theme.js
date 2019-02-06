@@ -18,36 +18,9 @@
             $("#search-block-form .form-actions").click(function(){
                 $("#search-block-form").submit();
             });
-        }
-    };
 
-    Drupal.behaviors.InternalBanner = {
-        attach: function (context, settings) {
-            $("#internal-banner-slider").fadeIn("slow");
-            $("#internal-slider-carousel").fadeIn("slow");
-
-            // The slider being synced must be initialized first
-            $("#internal-slider-carousel").flexslider({
-                animation: "slide",
-                controlNav: true,
-                animationLoop: false,
-                slideshow: false,
-                itemWidth: 166,
-                itemMargin: 4.8,
-                directionNav: false,
-                asNavFor: "#internal-banner-slider"
-            });
-
-            $("#internal-banner-slider").flexslider({
-                useCSS: true,
-                animation: "'.$internal_banner_effect.'",
-                controlNav: false,
-                keyboard: true,
-                directionNav: true,
-                animationLoop: false,
-                slideshow: false,
-                sync: "#internal-slider-carousel"
-            });
+            var val = $(".views-field-field-mt-banner-image > .field-content > img").attr("alt");
+            $(".views-field-field-mt-banner-image > .field-content").append(val);
         }
     };
 
