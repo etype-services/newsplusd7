@@ -52,6 +52,7 @@ foreach ($thumbnails as $key=>$file) { $numberOfImages++;  }
 $internal_banner_effect=theme_get_setting('internal_banner_effect');
 if ($numberOfImages>1) {
 drupal_add_js('
+
     jQuery(document).ready(function($) {
         // store the slider in a local variable
         var $window = $(window), flexslider;
