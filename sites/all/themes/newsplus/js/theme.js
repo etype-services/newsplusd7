@@ -22,7 +22,7 @@
             $(".views-field-field-mt-banner-image .field-content img").each(function() {
                 var val = $("this").attr("alt");
                 console.log(val);
-            }
+            });
         }
     };
 
