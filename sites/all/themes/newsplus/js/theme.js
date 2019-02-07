@@ -4,6 +4,8 @@
     'use strict';
     Drupal.behaviors.ThemeFixer = {
         attach: function (context, settings) {
+
+            /* Add fontawesome icons */
             $("#superfish-1").find("a.menuparent").each(function (i, obj) {
                 $(this).append('&nbsp;<i class="fas fa-caret-down"></i>');
             });
