@@ -3001,19 +3001,18 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
 /*Banner caption*/
 .banner-caption {
   position: absolute;
-  width: 490px;
+  max-width: 490px;
   background-color: rgba(255, 255, 255, 0.8);
-  bottom: 33%;
+  bottom: 0;
   left: 0;
-  padding: 25px 25px 25px 80px;
+  padding: 20px 47px;
   color: #252525; }
 
 .one-value .banner-caption {
   bottom: 7%; }
 
 .banner-caption .caption-title {
-  font-size: 25px;
-  margin-bottom: 5px; }
+  font-size: 18px; }
 
 /*.banner-caption:after { position: absolute; content: "\f030"; font-family: "FontAwesome"; top: 50%; font-size: 22px; left: 29px; line-height: 1; margin-top: -10px; }*/
 @media (max-width: 991px) {
