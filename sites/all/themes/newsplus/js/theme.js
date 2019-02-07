@@ -21,7 +21,7 @@
 
             $(".views-field-field-mt-banner-image .field-content img").each(function() {
                 var val = $("this").attr("title");
-                console.log(val);
+                console.log($("this"));
                 $(".views-field-field-mt-banner-image .field-content").append(val);
             });
         }
