@@ -2,7 +2,7 @@
 
 (function ($) {
     'use strict';
-    Drupal.behaviors.FontFixer = {
+    Drupal.behaviors.ThemeFixer = {
         attach: function (context, settings) {
             $("#superfish-1").find("a.menuparent").each(function (i, obj) {
                 $(this).append('&nbsp;<i class="fas fa-caret-down"></i>');
@@ -12,15 +12,11 @@
             $(".jcarousel-prev-horizontal").append('<i class="fas fa-arrow-left"></i>');
             $(".jcarousel-next-horizontal").append('<i class="fas fa-arrow-right"></i>');
 
-            /* fix search */
+            /* Fix search */
             $("#search-block-form .form-actions").click(function(){
                 $("#search-block-form").submit();
             });
-        }
-    };
 
-    Drupal.behaviors.InternalBannerFixer = {
-        attach: function (context, settings) {
             /* internal banner captions */
             $(".views-field-field-mt-banner-image .field-content img").each(function(idx,img) {
                 var caption = img.alt || img.title;
