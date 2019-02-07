@@ -21,7 +21,7 @@
 
             $(".views-field-field-mt-banner-image .field-content img").each(function(idx,img) {
                 var pTitle = img.title;
-                console.log(pTitle);
+                $(this).parent().append("<div class=\"flex-caption\">" + pTitle + "</div>");
             });
         }
     };
