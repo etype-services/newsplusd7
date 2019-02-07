@@ -20,8 +20,8 @@
             });
 
             $(".views-field-field-mt-banner-image .field-content img").each(function() {
-                var val = $("this").attr("title");
-                console.log($("this"));
+                var val = $(this).attr("title");
+                console.log($(this));
                 $(".views-field-field-mt-banner-image .field-content").append(val);
             });
         }
