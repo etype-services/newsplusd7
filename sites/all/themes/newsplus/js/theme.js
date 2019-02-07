@@ -17,7 +17,7 @@
                 $("#search-block-form").submit();
             });
 
-            /* internal banner captions */
+            /* Internal banner captions */
             $(".views-field-field-mt-banner-image .field-content img").each(function(idx,img) {
                 var caption = img.alt || img.title;
                 $(this).parent().append("<div class=\"banner-caption\"><div class=\"caption-title\">" + caption + "</div></div>");
