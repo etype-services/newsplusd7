@@ -19,6 +19,7 @@
                 $("#search-block-form").submit();
             });
 
+            /* internal banner captions */
             $(".views-field-field-mt-banner-image .field-content img").each(function(idx,img) {
                 var pTitle = img.title;
                 $(this).parent().append("<div class=\"banner-caption\"><div class=\"caption-title\">" + pTitle + "</div></div>");
