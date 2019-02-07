@@ -3701,27 +3701,14 @@ div.messages.warning:before { content: "\f12a"; font-family: "FontAwesome"; font
   font-size: 18px;
 }
 
-/*.banner-caption:after { position: absolute; content: "\f030"; font-family: "FontAwesome"; top: 50%; font-size: 22px; left: 29px; line-height: 1; margin-top: -10px; }*/
 @media (max-width: 991px) {
   .banner-caption {
     width: 460px;
     padding: 15px 15px 15px 60px;
-    bottom: 7%;
+    bottom: 0;
   }
-  .banner-caption:after {
+  .banner-caption .caption-title {
     font-size: 18px;
-    left: 19px;
-    left: 21px;
-    margin-top: -7px;
-  }
-  .banner-caption .caption-title {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .banner-caption .caption-title {
-    margin-bottom: 0;
   }
 }
 
