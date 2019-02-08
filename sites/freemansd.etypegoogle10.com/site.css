@@ -132,3 +132,9 @@ pre {  border-left: 10px solid #741212; }
 #header { border-bottom: 6px solid #000000; }
 .block-search .fas {color:#741212;}
 #header-top {background-color: #ffffff;}
+
+/* For rotaing ads */
+.sidebar .block.block-simpleads .adslist > div > div > div:last-child {
+  padding-bottom: 20px;
+}
+
