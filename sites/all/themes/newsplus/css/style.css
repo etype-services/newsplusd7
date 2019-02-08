@@ -3584,11 +3584,11 @@ Adjustments for ads
 
 .sidebar .block.block-simpleads {
   /* padding between ads */
-  /* last one with no padding -- removed for rotating ads (Freeman) */ }
+  /* last one with less padding -- removed for rotating ads (Freeman) */ }
   .sidebar .block.block-simpleads .simplead-container {
     padding-bottom: 20px; }
   .sidebar .block.block-simpleads .adslist > div > div > div:last-child {
-    padding-bottom: 0; }
+    padding-bottom: 10px; }
 
 .region-footer-ad .block-simpleads.block {
   padding-bottom: 40px; }
