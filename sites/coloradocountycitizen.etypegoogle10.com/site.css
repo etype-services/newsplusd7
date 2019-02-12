@@ -62,6 +62,6 @@ pre {  border-left: 10px solid #426AB2; }
 #header { border-bottom: 6px solid #000000; }
 .block-search .fas {color:#426AB2;}
 
-#block-views-mt-breaking-block .more-link {
-  background-color: #ED1B24;
+#block-views-mt-breaking-block .view-titles .more-link a {
+  background-color: #ED1B24!important;
 }
