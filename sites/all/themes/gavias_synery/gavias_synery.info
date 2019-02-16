@@ -1,6 +1,6 @@
 ;Theme info
-name = 'Gavias Synery'
-description = 'Theme for Drupal'
+name = 'eType Synergy'
+description = 'Drupal 7 Theme'
 core = '7.x'
 engine = 'phptemplate'
 screenshot = 'screenshot.png'
