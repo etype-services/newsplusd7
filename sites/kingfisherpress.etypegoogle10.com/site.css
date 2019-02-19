@@ -132,3 +132,9 @@ pre {  border-left: 10px solid #c4181c; }
 #header { border-bottom: 2px solid #000000; }
 .block-search .fas {color:#c4181c;}
 #header-top {background-color: #ffffff;}
+
+@media (max-width: 1199px) {
+  #main-navigation ul.menu li a {
+    padding: 15px 10px 11px;
+  }
+}
