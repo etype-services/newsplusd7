@@ -106,3 +106,9 @@ $sites['www.kingfisherpress.net'] = 'kingfisherpress.etypegoogle10.com';
 
 /* clintondailynews.etypegoogle10.com  */
 $sites['www.clintondailynews.com'] = 'clintondailynews.etypegoogle10.com';
+
+/* elgincourier.etypegoogle10.com  */
+$sites['www.elgincourier.com'] = 'elgincourier.etypegoogle10.com';
+
+/* thevindicator.etypegoogle10.com  */
+$sites['www.thevindicator.com'] = 'thevindicator.etypegoogle10.com';
