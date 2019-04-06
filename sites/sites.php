@@ -112,3 +112,6 @@ $sites['www.elgincourier.com'] = 'elgincourier.etypegoogle10.com';
 
 /* thevindicator.etypegoogle10.com  */
 $sites['www.thevindicator.com'] = 'thevindicator.etypegoogle10.com';
+
+/* indyrepnews.etypegoogle10.com  */
+$sites['www.indyrepnews.com'] = 'indyrepnews.etypegoogle10.com';
