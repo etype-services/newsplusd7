@@ -15,7 +15,6 @@
 				<ul class="user-social-bookmarks">
 					<?php if (render($user_profile['field_mt_facebook'])) { ?><li class="facebook"><a target="_blank" href="<?php print $facebook;?>"><i class="fab fa-facebook"></i></a></li><?php } ?>
 					<?php if (render($user_profile['field_mt_twitter'])) { ?><li class="twitter"><a target="_blank" href="<?php print render($twitter);?>"><i class="fab fa-twitter"></i></a></li><?php } ?>
-					<?php if (render($user_profile['field_mt_google_plus'])) { ?><li class="googleplus"><a target="_blank" href="<?php print render($googleplus);?>"><i class="fab fa-google-plus"></i></a></li><?php } ?>
 				</ul>
 				<?php } ?>
 			</div>

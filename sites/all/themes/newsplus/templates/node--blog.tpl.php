@@ -48,7 +48,6 @@ $post_progress = theme_get_setting('post_progress');
           <?php $path = isset($_GET['q']) ? $_GET['q'] : '<front>'; ?>
           <ul>
             <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php print urlencode(url($path, array('absolute' => TRUE)))?>&t=<?php print urlencode($title) ?>" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span><i class="fab fa-facebook"></i></span></a></li>
-            <li><a href="https://plus.google.com/share?url=<?php print urlencode(url($path, array('absolute' => TRUE))) ?>" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"><span><i class="fab fa-google-plus"></i></span></a></li>
             <li><a href="http://twitter.com/share?text=<?php print urlencode($title) ?>&url=<?php print urlencode(url($path, array('absolute' => TRUE))) ?>" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><span><i class="fab fa-twitter"></i></span></a></li>
           </ul>
         </div>
