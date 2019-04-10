@@ -3574,6 +3574,10 @@ Adjustments for ads
   z-index: 1;
   cursor: pointer; }
 
+/* For IE 10 & 11 from indyrepnews.com */
+.simplead-container img {
+  width: 100%; }
+
 /* Simple Ads */
 .adslist {
   display: flex;
@@ -3584,7 +3588,7 @@ Adjustments for ads
 
 .sidebar .block.block-simpleads {
   /* padding between ads */
-  /* last one with less padding -- removed for rotating ads (Freeman) */ }
+  /* last one with less padding */ }
   .sidebar .block.block-simpleads .simplead-container {
     padding-bottom: 20px; }
   .sidebar .block.block-simpleads .adslist > div > div > div:last-child {
