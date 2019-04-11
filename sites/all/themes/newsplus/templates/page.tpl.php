@@ -123,7 +123,7 @@
 <!-- above-nav -->
 <?php if ($page['above_nav']) : ?>
     <div id="above-nav" class="clearfix">
-        <?php print render($page['above_nav']); ?>
+        <div class="content"><?php print render($page['above_nav']); ?></div>
     </div>
 <?php endif; ?>
 

@@ -1,3 +1,8 @@
 #block-views-mt-breaking-block .view-titles .more-link a {
   background-color: #cf2428;
 }
+
+/* Restrict width of banner above nav */
+#block-simpleads-ad-groups-25 .simplead-container img {
+  max-width: 728px;
+}
