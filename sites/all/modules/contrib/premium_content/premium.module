@@ -169,7 +169,7 @@ function premium_form_alter(&$form, $form_state, $form_id) {
                 $default = is_array($premium_level) ? $premium_level['machine_name'] : 'default';
             }
             else {
-                $default = 'default';
+                $default = variable_get("premium_{$node->type}", 0);
             }
 
             $form['options']['premium'] = array(
