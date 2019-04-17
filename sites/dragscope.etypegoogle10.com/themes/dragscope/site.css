@@ -3,3 +3,8 @@
 h1, h2, h3, h4 h5 {
   font-family: 'Merriweather Sans', sans-serif!important;
 }
+
+/* Fix logo and ad -- size reversed on this site. */
+#header-top #header-top-inside .row {
+  flex-wrap: wrap;
+}
