@@ -3577,10 +3577,6 @@ Adjustments for ads
   z-index: 1;
   cursor: pointer; }
 
-/* For IE 10 & 11 from indyrepnews.com */
-.simplead-container img, #logo img {
-  width: 100%; }
-
 /* Simple Ads */
 .adslist {
   display: flex;

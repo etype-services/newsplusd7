@@ -17,3 +17,8 @@
 .view-highlighted-objects .views-row {
   margin-bottom: 1rem;
 }
+
+/* For IE 10 & 11 for indyrepnews.com */
+.simplead-container img, #logo img {
+  width: 100%;
+}
