@@ -9,7 +9,7 @@
   flex-wrap: wrap;
 }
 
-
+/* color overrides */
 a, .field-name-field-mt-post-categories.field-type-taxonomy-term-reference a, ul.links li.statistics_counter span { color: #a0a0a0; }
 
 #header, #header-inside, #main-navigation .sf-menu ul li.sfHover>a, #main-navigation .sf-menu ul li a:hover, .mean-container .mean-nav ul li a:hover,
