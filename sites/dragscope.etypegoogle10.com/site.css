@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans|PT+Sans+Narrow|PT+Serif+Caption');
 
-* {
+h1, h2, h3, h4, h5, p  {
   font-family: 'Merriweather Sans', sans-serif!important;
 }
 
