@@ -4,6 +4,11 @@ h1, h2, h3, h4, h5, p  {
   font-family: 'Merriweather Sans', sans-serif!important;
 }
 
+p {
+  font-size: 16pt;
+  line-height: 24px;
+}
+
 /* Fix logo and ad -- size reversed on this site. */
 #header-top #header-top-inside .row {
   flex-wrap: wrap;
