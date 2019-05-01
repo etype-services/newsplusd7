@@ -9,6 +9,10 @@ p {
   line-height: 24px;
 }
 
+.flex-caption, .caption-title {
+  font-family: 'PT Serif Caption', sans-serif!important;
+}
+
 /* Fix logo and ad -- size reversed on this site. */
 #header-top #header-top-inside .row {
   flex-wrap: wrap;
