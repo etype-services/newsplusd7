@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans|PT+Sans+Narrow|PT+Serif+Caption');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|PT+Sans+Narrow|PT+Serif+Caption');
 
-h1, h2, h3, h4, h5, p  {
+h1, h2, h3, h4, h5  {
   font-family: 'Merriweather Sans', sans-serif!important;
 }
 
 p {
+  font-family: 'Merriweather', serif!important;
   font-size: 16pt;
   line-height: 24px;
 }
