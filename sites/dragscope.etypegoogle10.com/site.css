@@ -10,6 +10,10 @@ p {
   line-height: 24px;
 }
 
+.views-field-title h2 {
+  maergin: 0;
+}
+
 /* Make sure Views titles take on size of containing tag, ie h2. */
 .views-field-title a {
   font-size: inherit;
