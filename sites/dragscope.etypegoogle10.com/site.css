@@ -6,16 +6,17 @@ h1, h2, h3, h4, h5  {
 
 p {
   font-family: 'Merriweather', serif!important;
-  font-size: 16pt;
+  font-size: 14pt;
   line-height: 24px;
 }
 
+/* Make sure Views titles take on size of containing tag, ie h2. */
 .views-field-title a {
   font-size: inherit;
 }
 
-.view-content p {
-  font-size: 14pt;
+article p {
+  font-size: 16pt;
 }
 
 .flex-caption, .caption-title {
