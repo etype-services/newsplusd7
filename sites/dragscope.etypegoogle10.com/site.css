@@ -10,6 +10,10 @@ p {
   line-height: 24px;
 }
 
+.views-title a {
+  font-size: inherit;
+}
+
 .flex-caption, .caption-title {
   font-family: 'PT Serif Caption', sans-serif!important;
 }
