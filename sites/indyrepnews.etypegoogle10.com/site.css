@@ -2,6 +2,14 @@
   background-color: #cf2428;
 }
 
+.region-above-nav {
+  display: flex;
+}
+
+.region-above-nav > div {
+  flex: 1 1 50%;
+}
+
 /* Restrict width of banner above nav */
 #block-simpleads-ad-groups-25 .simplead-container img {
   max-width: 728px;
