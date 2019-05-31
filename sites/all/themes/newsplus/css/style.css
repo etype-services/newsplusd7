@@ -3549,6 +3549,9 @@ Adjustments for ads
 .view .date-nav-wrapper .date-nav {
   height: 50px; }
 
+.view .date-nav-wrapper .date-next {
+  margin: 0; }
+
 /* upcoming events */
 #block-views-calendar-block-2 .views-row div {
   display: inline-block; }
