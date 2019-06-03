@@ -74,5 +74,15 @@ pre {  border-left: 10px solid #D3242A; }
     display: none;
     visibility: hidden;
   }
+  #block-views-slideshow-block {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  #block-views-slideshow-block {
+    display: none;
+    visibility: hidden;
+  }
 }
 
