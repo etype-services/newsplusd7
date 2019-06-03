@@ -70,7 +70,7 @@ pre {  border-left: 10px solid #D3242A; }
 }
 
 @media (max-width: 991px) {
-  #sidebar-second .block-simpleads {
+  #sidebar-second .block-simpleads, #block-block-17 {
     display: none;
     visibility: hidden;
   }
