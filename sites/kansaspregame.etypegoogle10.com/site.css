@@ -69,8 +69,10 @@ pre {  border-left: 10px solid #D3242A; }
 	margin-top: -35px;
 }
 
-#sidebar-second .block-simpleads {
-  display: none;
-  visibility: hidden;
+@media (max-width: 991px) {
+  #sidebar-second .block-simpleads {
+    display: none;
+    visibility: hidden;
+  }
 }
 
