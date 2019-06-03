@@ -65,7 +65,12 @@ pre {  border-left: 10px solid #D3242A; }
 
 /* css changes for padding google adsense ad above nav region */
 #block-simple-adsense-simple-adsense-slot5 {
-    padding-bottom: 15px;
+  padding-bottom: 15px;
 	margin-top: -35px;
-    } 
+}
+
+#sidebar-second .block-simpleads {
+  display: none;
+  visibility: hidden;
+}
 
