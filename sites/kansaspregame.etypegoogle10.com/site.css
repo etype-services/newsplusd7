@@ -70,12 +70,13 @@ pre {  border-left: 10px solid #D3242A; }
 }
 
 @media (max-width: 991px) {
-  #sidebar-second .block-simpleads, #block-block-17 {
+  #sidebar-second .block-simpleads, #block-block-17, .block-simple-adsense {
     display: none;
     visibility: hidden;
   }
   #block-simpleads-ad-groups-60 {
     display: block;
+    visibility: visible;
   }
 }
 
@@ -83,6 +84,10 @@ pre {  border-left: 10px solid #D3242A; }
   #block-simpleads-ad-groups-60 {
     display: none;
     visibility: hidden;
+  }
+  #sidebar-second .block-simpleads, #block-block-17, .block-simple-adsense {
+    display: block;
+    visibility: visible;
   }
 }
 
