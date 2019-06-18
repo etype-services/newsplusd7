@@ -69,8 +69,12 @@ pre {  border-left: 10px solid #D3242A; }
 	margin-top: -35px;
 }
 
+/* Mobile */
 @media (max-width: 991px) {
-  #sidebar-second .block-simpleads, #block-block-17, .block-simple-adsense {
+  #block-block-17,
+  #block-simple-adsense-simple-adsense-slot1,
+  #block-simple-adsense-simple-adsense-slot5,
+  #block-simpleads-ad-groups-31 {
     display: none;
     visibility: hidden;
   }
@@ -80,12 +84,16 @@ pre {  border-left: 10px solid #D3242A; }
   }
 }
 
+/* Desktop */
 @media (min-width: 992px) {
   #block-simpleads-ad-groups-60 {
     display: none;
     visibility: hidden;
   }
-  #sidebar-second .block-simpleads, #block-block-17, .block-simple-adsense {
+  #block-block-17,
+  #block-simple-adsense-simple-adsense-slot1,
+  #block-simple-adsense-simple-adsense-slot5,
+  #block-simpleads-ad-groups-31 {
     display: block;
     visibility: visible;
   }
