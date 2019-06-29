@@ -25,7 +25,7 @@ article p {
 
 .flex-caption, .caption-title {
   font-family: 'PT Serif Caption', sans-serif!important;
-  font-size: 14pt;
+  font-size: 14pt!important;
   font-weight: bold;
 }
 
