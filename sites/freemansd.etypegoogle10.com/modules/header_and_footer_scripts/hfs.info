@@ -1,0 +1,11 @@
+name = Header and Footer Scripts
+description = "This plugin allows you to add the scripts and styles on overall site from the front-end. No need to open files and add them there"
+core = 7.x
+package = HFS
+configure = admin/config/development/header-and-footer-scripts
+
+; Information added by Drupal.org packaging script on 2018-10-09
+version = "7.x-2.7"
+core = "7.x"
+project = "header_and_footer_scripts"
+datestamp = "1539077284"
