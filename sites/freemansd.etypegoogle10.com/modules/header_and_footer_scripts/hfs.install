@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Uninstall functions for hfs module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function hfs_uninstall() {
+  variable_del("header_and_footer_scripts_header_settings");
+  variable_del("header_and_footer_scripts_body_settings");
+  variable_del("header_and_footer_scripts_footer_settings");
+}
+
+/**
+ * Implements hook_update_N().
+ *
+ * Adding new configuration variables and updating current configuration
+ * in it to avoid conflict with any other module.
+ */
+function hfs_update_7200() {
+  $header = variable_get('hfs_header_scripts');
+  $body   = variable_get('hfs_body_scripts');
+  $footer = variable_get('hfs_footer_scripts');
+
+  variable_set('header_and_footer_scripts_header_settings', $header);
+  variable_set('header_and_footer_scripts_body_settings', $body);
+  variable_set('header_and_footer_scripts_footer_settings', $footer);
+
+  variable_del("hfs_header_scripts");
+  variable_del("hfs_body_scripts");
+  variable_del("hfs_footer_scripts");
+}
