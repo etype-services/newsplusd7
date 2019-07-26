@@ -479,3 +479,5 @@ function pwaUninstallServiceWorker() {
     console.error('PWA: Phone-home - ', error);
   });
 }
+
+importScripts("https://cdn.p-n.io/pushly-sw.min.js");
