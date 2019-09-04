@@ -9,6 +9,7 @@
 
 .region-above-nav > div {
   flex: 0 0 49%;
+  margin: auto;
 }
 
 /* Restrict width of banner above nav */
