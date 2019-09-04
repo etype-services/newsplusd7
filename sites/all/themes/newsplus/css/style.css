@@ -3553,12 +3553,12 @@ Adjustments for ads
   margin: 0; }
 
 /* See https://app.asana.com/0/0/1138501055598961/f */
-.view-calendar #single-day-container .single-day .item-wrapper .inner {
+.view-calendar .day-view #single-day-container .single-day .item-wrapper .inner {
   display: flex; }
-  .view-calendar #single-day-container .single-day .item-wrapper .inner .d_0.o_0.i_0.md_0 {
+  .view-calendar .day-view #single-day-container .single-day .item-wrapper .inner .d_0.o_0.i_0.md_0 {
     flex-basis: 50%;
     flex-grow: 1; }
-    .view-calendar #single-day-container .single-day .item-wrapper .inner .d_0.o_0.i_0.md_0 .view-item {
+    .view-calendar .day-view #single-day-container .single-day .item-wrapper .inner .d_0.o_0.i_0.md_0 .view-item {
       position: unset; }
 
 /* upcoming events */
