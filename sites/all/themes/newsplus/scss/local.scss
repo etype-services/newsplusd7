@@ -119,6 +119,9 @@ Adjustments for ads
           .d_0.o_0.i_0.md_0 {
             flex-basis: 50%;
             flex-grow: 1;
+            .view-item {
+              position: unset;
+            }
           }
         }
       }

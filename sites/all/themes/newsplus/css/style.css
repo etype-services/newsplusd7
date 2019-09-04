@@ -3558,6 +3558,8 @@ Adjustments for ads
   .view-calendar #single-day-container .single-day .item-wrapper .inner .d_0.o_0.i_0.md_0 {
     flex-basis: 50%;
     flex-grow: 1; }
+    .view-calendar #single-day-container .single-day .item-wrapper .inner .d_0.o_0.i_0.md_0 .view-item {
+      position: unset; }
 
 /* upcoming events */
 #block-views-calendar-block-2 .views-row div {
