@@ -99,3 +99,7 @@ pre {  border-left: 10px solid #D3242A; }
   }
 }
 
+/* Client Request */
+#main-content {
+  padding-top: 18px;
+}
