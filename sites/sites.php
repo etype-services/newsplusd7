@@ -93,7 +93,7 @@ $sites['www.lonestarliterary.com'] = 'lonestarliterary.etypegoogle10.com';
 $sites['www.thecantonherald.com'] = 'thecantonherald.etypegoogle10.com';
 
 /* quinlan-tawakoninews.etypegoogle10.com  */
-$sites['www.quinlan-tawakoninews.com'] = 'quinlan-tawakoninews.etypegoogle10.com';
+$sites['www.quinlan-tawakoninews.com'] = 'willspointchronicle.etypegoogle10.com';
 
 /* willspointchronicle.etypegoogle10.com  */
 $sites['www.willspointchronicle.com'] = 'willspointchronicle.etypegoogle10.com';
