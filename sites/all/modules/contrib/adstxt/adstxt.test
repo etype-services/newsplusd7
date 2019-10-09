@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * @file
+ * Tests for adstxt.module.
+ */
+
+/**
+ * Tests basic functionality of configured ads.txt files.
+ *
+ * @group Adstxt
+ */
+class AdsTxtBasicTestCase extends DrupalWebTestCase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function getInfo() {
+    return array(
+      'name' => 'Test ads.txt',
+      'description' => 'Tests basic functionality of configured ads.txt files.',
+      'group' => 'AdsTxt',
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function setUp() {
+    parent::setUp('adstxt');
+  }
+
+  /**
+   * Checks that an administrator can view the configuration page.
+   */
+  public function testAdsTxtAdminAccess() {
+    // Create an admin user, log in and access settings form.
+    $admin_user = $this->drupalCreateUser(array('administer ads.txt'));
+    $this->drupalLogin($admin_user);
+    $this->drupalGet('admin/config/system/adstxt');
+
+    $this->assertResponse(200);
+    $this->assertFieldById('edit-adstxt', NULL, 'The textarea for configuring ads.txt is shown.');
+  }
+
+  /**
+   * Checks that a non-administrative user cannot use the configuration page.
+   */
+  public function testAdsTxtUserNoAccess() {
+    // Attempt to access settings form as unprivileged user.
+    $normal_user = $this->drupalCreateUser(array('access content'));
+    $this->drupalLogin($normal_user);
+    $this->drupalGet('admin/config/system/adstxt');
+
+    $this->assertResponse(403);
+    $this->assertNoFieldById('edit-adstxt', NULL, 'The textarea for configuring ads.txt is not shown for users without appropriate permissions.');
+  }
+
+  /**
+   * Test that the ads.txt route delivers content with an appropriate header.
+   */
+  public function testAdsTxtPath() {
+    $this->drupalGet('ads.txt');
+    $this->assertResponse(200, 'An anonymous user is delivered content at the /ads.txt path.');
+    $this->assertText('greenadexchange.com, 12345, DIRECT, AEC242');
+    $this->assertText('blueadexchange.com, 4536, DIRECT');
+    $this->assertText('silverssp.com, 9675, RESELLER');
+
+    // Note: the header may have charset appended.
+    $header = $this->drupalGetHeader('Content-Type');
+    $this->assertIdentical(strpos($header, 'text/plain'), 0, 'The ads.txt file was served with header Content-Type: text/plain');
+  }
+
+  /**
+   * Checks that a configured ads.txt file is delivered as configured.
+   */
+  public function testAdsTxtConfigureAdsTxt() {
+    // Create an admin user, log in and access settings form.
+    $admin_user = $this->drupalCreateUser(array('administer ads.txt'));
+    $this->drupalLogin($admin_user);
+
+    // Modify and save the ads.txt content.
+    $edit = array();
+    $test_string = "# SimpleTest {$this->testId}";
+    $edit['adstxt'] = "#PHP_EOL{$test_string}PHP_EOL#PHP_EOL" . variable_get('adstxt', '');
+    $this->drupalPost('admin/config/system/adstxt', $edit, t('Save configuration'));
+
+    // Confirm that output contains changes.
+    $this->drupalLogout();
+    $this->drupalGet('ads.txt');
+    $this->assertResponse(200, 'An anonymous user is delivered content at the /ads.txt path.');
+    $this->assertText("# SimpleTest {$this->testId}", sprintf('Test string [%s] is displayed in the configured ads.txt file.', $test_string));
+  }
+
+  /**
+   * Test ads.txt file encoding with caching and compression.
+   */
+  public function testAdsTxtCachingAndCompressionTestCase() {
+    // Create an admin user, log in and access settings form.
+    $admin_user = $this->drupalCreateUser(array('administer site configuration', 'administer ads.txt'));
+    $this->drupalLogin($admin_user);
+
+    // Enable caching and compression.
+    $edit = array();
+    $edit['cache'] = 1;
+    $edit['cache_lifetime'] = 60;
+    $edit['page_cache_maximum_age'] = 60;
+    $edit['page_compression'] = 1;
+    $this->drupalPost('admin/config/development/performance', $edit, t('Save configuration'));
+
+    $this->drupalLogout();
+    $url = url('ads.txt', array('absolute' => TRUE));
+
+    // Use drupal_http_request so gzipped response is not automatically
+    // uncompressed.
+    $response = drupal_http_request($url, array('headers' => array('Accept-encoding' => 'gzip')));
+    $this->assertEqual(trim(variable_get('adstxt', '')), trim(gzinflate(substr($response->data, 10, -8))), 'The ads.txt content is properly served with compression enabled.');
+
+    // Note: the header may have charset appended.
+    $header = $response->headers['content-type'];
+    $this->assertIdentical(strpos($header, 'text/plain'), 0, 'The ads.txt file was served with header Content-Type: text/plain');
+  }
+
+}
