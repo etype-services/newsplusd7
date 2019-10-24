@@ -2793,10 +2793,10 @@ ul.user-social-bookmarks li a:hover {
 }
 
 /* article images styles for page, not teaser */
-.node-type-mt-post .node-mt-post .node-content {
+.node-mt-post .node-content {
   /* flexslider in node only for in-page images */
 }
-.node-type-mt-post .node-mt-post .node-content .flexslider {
+.node-mt-post .node-content .flexslider {
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
   padding: 4px 0;
@@ -2804,22 +2804,22 @@ ul.user-social-bookmarks li a:hover {
   margin-bottom: 9px;
   position: relative;
 }
-.node-type-mt-post .node-mt-post .node-content .flexslider ul.slides li img {
+.node-mt-post .node-content .flexslider ul.slides li img {
   width: auto;
   /* do not enlarge */
   margin: auto;
 }
-.node-type-mt-post .node-mt-post .node-content .flexslider ul.slides li .flex-caption {
+.node-mt-post .node-content .flexslider ul.slides li .flex-caption {
   font-size: 0.8em;
   margin-top: 1em;
 }
-.node-type-mt-post .node-mt-post .node-content .flexslider ul.flex-direction-nav {
+.node-mt-post .node-content .flexslider ul.flex-direction-nav {
   position: absolute;
   top: 4px;
   width: 100%;
   margin: 0;
 }
-.node-type-mt-post .node-mt-post .node-content .field-name-field-mugshot {
+.node-mt-post .node-content .field-name-field-mugshot {
   border: none;
   float: left;
   margin: 1.2em 1em auto 0;
