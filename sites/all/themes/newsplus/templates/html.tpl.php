@@ -9,6 +9,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
  <![endif]-->
 <?php print $scripts; ?>
+<?php print $head_script; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
@@ -17,5 +18,6 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <?php print $body_script; ?>
 </body>
 </html>
