@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * Implements hook_help().
+ */
+function adstxt_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#adstxt':
+      return '<p>' . t('In a multisite environment, there is no mechanism for having a separate ads.txt file for each site. This module addresses that need by letting you administer the ads.txt file from the settings interface.') . '</p>';
+
+    case 'admin/config/system/adstxt':
+      if (file_exists(DRUPAL_ROOT . '/ads.txt')) {
+        drupal_set_message(t('One or more problems have been detected with the AdsTxt configuration. Check the <a href="@status">status report</a> for more information.', array('@status' => url('admin/reports/status'))), 'warning');
+      }
+      return t('See <a href="https://iabtechlab.com/ads-txt/">https://iabtechlab.com/ads-txt/</a> for more information concerning how to write your <a href="@adstxt">ads.txt</a> file.', array('@adstxt' => base_path() . 'ads.txt'));
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function adstxt_permission() {
+  return array(
+    'administer ads.txt' => array(
+      'title' => t('Administer ads.txt'),
+      'description' => t('Administer ads.txt.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function adstxt_menu() {
+  $items['ads.txt'] = array(
+    'page callback' => 'adstxt_callback',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['admin/config/system/adstxt'] = array(
+    'title' => 'AdsTxt',
+    'description' => 'Manage your ads.txt file.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('adstxt_admin_settings'),
+    'access arguments' => array('administer ads.txt'),
+    'file' => 'adstxt.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Show the ads.txt file.
+ */
+function adstxt_callback() {
+  $content = array();
+  $content[] = variable_get('adstxt', '');
+
+  // Hook other modules for adding additional lines.
+  if ($additions = module_invoke_all('adstxt')) {
+    $content = array_merge($content, $additions);
+  }
+
+  // Trim any extra whitespace and filter out empty strings.
+  $content = array_map('trim', $content);
+  $content = array_filter($content);
+
+  drupal_add_http_header('Content-type', 'text/plain');
+  echo implode(PHP_EOL, $content);
+  drupal_page_footer();
+  exit;
+}

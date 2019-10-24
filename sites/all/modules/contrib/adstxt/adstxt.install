@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the adstxt module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function adstxt_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+
+  switch ($phase) {
+    case 'runtime':
+      if (file_exists(DRUPAL_ROOT . '/ads.txt')) {
+        $requirements['adstxt_file'] = array(
+          'title' => $t('Ads.txt'),
+          'severity' => REQUIREMENT_WARNING,
+          'value' => $t('Ads.txt module works only if you remove the existing ads.txt file in your website root.'),
+        );
+      }
+  }
+  return $requirements;
+}
+
+/**
+ * Implements hook_install().
+ */
+function adstxt_install() {
+  $content = file_get_contents(drupal_get_path('module', 'adstxt') . '/ads.txt');
+
+  variable_set('adstxt', $content);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function adstxt_uninstall() {
+  variable_del('adstxt');
+}
