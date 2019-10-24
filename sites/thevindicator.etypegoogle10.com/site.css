@@ -68,3 +68,6 @@ pre {  border-left: 10px solid #621116; }
   padding-bottom: 20px;
 }
 
+h1, h2, h3, h4, h5, p {
+  font-family: Times, Times New Roman, serif;
+}
