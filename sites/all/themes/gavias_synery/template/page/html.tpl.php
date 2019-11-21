@@ -64,6 +64,7 @@
     <![endif]-->
   <?php print $head_scripts; ?>
   <?php gavias_user_css(); ?>
+  <?php print $head_script; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
@@ -72,5 +73,6 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <?php print $body_script; ?>
 </body>
 </html>
