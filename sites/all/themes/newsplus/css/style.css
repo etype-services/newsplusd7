@@ -4460,6 +4460,11 @@ Adjustments for ads
   flex-wrap: nowrap;
 }
 
+#block-dfp-tpa-northleaderboard {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 767px) {
   #header-top #header-top-inside .row {
     flex-wrap: wrap;
@@ -4469,6 +4474,10 @@ Adjustments for ads
   }
   #header-top #header-top-inside .row .col-md-4, #header-top #header-top-inside .row .col-md-8 {
     width: 100%;
+  }
+
+  #block-dfp-tpa-northleaderboard {
+    display: none;
   }
 }
 /* Sponsor ads on article nodes */

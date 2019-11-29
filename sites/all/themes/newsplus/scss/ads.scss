@@ -38,6 +38,11 @@
   }
 }
 
+#block-dfp-tpa-northleaderboard {
+  display: flex;
+  justify-content: center
+}
+
 @media (max-width: 767px) {
   #header-top {
     #header-top-inside {
@@ -51,6 +56,9 @@
         }
       }
     }
+  }
+  #block-dfp-tpa-northleaderboard {
+    display: none;
   }
 }
 
