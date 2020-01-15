@@ -10,7 +10,7 @@ stylesheets[all][] = vendor/owl-carousel/owl.carousel.css
 stylesheets[all][] = vendor/owl-carousel/owl.theme.default.css
 
 ;Scripts
-;scripts[] = js/imagesloader.min.js
+scripts[] = js/imagesloader.min.js
 scripts[] = vendor/modernizr.js
 scripts[] = vendor/jquery.easing.js
 scripts[] = vendor/owl-carousel/owl.carousel.js
