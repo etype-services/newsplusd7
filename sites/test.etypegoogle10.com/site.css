@@ -1,0 +1,39 @@
+/* weather block in header */
+#block-block-11 {
+  margin-top: 17px;
+}
+
+@media screen and (max-width: 991px) {
+  #block-block-11 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #block-block-11 {
+    margin-top: 27px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #block-block-11 {
+    margin-bottom: 17px;
+  }
+
+  /* hide top ad */
+  #block-block-14 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* Logo */
+#logo img {
+  width: 100%;
+}
+
+/* paragraph spacing */
+.blog-single-post .article_content .field-name-body p {
+  margin: 0 0 0.4em 0;
+}
