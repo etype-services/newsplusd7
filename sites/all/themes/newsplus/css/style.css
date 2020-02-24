@@ -403,8 +403,8 @@ blockquote {
 /*Blockquote quote symbol
 blockquote:after {
   position: absolute;
-  font-family: "PT Sans", Helvetica Neue, Arial, sans-serif;
-  content: "";
+  font-family: 'PT Sans', Helvetica Neue, Arial, sans-serif;
+  content: "\xE2";
   left: 15px;
   color: #ddd;
   font-style: normal;
@@ -413,7 +413,6 @@ blockquote:after {
   top: -20px;
   height: 100%;
 }*/
-
 .footer-area blockquote:after {
   left: 0;
   font-size: 190px;
