@@ -25,7 +25,7 @@
         $(this).parent().append("<div class=\"banner-caption\"><div class=\"caption-title\">" + caption + "</div></div>");
       });
 
-      /* External links */
+      /* External links (module does not open links in new tab/window */
       $("a.ext").prop("target", "_blank");
     }
   };
