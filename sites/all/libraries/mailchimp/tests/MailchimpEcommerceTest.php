@@ -586,7 +586,6 @@ class MailchimpEcommerceTest extends TestCase {
     $store_id = 'MC001';
     $id = 'sku0001';
     $title = 'Test Product 001';
-    $url = 'http://example.org/';
     $variant_1 = (object) [
       'id' => 'PROD001A',
       'title' => "Freddie's Jokes Volume 1",
@@ -597,7 +596,7 @@ class MailchimpEcommerceTest extends TestCase {
 
     $mc = new MailchimpEcommerce();
 
-    $mc->addProduct($store_id, $id, $title, $url, $variants);
+    $mc->addProduct($store_id, $id, $title, $variants);
     $this->assertEquals('POST', $mc->getClient()->method);
 
     $this->assertEquals($mc->getEndpoint() . '/ecommerce/stores/' . $store_id . '/products', $mc->getClient()->uri);
