@@ -25,9 +25,11 @@ CKEDITOR.editorConfig = function(config) {
   config.protectedSource.push(/<\?[\s\S]*?\?>/g); // PHP Code
 
   // [#1762328] Uncomment the line below to protect <code> tags in CKEditor (hide them in wysiwyg mode).
-  config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
-  config.extraPlugins = 'videoembed, youtube';
-  config.youtube_responsive = true;
+  // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
+  config.extraPlugins = '';
+
+  // Insert all Smiley image paths as relative or they may fail on SSL pages.
+  config.smiley_path = window.CKEDITOR_BASEPATH + 'plugins/smiley/images/';
 
   /*
     * Append here extra CSS rules that should be applied into the editing area.
@@ -65,7 +67,6 @@ CKEDITOR.editorConfig = function(config) {
   if (this.element.$.rows > 0) {
     config.height = this.element.$.rows * 20 + 'px';
   }
-
 }
 
 /*
