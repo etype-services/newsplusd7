@@ -288,7 +288,8 @@ header h1.logo a {
       padding-right: 60px;
       padding-left: inherit; }
 .blog-single-post .post-content {
-  line-height: 1.7; }
+  line-height: 1.7;
+  margin-top: 3rem;}
 .blog-single-post .field-type-taxonomy-term-reference {
   margin-top: 20px; }
   .blog-single-post .field-type-taxonomy-term-reference .field-items > .field-item {
