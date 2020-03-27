@@ -3,6 +3,11 @@
   margin-top: 17px;
 }
 
+/* main font color */
+body {
+  color: #000000;
+}
+
 @media screen and (max-width: 991px) {
   #block-block-11 {
     margin-top: 0;
