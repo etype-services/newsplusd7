@@ -32,6 +32,7 @@ $sites['www.lakeoconeenews.us'] = 'lakeoconeenews.etypegoogle10.com';
 
 /* msgr.etypegoogle10.com */
 $sites['www.msgr.com'] = 'msgr.etypegoogle10.com';
+$sites['www.msgrnews.com'] = 'msgr.etypegoogle10.com';
 
 /* brownfieldonline.etypegoogle10.com */
 $sites['www.brownfieldonline.com'] = 'brownfieldonline.etypegoogle10.com';
