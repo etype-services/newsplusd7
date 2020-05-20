@@ -1,10 +1,6 @@
 <?php
 /* test, demo, and base sites */
 $sites['www.etypegoogle10.com'] = 'demo.etypegoogle10.com';
-$sites['demo.etypegoogle10.com'] = 'demo.etypegoogle10.com';
-$sites['newsplus-base.etypegoogle10.com'] = 'newsplus-base.etypegoogle10.com';
-$sites['synergy-base.etypegoogle10.com'] = 'synergy-base.etypegoogle10.com';
-$sites['test.etypegoogle10.com'] = 'test.etypegoogle10.com';
 $sites['local.drupal7.com'] = 'clintondailynews.etypegoogle10.com';
 
 /* freemansd.etypegoogle10.com */
@@ -36,6 +32,7 @@ $sites['www.lakeoconeenews.us'] = 'lakeoconeenews.etypegoogle10.com';
 
 /* msgr.etypegoogle10.com */
 $sites['www.msgr.com'] = 'msgr.etypegoogle10.com';
+$sites['www.msgrnews.com'] = 'msgr.etypegoogle10.com';
 
 /* brownfieldonline.etypegoogle10.com */
 $sites['www.brownfieldonline.com'] = 'brownfieldonline.etypegoogle10.com';
@@ -70,9 +67,6 @@ $sites['www.gothenburgtimes.com'] = 'gothenburgtimes.etypegoogle10.com';
 
 /* guthriecountynewspapers.etypegoogle10.com */
 $sites['www.guthriecountynewspapers.com'] = 'guthriecountynewspapers.etypegoogle10.com';
-
-/* heatbarbados.etypegoogle10.com */
-$sites['www.heatbarbados.com'] = 'heatbarbados.etypegoogle10.com';
 
 /* vanzandtnews.etypegoogle10.com */
 $sites['www.vanzandtnews.com'] = 'vanzandtnews.etypegoogle10.com';
