@@ -1,4 +1,7 @@
-<?php render(metatag_metatags_view('global:frontpage', array()));?>
+<?php
+$metaTagView = metatag_metatags_view('global:frontpage', []);
+render($metaTagView);
+?>
 
 <?php if (theme_get_setting('scrolltop_display')): ?>
   <div id="toTop"><i class="fas fa-play-circle fa-rotate-270"></i></div>

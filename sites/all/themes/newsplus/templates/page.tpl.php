@@ -60,7 +60,7 @@
 
                                 <div id="logo-and-site-name-wrapper" class="clearfix">
                                     <?php if ($logo): ?>
-                                        <div id="logo<?php if ($mobile_logo): ?>_hide<?php endif; ?>">
+                                        <div id="logo<?php if (isset($mobile_logo)): ?>_hide<?php endif; ?>">
                                             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"
                                                rel="home"> <img src="<?php print $logo; ?>"
                                                                 alt="<?php print t('Home'); ?>"/> </a>
