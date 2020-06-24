@@ -46,3 +46,11 @@ body {
 .blog-single-post .article_content .field-name-body p {
   margin: 0 0 0.4em 0;
 }
+
+.premium-message .buttons {
+  margin-top: 1rem;
+}
+
+.tb-megamenu .nav-collapse ul.nav > li > a {
+  padding: 15px;
+}
