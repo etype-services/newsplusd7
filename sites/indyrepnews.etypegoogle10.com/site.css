@@ -7,8 +7,9 @@
   justify-content: space-between;
 }
 
+/* only one ad so changed flex to 100 to fill normal leaderboard size */
 .region-above-nav > div {
-  flex: 0 0 49%;
+  flex: 0 0 100%;
   margin: auto;
 }
 
