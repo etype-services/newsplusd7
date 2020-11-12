@@ -16,6 +16,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <?php print $scripts; ?>
+  <?php print $head_script; ?>
     <script src="https://use.fontawesome.com/cbba4b6297.js"></script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
@@ -29,5 +30,6 @@
 <?php print $page_top; ?>
 <?php print $page; ?>
 <?php print $page_bottom; ?>
+<?php print $body_script; ?>
 </body>
 </html>
