@@ -4299,6 +4299,10 @@ a.button, input[type=submit], input[type=reset], input[type=button] {
   .header-top-area {
     margin-top: 7px;
   }
+
+  ul.social-bookmarks li {
+    margin: 0;
+  }
 }
 @media (min-width: 768px) {
   #mobile_logo {
