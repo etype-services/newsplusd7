@@ -13,6 +13,16 @@
 #header-top {
   padding-top: 32px;
 }
+
+/* Pre Header */
+#pre-header-inside {
+  .row {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media (max-width: 767px) {
   #header-top {
     padding-top: 0;
