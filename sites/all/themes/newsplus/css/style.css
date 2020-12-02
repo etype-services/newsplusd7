@@ -2714,7 +2714,6 @@ ul.user-social-bookmarks li a:hover {
 }
 
 .dropdown.search-bar {
-  position: absolute;
   width: 100%;
   text-align: right;
   top: 10px;
