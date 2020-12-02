@@ -467,6 +467,8 @@ blockquote:after {
   }
   #pre-header-inside .col-md-4 #block-etype-social-search .dropdown.search-bar {
     position: inherit;
+    top: 6px;
+    right: 20px;
   }
 }
 ul {

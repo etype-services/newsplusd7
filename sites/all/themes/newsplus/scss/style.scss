@@ -461,6 +461,8 @@ blockquote:after {
         margin-right: 1em;
         .dropdown.search-bar {
           position: inherit;
+          top: 6px;
+          right: 20px;
         }
       }
     }
