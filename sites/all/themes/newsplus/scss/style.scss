@@ -2702,14 +2702,12 @@ ul.user-social-bookmarks li a:hover {
   position: absolute;
   width: 100%;
   text-align: right;
-  top: 0;
+  top: 10px;
   z-index: 20;
   .trigger {
     font-size: 23px;
     display: inline-block;
     text-decoration: none;
-    line-height: 45px;
-    height: 54px;
     color: #fff;
     .fas {
       color: #fff;
@@ -2722,7 +2720,7 @@ ul.user-social-bookmarks li a:hover {
     border-color: #ddd;
     background-color: #f8f8f8;
     position: fixed;
-    top: 20vh;
+    top: 50px;
     left: 0;
     float: none;
     width: 90vw;
