@@ -56,6 +56,7 @@ $sites['www.bbnews.today'] = 'bbnews.etypegoogle10.com';
 
 /* postandwave.etypegoogle10.com */
 $sites['www.postandwave.com'] = 'postandwave.etypegoogle10.com';
+$sites['www.pechouspub.com'] = 'postandwave.etypegoogle10.com';
 
 /* jcnews.etypegoogle10.com */
 $sites['www.jcnews.com'] = 'jcnews.etypegoogle10.com';
