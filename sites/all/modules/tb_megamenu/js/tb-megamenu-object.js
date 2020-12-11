@@ -121,7 +121,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
     }
     else {
       unbindEvents(sub);
-      if (liitem.find('ul.level'+liitem.attr('data-level')).length > 0) {
+      if (liitem.find('ul.level-'+liitem.attr('data-level')).length > 0) {
         sub.css('display','none');
         liitem.attr('data-hidesub', 1);
       }
@@ -804,7 +804,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
           complete: function( msg ) {
             var resp = $.parseJSON(msg.responseText);
             var content = resp.content ? resp.content : "";
-            var close_button = $('<span class="close fas fa-trash-o" title="' + Drupal.t("Remove this block") + '">&nbsp;</span>');
+            var close_button = $('<span class="close fa fa-trash-o" title="' + Drupal.t("Remove this block") + '">&nbsp;</span>');
             var id = resp.id ? resp.id : "";
             var currentElement = $("#" + id);
             if(currentElement.length) {
