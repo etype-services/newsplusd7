@@ -144,6 +144,9 @@ function template_preprocess_tb_megamenu_item(&$vars) {
     $vars['item']['link']['#attributes'] += $item['link']['localized_options']['attributes'];
   }
 
+  // Ensure the link options are not NULL and an array.
+  $vars['item']['link']['options'] = isset($vars['item']['link']['options']) && is_array($vars['item']['link']['options']) ? $vars['item']['link']['options'] : [];
+
   if (isset($trail[$mlid])) {
     $vars['classes_array'][] = 'active';
     $vars['classes_array'][] = $vars['a_classes'][] = 'active-trail';
@@ -252,7 +255,7 @@ function template_preprocess_tb_megamenu_column(&$vars) {
       $vars['attributes_array']['data-showblocktitle'] = $col_config['showblocktitle'];
 
       if ($vars['section'] !== 'frontend') {
-        $vars['close_button'] = '<span class="close fas fa-trash-o" title="' . t("Remove this block") . '">&nbsp;</span>';
+        $vars['close_button'] = '<span class="close fa fa-trash-o" title="' . t("Remove this block") . '">&nbsp;</span>';
       }
     }
   }
@@ -310,7 +313,7 @@ function template_preprocess_tb_megamenu_block(&$vars) {
     }
     elseif ($block_content) {
       $block->subject = '';
-      $is_enabled_i18n_block = module_enable(array('i18n_block'));
+      $is_enabled_i18n_block = isset($block->i18n_mode) && $block->i18n_mode;
       // Translate content in block. And content must be a string.
       if ($is_enabled_i18n_block && !is_array($block_content['content'])) {
         $block->content = &$block_content['content'];

@@ -5,7 +5,7 @@
     <li title="<?php print t('Add row') . ' - ' . t('Add a new row to the selected submenu') ?>">
       <label class="hasTip"><?php print t('Add row') ?></label>
       <fieldset class="btn-group">
-        <a href="" class="btn toolsub-addrow toolbox-action" data-action="addRow"><i class="fas fa-plus"></i></a>
+        <a href="" class="btn toolsub-addrow toolbox-action" data-action="addRow"><i class="fa fa-plus"></i></a>
       </fieldset>
     </li>
   </ul>
@@ -33,10 +33,10 @@
       <label class="hasTip"><?php print t('Alignment') ?></label>
       <fieldset class="toolsub-alignment">
         <div class="btn-group">
-        <a class="btn toolsub-align-left toolbox-action" href="#" data-action="alignment" data-align="left" title="<?php print t('Left') ?>"><i class="fas fa-align-left"></i></a>
-        <a class="btn toolsub-align-right toolbox-action" href="#" data-action="alignment" data-align="right" title="<?php print t('Right') ?>"><i class="fas fa-align-right"></i></a>
-        <a class="btn toolsub-align-center toolbox-action" href="#" data-action="alignment" data-align="center" title="<?php print t('Center') ?>"><i class="fas fa-align-center"></i></a>
-        <a class="btn toolsub-align-justify toolbox-action" href="#" data-action="alignment" data-align="justify" title="<?php print t('Justify') ?>"><i class="fas fa-align-justify"></i></a>
+        <a class="btn toolsub-align-left toolbox-action" href="#" data-action="alignment" data-align="left" title="<?php print t('Left') ?>"><i class="fa fa-align-left"></i></a>
+        <a class="btn toolsub-align-right toolbox-action" href="#" data-action="alignment" data-align="right" title="<?php print t('Right') ?>"><i class="fa fa-align-right"></i></a>
+        <a class="btn toolsub-align-center toolbox-action" href="#" data-action="alignment" data-align="center" title="<?php print t('Center') ?>"><i class="fa fa-align-center"></i></a>
+        <a class="btn toolsub-align-justify toolbox-action" href="#" data-action="alignment" data-align="justify" title="<?php print t('Justify') ?>"><i class="fa fa-align-justify"></i></a>
         </div>
       </fieldset>
     </li>

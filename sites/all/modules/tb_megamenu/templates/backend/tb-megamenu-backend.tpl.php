@@ -70,8 +70,8 @@
       </div>
 
       <div class="toolbox-actions-group">
-        <button class="btn btn-success toolbox-action toolbox-saveConfig" data-action="saveConfig"><i class="fas fa-save"></i> <?php print t('Save') ?></button>
-        <button class="btn btn-danger toolbox-action toolbox-resetConfig" data-action="resetConfig"><i class="fas fa-undo"></i> <?php print t('Reset') ?></button>
+        <button class="btn btn-success toolbox-action toolbox-saveConfig" data-action="saveConfig"><i class="fa fa-save"></i> <?php print t('Save') ?></button>
+        <button class="btn btn-danger toolbox-action toolbox-resetConfig" data-action="resetConfig"><i class="fa fa-undo"></i> <?php print t('Reset') ?></button>
       </div>
       <div class="toolbox-links-groups">
         <a href="<?php print $edit_menu;?>" target="_blank">Edit menu</a>
