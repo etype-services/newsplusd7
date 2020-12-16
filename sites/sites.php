@@ -1,6 +1,5 @@
 <?php
 /* test, demos, migrations */
-$sites['www.etypegoogle10.com'] = 'demo.etypegoogle10.com';
 $sites['local.drupal7.com'] = 'seminoleproducer.etypegoogle10.com';
 
 /* thechronicle.etypegoogle10.com */
