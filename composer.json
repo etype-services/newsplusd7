@@ -1,6 +1,9 @@
 {
     "require": {
       "drush/drush": "8.x",
-      "ext-soap": "*"
+      "ext-soap": "*",
+      "ext-zip": "*",
+      "ext-simplexml": "*",
+      "ext-libxml": "*"
     }
 }
