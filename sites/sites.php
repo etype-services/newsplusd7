@@ -13,9 +13,6 @@ $sites['www.thechronicle.news'] = 'thechronicle.etypegoogle10.com';
 /* hartington.etypegoogle10.com */
 $sites['www.hartington.net'] = 'hartington.etypegoogle10.com';
 
-/* lampasasdispatchrecord.etypegoogle10.com */
-$sites['www.lampasasdispatchrecord.com'] = 'lampasasdispatchrecord.etypegoogle10.com';
-
 /* theexaminer.etypegoogle10.com */
 $sites['www.theexaminer.com'] = 'theexaminer.etypegoogle10.com';
 
