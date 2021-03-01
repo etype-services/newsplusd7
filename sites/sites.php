@@ -104,9 +104,6 @@ $sites['www.thevindicator.com'] = 'thevindicator.etypegoogle10.com';
 /* indyrepnews.etypegoogle10.com  */
 $sites['www.indyrepnews.com'] = 'indyrepnews.etypegoogle10.com';
 
-/* dragscope.etypegoogle10.com  */
-$sites['www.dragscope.com'] = 'dragscope.etypegoogle10.com';
-
 /* seminoleproducer.etypegoogle10.com  */
 $sites['www.seminoleproducer.com'] = 'seminoleproducer.etypegoogle10.com';
 
