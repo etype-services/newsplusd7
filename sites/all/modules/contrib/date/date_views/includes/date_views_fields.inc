@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Helper for identifying Date API fields for views.
@@ -9,10 +10,10 @@
  *
  * @return array
  *   An array with fieldname, type, and table.
+ *
  * @see date_views_date_views_fields()
  */
 function _date_views_fields($base = 'node') {
-
   // Make sure $base is never empty.
   if (empty($base)) {
     $base = 'node';
@@ -90,7 +91,7 @@ function _date_views_fields($base = 'node') {
       $db_info = date_api_database_info($field, $revision);
       $name = $table_name . "." . $field_name;
       $grans = array('year', 'month', 'day', 'hour', 'minute', 'second');
-      $granularity = !empty($field['granularity']) ? $field['granularity'] : $grans;
+      $granularity = !empty($field['settings']['granularity']) ? $field['settings']['granularity'] : $grans;
 
       $fromto = array(
         $table_name . '.' . $db_info['columns'][$table_name]['value'],
@@ -104,7 +105,7 @@ function _date_views_fields($base = 'node') {
           $offset_field = $table_name . '.' . $db_info['columns'][$table_name]['offset'];
         }
         $related_fields = array(
-          $table_name . '.' . $db_info['columns'][$table_name]['value']
+          $table_name . '.' . $db_info['columns'][$table_name]['value'],
         );
         if (isset($db_info['columns'][$table_name]['value2'])) {
           $related_fields = array_merge($related_fields, array($table_name . '.' . $db_info['columns'][$table_name]['value2']));
