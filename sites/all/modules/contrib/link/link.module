@@ -1373,7 +1373,7 @@ function theme_link_formatter_link_host($vars) {
  */
 function theme_link_formatter_link_absolute($vars) {
   // If no URL value is present there's no point in continuing.
-  if (empty(($vars['element']['url']))) {
+  if (empty($vars['element']['url'])) {
     return '';
   }
 
@@ -1387,7 +1387,7 @@ function theme_link_formatter_link_absolute($vars) {
  */
 function theme_link_formatter_link_domain($vars) {
   // If no URL value is present there's no point in continuing.
-  if (empty(($vars['element']['url']))) {
+  if (empty($vars['element']['url'])) {
     return '';
   }
 
@@ -1406,7 +1406,7 @@ function theme_link_formatter_link_domain($vars) {
  */
 function theme_link_formatter_link_no_protocol($vars) {
   // If no URL value is present there's no point in continuing.
-  if (empty(($vars['element']['url']))) {
+  if (empty($vars['element']['url'])) {
     return '';
   }
 
@@ -1427,7 +1427,7 @@ function theme_link_formatter_link_no_protocol($vars) {
  */
 function theme_link_formatter_link_title_plain($vars) {
   // If no title value is present there's no point in continuing.
-  if (empty(($vars['element']['title']))) {
+  if (empty($vars['element']['title'])) {
     return '';
   }
 
@@ -1439,7 +1439,7 @@ function theme_link_formatter_link_title_plain($vars) {
  */
 function theme_link_formatter_link_url($vars) {
   // If no URL value is present there's no point in continuing.
-  if (empty(($vars['element']['url']))) {
+  if (empty($vars['element']['url'])) {
     return '';
   }
 
@@ -1457,7 +1457,7 @@ function theme_link_formatter_link_url($vars) {
  */
 function theme_link_formatter_link_short($vars) {
   // If no URL value is present there's no point in continuing.
-  if (empty(($vars['element']['url']))) {
+  if (empty($vars['element']['url'])) {
     return '';
   }
 
@@ -1472,7 +1472,7 @@ function theme_link_formatter_link_short($vars) {
  */
 function theme_link_formatter_link_label($vars) {
   // If no URL value is present there's no point in continuing.
-  if (empty(($vars['element']['url']))) {
+  if (empty($vars['element']['url'])) {
     return '';
   }
 

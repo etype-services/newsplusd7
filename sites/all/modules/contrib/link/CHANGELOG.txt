@@ -1,3 +1,9 @@
+Link 7.x-1.9, 2021-04-19
+------------------------
+#3209434 by DamienMcKenna, tiziano.sartori: Syntax error, unexpected '(' after
+  upgrade to 7.x-1.8.
+
+
 Link 7.x-1.8, 2021-04-16
 ------------------------
 #2537248 by osopolar, Ronino, DamienMcKenna: Allow title without url on
