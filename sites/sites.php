@@ -1,7 +1,5 @@
 <?php
 /* test, demos, migrations */
-//$sites['local.drupal7.com'] = 'boernestar.etypegoogle10.com';
-//$sites['migrate.drupal7.com'] = 'gunnisontimes.etypegoogle10.com';
 
 /* gunnisontimes.etypegoogle10.com */
 $sites['www.gunnisontimes.com'] = 'gunnisontimes.etypegoogle10.com';
